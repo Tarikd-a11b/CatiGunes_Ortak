@@ -23,6 +23,7 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 - [ ] Tez metni (Yiğit koordinasyonunda, herkes)
 
 ## Bilal
+- 2026-11-08: Colab defterleri çıktılarıyla `proje/notebooks/colab/` altına eklendi. Dünkü sonuç defteri `sonuc_uretim_npv_harita_2026-11-07.ipynb`; açma adımları `README.md`'de.
 - 2026-11-08: Üretim, NPV ve Monte Carlo tamamlandı, ara rapor teslime hazırlandı. Çıktılar `ekonomi/` ve `uretim/` klasörlerinde.
 
 ## Yiğit
