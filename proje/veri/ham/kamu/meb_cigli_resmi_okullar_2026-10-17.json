@@ -1,0 +1,457 @@
+[
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - 80.Yıl Küçükçiğli İlkokulu",
+"HOST": "80yilkucukcigliio",
+"YOL": "35/25/313299",
+"lat": 38.50353494697294,
+"lon": 27.05265278622828
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Akiş Öğütçü Ortaokulu",
+"HOST": "akisogutcuortaokulu",
+"YOL": "35/25/751218",
+"lat": 38.50230390148997,
+"lon": 27.062739621877974
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Ali Şir Nevai Ortaokulu",
+"HOST": "alisirnevaioo",
+"YOL": "35/25/715823",
+"lat": 38.49617226117181,
+"lon": 27.089621631045475
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Atatürk Org.San.Böl.Özel Eğitim Uygulama Okulu I. Kademe",
+"HOST": "aosbozelegitimuo1",
+"YOL": "35/25/747110",
+"lat": 38.50433431619603,
+"lon": 27.0458405854307
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Atatürk Org.San.Böl.Özel Eğitim Uygulama Okulu II. Kademe",
+"HOST": "aosbozelegitimuo2",
+"YOL": "35/25/747377",
+"lat": 38.50433300760713,
+"lon": 27.045828013525984
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Atatürk Org.San.Böl.Özel Eğitim Uygulama Okulu III. Kademe",
+"HOST": "aosbozelegitim",
+"YOL": "35/25/748111",
+"lat": 38.50346438228739,
+"lon": 27.045272548383423
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Atatürk Organize Sanayi Bölgesi Mesleki Eğitim Merkezi",
+"HOST": "aosbmesem",
+"YOL": "35/25/973876",
+"lat": 38.491987197258375,
+"lon": 27.03725305241333
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Balatçık İbni Sina Özel Eğitim Uygulama Okulu I. Kademe",
+"HOST": "777150",
+"YOL": "35/25/777150",
+"lat": null,
+"lon": null
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Balatçık İlkokulu",
+"HOST": "ciglibalatcikilkokulu",
+"YOL": "35/25/729156",
+"lat": 38.51465990779091,
+"lon": 27.039228288073673
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Büyükçiğli Anadolu Lisesi",
+"HOST": "buyukcigli",
+"YOL": "35/25/972892",
+"lat": 38.498600742591215,
+"lon": 27.06548847318603
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Büyükçiğli İlkokulu",
+"HOST": "buyukcigliio",
+"YOL": "35/25/714974",
+"lat": 38.493888069074224,
+"lon": 27.06354683593365
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Cahide Ahmet Dalyanoğlu Ortaokulu",
+"HOST": "cad",
+"YOL": "35/25/313310",
+"lat": 38.508666682079,
+"lon": 27.066341926413
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli 75. Yıl Mesleki ve Teknik Anadolu Lisesi",
+"HOST": "catem",
+"YOL": "35/25/417105",
+"lat": 38.48534886316156,
+"lon": 27.07266171330477
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Ahmet Adnan Saygun Mesleki ve Teknik Anadolu Lisesi",
+"HOST": "ahmetadnansaygunmtal",
+"YOL": "35/25/751459",
+"lat": 38.507473629933415,
+"lon": 27.065412012477054
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Anaokulu",
+"HOST": "ciglianaokulu",
+"YOL": "35/25/967305",
+"lat": 38.49139635417804,
+"lon": 27.084495929618015
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Aydoğan Yağcı Bilim ve Sanat Merkezi",
+"HOST": "aydoganyagcibsm",
+"YOL": "35/25/761339",
+"lat": 38.49184771717602,
+"lon": 27.052156535525455
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Borsa İstanbul Mesleki ve Teknik Anadolu Lisesi",
+"HOST": "cbi",
+"YOL": "35/25/966426",
+"lat": 38.51541543271806,
+"lon": 27.056372968096866
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Egekent Anaokulu",
+"HOST": "egekentanaokulu",
+"YOL": "35/25/760105",
+"lat": 38.50786843669233,
+"lon": 27.060326407139414
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Fen Lisesi",
+"HOST": "ciglifen",
+"YOL": "35/25/352700",
+"lat": 38.49482034424029,
+"lon": 26.94643458499445
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Mehpare Yağcı Anadolu İmam Hatip Lisesi",
+"HOST": "mehpareyagci",
+"YOL": "35/25/749511",
+"lat": 38.49150657098498,
+"lon": 27.052798924584522
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Naime TÖMEK Ticaret Mesleki ve Teknik Anadolu Lisesi",
+"HOST": "naimetomektml",
+"YOL": "35/25/344337",
+"lat": 38.496264627241,
+"lon": 27.086934057613
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Neriman Haşim Emirli Anaokulu",
+"HOST": "nerimanhasimemirlianaokulu",
+"YOL": "35/25/875466",
+"lat": 38.502220473968535,
+"lon": 27.05768707079941
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Rehberlik ve Araştırma Merkezi",
+"HOST": "cigliram",
+"YOL": "35/25/972366",
+"lat": 38.48728640406995,
+"lon": 27.06382835145031
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Rotary Ticaret Mesleki ve Teknik Anadolu Lisesi",
+"HOST": "ciglirotarymtal",
+"YOL": "35/25/962666",
+"lat": 38.492336865511696,
+"lon": 27.0518024839355
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Şehit Astsubay Özgür Erdoğan İmam Hatip Ortaokulu",
+"HOST": "sehitastsubayozgurerdoganiho",
+"YOL": "35/25/761659",
+"lat": 38.508131107619775,
+"lon": 27.060297039885654
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Şehit Samet Çakır Ortaokulu",
+"HOST": "sehitsametcakir",
+"YOL": "35/25/313309",
+"lat": 38.49021859834306,
+"lon": 27.080684510607853
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Teğmen Ali Rıza Akıncı Anadolu Lisesi",
+"HOST": "taral",
+"YOL": "35/25/964417",
+"lat": 38.492892769347,
+"lon": 27.077413833043
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Çiğli Yıldız Tınas İzmiroğlu Anadolu Lisesi",
+"HOST": "ytial",
+"YOL": "35/25/964089",
+"lat": 38.51618354159901,
+"lon": 27.049131003756656
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Egekent İlkokulu",
+"HOST": "egekentilkokulu",
+"YOL": "35/25/879450",
+"lat": 38.508760784434,
+"lon": 27.066388587692
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Gülen Kora Bağımsız Anaokulu",
+"HOST": "gulenkoraanaokulu",
+"YOL": "35/25/752496",
+"lat": 38.51863891665375,
+"lon": 27.056480256457462
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Gülen Kora Ortaokulu",
+"HOST": "gulenkoraortaokulu",
+"YOL": "35/25/715198",
+"lat": 38.518987279322,
+"lon": 27.056952325244
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Güzeltepe İlkokulu",
+"HOST": "guzeltepeio",
+"YOL": "35/25/729116",
+"lat": 38.49635699319226,
+"lon": 27.071135846514835
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Güzeltepe Ortaokulu",
+"HOST": "guzeltepeo",
+"YOL": "35/25/729113",
+"lat": 38.49626882569611,
+"lon": 27.071173397441044
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Harmandalı Şehit Sefanur Parhan İlkokulu",
+"HOST": "harmandaliio",
+"YOL": "35/25/887807",
+"lat": 38.53389622713307,
+"lon": 27.051097062964544
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - İAOSB Sabahat Dirin Anaokulu",
+"HOST": "777014",
+"YOL": "35/25/777014",
+"lat": null,
+"lon": null
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - İsmail Rahmi Karadavut İlkokulu",
+"HOST": "ismailrahmikaradavut",
+"YOL": "35/25/714990",
+"lat": 38.48948800216118,
+"lon": 27.063582745928898
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - İzzet Gökçimen Ortaokulu",
+"HOST": "izzetgokcimen",
+"YOL": "35/25/715177",
+"lat": 38.49880410662716,
+"lon": 27.06595653666988
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Kaklıç İlkokulu",
+"HOST": "kaklicilkokulu",
+"YOL": "35/25/729143",
+"lat": 38.510614412623255,
+"lon": 26.98683835639492
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Kaklıç Ortaokulu",
+"HOST": "kaklicortaokulu",
+"YOL": "35/25/729142",
+"lat": 38.51083741774578,
+"lon": 26.986821464294508
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Kanuni İlkokulu",
+"HOST": "kanuniio",
+"YOL": "35/25/977081",
+"lat": 38.503124576076246,
+"lon": 27.07499822749628
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Kemal Hadımlı Ortaokulu",
+"HOST": "kemalhadimlioo",
+"YOL": "35/25/715221",
+"lat": 38.502637600028145,
+"lon": 27.076881138224735
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Maltepe İlkokulu",
+"HOST": "maltepeilkokulu",
+"YOL": "35/25/729207",
+"lat": 38.49120840439217,
+"lon": 27.070307720322788
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Mehmet-Hikmet Kaşerci Ortaokulu",
+"HOST": "mehmethikmetkaserci",
+"YOL": "35/25/812790",
+"lat": 38.48568943030875,
+"lon": 27.073051129851777
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Münevver Öğretmen İlkokulu",
+"HOST": "munevverogretmenilkokulu",
+"YOL": "35/25/976777",
+"lat": 38.51171387247399,
+"lon": 27.050965634722854
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Münevver Öğretmen Ortaokulu",
+"HOST": "munevverogretmenortaokulu",
+"YOL": "35/25/751219",
+"lat": 38.5114026651103,
+"lon": 27.05063572301402
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Nazime-Sacide Akarcalı İlkokulu",
+"HOST": "nazimesacideakarcali",
+"YOL": "35/25/776148",
+"lat": 38.509906328033466,
+"lon": 27.042010668013173
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Necip Fazıl Kısakürek Anadolu Lisesi",
+"HOST": "ciglinfkal",
+"YOL": "35/25/973820",
+"lat": 38.492816962020484,
+"lon": 27.077522811295104
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Nuriye-Abdülkerim Toraman İlkokulu",
+"HOST": "nuriyeabdulkerimtoraman",
+"YOL": "35/25/888054",
+"lat": 38.51547419543558,
+"lon": 27.049141732592716
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Sasalı İlkokulu",
+"HOST": "sasaliilkokulu",
+"YOL": "35/25/716012",
+"lat": 38.49500835574301,
+"lon": 26.954309550662185
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Sasalı Ortaokulu",
+"HOST": "sasaliortaokulu",
+"YOL": "35/25/716094",
+"lat": 38.49477621663968,
+"lon": 26.946473750166287
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Selim Diniz İlkokulu",
+"HOST": "selimdinizilkokulu",
+"YOL": "35/25/288646",
+"lat": 38.49742726107462,
+"lon": 27.054004035721654
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Selim Diniz Ortaokulu",
+"HOST": "selimdinizortaokulu",
+"YOL": "35/25/729092",
+"lat": 38.49693637691134,
+"lon": 27.05477906538998
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Sezai Karakoç Anadolu Lisesi",
+"HOST": "ciglisezaikarakoc",
+"YOL": "35/25/774307",
+"lat": 38.493460700882,
+"lon": 27.077471974157
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Şehit Ali Karaoğlan Anadolu Lisesi",
+"HOST": "sakal",
+"YOL": "35/25/767145",
+"lat": 38.49098954721819,
+"lon": 27.052510129299847
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Şehit Ali Karaoğlan Mesleki ve Teknik Anadolu Lisesi",
+"HOST": "sakmtal",
+"YOL": "35/25/776713",
+"lat": 38.49090341761853,
+"lon": 27.052634440119526
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Şehit Çevik Ersin Temel İlkokulu",
+"HOST": "sehitcevikersin",
+"YOL": "35/25/888099",
+"lat": 38.49233896485361,
+"lon": 27.084686366458083
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Şehit Şenali Ocak Ortaokulu",
+"HOST": "sehitsenaliocakoo",
+"YOL": "35/25/729273",
+"lat": 38.534009432933296,
+"lon": 27.051092369098807
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Şehit Uğur Görkem Harmankaya İlkokulu",
+"HOST": "ugurgorkemharmankayailkokulu",
+"YOL": "35/25/757555",
+"lat": 38.50443435738496,
+"lon": 27.09021171702875
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Şehit Uğur Yıldız Ortaokulu",
+"HOST": "sehituguryildizortaokulu",
+"YOL": "35/25/729174",
+"lat": 38.522517685362835,
+"lon": 27.03245187225597
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - TOKİ İlkokulu",
+"HOST": "ciglitokiilkokulu",
+"YOL": "35/25/729568",
+"lat": 38.52186945523291,
+"lon": 27.063414110690015
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Tuğba Özbek Anadolu Lisesi",
+"HOST": "tugbaozbekanadolulisesi",
+"YOL": "35/25/352952",
+"lat": 38.499295847983724,
+"lon": 27.084343043704166
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Turan Çakın İlkokulu",
+"HOST": "turancakin",
+"YOL": "35/25/626191",
+"lat": 38.504797913080644,
+"lon": 27.05887144579425
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Tüpraş Mahmut Esat Bozkurt İlkokulu",
+"HOST": "tuprasilkokulu",
+"YOL": "35/25/715538",
+"lat": 38.52115716304281,
+"lon": 27.046373692889347
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Tüpraş Mahmut Esat Bozkurt Ortaokulu",
+"HOST": "tuprasortaokulu",
+"YOL": "35/25/715771",
+"lat": 38.521123587003764,
+"lon": 27.0465453542663
+},
+{
+"OKUL_ADI": "İZMİR - ÇİĞLİ - Yunus Emre İlkokulu",
+"HOST": "cigliyunusemre",
+"YOL": "35/25/748448",
+"lat": 38.49724610342647,
+"lon": 27.080280815084613
+}
+]

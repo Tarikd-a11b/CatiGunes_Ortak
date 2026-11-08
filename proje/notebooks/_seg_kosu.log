@@ -1,0 +1,227 @@
+C:\Users\dmrta\AppData\Roaming\Python\Python314\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+defter: C:\Users\dmrta\Desktop\Projeler\CatiGunes\notebooks\CatiGunes_Segmentasyon_Golge_Egim.ipynb 57000 bayt
+ciktili defter: C:\Users\dmrta\Desktop\Projeler\CatiGunes\notebooks\CatiGunes_Segmentasyon_Golge_Egim_ciktili.ipynb | sure 1113 s
+--- [2] Colab: False | cihaz: CPU
+
+--- [4] mozaik 4352 x 5632 px | 0.234 m/piksel | 1017 x 1316 m | merkez 38.51755, 27.05349
+
+--- [6] {'surum': 'World Imagery (Wayback 2026-08-05)',
+ 'tarih': '20260114',
+ 'uydu': 'LG03',
+ 'urun': 'Vivid Advanced',
+ 'cozunurluk_m': 0.34}
+--- [8] 361 bina poligonu | toplam ayak izi 111871 m2
+
+--- [10] gölgeli piksel oranı %38.6 | parlaklık eşiği (Otsu) 114
+
+--- [10] grafik 1979 kB
+--- [12] gölge yönü 319.0° -> GÜNEŞ AZİMUTU 139.0° | en iyi yönde çakışma 0.58, medyan yönde 0.27
+  2025-12-30: güneş bu azimutta UTC 07:21, yükseklik 16.2°
+  2026-01-14: güneş bu azimutta UTC 07:33, yükseklik 18.4°
+  2026-01-29: güneş bu azimutta UTC 07:47, yükseklik 22.5°
+  kullanılan yükseklik bandı 16.2–22.5° (meta veri tarihi ± 15 gün)
+
+--- [12] grafik 68 kB
+--- [14] çatı, ayak izine göre +3.3 m doğu, +7.0 m güney kaymış (7.7 m)
+
+--- [14] grafik 1974 kB
+--- [16] 337 bina 38 kareye atandı
+
+--- [16]   10/38 kare | 156 maske | 213 s
+
+--- [16]   20/38 kare | 224 maske | 347 s
+
+--- [16]   30/38 kare | 293 maske | 479 s
+
+--- [16]   38/38 kare | 337 maske | 615 s
+
+--- [17] 337 çatı | 32 s
+                                toplam m²  ayak izine oran
+OSM ayak izi                    101090.48             1.00
+ham SAM maskesi (çatı + cephe)  125991.43             1.25
+son çatı maskesi                100615.92             1.00
+
+--- [17] grafik 1918 kB
+--- [19]                                   çatı sayısı  toplam alan m²
+tip                                                          
+eğimli (kiremit)                          145         44456.0
+karma (kiremit + teras)                    43         17555.0
+muhtemelen eğimli (kiremit dışı)           35         11978.0
+düz / teras                               114         26627.0
+
+--- [19] grafik 1941 kB
+--- [21] eğimli çatı: 223 | yüzlere bölünebilen 223
+güneye en yakın yüzün azimutu: medyan 180° | %93'i güney ±45° içinde
+bu yüzün çatıdaki payı: medyan %27 | güney + doğu + batı yüzleri: %83
+fotometrik eğim (n=175): medyan 16.5° | %25 12.4° | %75 31.9° | 5° ya da 60° sınırına dayanan 42
+
+--- [21] grafik 35 kB
+--- [24] 210 s
+ölçülen 213 | engelli 11 | ölçülemeyen 113
+              n  yükseklik_alt  yükseklik_üst kat (≈3 m)
+çatı_alanı                                              
+< 150 m²     53            3.6            5.2    1.2–1.7
+150–300 m²   42           14.3           20.4    4.8–6.8
+300–600 m²  104           18.1           25.9    6.0–8.6
+≥ 600 m²     14            9.4           13.5    3.1–4.5
+çatı kayması / gölge yüksekliği medyan 0.44 | Spearman +0.13 (yüksek bina daha çok kaymalı; zayıf ilişki bina bazında oturtmanın ±4 m gürültüsünü gösterir)
+
+--- [26] 278 güneş konumu | 111552 çatı hücresi | ışın izleme 105 s
+
+--- [26] doğrudan ışınımda yıllık gölge kaybı: medyan %0.1 | ortalama %2.0 | %10 üstü 21 çatı | %25 üstü 2 çatı
+
+--- [26] grafik 124 kB
+--- [28] 28 PVGIS sorgusu
+                                    çatı m²  kWp_alt  kWp_ust  GWh/yıl alt  \
+tip                                                                          
+eğimli (kiremit)                   44456.23  1428.05  4336.73         2.13   
+karma (kiremit + teras)            17554.71   891.24  1536.55         1.23   
+muhtemelen eğimli (kiremit dışı)   11977.66   334.91  1045.39         0.50   
+düz / teras                        26627.32  2440.84  2440.84         3.31   
+TOPLAM                            100615.92  5095.04  9359.51         7.16   
+
+                                  GWh/yıl üst  
+tip                                            
+eğimli (kiremit)                         5.94  
+karma (kiremit + teras)                  2.14  
+muhtemelen eğimli (kiremit dışı)         1.43  
+düz / teras                              3.79  
+TOPLAM                                  13.30  
+özgül verim örnekleri: düz 0° 1375 | 30° güney 1573 | 17° güney 1528 kWh/kWp
+
+--- [30] grafik 1952 kB
+--- [30] HATA TypeError: Object of type int64 is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\dmrta\Desktop\Projeler\CatiGunes\scripts\defter_segmentasyon.py", line 981, in <module>
+    NotebookClient(kosu, timeout=5400, kernel_name='python3', resources={'metadata': {'path': kosu_dizin}}).execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dmrta\AppData\Roaming\Python\Python314\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\dmrta\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\dmrta\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\dmrta\AppData\Roaming\Python\Python314\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def harita(bolge):
+    g = IMG[bolge].copy()
+    o = np.array([bolge[1].start, bolge[0].start], np.float32)
+    for c in CATILAR:
+        pc = np.round(c['px_cati'] - o).astype(np.int32)
+        cv2.polylines(g, [pc], True, RENK[c['tip']], 3)
+        mx, my = pc.mean(0)
+        if 'pv_yuz_az' in c:
+            a = math.radians(c['pv_yuz_az'])
+            cv2.arrowedLine(g, (int(mx), int(my)), (int(mx + 22 * math.sin(a)), int(my - 22 * math.cos(a))), (255, 255, 0), 2, tipLength=0.35)
+        yazi = f"{100 * c.get('yillik_golge_kaybi', 0):.0f}%"
+        cv2.putText(g, yazi, (int(mx) - 18, int(my) + 30), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 0), 4)
+        cv2.putText(g, yazi, (int(mx) - 18, int(my) + 30), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 1)
+    return g
+
+
+ciz([harita(ORNEK1), harita(ORNEK2)],
+    ['Çatı tipi (kontur), panel yüzü (sarı ok), yıllık gölge kaybı (%)', 'İkinci örnek bölge'])
+
+ozellikler = []
+for c, (_, satir) in zip(CATILAR, sonuc.iterrows()):
+    halka = [list(px2lonlat(float(x), float(y))) for x, y in c['px_cati']]
+    if halka[0] != halka[-1]:
+        halka.append(halka[0])
+    ozellikler.append({'type': 'Feature', 'geometry': {'type': 'Polygon', 'coordinates': [halka]},
+                       'properties': {k: (None if (isinstance(v, float) and math.isnan(v)) else (v.item() if hasattr(v, 'item') else v))
+                                      for k, v in satir.items()}})
+meta = dict(goruntu=META, gunes_azimutu=GUNES_AZ, gunes_yuksekligi_bandi=[E_LO, E_HI], kayma_px=list(KAYMA),
+            egim_bandi=list(EGIM_BANDI), dogrudan_pay=DOGRUDAN_PAY)
+json.dump({'type': 'FeatureCollection', 'meta': meta, 'features': ozellikler},
+          open(f'{CALISMA}/cikti/evka5_catilar.geojson', 'w', encoding='utf-8'), ensure_ascii=False)
+sonuc.round(4).to_csv(f'{CALISMA}/cikti/evka5_catilar.csv', sep=';', index=False, encoding='utf-8-sig')
+print('Yazıldı:', f'{CALISMA}/cikti/evka5_catilar.geojson', 've .csv |', len(sonuc), 'çatı')
+INDIR = False
+if INDIR and COLAB:
+    from google.colab import files
+    files.download(f'{CALISMA}/cikti/evka5_catilar.geojson')
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mTypeError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[15][39m[32m, line 30[39m
+[32m     26[39m                        'properties': {k: (None if (isinstance(v, float) and math.isnan(v)) else (v.item() if hasattr(v, 'item') else v))
+[32m     27[39m                                       [38;5;28;01mfor[39;00m k, v [38;5;28;01min[39;00m satir.items()}})
+[32m     28[39m meta = dict(goruntu=META, gunes_azimutu=GUNES_AZ, gunes_yuksekligi_bandi=[E_LO, E_HI], kayma_px=list(KAYMA),
+[32m     29[39m             egim_bandi=list(EGIM_BANDI), dogrudan_pay=DOGRUDAN_PAY)
+[32m---> [39m[32m30[39m json.dump({'type': 'FeatureCollection', 'meta': meta, 'features': ozellikler},
+[32m     31[39m           open(f'{CALISMA}/cikti/evka5_catilar.geojson', [33m'w'[39m, encoding=[33m'utf-8'[39m), ensure_ascii=[38;5;28;01mFalse[39;00m)
+[32m     32[39m sonuc.round([32m4[39m).to_csv(f'{CALISMA}/cikti/evka5_catilar.csv', sep=[33m';'[39m, index=[38;5;28;01mFalse[39;00m, encoding=[33m'utf-8-sig'[39m)
+[32m     33[39m print([33m'Yazıldı:'[39m, f'{CALISMA}/cikti/evka5_catilar.geojson', [33m've .csv |'[39m, len(sonuc), [33m'çatı'[39m)
+
+[36mFile [39m[32mC:\Python314\Lib\json\__init__.py:181[39m, in [36mdump[39m[34m(obj, fp, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
+[32m    175[39m     iterable = [38;5;28mcls[39m(skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+[32m    176[39m         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+[32m    177[39m         separators=separators,
+[32m    178[39m         default=default, sort_keys=sort_keys, **kw).iterencode(obj)
+[32m    179[39m [38;5;66;03m# could accelerate with writelines in some versions of Python, at[39;00m
+[32m    180[39m [38;5;66;03m# a debuggability cost[39;00m
+[32m--> [39m[32m181[39m [30;43m[39;49m[30;43;01mfor[39;49;00m[30;43m [39;49m[30;43mchunk[39;49m[30;43m [39;49m[30;43;01min[39;49;00m[30;43m [39;49m[30;43miterable[39;49m[30;43m:[39;49m
+[32m    182[39m [30;43m    [39;49m[30;43mfp[39;49m[30;43m.[39;49m[30;43mwrite[39;49m[30;43m([39;49m[30;43mchunk[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32mC:\Python314\Lib\json\encoder.py:444[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
+[32m    442[39m     [38;5;28;01myield from[39;00m _iterencode_list(o, _current_indent_level)
+[32m    443[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(o, [38;5;28mdict[39m):
+[32m--> [39m[32m444[39m     [38;5;28;01myield from[39;00m _iterencode_dict(o, _current_indent_level)
+[32m    445[39m [38;5;28;01melse[39;00m:
+[32m    446[39m     [38;5;28;01mif[39;00m markers [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32mC:\Python314\Lib\json\encoder.py:413[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
+[32m    411[39m         [38;5;28;01melse[39;00m:
+[32m    412[39m             chunks = _iterencode(value, _current_indent_level)
+[32m--> [39m[32m413[39m         [38;5;28;01myield from[39;00m chunks
+[32m    414[39m [38;5;28;01mexcept[39;00m [38;5;167;01mGeneratorExit[39;00m:
+[32m    415[39m     [38;5;28;01mraise[39;00m
+
+[36mFile [39m[32mC:\Python314\Lib\json\encoder.py:413[39m, in [36m_make_iterencode.<locals>._iterencode_dict[39m[34m(dct, _current_indent_level)[39m
+[32m    411[39m         [38;5;28;01melse[39;00m:
+[32m    412[39m             chunks = _iterencode(value, _current_indent_level)
+[32m--> [39m[32m413[39m         [38;5;28;01myield from[39;00m chunks
+[32m    414[39m [38;5;28;01mexcept[39;00m [38;5;167;01mGeneratorExit[39;00m:
+[32m    415[39m     [38;5;28;01mraise[39;00m
+
+[36mFile [39m[32mC:\Python314\Lib\json\encoder.py:326[39m, in [36m_make_iterencode.<locals>._iterencode_list[39m[34m(lst, _current_indent_level)[39m
+[32m    324[39m         [38;5;28;01melse[39;00m:
+[32m    325[39m             chunks = _iterencode(value, _current_indent_level)
+[32m--> [39m[32m326[39m         [38;5;28;01myield from[39;00m chunks
+[32m    327[39m [38;5;28;01mexcept[39;00m [38;5;167;01mGeneratorExit[39;00m:
+[32m    328[39m     [38;5;28;01mraise[39;00m
+
+[36mFile [39m[32mC:\Python314\Lib\json\encoder.py:451[39m, in [36m_make_iterencode.<locals>._iterencode[39m[34m(o, _current_indent_level)[39m
+[32m    449[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCircular reference detected[39m[33m"[39m)
+[32m    450[39m     markers[markerid] = o
+[32m--> [39m[32m451[39m newobj = [30;43m_default[39;49m[30;43m([39;49m[30;43mo[39;49m[30;43m)[39;49m
+[32m    452[39m [38;5;28;01mtry[39;00m:
+[32m    453[39m     [38;5;28;01myield from[39;00m _iterencode(newobj, _current_indent_level)
+
+[36mFile [39m[32mC:\Python314\Lib\json\encoder.py:182[39m, in [36mJSONEncoder.default[39m[34m(self, o)[39m
+[32m    163[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mdefault[39m([38;5;28mself[39m, o):
+[32m    164[39m [38;5;250m    [39m[33;03m"""Implement this method in a subclass such that it returns[39;00m
+[32m    165[39m [33;03m    a serializable object for ``o``, or calls the base implementation[39;00m
+[32m    166[39m [33;03m    (to raise a ``TypeError``).[39;00m
+[32m   (...)[39m[32m    180[39m 
+[32m    181[39m [33;03m    """[39;00m
+[32m--> [39m[32m182[39m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m([33mf[39m[33m'[39m[33mObject of type [39m[38;5;132;01m{[39;00mo.[34m__class__[39m.[34m__name__[39m[38;5;132;01m}[39;00m[33m [39m[33m'[39m
+[32m    183[39m                     [33mf[39m[33m'[39m[33mis not JSON serializable[39m[33m'[39m)
+
+[31mTypeError[39m: Object of type int64 is not JSON serializable
+when serializing list item 0
+when serializing dict item 'kayma_px'
+when serializing dict item 'meta'
+

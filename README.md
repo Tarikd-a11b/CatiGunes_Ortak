@@ -25,4 +25,15 @@ Ekipteki herkesin Claude'unun projede neler olduğunu bilmesi için ortak notlar
 | `KARARLAR.md` | Kapanmış ekip kararları |
 | `API.md` | API ve web harita veri sözleşmesi |
 
-Anahtar, şifre, öğrenci numarası ve büyük veri dosyaları repoya konmaz.
+| `proje/` | Kodlar, notebook'lar, ham ve işlenmiş veri, belgeler |
+| `model_verisi/` | Son veri seti, üretim, NPV ve Monte Carlo çıktıları |
+| `raporlar/` | Ara rapor ve teklif belgeleri |
+
+Repo yaklaşık 535 MB; ilk `git clone` biraz sürer.
+
+## Repoda olmayanlar
+- **SAM ağırlığı** (`sam_vit_b_01ec64.pth`, 358 MB, GitHub sınırını aşıyor). SAM'i yeniden koşacak olan [resmî adresten](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) indirip betiğin beklediği `modeller/` klasörüne koyar.
+- **`proje/cache/`** ve **`proje/veri/arsiv_kapsam_disi/`** (yeniden indirilebilen ara dosyalar, kapsam dışı arşiv).
+- **Anahtarlar:** TomTom gibi servis anahtarlarını herkes kendi bilgisayarında tutar, repoya koymaz.
+
+Anahtar, şifre ve öğrenci numarası repoya konmaz.

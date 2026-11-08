@@ -1,0 +1,7 @@
+﻿bolge,tur,cati,MWp,yatirim_milyon_TL,ilk_yil_tasarruf_milyon_TL,npv_milyon_TL,npv_pozitif,irr_medyan,geri_odeme_medyan,lcoe_medyan_TL_kWh
+ataturk_osb,sanayi,933.0,161.54,4002.504,949.713,4972.647,933.0,0.19,6.0,2.161
+ataturk_osb,sanayi_disi,8.0,1.005,25.915,7.317,44.164,8.0,0.242,5.0,2.162
+cigli_kamu,hastane,3.0,2.351,54.767,17.551,114.734,3.0,0.276,4.0,1.919
+cigli_kamu,okul,48.0,3.194,84.875,23.842,143.396,48.0,0.249,4.0,2.11
+cigli_kamu,universite,29.0,9.655,234.705,72.072,459.486,29.0,0.249,4.0,2.109
+TOPLAM,,1021.0,177.744,4402.766,1070.494,5734.428,1021.0,0.19,6.0,2.159

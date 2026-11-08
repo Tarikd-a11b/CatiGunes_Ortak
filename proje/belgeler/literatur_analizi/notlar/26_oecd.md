@@ -1,0 +1,28 @@
+## OECD & JRC (2008) — Bileşik Göstergeler Oluşturma El Kitabı
+KUNYE: OECD & European Commission Joint Research Centre (2008). Handbook on Constructing Composite Indicators: Methodology and User Guide. OECD Publishing, Paris. ISBN 978-92-64-04345-9. (Nardo, Saisana, Saltelli, Tarantola, Hoffman, Giovannini). 162 s.
+TEMA: Bileşik endeks (ihtiyaç endeksi ve öncelik skoru) kurmanın uluslararası standart yöntem kılavuzu — skor modelimizin METODOLOJİK OMURGASI
+AMAC: Çok boyutlu olguları (rekabetçilik, sürdürülebilirlik vb.) tek bir bileşik göstergede özetlerken yapılması gereken adımları, seçenekleri ve bunların sonuca etkisini sistematik biçimde ortaya koymak; kalite çerçevesi ve araç kutusu sunmak (örnek: Teknoloji Başarı Endeksi, TAI).
+YONTEM — 10 ADIM KONTROL LİSTESİ (Tablo 1):
+1. Kuramsal çerçeve: ölçülen olgunun net tanımı, alt boyutları, gösterge seçim ölçütleri; "iyi tanımlanmamış olan kötü ölçülür"; ölçülmek istenene göre, eldeki veriye göre değil; uzman/paydaş katılımı.
+2. Veri seçimi: analitik sağlamlık, ölçülebilirlik, kapsam, ilgililik; veri kıtsa VEKİL (proxy) değişkenler; güçlü/zayıf yönlerin tablosu.
+3. Eksik veri: tekli/çoklu atama (imputation), güvenilirlik; aykırı değerler.
+4. Çok değişkenli analiz: PCA, faktör analizi, Cronbach alfa, kümeleme — veri yapısı kuramsal çerçeveyle tutarlı mı?
+5. Normalizasyon: sıralama (RANK), z-skoru, min-max, referansa uzaklık, kategorik ölçek, eşik üstü/altı vb.; AYKIRI DEĞERLER istemeden ölçüt olabilir; çarpık göstergeler dönüştürülmeli; sağlamlık testiyle seçimin etkisi değerlendirilmeli.
+6. Ağırlıklandırma ve birleştirme: "Hangi yöntem kullanılırsa kullanılsın AĞIRLIKLAR ÖZÜNDE DEĞER YARGISIDIR." Çoğu endeks EŞİT ağırlık kullanır — ama eşit ağırlık "ağırlıksız" demek değildir; boyut içinde gösterge sayısı farklıysa boyutlar dolaylı olarak eşitsiz ağırlanır. İlişkili göstergeler ÇİFT SAYIM yaratır (korelasyon eşiği belirlenmeli). Doğrusal/geometrik birleştirmede ağırlıklar "önem katsayısı" değil ÖDÜNLEŞİM (trade-off) oranlarıdır. İkame edilebilirlik (compensability) tartışılmalı. Yöntemler: istatistiksel (PCA/FA, veri zarflama/benefit of the doubt, gözlenmeyen bileşen) ve katılımcı (bütçe dağıtımı BAP, AHP, konjoint analiz).
+7. Belirsizlik ve duyarlılık analizi: gösterge dahil/hariç, veri hatası, atama, normalizasyon, ağırlık şeması, birleştirme yöntemi, makul ağırlık aralıkları; sonuçlar belirsizlik aralıklarıyla sunulmalı; Sobol duyarlılık ölçüleri.
+8. Veriye geri dönüş: bileşik skoru hangi göstergelerin sürüklediğini göster; birkaç gösterge baskın mı?
+9. Diğer göstergelerle ilişki: mevcut ölçütlerle korelasyon, anlatı.
+10. Görselleştirme: hedef kitleye uygun, açık ve doğru sunum.
+- AHP (Saaty): problemi hiyerarşiye ayırır, ikili karşılaştırma 1–9 ölçeği, A_ij = 1/A_ji; avantaj: nitel+nicel, şeffaf, uzman görüşü meşruiyet ve uzlaşı zemini sağlar, TUTARSIZLIK ÖLÇÜSÜ verir; dezavantaj: çok sayıda ikili karşılaştırma, sonuç değerlendirici grubuna ve deney düzenine bağlı; AHP ağırlıkları da ödünleşimdir, önem katsayısı gibi yorumlanırsa yanlış anlaşılır.
+- Bütçe dağıtımı (BAP): uzmanlara 100 puan dağıttırma; >10 göstergede tutarsızlık; ağırlık bazen "önem" yerine "müdahale aciliyetini" ölçer.
+- Toplamsal birleştirmenin en basiti: sıraların toplamı (Borda) — basit, aykırı değerden bağımsız, ama mutlak bilgi kaybolur.
+- Kalite çerçevesi: ilgililik, doğruluk, güvenilirlik, zamanlılık, erişilebilirlik, yorumlanabilirlik, tutarlılık.
+BULGULAR/İLKELER (TAI örneğinde): farklı ağırlık ve birleştirme yöntemleri ülke sıralamalarını belirgin değiştiriyor → tek bir "doğru" sıralama yok; sağlamlık analizi sonuçların güvenilirliğini gösterir. BM İnsani Gelişme Endeksi alıntısı: "Hiçbir endeks kullandığı veriden iyi olamaz. Ama bu, veriyi iyileştirmek için bir argümandır, endeksi terk etmek için değil."
+EKSIKLER: 2008 baskısı (sonra JRC COIN'in 10 adım rehberi güncellendi); ülke düzeyi örnekler, mekânsal/mahalle uygulaması yok; bazı ileri yöntemler küçük örneklemde uygulanamaz.
+BIZIM PROJEYE (skor modeli ve ihtiyaç endeksi için doğrudan uygulanacak kontrol listesi):
+- 10 adımı tezde bir tablo olarak "bizim uygulamamız" sütunuyla eşleştir: (1) enerji yoksulluğu riski tanımı (Değirmenci, Robinson, Konzen çerçeveleri); (2) gösterge seçimi + vekil gerekçesi (askıda fatura, su tüketimi, İZMİRGAZ, yaş yapısı, bina yaşı); (3) eksik mahalle verisi; (4) korelasyon matrisi + (yalnız sağlamlık için) PCA; (5) SIRA-YÜZDELİK normalizasyon — el kitabının "Ranking" yöntemi, aykırı değere dayanıklı (bizim min-max'ten geçiş gerekçemiz: tek dev bina ölçütü ele geçiriyordu — el kitabının "aykırı değer istenmeden ölçüt olur" uyarısının aynısı); (6) iki kademeli eşit ağırlık / AHP; (7) Kendall tau duyarlılık + gösterge çıkarma testi + alternatif ağırlık setleri; (8) LLM raporunda "bu mahalleyi hangi gösterge öne çıkarıyor" açıklaması; (9) SES 2023 ve SEGE ile korelasyon (dış geçerlilik); (10) harita + rapor.
+- "Ağırlıklar değer yargısıdır" cümlesi → kullanıcıyla konuştuğumuz "öznellik kusur değil, görünür kılınmalı" argümanının resmî dayanağı; tezde alıntıla.
+- Eşit ağırlıkta boyut içi gösterge sayısı tuzağı → bizim ihtiyaç ekseninde (askıda 0,40 / su 0,40 / SES 0,20) ve ileride eklenecek göstergelerde boyut düzeyinde eşitleme.
+- ÇİFT SAYIM → korelasyonu çok yüksek (ör. >0,9) göstergelerden birini çıkar.
+- Ağırlıklar "önem" değil "ödünleşim" → AHP sonuçlarını tezde bu dille yorumla (teknik 0,50 = "1 birim ihtiyaç puanı için 0,7 birim teknik puandan vazgeçmeye razıyız" gibi).
+- Borda (sıraların toplamı) → bizim sıra tabanlı yaklaşımımızın basit bir alternatifi; duyarlılık analizinde karşılaştırma yöntemi olarak eklenebilir.

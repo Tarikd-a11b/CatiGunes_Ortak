@@ -1,0 +1,150 @@
+{
+ "sinir": {
+  "kaynak": "OpenStreetMap (Overpass API)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/sinir/sinirlar.geojson",
+  "not_": "OSB: admin sinir oncelikli, yoksa en buyuk aday; adaylar osb_adaylari.geojson",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "osm_bina_ataturk_osb": {
+  "kaynak": "OpenStreetMap (Overpass API)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/osm/binalar_ataturk_osb.geojson",
+  "kayit": 1428,
+  "not_": "tum etiketler korundu (height, building:levels, roof:* vb.)",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "goruntu_ataturk_osb": {
+  "kaynak": "Esri World Imagery (ArcGIS Online tile servisi)",
+  "lisans": "Esri kullanim kosullari — akademik/ticari olmayan, atif zorunlu; cekim tarihi karoya gore degisir",
+  "dosya": "veri/ham/goruntu/ataturk_osb/",
+  "kayit": 2089,
+  "eksik": 0,
+  "indirme_tarihi": "2026-10-17"
+ },
+ "iaosb_firmalar": {
+  "kaynak": "IAOSB firma rehberi https://www.iaosb.org.tr/iaosb-firmalar",
+  "lisans": "kamuya acik rehber; iletisim bilgisi alinmadi",
+  "dosya": "veri/ham/iaosb/iaosb_firmalar.csv",
+  "kayit": 775,
+  "not_": "NACE dolu 501, adres dolu 762; sahis firmasi adlari kisisel veri -> tezde anonim kullan; uretici scripts/iaosb_firmalar.py",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "iaosb_elektrik": {
+  "kaynak": "IAOSB web: /elektrik-dagitimi + GES basvuru sartlari (ges.pdf)",
+  "lisans": "kamuya acik",
+  "dosya": "veri/ham/iaosb/",
+  "not_": "IAOSB kendi dagitim sebekesini isletiyor (ATAER TM 2x140/160 MVA), faturalama yapiyor, 2022den beri uzaktan sayac okuma; GES basvurusunu IAOSB aliyor",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "epdk_tarife": {
+  "kaynak": "EPDK tarife tablosu 2026-04-04 (KK 14461)",
+  "dosya": "veri/ham/tarife/epdk_tarife_2026-04-04.xlsx",
+  "indirme_tarihi": "2026-10-13"
+ },
+ "izmirbb_ges": {
+  "kaynak": "IBB acik veri: Lisanssiz GES listesi + dogrulama tablosu",
+  "lisans": "IBB Acik Veri Lisansi",
+  "dosya": "veri/ham/dogrulama/",
+  "indirme_tarihi": "2026-09"
+ },
+ "kamu_osm": {
+  "kaynak": "OpenStreetMap (Overpass API)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/kamu/kamu_tesisleri_cigli_osm.geojson",
+  "kayit": 208,
+  "not_": "ISLEV etiketi, MULKIYET degil; place_of_worship + prison bu surumde eklendi, filtrelenebilir",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "ms_bina_cigli": {
+  "kaynak": "Microsoft GlobalMLBuildingFootprints (quadkey 122100310)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/ms/ms_binalar_cigli.geojson",
+  "kayit": 17256,
+  "not_": "bitisik binalari birlestirebiliyor; capraz kontrol icin",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "ms_bina_ataturk_osb": {
+  "kaynak": "Microsoft GlobalMLBuildingFootprints (quadkey 122100310)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/ms/ms_binalar_ataturk_osb.geojson",
+  "kayit": 1384,
+  "not_": "bitisik binalari birlestirebiliyor; capraz kontrol icin",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "pvgis_cigli": {
+  "kaynak": "PVGIS 5.3 API (JRC), SARAH3",
+  "lisans": "JRC, serbest kullanim + atif",
+  "dosya": "veri/ham/pvgis/cigli_*.json",
+  "nokta": [
+   38.49208,
+   26.9941
+  ],
+  "not_": "aspect: PVGIS 0=guney (pvlib 0=kuzey!). saatlik seri 2020-2023, 1 kWp, kayip %14",
+  "indirme_tarihi": "2026-11-07"
+ },
+ "pvgis_ataturk_osb": {
+  "kaynak": "PVGIS 5.3 API (JRC), SARAH3",
+  "lisans": "JRC, serbest kullanim + atif",
+  "dosya": "veri/ham/pvgis/ataturk_osb_*.json",
+  "nokta": [
+   38.4908,
+   27.0383
+  ],
+  "not_": "aspect: PVGIS 0=guney (pvlib 0=kuzey!). saatlik seri 2020-2023, 1 kWp, kayip %14",
+  "indirme_tarihi": "2026-11-07"
+ },
+ "goruntu_cigli_kamu": {
+  "kaynak": "Esri World Imagery (ArcGIS Online tile servisi)",
+  "lisans": "Esri kullanim kosullari — akademik/ticari olmayan, atif zorunlu; cekim tarihi karoya gore degisir",
+  "dosya": "veri/ham/goruntu/cigli_kamu/",
+  "kayit": 894,
+  "eksik": 0,
+  "indirme_tarihi": "2026-10-17"
+ },
+ "osm_bina_cigli": {
+  "kaynak": "OpenStreetMap (Overpass API)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/osm/binalar_cigli.geojson",
+  "kayit": 22432,
+  "not_": "tum etiketler korundu (height, building:levels, roof:* vb.)",
+  "indirme_tarihi": "2026-10-14"
+ },
+ "kamu_okul_hastane": {
+  "kaynak": "kamu_osm suzulmus (scripts/kamu_okul_hastane.py)",
+  "dosya": "veri/islenmis/kamu_okul_hastane_cigli.geojson",
+  "kayit": 64,
+  "kontrol_listesi": "veri/islenmis/kamu_belirsiz_kontrol.geojson",
+  "karar_tablosu": "veri/inceleme/kamu_secim_kontrol.xlsx",
+  "not_": "yalniz DEVLET okul + hastane; ozel kurumlar, ASM/poliklinik/klinik, universite binalari cikarildi",
+  "tarih": "2026-10-15"
+ },
+ "_arsiv": {
+  "globfp_bina_yuksekligi": {
+   "kaynak": "3D-GloBFP (Che vd., 2025, ESSD; Zenodo 10.5281/zenodo.15487037, figshare grid 1148)",
+   "lisans": "DOGRULANMADI (figshare sayfasina bak) — atif zorunlu",
+   "dosya": "veri/arsiv_kapsam_disi/globfp/globfp_{cigli,ataturk_osb}.geojson",
+   "kayit": {
+    "cigli": 18817,
+    "ataturk_osb": 1511
+   },
+   "not_": "Height alani (m); golge/yukseklik capraz kontrolu; uretici: scripts/globfp_kirp.py",
+   "indirme_tarihi": "2026-10-14",
+   "durum": "2026-10-15 kapsam disi (golge / ihtiyac endeksi projeden cikti)"
+  },
+  "sosyal": {
+   "kaynak": "IBB acik veri (askida fatura, nufus, bina sayisi, sosyal yardim) + OSM mahalle sinirlari + TUIK SES 2023",
+   "dosya": "veri/arsiv_kapsam_disi/sosyal/",
+   "indirme_tarihi": "2026-09",
+   "durum": "2026-10-15 kapsam disi (golge / ihtiyac endeksi projeden cikti)"
+  }
+ },
+ "kamu_ikcu": {
+  "kaynak": "OpenStreetMap (OSM API 0.6 + Overpass)",
+  "lisans": "ODbL 1.0",
+  "dosya": "veri/ham/kamu/ikcu_kampus_osm.geojson",
+  "kayit": 2,
+  "not_": "2026-10-17 kullanici karari: Izmir Katip Celebi Univ. (devlet) Cigli yerleskeleri kapsama eklendi. Ana kampus relation/6904659 kamu_tesisleri sorgusunda geometrisiz geldigi icin eksikti; OSM API /full ile alindi",
+  "indirme_tarihi": "2026-10-17"
+ }
+}

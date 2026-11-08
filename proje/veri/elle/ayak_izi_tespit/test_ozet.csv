@@ -1,0 +1,11 @@
+﻿,test
+n_sorunlu,11.0
+yakalanan,1.0
+n_temiz,97.0
+yanlis_alarm,21.0
+sorunlu_iou_mevcut,0.255
+sorunlu_iou_yeni,0.255
+temiz_iou_mevcut,0.879
+temiz_iou_yeni,0.803
+hepsi_ort_mevcut,0.773
+hepsi_ort_yeni,0.725

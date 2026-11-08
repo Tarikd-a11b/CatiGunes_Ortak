@@ -1,0 +1,11 @@
+Çatı GES — SAM sonuçları (Colab birleşik defter, koşu 2026-10-24, 1.085 çatı: Atatürk OSB 1.005 + Çiğli kamu 80)
+
+sam_sonuc_tam.csv        çatı başına SAM sonucu (sam_alan_m2, ayak_izi_m2, kaplama, tasma, iou_ayak, guven, supheli ...)
+sam_maskeler/cNNNN.png   SAM maskesi (görüntü pikseli; 255 = çatı)
+sam_poligonlari.geojson  maskelerin harita koordinatlı poligonları
+sam_haritasi.html        tarayıcıda açılan harita (uydu altlığı, OSB/kamu katmanları)
+sam_onizleme.jpg         en düşük kaplamalı 20 çatının görseli
+
+Not: Bu ham SAM çıktısıdır. 124 çatı "supheli" işaretli. Modelde kullanılacak son çatı geometrisi
+(insan çizimi > şüphesiz SAM > ayak izi) Model_Verisi paketinde, catilar.gpkg 'cati_son' katmanındadır.
+22.10 koşusuyla birebir aynı (4 çatıda ≤1,7 m² fark) — SAM deterministik.

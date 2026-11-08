@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayak İzi Düzeltme</title>
+<style>
+:root{--bg:#f6f7f9;--kart:#fff;--yazi:#1d2330;--soluk:#667085;--cizgi:#e3e6ea;--vurgu:#2f6fde;--ok:#1f9d55;--hata:#d14343;--uyari:#c27c0e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171c;--kart:#1d2128;--yazi:#e7eaf0;--soluk:#98a2b3;--cizgi:#2c323b;--vurgu:#6b9cff;--ok:#3fbf7f;--hata:#f07070;--uyari:#e5a83b}}
+:root[data-theme="dark"]{--bg:#14171c;--kart:#1d2128;--yazi:#e7eaf0;--soluk:#98a2b3;--cizgi:#2c323b;--vurgu:#6b9cff;--ok:#3fbf7f;--hata:#f07070;--uyari:#e5a83b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--kart);border-bottom:1px solid var(--cizgi);padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+h1{font-size:16px;margin:0 12px 0 0}
+input,select,button{font:inherit;color:inherit}
+input[type=text],select{background:var(--bg);border:1px solid var(--cizgi);border-radius:6px;padding:6px 8px}
+button{border:1px solid var(--cizgi);background:var(--bg);border-radius:6px;padding:6px 10px;cursor:pointer}
+button.ana{background:var(--vurgu);color:#fff;border-color:var(--vurgu)}
+button.secili{outline:2px solid var(--vurgu);outline-offset:-2px}
+.ilerleme{color:var(--soluk);margin-left:auto}
+.bar{height:4px;background:var(--cizgi);width:100%;flex-basis:100%;border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0}
+.aciklama{max-width:1200px;margin:12px auto 0;padding:0 16px;color:var(--soluk)}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:12px;padding:16px;max-width:1500px;margin:0 auto}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.kart.dogru{border-color:var(--ok)}.kart.duzeltildi{border-color:var(--uyari)}
+.tuval{position:relative;background:#222;line-height:0}
+.tuval img{width:100%;display:block}
+.tuval svg{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.tuval.ciz svg{cursor:crosshair}
+.ic{padding:10px;display:flex;flex-direction:column;gap:6px}
+.ust{display:flex;justify-content:space-between;gap:6px;color:var(--soluk);font-size:12px}
+.rozet{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;background:var(--bg);border:1px solid var(--cizgi);color:var(--uyari)}
+.dug{display:flex;gap:6px;flex-wrap:wrap}
+.dug button{flex:1}
+.ok{display:none;gap:4px}.ok button{flex:0 0 auto;padding:4px 9px}
+.kart.duzenle .ok{display:flex}
+.durum{font-size:12px;color:var(--soluk)}
+input.not{width:100%}
+@media (max-width:520px){main{grid-template-columns:1fr;padding:16px}header{padding:10px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Ayak İzi Düzeltme</h1>
+  <input type="text" id="ad" placeholder="Kontrol eden (ad soyad)">
+  <select id="filtre">
+    <option value="hepsi">Hepsi</option><option value="bekleyen">Bekleyenler</option><option value="once">Claude'un şüphelendikleri</option>
+  </select>
+  <button class="ana" id="indir">CSV indir</button>
+  <span class="ilerleme" id="ilerleme"></span>
+  <div class="bar"><i id="bar"></i></div>
+</header>
+<p class="aciklama"><b style="color:#ffe600;background:#333;padding:0 4px">Sarı</b> = mevcut ayak izi, <b style="color:#ff40ff;background:#333;padding:0 4px">pembe</b> = senin düzeltmen.
+Poligon çatının dış sınırına oturuyorsa <b>Doğru</b>. Kaymışsa <b>Düzenle</b> → ok düğmeleriyle kaydır ya da köşeleri sürükle.
+Şekil tamamen yanlışsa <b>Yeniden çiz</b> → çatının köşelerine sırayla tıkla, ilk noktaya tıklayınca (ya da <b>Bitir</b>) kapanır.
+Bitişik başka binayı, avluyu, sundurmayı dahil etme. Bitince <b>CSV indir</b> → dosyayı Claude'a ver
+(<code>python scripts/ayak_izi_duzeltme.py isle &lt;csv&gt;</code>). İlerleme bu tarayıcıda saklanır.</p>
+<main id="liste"></main>
+<script>
+const VERI = /*VERI*/[];
+const ANAHTAR = 'cati_ayak_izi_duzeltme_v1';
+const NS = 'http://www.w3.org/2000/svg';
+let durum = {};
+try { durum = JSON.parse(localStorage.getItem(ANAHTAR) || '{}'); } catch (e) { durum = {}; }
+const kaydet = () => { try { localStorage.setItem(ANAHTAR, JSON.stringify(durum)); } catch (e) {} };
+const ad = document.getElementById('ad');
+try { ad.value = localStorage.getItem(ANAHTAR + '_ad') || ''; } catch (e) {}
+ad.addEventListener('input', () => { try { localStorage.setItem(ANAHTAR + '_ad', ad.value); } catch (e) {} });
+
+const acik = p => (p.length > 1 && p[0][0] === p[p.length - 1][0] && p[0][1] === p[p.length - 1][1]) ? p.slice(0, -1) : p.slice();
+const alan = (p, mpp) => { let s = 0; for (let i = 0; i < p.length; i++) { const [x1, y1] = p[i], [x2, y2] = p[(i + 1) % p.length]; s += x1 * y2 - x2 * y1; } return Math.abs(s) / 2 * mpp * mpp; };
+const el = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+
+function kart(v) {
+  const k = document.createElement('div'); k.className = 'kart'; k.dataset.osm = v.osm;
+  k.innerHTML = `<div class="tuval"><img src="${v.img}" alt="${v.osm}"><svg viewBox="0 0 ${v.w} ${v.h}"></svg></div>
+  <div class="ic">
+    <div class="ust"><span>#${v.cati_id ?? '-'} · ${v.osm} · ${v.bolge}${v.ad ? ' · ' + v.ad : ''}</span>${v.once ? '<span class="rozet">şüpheli</span>' : v.gk ? '<span class="rozet">' + v.gk + '</span>' : ''}</div>
+    <div class="dug"><button data-a="dogru">Doğru</button><button data-a="duzenle">Düzenle</button><button data-a="ciz">Yeniden çiz</button><button data-a="geri" title="Son noktayı sil">Geri al</button><button data-a="bitir">Bitir</button><button data-a="sifirla">Sıfırla</button></div>
+    <div class="ok"><button data-k="-1,0">←</button><button data-k="0,-1">↑</button><button data-k="0,1">↓</button><button data-k="1,0">→</button><span class="durum">her basış ~${(2 * v.mpp).toFixed(1)} m · köşeleri sürükleyebilirsin</span></div>
+    <input type="text" class="not" placeholder="Not (isteğe bağlı)">
+    <div class="durum"></div>
+  </div>`;
+  const svg = k.querySelector('svg'), tuval = k.querySelector('.tuval'), bilgi = k.querySelectorAll('.durum')[1];
+  const notu = k.querySelector('input.not');
+  const ilk = acik(v.poly);
+  let mod = null, yeni = null, surukle = -1;
+  const d = () => durum[v.osm];
+  notu.value = d()?.not || '';
+  if (d()?.karar === 'duzeltildi') yeni = d().poly.map(p => p.slice());
+
+  function ciz() {
+    svg.innerHTML = '';
+    const sw = Math.max(1.5, v.w / 250);
+    svg.append(el('polygon', {points: ilk.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#ffe600', 'stroke-width': sw, 'stroke-dasharray': yeni ? `${3 * sw} ${2 * sw}` : ''}));
+    if (yeni && yeni.length) {
+      const kapali = mod !== 'ciz';
+      svg.append(el(kapali ? 'polygon' : 'polyline', {points: yeni.map(p => p.join(',')).join(' '), fill: kapali ? 'rgba(255,64,255,.18)' : 'none', stroke: '#ff40ff', 'stroke-width': sw}));
+      if (mod) yeni.forEach((p, i) => { const c = el('circle', {cx: p[0], cy: p[1], r: 2.6 * sw, fill: i === 0 && mod === 'ciz' ? '#fff' : '#ff40ff', stroke: '#000', 'stroke-width': sw / 2}); c.dataset.i = i; svg.append(c); });
+    }
+    k.className = 'kart' + (d() ? ' ' + d().karar : '') + (mod === 'duzenle' ? ' duzenle' : '');
+    tuval.classList.toggle('ciz', mod === 'ciz');
+    k.querySelectorAll('.dug button').forEach(b => b.classList.toggle('secili', b.dataset.a === mod || (b.dataset.a === 'dogru' && d()?.karar === 'dogru')));
+    const a0 = alan(ilk, v.mpp);
+    bilgi.textContent = d()?.karar === 'dogru' ? 'Doğru olarak işaretlendi' :
+      yeni && yeni.length > 2 ? `Alan ${a0.toFixed(0)} → ${alan(yeni, v.mpp).toFixed(0)} m²` + (mod === 'ciz' ? ' (çizim sürüyor)' : d()?.karar === 'duzeltildi' ? ' · kaydedildi' : '') :
+      mod === 'ciz' ? 'Çatının köşelerine sırayla tıkla' : `Alan ${a0.toFixed(0)} m²`;
+  }
+  function kaydetYeni() {
+    if (yeni && yeni.length > 2) durum[v.osm] = {karar: 'duzeltildi', poly: yeni.map(p => p.map(n => +n.toFixed(1))), not: notu.value};
+    kaydet(); sayac();
+  }
+  const nokta = e => { const p = svg.createSVGPoint(); p.x = e.clientX; p.y = e.clientY; const q = p.matrixTransform(svg.getScreenCTM().inverse()); return [q.x, q.y]; };
+
+  svg.addEventListener('pointerdown', e => {
+    if (mod === 'duzenle' && e.target.dataset.i !== undefined) { surukle = +e.target.dataset.i; svg.setPointerCapture(e.pointerId); return; }
+    if (mod !== 'ciz') return;
+    const p = nokta(e);
+    if (yeni.length > 2 && Math.hypot(p[0] - yeni[0][0], p[1] - yeni[0][1]) < v.w / 40) { mod = null; kaydetYeni(); ciz(); return; }
+    yeni.push(p); ciz();
+  });
+  svg.addEventListener('pointermove', e => { if (surukle < 0) return; yeni[surukle] = nokta(e); ciz(); });
+  svg.addEventListener('pointerup', () => { if (surukle >= 0) { surukle = -1; kaydetYeni(); } });
+
+  k.querySelector('.dug').addEventListener('click', e => {
+    const a = e.target.dataset.a; if (!a) return;
+    if (a === 'dogru') { mod = null; yeni = null; durum[v.osm] = {karar: 'dogru', not: notu.value}; kaydet(); sayac(); }
+    else if (a === 'duzenle') { mod = mod === 'duzenle' ? null : 'duzenle'; if (!yeni || yeni.length < 3) yeni = ilk.map(p => p.slice()); if (mod) kaydetYeni(); }
+    else if (a === 'ciz') { mod = 'ciz'; yeni = []; if (d()?.karar) { delete durum[v.osm]; kaydet(); sayac(); } }
+    else if (a === 'geri' && mod === 'ciz') yeni.pop();
+    else if (a === 'bitir' && mod) { if (yeni.length > 2) { mod = null; kaydetYeni(); } }
+    else if (a === 'sifirla') { mod = null; yeni = null; delete durum[v.osm]; kaydet(); sayac(); }
+    ciz();
+  });
+  k.querySelector('.ok').addEventListener('click', e => {
+    const kk = e.target.dataset.k; if (!kk || !yeni) return;
+    const [dx, dy] = kk.split(',').map(Number);
+    yeni = yeni.map(([x, y]) => [x + 2 * dx, y + 2 * dy]); kaydetYeni(); ciz();
+  });
+  notu.addEventListener('change', () => { if (d()) { d().not = notu.value; kaydet(); } });
+  ciz();
+  return k;
+}
+
+const liste = document.getElementById('liste');
+const kartlar = VERI.map(v => { const k = kart(v); liste.append(k); return [v, k]; });
+function sayac() {
+  const n = VERI.filter(v => durum[v.osm]).length;
+  document.getElementById('ilerleme').textContent = `${n} / ${VERI.length} karar`;
+  document.getElementById('bar').style.width = (100 * n / Math.max(1, VERI.length)) + '%';
+}
+document.getElementById('filtre').addEventListener('change', e => {
+  const f = e.target.value;
+  kartlar.forEach(([v, k]) => { k.style.display = f === 'hepsi' || (f === 'bekleyen' && !durum[v.osm]) || (f === 'once' && v.once) ? '' : 'none'; });
+});
+document.getElementById('indir').addEventListener('click', () => {
+  if (!ad.value.trim()) { ad.focus(); ad.placeholder = 'Önce adını yaz'; return; }
+  const bugun = new Date().toISOString().slice(0, 10);
+  const q = s => '"' + String(s ?? '').replace(/"/g, '""') + '"';
+  const satir = [['osm', 'cati_id', 'karar', 'poligon_px', 'not', 'kontrol_eden', 'tarih'].join(',')];
+  VERI.forEach(v => { const d = durum[v.osm]; if (!d) return;
+    const p = d.poly ? JSON.stringify([...d.poly, d.poly[0]]) : '';
+    satir.push([q(v.osm), v.cati_id ?? '', d.karar, q(p), q(d.not), q(ad.value.trim()), bugun].join(','));
+  });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob(['﻿' + satir.join('\n')], {type: 'text/csv'}));
+  a.download = `ayak_izi_duzeltme_${bugun}.csv`; a.click();
+});
+sayac();
+</script>
+</body>
+</html>

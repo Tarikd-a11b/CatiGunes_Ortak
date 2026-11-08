@@ -3,7 +3,7 @@
 Dorukhan ve Yavuz'un aynı alan adlarıyla çalışması içindir. Veri alanları mevcut dosyalardan alınmıştır. Uç noktalar **öneridir**, ikisi anlaşınca kesinleşir. Değişiklik olursa bu dosya aynı commit'te güncellenir.
 
 ## Veri kaynakları
-Veri klasörü: `CatiGunes_Model_Verisi` (Drive bağlantısı: eklenecek).
+Veri klasörü: bu repoda `model_verisi/`.
 
 | Dosya | Satır | İçerik |
 |---|---|---|

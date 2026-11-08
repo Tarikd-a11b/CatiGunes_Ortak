@@ -1,0 +1,119 @@
+C:\Users\dmrta\AppData\Roaming\Python\Python314\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+defter: C:\Users\dmrta\Desktop\Projeler\CatiGunes\notebooks\CatiGunes_Cigli_Segmentasyon.ipynb 72516 bayt
+ciktili: C:\Users\dmrta\Desktop\Projeler\CatiGunes\notebooks\CatiGunes_Cigli_Segmentasyon_ornek_ciktili.ipynb | sure 1462 s
+--- [2] Colab: False | cihaz: CPU | örnek: 20
+
+--- [4] 26 mahalle + 1 OSB | toplam 131.4 km² | 0.234 m/piksel
+
+--- [4] grafik 78 kB
+--- [6]   overpass-api.de HTTP 429
+
+--- [6]   overpass-api.de HTTP 429
+
+--- [6] 20 Overpass karosu | 33711 bina poligonu (tampon dahil) | işlenecek 540 bina
+      Sasalı Merkez  Atatürk Organize Sanayi Bölgesi  Ataşehir  Yeni Mahalle  Köyiçi  Maltepe  Şirintepe  Küçük Çiğli  Çağdaş  Egekent  Yakakent  Güzeltepe  Aydınlıkevler  Ahmet Taner Kışlalı  Evka-2  Evka-6  Kaklıç  Ahmet Efendi  Balatçık  Esentepe  Evka-5  Uğur Mumcu  İnönü  Harmandalı Gazi Mustafa Kemal Atatürk  İzkent  Atatürk  Cumhuriyet
+bina             20                               20        20            20      20       20         20           20      20       20        20         20             20                   20      20      20      20            20        20        20      20          20     20                                     20      20       20          20
+
+--- [8] World Imagery (Wayback 2026-08-05)
+        çekim uydu    tarih  çözünürlük_m  işlenecek_bina
+LG03 20260114 LG03 20260114          0.34             500
+LG05 20260219 LG05 20260219          0.34              40
+çekime atanamayan bina: 0
+
+--- [10] Aşama 1 · bina karoları: 415 karo, indirilecek 381
+
+--- [10]   tamam (8 s)
+
+--- [12] LG03 20260114 örnek pencereleri: 128 karo, indirilecek 111
+
+--- [12]   tamam (2 s)
+
+--- [12] LG03 20260114: gölge 323.5° güneş 143.5° (tepe/medyan 1.38) | yükseklik 19.8–22.7° | kayma +0.9 m D, +2.8 m G | GÜVENİLMEZ: gölge yönü belirsiz
+LG05 20260219 örnek pencereleri: 128 karo, indirilecek 110
+
+--- [12]   tamam (3 s)
+
+--- [12] LG05 20260219: gölge 16.5° güneş 196.5° (tepe/medyan 1.85) | yükseklik 36.3–41.5° | kayma +0.9 m D, +0.0 m G | güvenilir
+
+--- [12] grafik 83 kB
+--- [12] grafik 510 kB
+--- [14] Aşama 2 · gölge tarafı: 10 karo, indirilecek 5
+
+--- [14]   tamam (0 s)
+toplam karo: 425
+
+--- [16] 540 bina 85 kareye atandı | SAM dışı büyük yapı 0 | kalan kare 85
+
+--- [16]   85/85 kare | 540 maske | 850 s | kalan ~0 dk
+
+--- [18]   540/540 bina | 539 çatı | 1 s | kalan ~0 dk
+539 çatı | OSM ayak izi 123.571 m² | ham SAM 157.741 m² | son çatı 120.285 m²
+SAM'siz (büyük yapı ya da maske yok): 0 | oturtması şüpheli (< 0,4): 46
+cekim                             LG03 20260114  LG05 20260219
+tip                                                           
+eğimli (kiremit)                            207             21
+karma (kiremit + teras)                      42              6
+muhtemelen eğimli (kiremit dışı)              0              1
+düz / teras                                 250             12
+fotometrik eğim (n=20): medyan 41.2° | %25 27.6° | %75 59.4° | sınıra dayanan 7
+
+--- [18] grafik 494 kB
+--- [20] durum
+çekim güvenilmez    499
+ölçüldü              20
+ölçülemedi           13
+engelli               7
+               n  yukseklik_alt  yukseklik_ust
+sinif                                         
+< 150 m²    18.0           10.3           12.3
+150–300 m²   2.0            3.6            4.4
+300–600 m²   NaN            NaN            NaN
+≥ 600 m²     NaN            NaN            NaN
+               yukseklik_lo  yukseklik_hi
+cekim                                    
+LG05 20260219          10.3          12.3
+
+--- [22] alan sınıfı medyan yükseklik (m): {'< 150 m²': 11.3, '150–300 m²': 4.0, '300–600 m²': 11.3, '≥ 600 m²': 11.3}
+
+--- [22] yükseklik ızgarası 10240 x 6921 (71 M hücre) | çatı hücresi 38.201
+
+--- [22]   70/279 güneş konumu | 2 s
+
+--- [22]   140/279 güneş konumu | 4 s
+
+--- [22]   210/279 güneş konumu | 6 s
+
+--- [22]   279/279 güneş konumu | 8 s
+yıllık doğrudan ışınım gölge kaybı: medyan %0.0 | ortalama %1.7 | %10 üstü 36 çatı | %25 üstü 9 çatı
+
+--- [22] grafik 91 kB
+--- [24] 57 PVGIS sorgusu | merkez düz 1372 kWh/kWp | birim ölçeği 0.977–1.017
+
+--- [26] 
+Uğur Mumcu                             mahalle    20   2906.77     33.08           6.72     0.21     0.28     0.28     0.41            4.84           16.39             B        0.34
+Aydınlıkevler                          mahalle    20   3635.09     79.44           1.03     0.14     0.36     0.20     0.51            5.24           16.69             A        0.32
+Evka-2                                 mahalle    20   3704.27     90.88           1.00     0.13     0.37     0.19     0.52            4.68           11.17             A        0.32
+Yeni Mahalle                           mahalle    20   2443.29     15.88           5.89     0.20     0.23     0.27     0.34            9.99           31.58             A        0.30
+Yakakent                               mahalle    19   2239.99     37.24           0.01     0.18     0.21     0.25     0.32            3.96           15.21             B        0.28
+Ataşehir                               mahalle    20   2571.99     41.76           4.42     0.16     0.24     0.22     0.35           23.13           71.72             A        0.28
+İnönü                                  mahalle    20   2113.86     26.98           0.00     0.17     0.20     0.23     0.30            5.35           17.27             A        0.26
+Ahmet Taner Kışlalı                    mahalle    20   2222.57     57.85           1.55     0.15     0.20     0.21     0.30            4.16           12.09             A        0.25
+Maltepe                                mahalle    20   1786.34     42.37           4.07     0.13     0.15     0.18     0.23            5.50           15.96             A        0.20
+Kaklıç                                 mahalle    20   2088.96     57.20           3.06     0.12     0.17     0.16     0.25           20.96           65.95             B        0.20
+Şirintepe                              mahalle    20   1621.27     36.02           0.00     0.12     0.15     0.17     0.22            8.75           27.16             B        0.19
+Sasalı Merkez                          mahalle    20   2016.77     80.36           9.31     0.10     0.18     0.13     0.25           21.58           77.35             B        0.18
+Güzeltepe                              mahalle    20   1552.47     57.73           2.73     0.11     0.15     0.15     0.22            6.36           20.10             B        0.18
+Harmandalı Gazi Mustafa Kemal Atatürk  mahalle    20   1386.52     36.30           2.64     0.10     0.13     0.14     0.20            4.89           14.64             A        0.17
+Köyiçi                                 mahalle    20   1659.38     62.10           0.00     0.09     0.14     0.12     0.21            5.08           15.44             A        0.16
+
+TOPLAM: 539 çatı | 0.12 km² | 8–11 MWp | 11.0–16.8 GWh/yıl (bant 1.52×)
+26 mahalle, önceki ayak izi modeli: 195.2–625.9 GWh/yıl | segmentasyon: 9.9–15.6 GWh/yıl
+!! Örnek kipinde yalnız birim başına 20 bina işlendi; önceki modelle toplam karşılaştırması anlamlı değil.
+
+--- [26] grafik 128 kB
+--- [28] cigli_birim_ozeti_ornek20.csv                   0.00 MB
+cigli_catilar_ornek20.csv                       0.10 MB
+cigli_catilar_ornek20.geojson                   0.45 MB
+

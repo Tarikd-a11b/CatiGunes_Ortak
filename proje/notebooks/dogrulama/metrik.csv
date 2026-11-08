@@ -1,0 +1,12 @@
+﻿kirilim;deger;n;dogru_yuzde
+oturtma;normal;92;87.9
+oturtma;supheli;17;17.1
+alan;<150;54;72.6
+alan;150-300;27;91.8
+alan;>=300;28;94.0
+cekim;LG03 20260114;97;84.4
+cekim;LG05 20260219;12;56.2
+tip;düz / teras;36;61.5
+tip;eğimli (kiremit);56;95.9
+tip;karma (kiremit + teras);12;79.8
+tip;muhtemelen eğimli (kiremit dışı);5;58.9

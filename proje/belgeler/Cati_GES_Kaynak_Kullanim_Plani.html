@@ -1,0 +1,380 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Çatı GES — Kaynak Kullanım Planı</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+@page { size: 1920px 1080px; margin:0 }
+html,body { margin:0; padding:0; background:#888 }
+section { position:relative; width:1920px; height:1080px; box-sizing:border-box; overflow:hidden; page-break-after:always; break-after:page }
+h1,h2,h3,p,ul,table { margin:0 }
+ul { padding-left:30px }
+table { border-collapse:collapse; width:100% }
+td,th { padding:10px 18px; text-align:left; vertical-align:top }
+@media screen { section { margin:0 auto 24px } }
+</style></head><body>
+<section id="cover" data-transition="fade" style="background:#1D2B33;color:#F5F2EA;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="position:absolute;left:0;top:0;width:24px;height:1080px;background:#E8A33D"></div>
+<p style="font-size:24px;font-weight:600;color:#E8A33D;letter-spacing:3px;text-transform:uppercase">YBS Bitirme Projesi · Çiğli / Atatürk OSB</p>
+<div style="display:flex;flex-direction:column;gap:32px">
+<h1 style="font-family:'Source Serif 4', Georgia, serif;font-size:112px;font-weight:600;line-height:1.05">Kaynak Kullanım Planı</h1>
+<p style="font-size:40px;line-height:1.35;color:#C9D3D6;width:1400px">11 kaynaktan hangi cümleyi, hangi yöntemi alacağız ve bizde neyi düzelterek uygulayacağız</p>
+</div>
+<div style="display:flex;gap:64px">
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;color:#E8A33D;font-weight:600">Temel belge</p><p style="font-size:28px">Cati_GES_Kaynak_Kullanim_Rehberi</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;color:#E8A33D;font-weight:600">Alıntılar</p><p style="font-size:28px">PDF'lerden birebir, sayfa numaralı</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;color:#E8A33D;font-weight:600">Tarih</p><p style="font-size:28px">5 Ekim 2026</p></div>
+</div>
+
+</section>
+<section id="harita" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:96px 112px 136px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak haritası</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:60px;font-weight:600;line-height:1.1">11 kaynak, projenin üç eksenine dağılıyor</h2>
+</div>
+<table style="font-size:26px;color:#1D2B33">
+<tr style="background:#1D2B33"><th style="width:22%;color:#F5F2EA;padding:14px 20px">Eksen</th><th style="width:33%;color:#F5F2EA">Kaynaklar</th><th style="width:45%;color:#F5F2EA">Projede neyi besliyor</th></tr>
+<tr><td><b>Kuramsal çerçeve</b></td><td>Konzen vd. 2024 · Wussow vd. 2024</td><td>Problem tanımı, enerji adaleti, OSB'nin eşitlik aracı rolü</td></tr>
+<tr style="background:#ECE6D8"><td><b>İhtiyaç ekseni</b></td><td>Değirmenci &amp; Limanlı 2025</td><td>Enerji yoksulluğu boyutları, endeks yöntemi</td></tr>
+<tr><td><b>Türkiye bağlamı</b></td><td>Ember 2023 · Kutlu vd. 2022</td><td>İzmir rakamları, Türkiye katsayıları, yerleşim kuralları, politika</td></tr>
+<tr style="background:#ECE6D8"><td><b>Teknik hat</b></td><td>Pino-Gallardo 2026 · Ni 2024 · Zhong 2021</td><td>Filtre kaskadı, engel–gölge, paralaks, etiketleme stratejisi</td></tr>
+<tr><td><b>Destekleyici</b></td><td>Ünal 2026 · Chen 2025 · Wang (preprint)</td><td>Alan kayması, potansiyel–talep eşleştirmesi, alternatif SAM</td></tr>
+</table>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;gap:16px;align-items:center;background:#FFFDF8;padding:18px 24px;border-left:6px solid #A15C07"><p style="font-size:24px"><b>Alınacak cümle</b> — birebir alıntı + PDF sayfası + tezde gideceği bölüm</p></div>
+<div style="flex:1;display:flex;gap:16px;align-items:center;background:#E6EDF3;padding:18px 24px;border-left:6px solid #2B5C8A"><p style="font-size:24px"><b>Kullanılacak yöntem</b> — koda/analize aktarılacak adım</p></div>
+<div style="flex:1;display:flex;gap:16px;align-items:center;background:#EFE6D6;padding:18px 24px;border-left:6px solid #5B666D"><p style="font-size:24px"><b>Bizde düzeltme</b> — kaynaktaki sorun ve yerine yaptığımız</p></div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">2</p>
+
+</section>
+<section id="konzen" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 1 / 11 · Kuramsal çerçeve</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Konzen, Best &amp; de Castro (2024)</h2>
+<p style="font-size:24px;color:#55626B">Energy Research &amp; Social Science 111, 103473 · Rolü: eşitlik ekseninin kuramsal çerçevesi</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…distributional justice (how resources, costs, and benefits are allocated across different stakeholders); (ii) recognition justice…; (iii) procedural justice…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 2 → Kuramsal çerçeve: dağıtımsal adalet tanımı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“In fact, 91 % of the studies cover developed countries, and only eight articles focus on developing countries.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 4 → Giriş: “neden Türkiye?” boşluk cümlesi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the literature recommends targeting subsidies to lower-income households, encouraging community solar facilities…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Politika: “OSB → mahalle” sanal tahsis dayanağı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the elevated adoption rates were propelled by middle and upper-class newcomers in the neighborhoods during a gentrification process…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 (Atlanta) → Sınırlılık: toplulaştırma / ekolojik yanılgı</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>McCauley 4 boyutlu adalet çerçevesi; çalışmayı dağıtımsal boyuta konumla</li><li>Araştırma gündemi 6. madde: verimlilik–eşitlik ödünleşim eğrimizin karşılığı</li><li>Sıfırı çok sayım verisinde sıfır-şişkin model (opsiyonel GES dağılımı analizi)</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Toplulaştırılmış veride gelir–benimseme ilişkisi tersine dönebiliyor. Çıkarım birimini (mahalle) açıkça yazacağız; mahalle içi dağılımı bina yaşına göre ayrı raporlayacağız.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">3</p>
+
+</section>
+<section id="wussow" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 2 / 11 · Kuramsal çerçeve</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Wussow, Zanocco, Wang vd. (2024)</h2>
+<p style="font-size:24px;color:#55626B">Nature Energy 9, 654–663 · Rolü: OSB'den başlama kararının kuramsal gerekçesi</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“We find that disadvantaged communities have less non-residential solar (−38%), but this disparity is notably higher for residential solar (−67%).”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Giriş: konut dışı çatı neden eşitlik aracı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“We distinguish between three scenarios for the fraction of large building footprints feasible for solar deployment: 10%, 25% and 40%.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 → Yöntem: Tier 1 makro senaryolar</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…a system that supplies 20% of annual electricity demand would on average supply 30% in May, while only supplying 13% in January.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 → Yöntem: eşleştirmeyi aylık kurmanın gerekçesi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“This solar equity gap is 77% larger for the residential sector compared with the non-residential sector…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 2 → Opsiyonel: Çiğli GES'lerinin ihtiyaç tersillerine dağılımı</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>OSB = “arz düğümü”: büyük çatı (&gt;1.000 m²) → komşu mahalle talebi</li><li>%10 / %25 / %40 ayak izi kullanımı × 200 W/m² (s. 6); AOSİ'de ölçtüğümüz oranla kalibre</li><li>Üretim/talep oranı aylık</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">“%20 karşılar” fiziksel kapasite; tesis tüketimi düşülmemiş. Net fazla = tesis üretimi − tesis tüketimi (aylık); SKDM kapsamındaki sektörlerde fazla = 0; aktarım Türkiye mevzuatına göre ayrı senaryo.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">4</p>
+
+</section>
+<section id="degirmenci" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 3 / 11 · İhtiyaç ekseni</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Değirmenci &amp; Limanlı (2025)</h2>
+<p style="font-size:24px;color:#55626B">Energy Research &amp; Social Science 127, 104241 · Rolü: ihtiyaç endeksinin Türkiye dayanağı</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Thus, although energy poverty is a phenomenon linked to household income poverty, it cannot be reduced exclusively to this concept.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 11 → Yöntem: SEGE tek başına değil, çok göstergeli endeks</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Problems with housing and insulation remain the most persistent issues.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 7 → Endekse bina yaşı boyutu + yalıtım sınırlılığı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“The use of traditional energy resources, which is measured by the fuel type indicator, contributed the most to the index.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Gösterge: mahalle doğalgaz abonelik oranı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Local mapping of energy poverty, data collection studies and awareness-raising campaigns at the regional level are necessary to accurately identify needs at the local level.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 12 → Giriş: politika boşluğu cümlesi</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Alkire-Foster mantığı: iç içe eşit ağırlık (başlangıç)</li><li>Gösterge katkısına ayrıştırma → LLM raporunda açıklanabilirlik</li><li>Farklı yoksulluk eşiklerinde sağlamlık kontrolü</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Yakıta 1/3 ağırlık “en büyük katkı” bulgusunu tasarım gereği üretiyor; NUTS-1 çok kaba. Ağırlık senaryolarıyla duyarlılık, mahalle ölçeği. GES–yoksulluk bağı soğutma yoksulluğu üzerinden; “GES yalıtımın yerini tutmaz” açıkça yazılır.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">5</p>
+
+</section>
+<section id="ember" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 4 / 11 · Türkiye bağlamı</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Ember — Alparslan &amp; Yıldırım (2023)</h2>
+<p style="font-size:24px;color:#55626B">Çatılarda 120 GW'tan fazla potansiyel mevcut · Rolü: İzmir bağlamı, Tier 1 yöntemi, politika</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…toplam potansiyelin 61,7 GW'ına sahip olan düz çatılarda İzmir ilk sıradadır (6,7 GW).”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 17 → Giriş; 6,7 / 9,3 GW ≈ %72 düz çatı (bizim hesabımız)</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…İzmir'in (%76) de çatı GES potansiyeli faturalanan elektrik tüketimlerini karşılamada yüksek seviyelerdedir.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 19 → Giriş: İzmir'in önemi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…1 kW'lık çatı GES kapasitesinin ortalama 6,3 m2'lik alan kapladığı görülmüştür.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 36 → Doğrulama: AOSİ m²/kW sonucunun referansı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…belediyelerin uygun apartman binası çatı alanlarını ihale etmesi, hem enerjideki hedeflere ulaşmamızı, hem de kişilerin kendi elektriklerini ucuza üretmesini sağlayabilir.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 7 → Politika senaryosu (b)</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Microsoft Building Footprints + 6,4 m²/kW → Tier 1 hızlı hesap</li><li>PVGIS düzeltme katsayısı: düz 0° → %84 (s. 19)</li><li>SKDM (s. 9): OSB fazlasını sektöre göre ayırma gerekçesi</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Kuzey cepheler dahil; kenar boşluğu ve gölge yok; yön ayak izinin uzun kenarından. Kuzeyi eliyoruz (Ember versiyonu yalnız karşılaştırma); sonucu “W / toplam çatı m²” ile Ember'e karşı veriyoruz.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">6</p>
+
+</section>
+<section id="kutlu" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 5 / 11 · Türkiye bağlamı</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Kutlu, Durusoy, Ozden &amp; Akinoglu (2022)</h2>
+<p style="font-size:24px;color:#55626B">Renewable Energy · Technical potential of rooftop solar PV for Ankara · Rolü: Türkiye katsayıları ve yerleşim kuralları</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Setbacks are calculated as 0.8 m, 1.2 m, and 2 m for residential, public, and commercial buildings.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 3 → Yöntem: kenar boşluğu parametresi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“The settlement design assumes no shading between 10.00 and 14.00 on December 21, Winter Solstice, and therefore, row spacing is arranged due to this assumption.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 3 → Yöntem: sıra aralığı kuralı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Module shading cutoff is limited by 10% for all buildings, and the modules with shading of more than 10% are removed automatically.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 3 → Yöntem: %10 gölge eşiği</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“According to Ankara Building Bylaws [24], roofs' slopes cannot exceed 40%.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 2 → Soru: İzmir imar yönetmeliğindeki eğim sınırı</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Yerleşim kuralları: kenar boşluğu + 21 Aralık sıra aralığı + %10 gölge kesimi</li><li>Tablo 7 kaplama oranları (eğimli %20,42 · düz %12,40) → karşılaştırma bandı</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Konut alanı yalnız 2000–2019 izinlerinden (eski stok yok); katsayılar 24 örnek binadan. Bina stoku ayak izinden gelecek, eski stok dahil; katsayılar varsayım değil karşılaştırma bandı.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">7</p>
+
+</section>
+<section id="pino" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 6 / 11 · Teknik hat</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Pino-Gallardo vd. (2026) — Valensiya</h2>
+<p style="font-size:24px;color:#55626B">Engineering Science and Technology, an Int. Journal 80, 102437 · Rolü: teknik hattın iskeleti</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Based on the building footprint, the system generates spatial prompts, defined as delimited regions or bounding boxes that act as guides for the AI model…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 4 → Yöntem: ayak izinden kutu istemi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…multiple filtering criteria (slope ≤ 40°, orientation, minimum irradiation threshold ≥ 1,000 kWh/m2/year, and minimum rooftop area ≥ 10 m2) that work in combination…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 7 → Yöntem: filtre kaskadı başlangıç değerleri</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“When the slope exceeds the 3° threshold, the surface is considered effectively sloped and those areas facing north are discarded…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 7 → Yöntem: 3° kuralı (katı / esnek senaryo)</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…using bounding boxes derived from the ground truth masks as input prompts.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 9 → Eleştiri: test istemleri “oracle”; bizimki gerçek hattaki gibi</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Modüller: veri → SAM → ışınım → yerleşim → raporlama</li><li>Düz / eğimli çatıya iki ayrı yerleşim mantığı</li><li>Huni biçiminde raporlama; ortak metrik m²/kWp (s. 13)</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Precision 0,53 (s. 9); pozitif sınıf “uygun çatı”. Bizde pozitif sınıf “çatı”, uygunluk sonraki filtrelerde. Yerleşim kWh maksimize ediyor → yalnız %1,4 modül optimum açıda (s. 13); amaç NPV/LCOE + 10° doğu-batı taraması.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">8</p>
+
+</section>
+<section id="ni" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 7 / 11 · Teknik hat</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Ni vd. (2024) — Şangay</h2>
+<p style="font-size:24px;color:#55626B">Energy &amp; Buildings 309, 113743 · Rolü: engel, gölge ve paralaks yöntemi</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Since the satellite image is not taken vertically to the roof…, the building footprint outline does not completely coincide with the building rooftop outline…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 → Yöntem: paralaks düzeltmesi (Faz 2'de zorunlu)</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the irregular obstacles were shaped as their minimum-area rotated bounding rectangle.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 → Yöntem: engel dikdörtgenleştirme</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the solar energy potential reduction of individual buildings varied in a wide range from 8 % (B10) to 93 % (B8).”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 11 → Mahalle skorunda ortalama + dağılım</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“Neglecting the impact of rooftop obstructions and shading effects would result in a 25.6 % overestimation of the rooftop PV capacity.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Gerekçe: engel payı senaryosu (%15–25)</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Vektör gölge: ayak izi × kat sayısı × 3 m (s. 7)</li><li>Engel sınıfları + güneş kolektörü ve su deposu ekle</li><li>B33: gölge %14,2 + engel %49,6 toplanmaz → filtreler sıralı uygulanır</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Verim formülünde sıcaklık katsayısı hatalı, hava sıcaklığı kullanılmış (üretim ~%10–20 fazla); yerleşim yok. Hücre sıcaklığı pvlib ile; yerleşim Kutlu'dan; ArcGIS yerine açık kaynak Python.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">9</p>
+
+</section>
+<section id="zhong" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 8 / 11 · Teknik hat</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Zhong vd. (2021) — Nanjing</h2>
+<p style="font-size:24px;color:#55626B">Applied Energy 298, 117132 · Rolü: etiketleme stratejisi</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“A spatial optimization sampling strategy is developed… based on prior knowledge of urban and rural spatial layout and land use.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Yöntem: katmanlı örnekleme gerekçesi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the labor cost on preparing the dataset for training the rooftop extraction model has been reduced by about 80%…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Yöntem: etiketleme emeği tasarrufu</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…a small number of samples can be collected for training to obtain a model that can be applied to rooftop extraction over the whole city.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 16 → Öğrenme eğrisi: etiketlemeyi ne zaman bırakacağız</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“If 0.88 is used as the threshold of the accuracy rate, the model evaluation results under the non-strategic sampling method do not meet the standard in Gaochun, Lishui, and Luhe.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 15 → Katman bazında performans raporlama</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Katmanlar: sanayi, site, eski stok, kırsal × ihtiyaç tersili</li><li>Arazi örtüsü filtresi → ESA WorldCover</li><li>Öğrenme eğrisi (Şekil 15) + katman bazında skor</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Çatının %100'ü panelle kaplı (200 W/m²); ışınım ~%25 eksik; IoU yok, piksel doğruluğu var. Yerleşim kuralları uygulanacak; ışınım PVGIS'ten; IoU raporlanacak (yalnız F1 veren kaynaklar için IoU = F1 / (2 − F1)).</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">10</p>
+
+</section>
+<section id="unal" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 9 / 11 · Destekleyici</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Ünal (2026) — ODTÜ Enformatik</h2>
+<p style="font-size:24px;color:#55626B">Rooftop identification and classification… (teknik rapor) · Rolü: Türkiye görüntüsünde alan kayması riski</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…out of the 1420 polygons identified, 1008 (70.99%) were classified as ‘Bugs’, while 412 were recognized as real roofs.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 30 → Gerekçe: serbest segmentasyon yerine ayak izi istemi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…879 images were roads, roof components, parking lots, and densely vegetated areas. The remaining 129 boundaries were actually roofs…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 30 → 879/1420 ≈ %62 yanlış; 129/541 ≈ %24 gerçek çatı eleniyor</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“The main reason for these performance degradations was the use of satellite imagery instead of aerial imagery.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 30 → Sınırlılık: alan kayması (hava fotoğrafı → uydu)</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the resulting polygons are simplified using the Ramer-Douglas-Peucker algorithm.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 3 → Arayüz: Leaflet GeoJSON boyutu</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Çatı tipi sınıflandırıcı (düz / kırma / karmaşık / hata), EfficientNetB0</li><li>RDP poligon sadeleştirme</li><li>RID2 + Sofya veri setleri; solareka rakip araç</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">IoU 0,88 Almanya hava fotoğrafında (RID2, s. 3); Ankara'da çöküyor. Alan içi ve İzmir skorları ayrı raporlanacak; en az 50–100 İzmir çatısı elle etiketlenecek; RID2 yön etiketleri değerlendirilecek.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">11</p>
+
+</section>
+<section id="chen" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 10 / 11 · Destekleyici</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Chen vd. (2025) — Lanzhou</h2>
+<p style="font-size:24px;color:#55626B">Buildings 15, 2207 · Analysis of rooftop PV potential and electricity matching · Rolü: potansiyel–talep eşleştirmesi</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…the rooftop PV potential of the industrial buildings in the research area provided can cover 75.17% of the industrial electricity consumption.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Gösterge: üretim / tüketim oranı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“The annual solar PV potential of industrial and residential buildings reached 293.602 GWh and 223.198 GWh, respectively…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Örnek: yalnız verimliliğe bakan planlamanın tipik çıktısı</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“This paper employs the U2-Net (U Square Net), a lightweight and efficient deep learning model…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 4 → Deney: SAM'e karşı baseline</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“The actual size of the exported image was set to be 100 × 100 m…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 → MAUP yan analizi: 100 m grid</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Üretim/tüketim oranı → bizde mahalle bazında, aylık</li><li>Sanayi–konut ayrı raporlama</li><li>U²-Net baseline · 100 m grid ile MAUP</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Üretim = alan × tek GHI × verim (s. 10, PPV = APV × Sy × ηPV); eğim, yön, gölge, PR yok; eşleştirme yıllık. Bizde PVGIS + pvlib, PR dahil; eşleştirme en az aylık.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">12</p>
+
+</section>
+<section id="wang" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:72px 112px 128px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Kaynak 11 / 11 · Destekleyici</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:56px;font-weight:600;line-height:1.1">Wang (2024) — SolarSAM</h2>
+<p style="font-size:24px;color:#55626B">arXiv preprint (yayım durumu kontrol edilecek) · Rolü: alternatif SAM yaklaşımı</p>
+</div>
+<div style="display:flex;gap:40px">
+<div style="flex:1.5;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:28px;font-weight:600">Alınacak cümleler</h3>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“For the emerging cities, the lack of detailed street-level data presents a challenge for effectively assessing the potential of building-integrated photovoltaic (BIPV).”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Giriş: veri kıtlığında uydu + SAM gerekçesi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…SolarSAM segmented various building rooftops using text prompt guided semantic segmentation.”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 1 → Literatür: metin istemi ↔ bizim kutu istemi</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“…identifies optimal text prompts and hyperparameter settings for segmenting roofs of different building types…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 6 → Yöntem: istem ablasyonu + eşik taraması (ayrı test setiyle)</p></div>
+<div style="background:#FFFDF8;border-left:6px solid #A15C07;padding:12px 22px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;font-style:italic;line-height:1.35">“LCOE represents the average net present cost of electricity generation over the lifetime of the PV system…”</p><p style="font-size:24px;font-weight:600;color:#A15C07">s. 17 → Maliyet ekseni (Türkiye girdileriyle)</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#E6EDF3;border-left:6px solid #2B5C8A;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600;color:#2B5C8A">Kullanılacak yöntem</h3><ul style="font-size:24px;line-height:1.35"><li>Metin istemli sıfır-atış tespit → AOSİ'de mevcut GES'leri bulmak</li><li>İstem ablasyonu ve eşik taraması</li><li>LCOE çerçevesi</li></ul></div>
+<div style="background:#EFE6D6;border-left:6px solid #5B666D;padding:20px 24px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:28px;font-weight:600">Bizde düzeltme</h3><p style="font-size:24px;line-height:1.35">Ayrı test seti yok; K_mapping katsayıları (fabrika 0,8 · apartman 0,6, s. 16) kaynaksız. Bina tipi tablodan (OSB sınırı, OSM/kadastro), modelden değil; katsayı yalnız karşılaştırma; cephe PV kapsam dışı.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">13</p>
+
+</section>
+<section id="metrik" data-transition="fade" style="background:#1D2B33;color:#F5F2EA;font-family:'IBM Plex Sans', Arial, sans-serif;padding:80px 112px 128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:24px;font-weight:600;color:#E8A33D;letter-spacing:2px;text-transform:uppercase">Sentez · ortak metrik</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:60px;font-weight:600;line-height:1.1">Toplam çatı m² başına kurulu güç: 20 kat fark</h2>
+<p style="font-size:28px;color:#C9D3D6;width:1500px">“Kullanılabilir çatı” kaynaklarda aynı şeyi ölçmüyor; fark, tanıma hangi kısıtların girdiğinden geliyor.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;gap:24px;align-items:center"><p style="font-size:26px;width:380px">Pino-Gallardo (Valensiya)</p><div style="width:52px;height:48px;background:#E8A33D"></div><p style="font-size:26px;font-weight:600">9,4 W/m²</p><p style="font-size:24px;color:#C9D3D6">kuzey eleme, ışınım, yükseklik, alan, koridor filtreleri</p></div>
+<div style="display:flex;gap:24px;align-items:center"><p style="font-size:26px;width:380px">Ember (Türkiye)</p><div style="width:237px;height:48px;background:#7FA7C9"></div><p style="font-size:26px;font-weight:600">43 W/m²</p><p style="font-size:24px;color:#C9D3D6">kuzey dahil, kenar boşluğu ve gölge yok</p></div>
+<div style="display:flex;gap:24px;align-items:center"><p style="font-size:26px;width:380px">Wussow (ABD, %25)</p><div style="width:275px;height:48px;background:#7FA7C9"></div><p style="font-size:26px;font-weight:600">50 W/m²</p><p style="font-size:24px;color:#C9D3D6">sabit kullanım oranı × 200 W/m²</p></div>
+<div style="display:flex;gap:24px;align-items:center"><p style="font-size:26px;width:380px">Zhong (Nanjing)</p><div style="width:1000px;height:48px;background:#7FA7C9"></div><p style="font-size:26px;font-weight:600">200 W/m²</p></div>
+</div>
+<div style="background:#2A3B44;border-left:6px solid #E8A33D;padding:22px 28px">
+<p style="font-size:28px;line-height:1.4">Yerleşim kuralları (kenar boşluğu, sıra aralığı, gölge eşiği) eklendikçe oran <b>%12–29</b> bandına iniyor. AOSİ sonucumuzu bu tek metrikle tüm kaynaklara karşı vereceğiz; bandın yakınında çıkması hattın gerçekçi olduğunun kanıtı.</p>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#C9D3D6">Değerler kaynakların kendi raporladığıdır · Çubuklar ölçekli</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#C9D3D6">14</p>
+
+</section>
+<section id="celiski" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:80px 112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Sentez · çelişkiler</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:60px;font-weight:600;line-height:1.1">Kaynaklar çeliştiğinde kararımız</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="background:#FFFDF8;padding:24px 28px;border-top:6px solid #A15C07;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">Çatı tipi</h3><p style="font-size:24px;line-height:1.4">Ember: İzmir potansiyelinin ~%72'si düz çatıda. Kutlu: Ankara apartmanlarının çoğu eğimli (17 örneğin 12'si).</p><p style="font-size:24px;line-height:1.4;font-weight:600;color:#2B5C8A">Karar: Faz 2'den önce Çiğli'de örnek mahallede elle sayım.</p></div>
+<div style="background:#FFFDF8;padding:24px 28px;border-top:6px solid #A15C07;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">Kuzey cepheler</h3><p style="font-size:24px;line-height:1.4">Ember katsayıyla dahil ediyor; Valensiya 3° üstü kuzeyi eliyor.</p><p style="font-size:24px;line-height:1.4;font-weight:600;color:#2B5C8A">Karar: eliyoruz; Ember versiyonu yalnız karşılaştırma için.</p></div>
+<div style="background:#FFFDF8;padding:24px 28px;border-top:6px solid #A15C07;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">OSB fazlası</h3><p style="font-size:24px;line-height:1.4">Wussow: konut dışı çatı komşulara arz kaynağı. Ember: SKDM ihracatçıyı tesis içi tüketime itiyor.</p><p style="font-size:24px;line-height:1.4;font-weight:600;color:#2B5C8A">Karar: sektöre göre ayrım; SKDM kapsamındakilerde fazla = 0.</p></div>
+<div style="background:#FFFDF8;padding:24px 28px;border-top:6px solid #A15C07;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">GES ve enerji yoksulluğu</h3><p style="font-size:24px;line-height:1.4">Konzen ve Wussow: GES eşitlik aracı. Değirmenci &amp; Limanlı: Türkiye'de asıl sorun ısınma ve yalıtım.</p><p style="font-size:24px;line-height:1.4;font-weight:600;color:#2B5C8A">Karar: soğutma yoksulluğu çerçevesi + yalıtım sınırlılığı.</p></div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">15</p>
+
+</section>
+<section id="bolum" data-transition="fade" style="background:#EDE8DC;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:80px 112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Sentez · tez bölüm haritası</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:60px;font-weight:600;line-height:1.1">Hangi alıntı tezin hangi bölümüne gidiyor</h2>
+</div>
+<table style="font-size:24px;color:#1D2B33">
+<tr style="background:#1D2B33"><th style="width:20%;color:#F5F2EA;padding:12px 18px">Bölüm</th><th style="width:80%;color:#F5F2EA">Kullanılacak cümle / bulgu (kaynak, PDF sayfası)</th></tr>
+<tr style="background:#F5F2EA"><td><b>Giriş</b></td><td>%91 gelişmiş ülke (Konzen s. 4) · −38% / −67% (Wussow s. 1) · İzmir 9,3 GW, %76 (Ember s. 15, 19) · yerel haritalama gerekli (Değirmenci s. 12)</td></tr>
+<tr><td><b>Kuramsal çerçeve</b></td><td>Dağıtımsal / tanınma / usul adaleti (Konzen s. 2) · gelire indirgenemez (Değirmenci s. 11)</td></tr>
+<tr style="background:#F5F2EA"><td><b>Yöntem — teknik</b></td><td>Kutu istemi (Pino s. 4) · filtre kaskadı ve 3° (Pino s. 7) · paralaks, dikdörtgen, 3 m kat (Ni s. 6–7) · kenar boşluğu, 21 Aralık, %10 gölge (Kutlu s. 3) · katmanlı örnekleme (Zhong s. 1, 16)</td></tr>
+<tr><td><b>Yöntem — ihtiyaç</b></td><td>Alkire-Foster, gösterge katkısı (Değirmenci s. 1–2) · konut/yalıtım (s. 7) · %10/25/40 senaryo + aylık eşleştirme (Wussow s. 6)</td></tr>
+<tr style="background:#F5F2EA"><td><b>Doğrulama</b></td><td>6,3 m²/kW (Ember s. 36) · m²/kWp bandı 5,86–19,28 (Pino s. 13) · alan kayması (Ünal s. 30)</td></tr>
+<tr><td><b>Tartışma / sınırlılık</b></td><td>Regresif teşvik (Konzen s. 1) · Atlanta ekolojik yanılgı (Konzen s. 6) · %25,6 abartı (Ni s. 1) · uydu vs hava fotoğrafı (Ünal s. 30)</td></tr>
+</table>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Sayfa = PDF sayfası; APA atfında dergi sayfasına çevrilecek</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">16</p>
+
+</section>
+<section id="teyit" data-transition="fade" style="background:#F5F2EA;color:#1D2B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:80px 112px 128px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:24px;font-weight:600;color:#A15C07;letter-spacing:2px;text-transform:uppercase">Sonraki adım</p>
+<h2 style="font-family:'Source Serif 4', Georgia, serif;font-size:60px;font-weight:600;line-height:1.1">Alıntılamadan önce teyit edilecekler</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:30px;font-weight:600;color:#A15C07">PDF metninde birebir bulunamadı</h3>
+<div style="background:#FFFDF8;padding:16px 22px;border-left:6px solid #A15C07"><p style="font-size:24px;line-height:1.4"><b>Kutlu</b> — “eğimli çatı m² başına ~%40 fazla”: cümle yok; Tablo 7'den kendimiz hesaplayalım</p></div>
+<div style="background:#FFFDF8;padding:16px 22px;border-left:6px solid #A15C07"><p style="font-size:24px;line-height:1.4"><b>Ember</b> — %96 / %78 / %55 eğim-yön katsayıları: muhtemelen şekilde; sayfadan bak</p></div>
+<div style="background:#FFFDF8;padding:16px 22px;border-left:6px solid #A15C07"><p style="font-size:24px;line-height:1.4"><b>Wang</b> — “Grounding DINO + SAM” ve “IoU 0,29–0,36”: metinde yok, şemada CLIP encoder var; s. 6–8 elle oku</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:30px;font-weight:600;color:#2B5C8A">Bizim hesabımız — öyle yazılmalı</h3>
+<div style="background:#E6EDF3;padding:16px 22px;border-left:6px solid #2B5C8A"><p style="font-size:24px;line-height:1.4"><b>Ember</b> — İzmir %72 düz çatı = 6,7 / 9,3 GW</p></div>
+<div style="background:#E6EDF3;padding:16px 22px;border-left:6px solid #2B5C8A"><p style="font-size:24px;line-height:1.4"><b>Ünal</b> — %62 yanlış = 879/1420 · %24 elenen gerçek çatı = 129/541</p></div>
+<h3 style="font-size:30px;font-weight:600;color:#2B5C8A">Künye eksikleri</h3>
+<div style="background:#E6EDF3;padding:16px 22px;border-left:6px solid #2B5C8A"><p style="font-size:24px;line-height:1.4">Tamamlandı: Wussow ve Kutlu yazarları. Eksik: Ni ve Chen yazar listesi, Ünal rapor no, Wang yayım durumu</p></div>
+</div>
+</div>
+<p style="position:absolute;left:112px;bottom:56px;width:1300px;font-size:24px;color:#5B666D">Çatı GES · Kaynak kullanım planı</p>
+<p style="position:absolute;right:112px;bottom:56px;width:200px;text-align:right;font-size:24px;color:#5B666D">17</p>
+
+</section>
+
+</body></html>

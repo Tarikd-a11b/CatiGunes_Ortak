@@ -1,0 +1,167 @@
+﻿mahalle;ad;tur;grup;mulkiyet;mulkiyet_kanit;cati_m2;cati_ham_m2;tesis_m2;doluluk;bina_ic;kat;kaynak;isletmeci;isletmeci_tur;osm_tip;osm_id
+AHMET TANER KIŞLALI;Naime Tömek Lisesi;school;egitim;kamu;operator:type=government;1103.9;1103.9;7351.8;0.15;2;;poligon;Millî Eğitim Bakanlığı;government;way;659508981
+AHMET TANER KIŞLALI;Ali Şir Nevai Ortaokulu;school;egitim;kamu;isim~ortaokul;587.7;587.7;5951.9;0.099;3;;poligon;;;way;831738493
+AHMET TANER KIŞLALI;PTT;post_office;idari;kamu;operator=PTT;96.9;96.9;96.9;1.0;1;;nokta->bina;PTT;;node;11294849677
+ATATÜRK;(isimsiz);school;egitim;belirsiz;;1774.3;1774.3;8728.3;0.203;1;;poligon;;;way;375907016
+ATATÜRK;Atatürk Mh. Muhtarlığı;government;idari;belirsiz;;45.9;45.9;45.9;1.0;1;;nokta->bina;;;node;3794535912
+ATATÜRK;Toki İlköğretim Okulu;school;egitim;belirsiz;;;1774.3;1774.3;;1;4;poligon;;;way;375908072
+ATAŞEHİR;Çiğli Belediyesi Kapalı Spor Salonu;yes;diger;kamu;isim~belediye;8004.9;8004.9;5716.6;1.4;2;;poligon;;;way;256714142
+ATAŞEHİR;Özel Türk Anaokulu ve Koleji;school;egitim;ozel;isim~ozel;3957.0;3957.0;7693.2;0.514;1;;poligon;;;way;376864490
+ATAŞEHİR;Özel Acıbadem İzmir Kent Hastanesi;hospital;saglik;ozel;operator:type=private;3937.1;3937.1;3937.1;1.0;1;;poligon;Acıbadem;private;way;503410469
+ATAŞEHİR;İstasyonaltı Kapalı Pazar Yeri;marketplace;diger;kamu;isim~kapali pazar;3797.7;3797.7;3797.7;1.0;1;;poligon;;;way;501432953
+ATAŞEHİR;Çiğli 75. Yıl Mesleki ve Teknik Anadolu Lisesi;school;egitim;kamu;operator:type=public;3442.0;3442.0;15177.9;0.227;2;;poligon;Milli Eğitim Bakanlığı;public;way;377338834
+ATAŞEHİR;(isimsiz);sports_centre;spor;belirsiz;;2460.7;2460.7;15162.6;0.162;5;;poligon;;;way;376864439
+ATAŞEHİR;Mehmet Hikmet Kaşerci Ortaokulu;school;egitim;kamu;operator:type=public;1854.8;1854.8;8803.5;0.211;1;;poligon;Milli Eğitim Bakanlığı;public;way;377338832
+ATAŞEHİR;Özel Doğa Koleji;school;egitim;ozel;isim~ozel;1395.6;1395.6;2970.9;0.47;2;;poligon;;;way;379661444
+ATAŞEHİR;Çiğli Belediyesi Hizmet Binası;townhall;idari;kamu;isim~belediye;1227.8;1227.8;1227.8;1.0;1;;poligon;;;way;376295629
+ATAŞEHİR;İsmail Rahmi Karadavut İlkokulu;school;egitim;kamu;isim~ilkokul;1227.1;1227.1;6580.9;0.186;2;;poligon;;;way;376873364
+ATAŞEHİR;Çiğli Kaymakamlığı;yes;diger;belirsiz;;1103.1;1103.1;1103.1;1.0;1;;poligon;;;way;376295628
+ATAŞEHİR;Çiğli Belediyesi;townhall;idari;kamu;operator=Çiğli Belediyesi;1069.0;1069.0;1069.0;1.0;1;8;poligon;Çiğli Belediyesi;;way;377465495
+ATAŞEHİR;Çiĝli Gökkuşaĝı Koleji;school;egitim;ozel;isim~koleji;944.4;944.4;2842.3;0.332;1;;poligon;;;way;1355499809
+ATAŞEHİR;Ekol KBB Hastanesi;hospital;saglik;belirsiz;;919.7;919.7;919.7;1.0;1;;poligon;;;way;376864492
+ATAŞEHİR;Şehit Ali Karaoğlan Çok Programlı Anadolu Lisesi;school;egitim;kamu;operator:type=government;905.3;905.3;5166.1;0.175;3;;poligon;Millî Eğitim Bakanlığı;government;way;256716938
+ATAŞEHİR;VIP Fen Bilimleri;school;egitim;ozel;operator:type=private;900.1;900.1;900.1;1.0;1;;nokta->bina;;private;node;12612608537
+ATAŞEHİR;Çiğli Aydoğan Yağcı Bilim ve Sanat Merkezi;school;egitim;kamu;operator:type=government;809.0;809.0;809.0;1.0;1;;poligon;Millî Eğitim Bakanlığı;government;way;472473577
+ATAŞEHİR;Özel Can Hastanesi;hospital;saglik;ozel;isim~ozel;762.3;762.3;762.3;1.0;1;;poligon;;;way;472164635
+ATAŞEHİR;Çiğli Rotary Ticaret Meslek Lisesi;school;egitim;kamu;isim~meslek lisesi;747.9;747.9;4804.3;0.156;3;;poligon;;;way;256716935
+ATAŞEHİR;Çiğli Mehpare Yağcı Anadolu İmam Hatip Lisesi;school;egitim;kamu;operator:type=government;731.9;731.9;731.9;1.0;1;;poligon;Millî Eğitim Bakanlığı;government;way;472473578
+ATAŞEHİR;Kent Hastanesi;clinic;saglik;ozel;isim~kent hastane;548.0;548.0;548.0;1.0;1;;nokta->bina;;;node;4505868491
+ATAŞEHİR;DHL eCommerce;post_office;idari;belirsiz;;469.5;469.5;469.5;1.0;1;;nokta->bina;;;node;13049716343
+ATAŞEHİR;Çiğli PTT;post_office;idari;kamu;isim~ptt;394.0;394.0;394.0;1.0;1;;poligon;;;way;392528151
+ATAŞEHİR;Doğa Okulları Ataşehir Anaokulu;school;egitim;belirsiz;;289.3;289.3;289.3;1.0;1;;poligon;;;way;376870839
+ATAŞEHİR;Sürat Kargo;post_office;idari;belirsiz;;272.4;272.4;272.4;1.0;1;;nokta->bina;;;node;13049739645
+ATAŞEHİR;Kordon Kadın Doğum ve Çocuk Hastalıkları Hastanesi;hospital;saglik;belirsiz;;268.6;268.6;268.6;1.0;1;;poligon;;;way;376872080
+ATAŞEHİR;Ekol Göz Tıp Merkezi;hospital;saglik;ozel;isim~tip merkezi;225.0;225.0;225.0;1.0;1;;poligon;;;way;376865100
+ATAŞEHİR;Çiğli 11 Nolu Aile Sağlığı Merkezi;clinic;saglik;kamu;operator:type=government;208.4;208.4;208.4;1.0;1;;poligon;Sağlık Bakanlığı;government;way;376872928
+ATAŞEHİR;Uzman Diyetisyen Salih Buğra Ölmez;clinic;saglik;belirsiz;;180.2;180.2;180.2;1.0;1;;nokta->bina;;;node;13394768715
+ATAŞEHİR;Mavişehir Martı Anaokulu;kindergarten;egitim;belirsiz;;148.7;148.7;148.7;1.0;1;;poligon;;;way;878774465
+ATAŞEHİR;Çiğli Belediye Başkanlığı;townhall;idari;kamu;isim~belediye;;1069.0;1069.0;;1;;nokta->bina;;;node;3797370693
+ATAŞEHİR;Çiğli İtfaiye Grubu;fire_station;idari;kamu;isim~itfaiye;;;;;0;;nokta;;;node;3909732205
+ATAŞEHİR;Yurtiçi Kargo İmbat Şubesi;post_office;idari;belirsiz;;;;;;0;;nokta;Yurtiçi Kargo;;node;4083700936
+ATAŞEHİR;Teoti Anaokulu Çiğli Anaokulu;kindergarten;egitim;kamu;operator:type=public;;;;;0;;nokta;Teoti Anaokulu;public;node;9658210078
+ATAŞEHİR;Çiĝli Gökkuşaĝı Koleji;school;egitim;ozel;isim~koleji;;944.4;944.4;;1;;nokta->bina;;;node;11447354369
+ATAŞEHİR;(isimsiz);school;egitim;belirsiz;;;3256.2;3256.2;;1;0;poligon;;;way;377338835
+ATAŞEHİR;(isimsiz);school;egitim;belirsiz;;;185.8;185.8;;1;;poligon;;;way;377338836
+ATAŞEHİR;(isimsiz);school;egitim;belirsiz;;;1854.8;1854.8;;1;;poligon;;;way;377345326
+ATAŞEHİR;(isimsiz);school;egitim;belirsiz;;;710.7;710.7;;1;;poligon;;;way;472473744
+AYDINLIKEVLER;İzmir Kâtip Çelebi Üniversitesi Aydınlıkevler Yerleşkesi;university;egitim;kamu;isim~universitesi;2010.6;2010.6;6530.4;0.308;4;;poligon;;;way;376444055
+AYDINLIKEVLER;Öncü Koleji;school;egitim;ozel;isim~koleji;892.5;892.5;2383.6;0.374;2;;poligon;;;way;392528156
+AYDINLIKEVLER;(isimsiz);school;egitim;belirsiz;;728.6;728.6;4003.3;0.182;6;;poligon;;;way;559254683
+AYDINLIKEVLER;Era Koleji;school;egitim;ozel;isim~koleji;623.9;623.9;623.9;1.0;1;3;poligon;;;way;1120631622
+AYDINLIKEVLER;Çiğli Emniyet Müdürlüğü;police;idari;kamu;isim~emniyet;459.0;459.0;1689.5;0.272;1;;poligon;;;way;392528154
+AYDINLIKEVLER;(isimsiz);school;egitim;belirsiz;;383.4;383.4;383.4;1.0;1;;poligon;;;way;503435768
+AYDINLIKEVLER;Özel Nil Yaşlı Bakım ve Huzurevi;social_facility;sosyal-kultur;ozel;isim~ozel;369.5;369.5;369.5;1.0;1;;nokta->bina;;;node;13383491653
+AYDINLIKEVLER;(isimsiz);school;egitim;belirsiz;;;725.3;725.3;;1;;poligon;;;way;878811926
+BALATÇIK;Merkezi Kütüphane;library;sosyal-kultur;kamu;isim~kutuphane;34134.7;34134.7;34134.7;1.0;1;;nokta->bina;;;node;12459062728
+BALATÇIK;Diş Hekimliği Fakültesi;hospital;saglik;kamu;isim~fakultesi;5905.6;5905.6;5905.6;1.0;1;4;poligon;;;way;879136910
+BALATÇIK;Spor Kompleksi;sports_centre;spor;belirsiz;;5557.2;5557.2;5557.2;1.0;1;2;poligon;;;way;660991428
+BALATÇIK;Yemekhane;university;egitim;belirsiz;;3248.3;3248.3;3248.3;1.0;1;3;poligon;;;way;1369974840
+BALATÇIK;Kent Koleji;school;egitim;ozel;operator:type=private;2390.7;2390.7;5271.2;0.454;6;;poligon;;private;way;385151660
+BALATÇIK;Sınav Koleji;school;egitim;ozel;operator:type=private;1723.1;1723.1;4496.4;0.383;1;;poligon;;private;way;385151657
+BALATÇIK;(isimsiz);school;egitim;belirsiz;;1207.0;1207.0;1207.0;1.0;1;1;poligon;;;way;876233148
+BALATÇIK;Makine Mühendisliği Laboratuvarları;university;egitim;belirsiz;;1134.8;1134.8;1134.8;1.0;1;2;poligon;;;way;868505896
+BALATÇIK;15 Nolu Katip Çelebi Üniversitesi Balatçık Kampüsü Eğitim Aile Sağlığı Merkezi;clinic;saglik;kamu;operator:type=government;1053.5;1053.5;1053.5;1.0;1;1;poligon;Sağlık Bakanlığı;government;way;884318781
+BALATÇIK;Nazime-Sacide Akarcalı İlkokulu;school;egitim;kamu;operator:type=government;927.4;927.4;3802.0;0.244;1;;poligon;Millî Eğitim Bakanlığı;government;way;1429025579
+BALATÇIK;Rektörlük;university;egitim;belirsiz;;834.6;834.6;834.6;1.0;1;;poligon;;;way;420190311
+BALATÇIK;Çiğli İlçe Jandarma Komutanlığı;police;idari;belirsiz;;792.9;792.9;3823.7;0.207;2;;poligon;;;way;379475530
+BALATÇIK;Deneysel Hayvanlar Uygulama ve Araştırma Merkezi;university;egitim;belirsiz;;737.5;737.5;737.5;1.0;1;2;poligon;;;way;868505931
+BALATÇIK;Balatçık İlkokulu;school;egitim;kamu;operator:type=government;663.7;663.7;4339.8;0.153;3;;poligon;Millî Eğitim Bakanlığı;government;way;1391171219
+BALATÇIK;(isimsiz);school;egitim;belirsiz;;593.0;593.0;593.0;1.0;1;2;poligon;;;way;868505947
+BALATÇIK;Diş Hekimliği Fakültesi Hastanesi;hospital;saglik;kamu;operator:type=university;497.2;6402.8;35375.4;0.014;2;;poligon;İzmir Kâtip Çelebi Üniversitesi;university;way;1453738831
+BALATÇIK;Kent Kitaplığı;library;sosyal-kultur;kamu;operator:type=public;368.2;368.2;368.2;1.0;1;;nokta->bina;Çiğli Belediyesi;public;node;13136511862
+BALATÇIK;9 No.lu Balatçık Aile Sağlığı Merkezi;clinic;saglik;kamu;isim~aile sagligi;321.1;321.1;321.1;1.0;1;;poligon;;;way;384578758
+BALATÇIK;Balatçık Spor Kulübü;yes;diger;belirsiz;;34.1;34.1;34.1;1.0;1;;poligon;;;way;385151662
+BALATÇIK;Balatçık Mah. Muhtarlığı;yes;diger;belirsiz;;32.5;32.5;32.5;1.0;1;;poligon;;;way;381847416
+BALATÇIK;İlk Masalım;kindergarten;egitim;belirsiz;;;;;;0;;nokta;;;node;13758878577
+BALATÇIK;Mektebim Koleji Anadolu Lisesi;school;egitim;ozel;isim~koleji;;1723.1;1723.1;;1;;poligon;;;way;385151658
+BALATÇIK;(isimsiz);school;egitim;belirsiz;;;1340.6;1340.6;;1;;poligon;;;way;385151661
+BALATÇIK;Şehit Uğur Yıldız Ortaokulu;school;egitim;kamu;operator:type=government;;1207.0;6296.3;;1;;poligon;Millî Eğitim Bakanlığı;government;way;1356991930
+BALATÇIK;Çelebi Anaokulu ve Gündüz Bakımevi;kindergarten;egitim;kamu;operator:type=university;;593.0;1542.1;;1;;poligon;İzmir Katip Çelebi Üniversitesi;university;way;1380239468
+BALATÇIK;(isimsiz);sports_centre;spor;kamu;operator:type=university;;;6842.0;;0;;poligon;İzmir Kâtip Çelebi Üniversitesi;university;way;1427505688
+BALATÇIK;(isimsiz);school;egitim;belirsiz;;;927.4;927.4;;1;3;poligon;;;way;1429025585
+BALATÇIK;Balatçık Mahallesi Pazar Yeri;marketplace;diger;kamu;isim~pazaryeri;;;3978.7;;0;;poligon;;;way;1453070939
+CUMHURİYET;Harnandalı Cumhuriyet Mahallesi Muhtarlığı;townhall;idari;belirsiz;;99.2;99.2;99.2;1.0;1;1;poligon;;;way;497100765
+EGEKENT;PTT;post_office;idari;kamu;operator=PTT;3936.5;3936.5;3936.5;1.0;1;;nokta->bina;PTT;;node;2054666051
+EGEKENT;(isimsiz);school;egitim;belirsiz;;1261.5;1261.5;5629.2;0.224;1;;poligon;;;way;386078054
+EGEKENT;Ev;government;idari;belirsiz;;;;;;0;;nokta;;;node;4523947890
+EGEKENT;Egekent Pazaryeri;marketplace;diger;kamu;isim~pazaryeri;;;5185.1;;0;;poligon;;;way;376165957
+EGEKENT;(isimsiz);school;egitim;belirsiz;;;1261.5;1261.5;;1;;poligon;;;way;386078055
+EGEKENT;(isimsiz);sports_centre;spor;belirsiz;;;;76.9;;0;;poligon;;;way;387619929
+ESENTEPE;İMKB Anadolu Meslek Lisesi;school;egitim;kamu;operator:type=public;1790.7;1790.7;7756.1;0.231;1;;poligon;Milli Eğitim Bakanlığı;public;way;380650503
+ESENTEPE;Münevver Öğretmen Ortaokulu;school;egitim;kamu;operator:type=public;642.0;642.0;4069.0;0.158;2;;poligon;Milli Eğitim Bakanlığı;public;way;219083207
+ESENTEPE;(isimsiz);school;egitim;belirsiz;;;1790.7;1790.7;;1;;poligon;;;way;380650504
+ESENTEPE;(isimsiz);school;egitim;belirsiz;;;196.7;196.7;;1;;poligon;;;way;384583020
+ESENTEPE;(isimsiz);school;egitim;belirsiz;;;445.4;445.4;;1;;poligon;;;way;384583021
+EVKA-2;Çiğli Belediyesi Evka-2 Kapalı Pazaryeri;marketplace;diger;kamu;isim~belediye;3113.7;3113.7;3113.7;1.0;1;;poligon;;;way;880038947
+EVKA-2;(isimsiz);school;egitim;belirsiz;;974.3;974.3;974.3;1.0;1;5;poligon;;;way;661706992
+EVKA-2;(isimsiz);school;egitim;belirsiz;;819.5;819.5;819.5;1.0;1;6;poligon;;;way;661706991
+EVKA-2;Yuvamız İzmir;kindergarten;egitim;kamu;operator=İzmir Büyükşehir Belediyesi;545.0;545.0;545.0;1.0;1;;nokta->bina;İzmir Büyükşehir Belediyesi;;node;13473681649
+EVKA-2;Evka-2 Sosyal Destek Merkezi;community_centre;sosyal-kultur;belirsiz;;450.1;450.1;450.1;1.0;1;;nokta->bina;;;node;6196313765
+EVKA-2;Çiğli 1 Nolu Evka-2 Aile Sağlığı Merkezi;clinic;saglik;kamu;isim~aile sagligi;285.8;285.8;285.8;1.0;1;;nokta->bina;;;node;6196221054
+EVKA-2;Yunus Emre İlkokulu;school;egitim;kamu;isim~ilkokul;215.6;215.6;215.6;1.0;1;;nokta->bina;;;node;9004230020
+EVKA-2;(isimsiz);school;egitim;belirsiz;;211.2;211.2;211.2;1.0;1;5;poligon;;;way;661706993
+EVKA-2;İzmir Büyükşehir Belediyesi Meslek Fabrikası Evka-2 Kurs Merkezi;school;egitim;kamu;isim~belediye;;450.1;450.1;;1;;nokta->bina;;;node;12119758002
+EVKA-2;Tuğba Özbek Anadolu Lisesi;school;egitim;kamu;isim~anadolu lisesi;;2005.0;7681.3;;3;;poligon;;;way;1308690269
+EVKA-5;PTT;post_office;idari;kamu;operator=PTT;6348.1;6348.1;6348.1;1.0;1;;nokta->bina;PTT;;node;3885074835
+EVKA-5;Gülen KORA Ortaokulu;school;egitim;kamu;isim~ortaokul;1353.3;1353.3;6374.0;0.212;2;;poligon;;;way;117920883
+EVKA-5;Yıldız Tınas İzmiroğlu Anadolu Lisesi;school;egitim;kamu;isim~anadolu lisesi;811.6;811.6;2999.4;0.271;2;;poligon;;;way;377050075
+EVKA-5;(isimsiz);school;egitim;belirsiz;;594.8;594.8;1801.3;0.33;1;;poligon;;;way;377050074
+EVKA-5;(isimsiz);school;egitim;belirsiz;;539.7;539.7;2343.5;0.23;1;;poligon;;;way;376094744
+EVKA-5;Evka-5 Sağlık Ocağı;clinic;saglik;kamu;operator:type=government;231.6;231.6;231.6;1.0;1;;poligon;Sağlık Bakanlığı;government;way;376208257
+EVKA-5;Evka-5 Muhtarlığı;yes;diger;belirsiz;;29.0;29.0;29.0;1.0;1;;poligon;;;way;383543155
+EVKA-5;Gülen KORA İ.Ö.O. Spor Salonu;yes;diger;belirsiz;;;687.6;687.6;;1;;poligon;;;way;378222676
+EVKA-5;Gülen KORA Anaokulu;school;egitim;belirsiz;;;539.7;539.7;;1;;poligon;;;way;378222678
+EVKA-5;(isimsiz);school;egitim;belirsiz;;;168.8;168.8;;1;;poligon;;;way;501391713
+EVKA-5;(isimsiz);school;egitim;belirsiz;;;642.8;642.8;;1;;poligon;;;way;501391714
+EVKA-5;(isimsiz);school;egitim;belirsiz;;;594.8;594.8;;1;;poligon;;;way;501391715
+EVKA-5;(isimsiz);school;egitim;belirsiz;;;665.8;665.8;;1;;poligon;;;way;501391716
+EVKA-6;Evka 6 İlkokulu;school;egitim;kamu;isim~ilkokul;;;3282.2;;0;;poligon;;;way;318851649
+KÖYİÇİ;(isimsiz);school;egitim;belirsiz;;1692.0;1692.0;6739.0;0.251;2;;poligon;;;way;386075174
+KÖYİÇİ;T.C. Çiğli Kaymakamlığı;public;idari;belirsiz;;1262.9;1262.9;1262.9;1.0;1;7;poligon;;;way;449892314
+KÖYİÇİ;Büyük Çiğli İlköğretim Okulu;school;egitim;belirsiz;;686.2;686.2;5910.1;0.116;3;;poligon;;;way;388408572
+KÖYİÇİ;Yönelim Kilo Kontrol ve Aktif Yaşam Merkezi;clinic;saglik;belirsiz;;488.9;488.9;488.9;1.0;1;;nokta->bina;;;node;13926005921
+KÖYİÇİ;Büyük Çiğli Anadolu Lisesi;school;egitim;kamu;isim~anadolu lisesi;;868.9;868.9;;1;;poligon;;;way;386075181
+KÖYİÇİ;İzzet Gökçimen İlöğretim Okulu;school;egitim;belirsiz;;;823.1;823.1;;1;;poligon;;;way;386075184
+KÜÇÜK ÇİĞLİ;Özel Metropol Hastanesi;hospital;saglik;ozel;operator:type=private;1112.3;1112.3;1112.3;1.0;1;;poligon;Metropol Hastaneleri;private;way;884117284
+KÜÇÜK ÇİĞLİ;Özel Fen Bilimleri Okulları Anadolu Lisesi;school;egitim;ozel;isim~ozel;931.3;931.3;931.3;1.0;1;;nokta->bina;;;node;11878842311
+KÜÇÜK ÇİĞLİ;80. Yıl Küçük Çiğli İlkokulu;school;egitim;kamu;operator:type=government;814.8;814.8;3707.9;0.22;1;;poligon;Millî Eğitim Bakanlığı;government;way;380006489
+KÜÇÜK ÇİĞLİ;Küçük Çiğli Pazar Yeri;marketplace;diger;kamu;isim~pazaryeri;215.1;215.1;4818.3;0.045;1;;poligon;;;way;468491529
+KÜÇÜK ÇİĞLİ;(isimsiz);school;egitim;belirsiz;;;814.8;814.8;;1;;poligon;;;way;1433531004
+MALTEPE;Sezai Karakoç Anadolu Lisesi;school;egitim;kamu;operator:type=government;2029.7;2029.7;10304.3;0.197;1;;poligon;Millî Eğitim Bakanlığı;government;way;738502361
+MALTEPE;(isimsiz);school;egitim;kamu;operator:type=government;1407.8;1407.8;5309.4;0.265;2;;poligon;Millî Eğitim Bakanlığı;government;way;1446405940
+MALTEPE;Türkiye Eğitim Gönüllüleri Vakfı Çiğli Eğitim Parkı;school;egitim;belirsiz;;1315.1;1315.1;9191.8;0.143;3;;poligon;;;way;392528157
+MALTEPE;Başkent Üniversitesi Hemodiyaliz Polikliniği;hospital;saglik;kamu;isim~universitesi;863.5;863.5;863.5;1.0;1;;poligon;;;way;388420034
+MALTEPE;Maltepe İlköğretim Okulu;school;egitim;belirsiz;;673.9;673.9;3261.7;0.207;2;;poligon;;;way;392528158
+MALTEPE;(isimsiz);public;idari;belirsiz;;244.5;244.5;244.5;1.0;1;;poligon;;;way;468709201
+MALTEPE;Denge Koleji;school;egitim;ozel;isim~koleji;197.3;197.3;197.3;1.0;1;;nokta->bina;;;node;11601747467
+MALTEPE;Kırmızı Otobüs Anaokulu;kindergarten;egitim;belirsiz;;;;;;0;;nokta;;;node;13234909736
+MALTEPE;(isimsiz);school;egitim;belirsiz;;;364.6;364.6;;1;;poligon;;;way;503433894
+MALTEPE;(isimsiz);school;egitim;belirsiz;;;309.3;309.3;;1;;poligon;;;way;503433895
+MALTEPE;Necip Fazıl Kısakürek Anadolu Lisesi;school;egitim;kamu;isim~anadolu lisesi;;958.5;958.5;;1;;poligon;;;way;1446405941
+MALTEPE;Çiğli Teğmen Ali Rıza Akıncı Anadolu Lisesi;school;egitim;kamu;isim~anadolu lisesi;;449.2;449.2;;1;;poligon;;;way;1446405942
+SASALI MERKEZ;Çakabey Okulları;school;egitim;ozel;operator:type=private_for_profit;10285.9;10285.9;54815.6;0.188;17;;poligon;Çakabey Okulları;private_for_profit;way;156842271
+SASALI MERKEZ;Çiğli Fen Lisesi;school;egitim;kamu;isim~fen lisesi;2113.2;3327.4;21507.3;0.098;9;;poligon;;;way;1012979305
+SASALI MERKEZ;İzmir Anadolu Öğretmen Lisesi;school;egitim;belirsiz;;1248.2;1248.2;7922.4;0.158;1;;poligon;;;way;1147404424
+SASALI MERKEZ;Çiğli Fen Lisesi;school;egitim;kamu;isim~fen lisesi;1214.2;1214.2;1214.2;1.0;1;;poligon;;;way;878964928
+SASALI MERKEZ;Çakabey Anadolu Lisesi Binası;school;egitim;ozel;isim~cakabey;;1478.9;1478.9;;1;;poligon;;;way;503429091
+SASALI MERKEZ;Çakabey İlköğretim Binası;school;egitim;ozel;isim~cakabey;;1475.3;1475.3;;1;;poligon;;;way;503429099
+UĞUR MUMCU;Harmandalı Kapalı Pazar Alanı;marketplace;diger;kamu;isim~kapali pazar;6039.1;6039.1;6039.1;1.0;1;;poligon;;;way;586085348
+UĞUR MUMCU;Tüpraş Mahmut Esat Bozkurt İ.Ö.O.;school;egitim;kamu;isim~asm;1745.2;1745.2;5835.1;0.299;1;;poligon;;;way;377050077
+YENİ MAHALLE;(isimsiz);hospital;saglik;belirsiz;;18529.9;18529.9;18529.9;1.0;1;5;poligon;;;way;503350239
+YENİ MAHALLE;Selim Diniz İlkokulu-Ortaokulu;school;egitim;kamu;isim~ilkokul;2600.7;2600.7;9026.0;0.288;4;;poligon;;;way;376426804
+YENİ MAHALLE;Doğa Koleji;school;egitim;ozel;isim~koleji;1798.0;1798.0;6115.5;0.294;1;;poligon;;;way;468137728
+YENİ MAHALLE;Stad;sports_centre;spor;belirsiz;;1007.8;1007.8;9769.6;0.103;5;;poligon;;;way;376240234
+YENİ MAHALLE;Kalp İzmir Klinik;clinic;saglik;belirsiz;;897.7;897.7;897.7;1.0;1;;nokta->bina;;;node;10184453871
+YENİ MAHALLE;Çiğli 10 Nolu Aile Sağlığı Merkezi;clinic;saglik;kamu;isim~aile sagligi;71.4;71.4;71.4;1.0;1;;nokta->bina;;;node;3798579357
+YENİ MAHALLE;(isimsiz);arts_centre;sosyal-kultur;belirsiz;;;;;;0;;nokta;;;node;13273954484
+YENİ MAHALLE;(isimsiz);school;egitim;belirsiz;;;582.3;582.3;;1;;poligon;;;way;503433186
+ÇAĞDAŞ;(isimsiz);school;egitim;belirsiz;;1789.6;1789.6;11124.3;0.161;5;;poligon;;;way;93219910
+ÇAĞDAŞ;PTT;post_office;idari;kamu;operator=PTT;511.1;511.1;511.1;1.0;1;;nokta->bina;PTT;;node;3798568564
+ÇAĞDAŞ;6 Nolu Egekent Aile Sağlığı Merkezi;clinic;saglik;kamu;isim~aile sagligi;488.2;488.2;488.2;1.0;1;;nokta->bina;;;node;3798560655
+ÇAĞDAŞ;Çağdaş Mh. Muhtarlığı;government;idari;kamu;isim~asm;40.8;40.8;40.8;1.0;1;;nokta->bina;;;node;3798560654
+ÇAĞDAŞ;(isimsiz);school;egitim;belirsiz;;;243.2;243.2;;1;;poligon;;;way;503333927
+ÇAĞDAŞ;Cahide Ahmet Dalyanoğlu Ortaokulu;school;egitim;kamu;isim~ortaokul;;857.9;857.9;;1;;poligon;;;way;503333928
+ÇAĞDAŞ;Turan Çakın İlköğretim Okulu;school;egitim;belirsiz;;;350.5;350.5;;1;;poligon;;;way;503333929
+İZKENT;İzkent Mh. Muhtarlığı;government;idari;belirsiz;;;;;;0;;nokta;;;node;3796210253
+İZKENT;(isimsiz);school;egitim;belirsiz;;;;4109.0;;0;;poligon;;;way;387692304
+ŞİRİNTEPE;İzmir Büyükşehir Belediyesi Çiğli Kültür Merkezi;community_centre;sosyal-kultur;kamu;isim~belediye;638.4;638.4;638.4;1.0;1;;poligon;;;way;583329757

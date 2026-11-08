@@ -1,0 +1,275 @@
+# -*- coding: utf-8 -*-
+"""Toplantiya katilamayan ekip arkadasi icin calisma rehberi (2026-11-07).
+Sayilar Model_Verisi'nden okunur. Cikti: Desktop/CatiGunes_Calisma_Rehberi_2026-11-07.pdf
+  python rapor/rehber_2026-11-07/rehber_pdf.py"""
+import os
+import pandas as pd
+import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import cm
+from reportlab.lib import colors
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image, PageBreak, KeepTogether)
+
+BU = os.path.dirname(os.path.abspath(__file__))
+H = os.path.join(os.path.expanduser('~'), 'Desktop', 'CatiGunes_Model_Verisi')
+CIKTI = os.path.join(os.path.expanduser('~'), 'Desktop', 'CatiGunes_Calisma_Rehberi_2026-11-07.pdf')
+
+F = r'C:\Windows\Fonts'
+for ad, f in (('Ar', 'arial'), ('ArB', 'arialbd'), ('ArI', 'ariali'), ('ArBI', 'arialbi')):
+    pdfmetrics.registerFont(TTFont(ad, os.path.join(F, f + '.ttf')))
+pdfmetrics.registerFontFamily('Ar', normal='Ar', bold='ArB', italic='ArI', boldItalic='ArBI')
+
+# ---- veriler
+u = pd.read_csv(os.path.join(H, 'uretim', 'cati_uretim.csv'))
+n = pd.read_csv(os.path.join(H, 'ekonomi', 'cati_npv.csv'))
+k = pd.read_csv(os.path.join(H, 'uretim', 'ozgul_uretim_kontrol.csv'))
+va = pd.read_csv(os.path.join(H, 'ekonomi', 'npv_varsayimlar.csv'))
+mc = pd.read_csv(os.path.join(H, 'ekonomi', 'mc_ozet.csv')).iloc[0]
+m = pd.read_csv(os.path.join(H, 'master_veriseti.csv'))[['cati_id', 'lon', 'lat']]
+v = n.dropna(subset=['npv_TL'])
+tr = lambda x, d=0: f'{x:,.{d}f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
+
+# ---- sekil
+d = n.merge(m, on='cati_id')
+fig, ax = plt.subplots(1, 2, figsize=(9.5, 4.3), gridspec_kw={'width_ratios': [1, 1.15]})
+o = d[d.bolge == 'ataturk_osb']; y = o[o.npv_TL.isna()]; o = o.dropna(subset=['npv_TL'])
+ax[0].scatter(y.lon, y.lat, s=7, c='#bbbbbb', label='mevcut GES (üretim 0)')
+sc = ax[0].scatter(o.lon, o.lat, s=(o.kwp_merkez ** .5) * 1.1, c=o.npv_TL_kWp / 1000, cmap='RdYlGn', vmin=26, vmax=34,
+                   edgecolor='k', linewidth=.2)
+ax[0].set_title('Atatürk OSB: nokta = çatı, büyüklük ~ kWp', fontsize=9)
+ax[0].set_xticks([]); ax[0].set_yticks([]); ax[0].set_aspect(1.27); ax[0].legend(fontsize=7, loc='lower left')
+cb = fig.colorbar(sc, ax=ax[0], fraction=.06, pad=.02); cb.set_label('NPV / kWp (bin TL)', fontsize=8); cb.ax.tick_params(labelsize=7)
+for tur, c in [('sanayi', '#4c72b0'), ('okul', '#dd8452'), ('universite', '#55a868'), ('hastane', '#c44e52'), ('sanayi_disi', '#8172b3')]:
+    s = v[v.tur == tur]; ax[1].scatter(s.kwp_merkez, s.npv_TL / 1e6, s=7, c=c, label=tur)
+ax[1].set_xscale('log'); ax[1].set_yscale('log')
+ax[1].set_xlabel('kurulu güç (kWp, log)', fontsize=8); ax[1].set_ylabel('NPV (milyon TL, log)', fontsize=8)
+ax[1].set_title('Tüm çatılar: NPV kurulu güçle doğru orantılı', fontsize=9)
+ax[1].legend(fontsize=7); ax[1].tick_params(labelsize=7); ax[1].grid(alpha=.3, which='both')
+plt.tight_layout(); png = os.path.join(BU, 'harita_npv.png'); plt.savefig(png, dpi=200); plt.close()
+
+# ---- stiller
+S = lambda **kw: ParagraphStyle('x', **{'fontName': 'Ar', 'fontSize': 9.5, 'leading': 13.2, **kw})
+GOV, KUC = S(), S(fontSize=8, leading=10.5, textColor=colors.HexColor('#444444'))
+B1 = ParagraphStyle('b1', fontName='ArB', fontSize=14, leading=18, spaceBefore=10, spaceAfter=5, textColor=colors.HexColor('#1f4e79'))
+B2 = ParagraphStyle('b2', fontName='ArB', fontSize=11, leading=14, spaceBefore=8, spaceAfter=3, textColor=colors.HexColor('#1f4e79'))
+MAD = S(leftIndent=12, bulletIndent=2)
+KOD = ParagraphStyle('kod', fontName='Ar', fontSize=8.5, leading=10.5, backColor=colors.HexColor('#f2f2f2'),
+                     borderPadding=4, leftIndent=4, spaceBefore=3, spaceAfter=5)
+HUC, HUCB = S(fontSize=8, leading=10.2), ParagraphStyle('hb', fontName='ArB', fontSize=8, leading=10.2, textColor=colors.white)
+P = lambda t, s=GOV: Paragraph(t, s)
+M = lambda t: Paragraph(t, MAD, bulletText='•')
+
+
+def tablo(satirlar, gen, vurgu_son=False):
+    t = Table([[Paragraph(str(c), HUCB if i == 0 else HUC) for c in r] for i, r in enumerate(satirlar)], colWidths=gen, repeatRows=1)
+    st = [('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1f4e79')), ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+          ('GRID', (0, 0), (-1, -1), .3, colors.HexColor('#bbbbbb')),
+          ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f4f7fb')]),
+          ('TOPPADDING', (0, 0), (-1, -1), 2.5), ('BOTTOMPADDING', (0, 0), (-1, -1), 2.5)]
+    if vurgu_son: st.append(('BACKGROUND', (0, -1), (-1, -1), colors.HexColor('#dde8f3')))
+    t.setStyle(TableStyle(st)); return t
+
+
+def kutu(icerik, renk='#fff4e0', kenar='#e0a030'):
+    t = Table([[icerik]], colWidths=[16.6 * cm])
+    t.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, -1), colors.HexColor(renk)), ('BOX', (0, 0), (-1, -1), .6, colors.HexColor(kenar)),
+                           ('LEFTPADDING', (0, 0), (-1, -1), 7), ('RIGHTPADDING', (0, 0), (-1, -1), 7),
+                           ('TOPPADDING', (0, 0), (-1, -1), 5), ('BOTTOMPADDING', (0, 0), (-1, -1), 5)]))
+    return t
+
+
+osb, kam = v[v.bolge == 'ataturk_osb'], v[v.bolge == 'cigli_kamu']
+ok = k.set_index(['bolge', 'egim'])
+e = []
+# ================= 1. sayfa
+e += [P('Çatı GES Projesi — Çalışma Rehberi', ParagraphStyle('t', fontName='ArB', fontSize=19, leading=23, textColor=colors.HexColor('#1f4e79'))),
+      P('Üretim hesabı, NPV ve Colab sonuç defteri · 8 Kasım 2026 güncellemesi · toplantıya katılamayanlar için özet', KUC), Spacer(1, 8)]
+e.append(kutu(P(
+    '<b>Kısaca:</b> Veri aşaması 30 Ekim\'de kapanmıştı (1.085 çatı, 1,96 km² uygun alan). Bu hafta <b>üretim hesabı</b> ve '
+    '<b>NPV taban senaryosu</b> tamamlandı; sonuçlar çatı çatı CSV olarak hazır ve Colab\'de harita + tablo olarak görülebiliyor. '
+    f'Toplam: <b>{tr(v.kwp_merkez.sum() / 1000, 1)} MWp</b> kurulu güç, yılda <b>{tr(v.kwh_merkez.sum() / 1e6)} GWh</b> üretim, '
+    f'<b>{tr(v.yatirim_TL.sum() / 1e9, 2)} milyar TL</b> yatırım, <b>{tr(v.npv_TL.sum() / 1e9, 2)} milyar TL NPV</b>. '
+    f'Monte Carlo (10.000 tur): medyan <b>{tr(mc.toplam_p50, 2)}</b>, %80 aralık <b>{tr(mc.toplam_p10, 2)}–{tr(mc.toplam_p90, 2)} milyar TL</b>. '
+    '7 Kasım sürümündeki 5,73 milyar TL, OSB dağıtım bedeli düzeltmesinden önceki değerdir.', GOV), '#e8f1fa', '#1f4e79'))
+e += [P('Toplantıda alınan kararlar', B2),
+      M('<b>SAM ince ayarı (fine-tuning) yapılmayacak.</b> Toplam alanda SAM zaten insanla istatistiksel olarak aynı (oran 0,975; %95 GA 0,935–1,021); '
+        'ince ayar NPV\'yi anlamlı değiştirmez, veriyi dondurduktan sonra her şeyi yeniden koşturur. Raporda en fazla "gelecek çalışma".'),
+      M('<b>Ekip arkadaşımızın üretim defteri (tahmin_modeli.ipynb) temel alındı</b> ve 80 kamu çatısından tüm 1.085 çatıya genişletildi.'),
+      M('Ekonomi <b>reel</b> (sabit Nisan 2026 TL\'si) hesaplanıyor; enflasyon/kur tahmini gerekmiyor.'),
+      P('Genel akış', B1)]
+akis = [['Adım', 'Ne yapılıyor', 'Çıktı', 'Durum'],
+        ['1. Bina envanteri', 'OSM + Microsoft ayak izleri, kamu binaları (okul, hastane, İKÇÜ)', 'catilar.gpkg (1.085 çatı)', 'Tamam (30 Eki)'],
+        ['2. Çatı geometrisi', 'SAM (ayak izi kutu istemiyle, Colab) + ekip çizimleri (LabelMe); öncelik insan > SAM > ayak izi', 'cati_son katmanı', 'Tamam (30 Eki)'],
+        ['3. Uygun alan', 'Mevcut GES panelleri düşülür (tam dolu = 0, kısmi = panelsiz kısım)', 'uygun_alan_m2 (1,96 km²)', 'Tamam (30 Eki)'],
+        ['4. Üretim', 'Kenar boşluğu → engel payı → sıra gölgesi → kWp → PVGIS kWh/kWp', 'uretim/cati_uretim.csv', '<b>Tamam (7 Kas)</b>'],
+        ['5. Ekonomi', 'Yatırım, 25 yıllık tasarruf, NPV, IRR, geri ödeme, LCOE, 3 sıralama', 'ekonomi/cati_npv.csv', '<b>Tamam (7 Kas)</b>'],
+        ['6. Belirsizlik', 'Monte Carlo + tornado, sıralama kararlılığı (AS3)', 'ekonomi/mc_*.csv', '<b>Tamam (8 Kas)</b>'],
+        ['7. Sunum', 'REST API + web harita + LLM açıklaması', '—', 'Sonra']]
+e.append(tablo(akis, [2.6 * cm, 7.4 * cm, 4 * cm, 2.6 * cm]))
+e += [Spacer(1, 4), P('Tüm adımlar ham veriden tek komutla baştan üretilir: <font face="Courier">python scripts/kur.py</font> '
+                     '(Projeler\\CatiGunes). Üretim ve NPV de bu zincire eklendi; her kurulumda 34 veri kontrolü çalışır (son durum: 34 geçti, 0 hata).', GOV)]
+
+# ================= Colab
+e += [P('Sonuçları Colab\'de görmek', B1),
+      P('Hesaplar yerelde çalışıyor; Colab defteri yalnız <b>sonuçları gösterir</b> (yeniden hesaplamaz). Defter Bilal\'in Drive\'ında '
+        '(<i>Untitled19.ipynb</i>, paylaşılacak). Kendin açmak için:', GOV),
+      M('Colab\'de sol paneldeki <b>Dosyalar</b> (klasör simgesi) → yükle simgesi → şu iki dosyayı seç: '
+        '<font face="Courier">CatiGunes_Model_Verisi\\ekonomi\\cati_npv.csv</font> ve <font face="Courier">CatiGunes_Model_Verisi\\master_veriseti.csv</font>.'),
+      M('Hücreyi çalıştır (kod: <font face="Courier">Projeler\\CatiGunes\\scripts\\colab_sonuc_hucresi.py</font>). Oturum kapanınca yüklenen dosyalar silinir, tekrar yüklemek gerekir.'),
+      P('<b>Hücre ne gösteriyor:</b>', GOV),
+      M('<b>Özet satırı:</b> üretim yapan çatı sayısı, toplam MWp, GWh, yatırım, NPV.'),
+      M('<b>İlk 20 çatı tablosu.</b> Sıralamayı değiştirmek için <font face="Courier">SIRALA = \'sira_npv\'</font> yerine '
+        '<font face="Courier">\'sira_npv_kWp\'</font> ya da <font face="Courier">\'sira_uretim\'</font>.'),
+      M('<b>Tek çatı:</b> <font face="Courier">CATI = 701</font> yazınca o çatının tüm sütunları listelenir.'),
+      M('<b>Uydu haritası:</b> nokta büyüklüğü ~ kurulu güç, renk = kWp başına NPV (kırmızı düşük, yeşil yüksek), gri = mevcut GES ile dolu. '
+        'Noktaya tıklayınca alan, kWp, kWh, yatırım, NPV, IRR, geri ödeme ve sıralar açılır.')]
+
+# ================= Üretim
+e += [PageBreak(), P('Üretim hesabı nasıl yapıldı', B1),
+      P('Betik: <font face="Courier">scripts/uretim_hesabi.py</font>. Ekip arkadaşımızın defterindeki zincir aynen korundu; iki fark var: '
+        'alan olarak SAM maskesi yerine güncel <b>uygun_alan</b> (son çatı çizimi, mevcut GES düşülmüş) kullanıldı ve enerji için PVGIS\'in '
+        'hazır özgül üretim değeri alındı. Defterin kendi ışınım motoru çapraz kontrol olarak duruyor.', GOV),
+      P('Her çatı için:', GOV),
+      M('<b>Net alan</b> = uygun alan poligonu, kenar boşluğu kadar içeri daraltılır (kamu 1,2 m, sanayi 2,0 m).'),
+      M('<b>Modül alanı</b> = net alan × engel payı × sıra kaplama oranı ÷ cos(eğim). Kaplama oranı, 21 Aralık saat 10:00\'da sıraların '
+        f'birbirine gölge düşürmemesi için gereken aralıktan gelir: 10°\'de %{tr(ok.loc[("ataturk_osb", 10), "gcr"] * 100, 1)}, '
+        f'15°\'de %{tr(ok.loc[("ataturk_osb", 15), "gcr"] * 100, 1)}.'),
+      M('<b>Kurulu güç (kWp)</b> = modül alanı × 0,20 kWp/m² (200 W/m² modül).'),
+      M('<b>Yıllık üretim (kWh)</b> = kWp × PVGIS özgül üretim (OSB 10° güney: '
+        f'{tr(ok.loc[("ataturk_osb", 10), "pvgis_kWh_kWp"], 0)} kWh/kWp; Çiğli: {tr(ok.loc[("cigli_kamu", 10), "pvgis_kWh_kWp"], 0)}).'),
+      M('<b>Senaryolar:</b> eğim {10°, 15°} × engel payı {0,70, 0,80}. En düşüğü <i>alt</i>, en yükseği <i>üst</i>; '
+        '<b>merkez</b> = 10° + 0,75 (NPV bununla).'),
+      kutu(P('<b>kWp ile kWh farkı:</b> kWp panelin en iyi koşuldaki anlık gücü (kapasite), kWh bir yılda üretilen enerji. '
+             'İzmir\'de 1 kWp yılda ~1.477 kWh üretir; yani panel yılda 1.477 saat (günde ~4 saat) tam güçte çalışmış gibidir. '
+             'Gece, alçak güneş, bulut, ısınma ve kablo/evirici kayıpları bu yüzden "24 saat" değil "4 saat" eder.', GOV)),
+      P('Işınım verisi (PVGIS 5.3)', B2),
+      tablo([['Veri', 'Zaman çözünürlüğü', 'Dönem', 'Kullanım'],
+             ['Özgül üretim (PVcalc)', 'yıllık + aylık ortalama, yıllar arası sapma', '2005–2023 (19 yıl)', 'Üretim hesabı (asıl girdi)'],
+             ['Saatlik üretim serisi', 'saatlik, 35.064 saat, eksiksiz', '2020–2023', 'Yedekte (saatlik tarife/öz tüketim için)'],
+             ['Tipik yıl (TMY)', 'saatlik, 8.760 saat', '2005–2023\'ten seçilmiş aylar', 'Defter motoru (çapraz kontrol)'],
+             ['Aylık ışınım', 'aylık, 228 ay', '2005–2023', 'Rapor tabloları']],
+            [3.8 * cm, 4.6 * cm, 3.6 * cm, 4.6 * cm]),
+      Spacer(1, 3),
+      P('Kaynak uydu verisi SARAH3 (Meteosat, 15–30 dk\'da bir görüntü → PVGIS saatlik yapar), çözünürlük ~5 km × 5 km; OSB tek hücreye düştüğü için '
+        'tüm OSB çatıları aynı kWh/kWp\'yi alır. Sıcaklık/rüzgâr ERA5. Uzak ufuk (dağ) gölgesi dahil, binaların birbirine gölgesi hariç. '
+        'Ham dosyalar <font face="Courier">CatiGunes/veri/ham/pvgis/</font> (14–16 Eki; 15° senaryosu 7 Kas).', GOV),
+      P(f'<b>Çapraz kontrol:</b> defterin kendi ışınım motoru aynı tipik yılla PVGIS\'ten %{tr(-k.fark_yuzde.max(), 1)}–{tr(-k.fark_yuzde.min(), 1)} '
+        'düşük çıktı; iki bağımsız yöntem uyumlu. Yıllar arası sapma ±~30 kWh/kWp (±%2).', GOV)]
+uz = pd.read_csv(os.path.join(H, 'uretim', 'uretim_ozet.csv'))
+uz['tur'] = uz['tur'].fillna('')
+sat = [['Bölge / tür', 'Çatı', 'Net alan (m²)', 'kWp merkez', 'GWh/yıl merkez', 'GWh/yıl bant']]
+for r in uz.itertuples():
+    sat.append([('TOPLAM' if r.bolge == 'TOPLAM' else f'{r.bolge} / {r.tur}'), tr(r.cati), tr(r.net_alan_m2), tr(r.kwp_merkez),
+                tr(r.MWh_merkez / 1000, 1), f'{tr(r.MWh_alt / 1000, 1)}–{tr(r.MWh_ust / 1000, 1)}'])
+e += [P('Üretim sonuçları', B2), tablo(sat, [4.6 * cm, 1.6 * cm, 2.8 * cm, 2.4 * cm, 2.6 * cm, 2.6 * cm], vurgu_son=True),
+      Spacer(1, 3),
+      P('<b>Bant neden geniş (~%25):</b> engel payı 0,70↔0,80 (~%14) ve eğim 10°↔15° (~%12) birlikte değişiyor. Eğim aslında belirsizlik değil '
+        'tasarım kararı; önerimiz eğimi 10°\'de sabitleyip bandı yalnız engel payından üretmek (≈ ±%7). Ekip kararı bekliyor.', GOV)]
+
+# ================= NPV
+e += [PageBreak(), P('Ekonomi (NPV) nasıl hesaplandı', B1),
+      P('Betik: <font face="Courier">scripts/npv_hesabi.py</font>. Ara rapordaki formül (4.7):', GOV),
+      P('NPV = − Yatırım + Σ<sub>t=1..25</sub> [ kWh × (1 − bozunma)<sup>t−1</sup> × tarife − O&amp;M − evirici(t=13) ] ÷ (1 + r)<sup>t</sup>', KOD),
+      M('<b>%100 öz tüketim:</b> üretilen elektriğin tamamı binanın kendi tüketimini karşılıyor; kazanç = şebekeden alınmayan elektriğin bedeli '
+        '(EPDK enerji + dağıtım, vergi hariç).'),
+      M('<b>Yasal kurulum sınırı uygulanmadı</b> (sözleşme gücü verisi yok; tüketim kapsamdan çıkarılmıştı).'),
+      M('<b>Kaçınılan bedel:</b> OSB çatılarında EPDK enerji bedeli + Atatürk OSB dağıtım bedeli (EPDK 14049-111): sanayi 3,35, sanayi dışı 3,70 TL/kWh. OSB dışındaki Çiğli kamu binaları OG çift terim Kamu ve Özel Hizmetler 4,93 TL/kWh.'),
+      P('Varsayımlar (taban + Monte Carlo aralığı)', B2)]
+ad = {'kur_TL_USD': 'Dolar kuru', 'capex_kucuk_USD': 'Yatırım <100 kWp', 'capex_orta_USD': 'Yatırım 100–1.000 kWp',
+      'capex_buyuk_USD': 'Yatırım ≥1.000 kWp', 'om_orani': 'İşletme-bakım (O&amp;M)', 'evirici_orani': 'Evirici yenileme',
+      'evirici_yili': 'Evirici yenileme yılı', 'bozunma': 'Panel verim kaybı', 'omur': 'Sistem ömrü', 'iskonto_reel': 'Reel iskonto',
+      'fiyat_artisi_reel': 'Reel tarife artışı', 'tarife_sanayi_kr': 'Tarife OSB sanayi', 'tarife_osb_diger_kr': 'Tarife OSB sanayi dışı', 'tarife_kamu_kr': 'Tarife Çiğli kamu'}
+kay = {'kur_TL_USD': 'TCMB, 06.11.2026 döviz satış', 'capex_kucuk_USD': 'TR kurulumcu siteleri 2026 (gösterge)',
+       'capex_orta_USD': 'TR kurulumcu siteleri 2026 (gösterge)', 'capex_buyuk_USD': 'TR kurulumcu siteleri; IRENA 2024 dünya ort. 691 $/kW',
+       'om_orani': 'literatür tipik %1–2 (varsayım)', 'evirici_orani': 'varsayım', 'evirici_yili': 'evirici ömrü 10–15 yıl (varsayım)',
+       'bozunma': 'modül garantisi (varsayım)', 'omur': 'modül güç garantisi', 'iskonto_reel': 'varsayım (TR ülke riski)',
+       'fiyat_artisi_reel': 'varsayım', 'tarife_sanayi_kr': 'EPDK 04.04.2026 + 14049-111', 'tarife_osb_diger_kr': 'EPDK 04.04.2026 + 14049-111', 'tarife_kamu_kr': 'EPDK 04.04.2026'}
+
+
+def bic(r):
+    p = r.parametre; f = lambda x: tr(x * 100, 1) if p in ('om_orani', 'evirici_orani', 'bozunma', 'iskonto_reel', 'fiyat_artisi_reel') else tr(x, 2 if p == 'kur_TL_USD' else 0)
+    bir = {'kur_TL_USD': ' TL/$', 'om_orani': ' %/yıl', 'evirici_orani': ' % yatırım', 'bozunma': ' %/yıl', 'iskonto_reel': ' %',
+           'fiyat_artisi_reel': ' %/yıl', 'evirici_yili': ' yıl', 'omur': ' yıl', 'tarife_sanayi_kr': ' kr/kWh', 'tarife_osb_diger_kr': ' kr/kWh', 'tarife_kamu_kr': ' kr/kWh'}.get(p, ' $/kWp')
+    return [ad[p], f(r.taban) + bir, f'{f(r.mc_alt)} – {f(r.mc_ust)}', kay[p]]
+
+
+e.append(tablo([['Parametre', 'Taban', 'MC aralığı', 'Kaynak']] + [bic(r) for r in va.itertuples()],
+               [4.2 * cm, 3.1 * cm, 3.1 * cm, 6.2 * cm]))
+nz = pd.read_csv(os.path.join(H, 'ekonomi', 'npv_ozet.csv')); nz['tur'] = nz['tur'].fillna('')
+sat = [['Bölge / tür', 'Çatı', 'MWp', 'Yatırım (M TL)', 'İlk yıl tasarruf (M TL)', 'NPV (M TL)', 'Medyan IRR', 'Geri ödeme']]
+for r in nz.itertuples():
+    sat.append([('TOPLAM' if r.bolge == 'TOPLAM' else f'{r.bolge} / {r.tur}'), tr(r.cati), tr(r.MWp, 1), tr(r.yatirim_milyon_TL),
+                tr(r.ilk_yil_tasarruf_milyon_TL), tr(r.npv_milyon_TL), '%' + tr(r.irr_medyan * 100, 1), f'{tr(r.geri_odeme_medyan)} yıl'])
+e += [P('NPV sonuçları', B2), tablo(sat, [3.9 * cm, 1.2 * cm, 1.4 * cm, 2 * cm, 2.4 * cm, 2 * cm, 1.8 * cm, 1.9 * cm], vurgu_son=True),
+      Spacer(1, 3),
+      P(f'Bu varsayımlarla <b>tüm {tr(len(v))} çatıda NPV pozitif</b>: güneşten üretimin maliyeti (LCOE medyan ~{tr(v.lcoe_TL_kWh.median(), 2)} TL/kWh) '
+        'şebekeden alınan elektriğin kaçınılan bedelinin (3,35–4,93 TL/kWh) altında. Medyan geri ödeme kamuda 4, sanayide 7 yıl; kurulumcuların "4–5 yıl" iddiası sanayi için iyimser.', GOV)]
+
+# ================= Şekil + sıralama + sözlük
+e += [PageBreak(), P('Çatılar haritada ve sıralama (AS3 ön bulgusu)', B1), Image(png, width=17 * cm, height=17 * cm * 4.3 / 9.5),
+      P('Soldaki haritada renk kademeleri yatırım maliyeti kademelerinden geliyor (<100 kWp küçük çatılar kırmızı, ≥1.000 kWp büyükler koyu yeşil). '
+        'Sağda kamu binaları sanayinin üstünde: aynı kWp için daha yüksek tarife = daha yüksek NPV.', KUC),
+      Spacer(1, 4),
+      tablo([['Sıralama', 'Neye göre', 'Üretim sırasıyla benzerlik'],
+             ['sira_uretim', 'yıllık kWh', '—'],
+             ['sira_npv', 'toplam NPV (TL)', 'Spearman 0,989; ilk 50\'nin 43\'ü ortak → neredeyse aynı (NPV çatı büyüklüğüyle orantılı)'],
+             ['sira_npv_kWp', 'kWp başına NPV', 'Spearman 0,637 → ayrışıyor (kamu tarifesi + yatırım kademesi)']],
+            [3 * cm, 3.4 * cm, 10.2 * cm]),
+      Spacer(1, 3),
+      P('<b>Anlamı:</b> toplam NPV\'ye göre sıralamak üretime göre sıralamaktan pek farklı değil; ekonomik bakış ancak <i>birim getiri</i> ölçütünde '
+        'farklı sonuç veriyor. Raporda hangi ölçütle sıralayacağımızı netleştirmeliyiz.', GOV),
+      P('cati_npv.csv sütun sözlüğü', B2),
+      tablo([['Sütun', 'Anlamı'],
+             ['kwp_merkez, kwh_merkez', 'merkez senaryo kurulu güç (kWp) ve yıllık üretim (kWh)'],
+             ['kwh_alt / kwh_ust', 'üretim bandının uçları (eğim × engel payı senaryoları)'],
+             ['abone_grubu, tarife_kr_kWh', 'EPDK abone grubu ve kullanılan birim fiyat (kuruş/kWh)'],
+             ['capex_USD_kWp, yatirim_TL', 'kademeye göre birim yatırım ($/kWp) ve toplam yatırım (TL)'],
+             ['ilk_yil_tasarruf_TL', 'ilk yıl şebekeden alınmayan elektriğin bedeli'],
+             ['npv_TL (+ _uretim_alt/_ust)', '25 yılın bugünkü net kazancı; parantezdekiler üretim bandıyla'],
+             ['npv_TL_kWp', 'kWp başına NPV (çatıları adil kıyas)'],
+             ['irr_reel, geri_odeme_yil, lcoe_TL_kWh', 'reel iç verim oranı, iskontosuz geri ödeme yılı, birim üretim maliyeti'],
+             ['sira_npv, sira_npv_kWp, sira_uretim', '1 = en iyi; üretim yapmayan (tam GES) çatılarda boş']],
+            [5.4 * cm, 11.2 * cm])]
+
+# ================= Dosyalar + açıklar
+e += [PageBreak(), P('Dosyalar nerede', B1),
+      tablo([['Yer', 'İçerik'],
+             ['Desktop\\CatiGunes_Model_Verisi\\', 'Ana veri: master_veriseti.csv (çatı başına tek satır), catilar.gpkg, BENIOKU.md (her şeyin açıklaması)'],
+             ['  …\\uretim\\', 'cati_uretim.csv, uretim_ozet.csv, ozgul_uretim_kontrol.csv, PVGIS yıllık/aylık/saatlik'],
+             ['  …\\ekonomi\\', 'cati_npv.csv, npv_ozet.csv, npv_varsayimlar.csv, mc_*.csv (Monte Carlo sonuçları, tornado, kararlılık)'],
+             ['  …\\tarife\\', 'EPDK 04.04.2026 tarife tablosu (orijinal + düz)'],
+             ['Desktop\\CatiGunes_Kamu_Binalari\\', 'Yalnız 80 kamu çatısı (üretim + ekonomi dahil)'],
+             ['Desktop\\Projeler\\CatiGunes\\scripts\\', 'Tüm kod: kur.py (zincir), uretim_hesabi.py, npv_hesabi.py, colab_sonuc_hucresi.py …'],
+             ['Desktop\\Projeler\\CatiGunes\\veri\\ham\\', 'İndirilen ham veri (PVGIS, OSM, görüntü, SAM sonuçları)']],
+            [5.8 * cm, 10.8 * cm]),
+      P('Açık konular — ekip kararı gerekiyor', B1),
+      tablo([['#', 'Konu', 'Neden önemli / öneri'],
+             ['1', 'Yatırım maliyeti kaynağı', 'Şu an kurulumcu siteleri (400–850 $/kWp, tutarsız). Raporda "gösterge" denmeli; mümkünse IRENA ülke tablosu / sektör raporu.'],
+             ['2', 'Kenar boşluğu, engel payı, PR kaynağı', 'Ni vd. 2024 engeli (%14,9) ve kenarı ayrı düşüyor; çift düşüm kanıtı yok. Engel Monte Carlo\'da 0,70–0,85.'],
+             ['3', 'Eğim belirsizliği', 'Monte Carlo\'da 10° sabit alındı; 15° ayrı senaryo.'],
+             ['4', 'İKÇÜ kapsamı', 'Kamu üretiminin %64\'ü İKÇÜ (29 çatı). Hoca "yalnız okul + hastane" demişti → sorulmalı; kamu sonucu İKÇÜ\'lü/İKÇÜ\'süz verilebilir.'],
+             ['5', '%100 öz tüketim + yasal sınır yok', 'Öz tüketim Monte Carlo girdisi oldu (0,714–1,00). Yasal sınır yok; raporda sınırlılık olarak yazıldı.'],
+             ['6', 'Çatı tipi', 'Yön/montaj çarpanı Monte Carlo girdisi oldu (0,92–1,00).'],
+             ['7', 'Yatırım kademesi', '100 / 1.000 kWp eşiklerinde NPV sıçrıyor; sürekli bir maliyet eğrisi daha düzgün olur.'],
+             ['8', 'Atatürk OSB dağıtım tarifesi', 'Çözüldü: EPDK 14049-111 kararındaki OSB bedeli kullanıldı; NPV 5,73\'ten 4,17 milyar TL\'ye indi.']],
+            [0.6 * cm, 4.4 * cm, 11.6 * cm]),
+      P('Sırada ne var', B1),
+      M(f'<b>Monte Carlo tamamlandı</b> (<font face="Courier">scripts/monte_carlo.py</font>): toplam NPV medyanı {tr(mc.toplam_p50, 2)}, P10–P90 {tr(mc.toplam_p10, 2)}–{tr(mc.toplam_p90, 2)} milyar TL; P(NPV&gt;0) %{tr(mc.p_toplam_poz * 100, 1)}. '
+        'En etkili girdiler iskonto, birim maliyet, tarife, fiyat artışı ve öz tüketim. Sonuçların Yiğit\'le gözden geçirilmesi gerekiyor.'),
+      M('Ara rapor teslimi <b>13 Kasım</b>: sonuçlar karşılaştırma dosyasına işlendi (Bitirme_Ara_Rapor_Karsilastirma.docx).'),
+      Spacer(1, 6),
+      P('Bu rehberdeki tüm sayılar CatiGunes_Model_Verisi\'nden otomatik okunur (üretici: Projeler\\CatiGunes\\rapor\\rehber_2026-11-07\\rehber_pdf.py).', KUC)]
+
+
+def alt(c, doc):
+    c.saveState(); c.setFont('Ar', 7.5); c.setFillColor(colors.HexColor('#777777'))
+    c.drawString(2 * cm, 1.2 * cm, 'Çatı GES Uygunluk ve Önceliklendirme — çalışma rehberi, 8 Kasım 2026')
+    c.drawRightString(A4[0] - 2 * cm, 1.2 * cm, 'sayfa %d' % doc.page); c.restoreState()
+
+
+SimpleDocTemplate(CIKTI, pagesize=A4, leftMargin=2.2 * cm, rightMargin=2.2 * cm, topMargin=1.8 * cm, bottomMargin=1.8 * cm,
+                  title='Çatı GES — Çalışma Rehberi', author='Çatı GES ekibi').build(e, onFirstPage=alt, onLaterPages=alt)
+print(CIKTI)

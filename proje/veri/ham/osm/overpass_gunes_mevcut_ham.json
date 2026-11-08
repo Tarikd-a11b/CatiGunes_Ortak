@@ -1,0 +1,518 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-15T04:45:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 400988892,
+  "bounds": {
+    "minlat": 38.4761263,
+    "minlon": 27.0423358,
+    "maxlat": 38.4770464,
+    "maxlon": 27.0428511
+  },
+  "geometry": [
+    { "lat": 38.4770404, "lon": 27.0423358 },
+    { "lat": 38.4761263, "lon": 27.0423538 },
+    { "lat": 38.4761323, "lon": 27.0428511 },
+    { "lat": 38.4770464, "lon": 27.0428331 },
+    { "lat": 38.4770404, "lon": 27.0423358 }
+  ],
+  "tags": {
+    "addr:city": "Çiğli/İzmir",
+    "location": "roof",
+    "name": "Tariş GES",
+    "operator": "Tariş",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "0.7 MW",
+    "plant:source": "solar",
+    "plant:type": "solar_photovoltaic_panel",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 402393601,
+  "bounds": {
+    "minlat": 38.5042662,
+    "minlon": 27.1130359,
+    "maxlat": 38.5104062,
+    "maxlon": 27.1167950
+  },
+  "geometry": [
+    { "lat": 38.5088097, "lon": 27.1150562 },
+    { "lat": 38.5085078, "lon": 27.1145928 },
+    { "lat": 38.5080988, "lon": 27.1143268 },
+    { "lat": 38.5079126, "lon": 27.1149034 },
+    { "lat": 38.5074491, "lon": 27.1157313 },
+    { "lat": 38.5071512, "lon": 27.1156467 },
+    { "lat": 38.5067302, "lon": 27.1156165 },
+    { "lat": 38.5058979, "lon": 27.1161000 },
+    { "lat": 38.5056803, "lon": 27.1167950 },
+    { "lat": 38.5052688, "lon": 27.1166802 },
+    { "lat": 38.5047959, "lon": 27.1154654 },
+    { "lat": 38.5045310, "lon": 27.1144591 },
+    { "lat": 38.5042662, "lon": 27.1134529 },
+    { "lat": 38.5052216, "lon": 27.1130359 },
+    { "lat": 38.5064796, "lon": 27.1130721 },
+    { "lat": 38.5079051, "lon": 27.1135785 },
+    { "lat": 38.5083572, "lon": 27.1138188 },
+    { "lat": 38.5084852, "lon": 27.1135846 },
+    { "lat": 38.5089926, "lon": 27.1134769 },
+    { "lat": 38.5091559, "lon": 27.1134561 },
+    { "lat": 38.5098746, "lon": 27.1136496 },
+    { "lat": 38.5103772, "lon": 27.1142878 },
+    { "lat": 38.5104062, "lon": 27.1145283 },
+    { "lat": 38.5099245, "lon": 27.1155304 },
+    { "lat": 38.5093414, "lon": 27.1155288 },
+    { "lat": 38.5088097, "lon": 27.1150562 }
+  ],
+  "tags": {
+    "addr:city": "Karşıyaka/İzmir",
+    "name": "Karşıyaka Belediyesi Güneş Tarlası",
+    "operator": "Karşıyaka Belediyesi",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "0.49 MW",
+    "plant:source": "solar",
+    "plant:type": "solar_photovoltaic_panel",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 785344480,
+  "bounds": {
+    "minlat": 38.5840724,
+    "minlon": 27.1604335,
+    "maxlat": 38.5875558,
+    "maxlon": 27.1651044
+  },
+  "geometry": [
+    { "lat": 38.5857210, "lon": 27.1606480 },
+    { "lat": 38.5857396, "lon": 27.1616131 },
+    { "lat": 38.5860470, "lon": 27.1619349 },
+    { "lat": 38.5862332, "lon": 27.1628047 },
+    { "lat": 38.5862053, "lon": 27.1636507 },
+    { "lat": 38.5869038, "lon": 27.1637460 },
+    { "lat": 38.5872019, "lon": 27.1636149 },
+    { "lat": 38.5873882, "lon": 27.1639009 },
+    { "lat": 38.5875558, "lon": 27.1646278 },
+    { "lat": 38.5863823, "lon": 27.1649376 },
+    { "lat": 38.5854415, "lon": 27.1651044 },
+    { "lat": 38.5846126, "lon": 27.1648422 },
+    { "lat": 38.5845194, "lon": 27.1641869 },
+    { "lat": 38.5846871, "lon": 27.1637460 },
+    { "lat": 38.5853950, "lon": 27.1633290 },
+    { "lat": 38.5857862, "lon": 27.1629953 },
+    { "lat": 38.5855347, "lon": 27.1627928 },
+    { "lat": 38.5851249, "lon": 27.1627928 },
+    { "lat": 38.5845940, "lon": 27.1630668 },
+    { "lat": 38.5840817, "lon": 27.1630668 },
+    { "lat": 38.5840724, "lon": 27.1614582 },
+    { "lat": 38.5848827, "lon": 27.1613153 },
+    { "lat": 38.5853018, "lon": 27.1604335 },
+    { "lat": 38.5857210, "lon": 27.1606480 }
+  ],
+  "tags": {
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "name": "Emiralem Güneş Enerji Santrali",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 880646192,
+  "bounds": {
+    "minlat": 38.5165611,
+    "minlon": 27.0301890,
+    "maxlat": 38.5167257,
+    "maxlon": 27.0306443
+  },
+  "geometry": [
+    { "lat": 38.5166463, "lon": 27.0301890 },
+    { "lat": 38.5167257, "lon": 27.0306186 },
+    { "lat": 38.5166405, "lon": 27.0306443 },
+    { "lat": 38.5165611, "lon": 27.0302148 },
+    { "lat": 38.5166463, "lon": 27.0301890 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "50 kW",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 880646193,
+  "bounds": {
+    "minlat": 38.5167048,
+    "minlon": 27.0301547,
+    "maxlat": 38.5168581,
+    "maxlon": 27.0306103
+  },
+  "geometry": [
+    { "lat": 38.5167048, "lon": 27.0301768 },
+    { "lat": 38.5167826, "lon": 27.0301547 },
+    { "lat": 38.5168581, "lon": 27.0305881 },
+    { "lat": 38.5167803, "lon": 27.0306103 },
+    { "lat": 38.5167048, "lon": 27.0301768 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "50 kW",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 880646194,
+  "bounds": {
+    "minlat": 38.5168372,
+    "minlon": 27.0301156,
+    "maxlat": 38.5169877,
+    "maxlon": 27.0305564
+  },
+  "geometry": [
+    { "lat": 38.5168372, "lon": 27.0301377 },
+    { "lat": 38.5169146, "lon": 27.0301156 },
+    { "lat": 38.5169877, "lon": 27.0305343 },
+    { "lat": 38.5169102, "lon": 27.0305564 },
+    { "lat": 38.5168372, "lon": 27.0301377 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "50 kW",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 880646195,
+  "bounds": {
+    "minlat": 38.5169756,
+    "minlon": 27.0301018,
+    "maxlat": 38.5171260,
+    "maxlon": 27.0305223
+  },
+  "geometry": [
+    { "lat": 38.5169756, "lon": 27.0301250 },
+    { "lat": 38.5170539, "lon": 27.0301018 },
+    { "lat": 38.5171260, "lon": 27.0304991 },
+    { "lat": 38.5170477, "lon": 27.0305223 },
+    { "lat": 38.5169756, "lon": 27.0301250 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "50 kW",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1108936868,
+  "bounds": {
+    "minlat": 38.5821011,
+    "minlon": 26.9625958,
+    "maxlat": 38.5822021,
+    "maxlon": 26.9632251
+  },
+  "geometry": [
+    { "lat": 38.5822021, "lon": 26.9626018 },
+    { "lat": 38.5821678, "lon": 26.9632251 },
+    { "lat": 38.5821011, "lon": 26.9632191 },
+    { "lat": 38.5821354, "lon": 26.9625958 },
+    { "lat": 38.5822021, "lon": 26.9626018 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1108936869,
+  "bounds": {
+    "minlat": 38.5819520,
+    "minlon": 26.9626026,
+    "maxlat": 38.5820595,
+    "maxlon": 26.9632162
+  },
+  "geometry": [
+    { "lat": 38.5820595, "lon": 26.9626097 },
+    { "lat": 38.5820221, "lon": 26.9632162 },
+    { "lat": 38.5819520, "lon": 26.9632091 },
+    { "lat": 38.5819894, "lon": 26.9626026 },
+    { "lat": 38.5820595, "lon": 26.9626097 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1108936870,
+  "bounds": {
+    "minlat": 38.5818086,
+    "minlon": 26.9625878,
+    "maxlat": 38.5819235,
+    "maxlon": 26.9631916
+  },
+  "geometry": [
+    { "lat": 38.5819235, "lon": 26.9625964 },
+    { "lat": 38.5818793, "lon": 26.9631916 },
+    { "lat": 38.5818086, "lon": 26.9631830 },
+    { "lat": 38.5818528, "lon": 26.9625878 },
+    { "lat": 38.5819235, "lon": 26.9625964 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1108936871,
+  "bounds": {
+    "minlat": 38.5816658,
+    "minlon": 26.9625783,
+    "maxlat": 38.5817732,
+    "maxlon": 26.9631830
+  },
+  "geometry": [
+    { "lat": 38.5817732, "lon": 26.9625850 },
+    { "lat": 38.5817395, "lon": 26.9631830 },
+    { "lat": 38.5816658, "lon": 26.9631763 },
+    { "lat": 38.5816995, "lon": 26.9625783 },
+    { "lat": 38.5817732, "lon": 26.9625850 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1108936872,
+  "bounds": {
+    "minlat": 38.5815254,
+    "minlon": 26.9625484,
+    "maxlat": 38.5816295,
+    "maxlon": 26.9631702
+  },
+  "geometry": [
+    { "lat": 38.5816295, "lon": 26.9625546 },
+    { "lat": 38.5815973, "lon": 26.9631702 },
+    { "lat": 38.5815254, "lon": 26.9631640 },
+    { "lat": 38.5815576, "lon": 26.9625484 },
+    { "lat": 38.5816295, "lon": 26.9625546 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1108936873,
+  "bounds": {
+    "minlat": 38.5813722,
+    "minlon": 26.9625344,
+    "maxlat": 38.5814900,
+    "maxlon": 26.9631583
+  },
+  "geometry": [
+    { "lat": 38.5814900, "lon": 26.9625427 },
+    { "lat": 38.5814496, "lon": 26.9631583 },
+    { "lat": 38.5813722, "lon": 26.9631500 },
+    { "lat": 38.5814126, "lon": 26.9625344 },
+    { "lat": 38.5814900, "lon": 26.9625427 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1355499819,
+  "bounds": {
+    "minlat": 38.5608802,
+    "minlon": 27.0540521,
+    "maxlat": 38.5631885,
+    "maxlon": 27.0563227
+  },
+  "geometry": [
+    { "lat": 38.5608802, "lon": 27.0547490 },
+    { "lat": 38.5613112, "lon": 27.0551564 },
+    { "lat": 38.5616173, "lon": 27.0561310 },
+    { "lat": 38.5620545, "lon": 27.0563227 },
+    { "lat": 38.5625980, "lon": 27.0555878 },
+    { "lat": 38.5627604, "lon": 27.0557156 },
+    { "lat": 38.5628915, "lon": 27.0559632 },
+    { "lat": 38.5631435, "lon": 27.0560086 },
+    { "lat": 38.5631885, "lon": 27.0553072 },
+    { "lat": 38.5618165, "lon": 27.0540521 },
+    { "lat": 38.5614611, "lon": 27.0545892 },
+    { "lat": 38.5610114, "lon": 27.0543975 },
+    { "lat": 38.5608802, "lon": 27.0547490 }
+  ],
+  "tags": {
+    "plant:source": "solar",
+    "power": "plant"
+  }
+},
+{
+  "type": "way",
+  "id": 1369956559,
+  "bounds": {
+    "minlat": 38.5816165,
+    "minlon": 26.9647348,
+    "maxlat": 38.5817400,
+    "maxlon": 26.9653763
+  },
+  "geometry": [
+    { "lat": 38.5817400, "lon": 26.9647445 },
+    { "lat": 38.5816700, "lon": 26.9653763 },
+    { "lat": 38.5816165, "lon": 26.9653666 },
+    { "lat": 38.5816865, "lon": 26.9647348 },
+    { "lat": 38.5817400, "lon": 26.9647445 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1369956560,
+  "bounds": {
+    "minlat": 38.5818326,
+    "minlon": 26.9650047,
+    "maxlat": 38.5819312,
+    "maxlon": 26.9654179
+  },
+  "geometry": [
+    { "lat": 38.5819312, "lon": 26.9650145 },
+    { "lat": 38.5818836, "lon": 26.9654179 },
+    { "lat": 38.5818326, "lon": 26.9654080 },
+    { "lat": 38.5818802, "lon": 26.9650047 },
+    { "lat": 38.5819312, "lon": 26.9650145 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "way",
+  "id": 1369956561,
+  "bounds": {
+    "minlat": 38.5817056,
+    "minlon": 26.9647599,
+    "maxlat": 38.5818703,
+    "maxlon": 26.9654035
+  },
+  "geometry": [
+    { "lat": 38.5818703, "lon": 26.9647767 },
+    { "lat": 38.5818065, "lon": 26.9654035 },
+    { "lat": 38.5817056, "lon": 26.9653867 },
+    { "lat": 38.5817694, "lon": 26.9647599 },
+    { "lat": 38.5818703, "lon": 26.9647767 }
+  ],
+  "tags": {
+    "building": "roof",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "layer": "1",
+    "power": "generator"
+  }
+},
+{
+  "type": "relation",
+  "id": 20402609,
+  "bounds": {
+    "minlat": 38.5165611,
+    "minlon": 27.0301018,
+    "maxlat": 38.5171260,
+    "maxlon": 27.0306443
+  },
+  "tags": {
+    "name": "İzmir Kâtip Çelebi Üniversitesi Güneş Enerji Santrali",
+    "operator": "İzmir Kâtip Çelebi Üniversitesi",
+    "plant:method": "photovoltaic",
+    "plant:output:electricity": "200 kW",
+    "plant:source": "solar",
+    "power": "plant",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

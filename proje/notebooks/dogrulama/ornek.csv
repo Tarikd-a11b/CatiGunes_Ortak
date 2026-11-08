@@ -1,0 +1,110 @@
+﻿sira;osm;birim;cekim;tabaka_alan;tabaka_oturtma;tip;alan_m2;oturtma_orani;kiremit_payi;golge_durumu;ayak_izi_var;not_;sayfa;hucre
+1;way/879453172;Sasalı Merkez;LG05 20260219;<150;normal;eğimli (kiremit);128.3;0.978;0.954;ölçüldü;True;dogru;1;1
+2;way/875055921;Uğur Mumcu;LG03 20260114;>=300;normal;eğimli (kiremit);314.9;0.987;0.788;ölçüldü;True;dogru;1;2
+3;way/1418185549;Atatürk Organize Sanayi Bölgesi;LG03 20260114;150-300;supheli;muhtemelen eğimli (kiremit dışı);245.6;0.048;0.0;engelli;True;tasmis;1;3
+4;way/927699201;Ataşehir;LG03 20260114;<150;normal;karma (kiremit + teras);104.2;0.978;0.204;ölçüldü;True;dogru;1;4
+5;way/882840789;Balatçık;LG03 20260114;<150;supheli;düz / teras;118.7;0.295;0.001;ölçülemedi;True;kaymis;1;5
+6;way/883265484;Esentepe;LG03 20260114;<150;normal;düz / teras;29.2;0.807;0.0;ölçülemedi;True;belirsiz;1;6
+7;way/880039463;Evka-2;LG03 20260114;150-300;normal;eğimli (kiremit);264.5;0.617;0.277;ölçülemedi;True;dogru;1;7
+8;way/387617181;Egekent;LG03 20260114;<150;normal;muhtemelen eğimli (kiremit dışı);41.9;0.946;0.0;ölçülemedi;True;belirsiz;1;8
+9;way/882577375;Egekent;LG03 20260114;>=300;normal;eğimli (kiremit);579.7;0.92;0.488;ölçüldü;True;dogru;1;9
+10;way/867726681;Cumhuriyet;LG03 20260114;>=300;normal;eğimli (kiremit);361.7;0.984;0.707;ölçüldü;True;dogru;1;10
+11;way/882269657;Küçük Çiğli;LG03 20260114;>=300;normal;eğimli (kiremit);309.0;0.764;0.576;ölçüldü;True;dogru;1;11
+12;way/391047190;Egekent;LG03 20260114;>=300;supheli;muhtemelen eğimli (kiremit dışı);655.6;0.177;0.0;ölçüldü;True;tasmis;1;12
+13;way/901973733;Yeni Mahalle;LG03 20260114;150-300;normal;düz / teras;157.4;0.739;0.0;ölçüldü;True;dogru;2;1
+14;way/879301083;Kaklıç;LG05 20260219;150-300;normal;karma (kiremit + teras);218.1;0.996;0.246;ölçüldü;True;dogru;2;2
+15;way/882774670;Yakakent;LG03 20260114;>=300;normal;düz / teras;418.4;0.923;0.0;ölçüldü;True;dogru;2;3
+16;way/927747691;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);70.0;0.974;0.644;ölçülemedi;True;dogru;2;4
+17;way/551481629;Balatçık;LG03 20260114;>=300;normal;eğimli (kiremit);460.6;0.955;0.844;ölçüldü;True;dogru;2;5
+18;way/929195636;Maltepe;LG03 20260114;<150;normal;eğimli (kiremit);51.4;0.559;0.617;ölçüldü;True;dogru;2;6
+19;way/468494768;Küçük Çiğli;LG03 20260114;<150;supheli;düz / teras;65.9;0.0;0.0;ölçüldü;True;yanlis;2;7
+20;way/880039461;Evka-2;LG03 20260114;150-300;normal;eğimli (kiremit);154.2;0.473;0.712;ölçüldü;True;dogru;2;8
+21;way/884518524;Çağdaş;LG03 20260114;150-300;normal;eğimli (kiremit);234.4;0.948;0.535;engelli;True;dogru;2;9
+22;way/882577367;Egekent;LG03 20260114;>=300;normal;karma (kiremit + teras);576.6;0.725;0.104;ölçüldü;True;dogru;2;10
+23;way/551481630;Balatçık;LG03 20260114;>=300;normal;eğimli (kiremit);465.7;0.817;0.386;engelli;True;eksik;2;11
+24;way/882577368;Egekent;LG03 20260114;>=300;normal;eğimli (kiremit);524.5;0.777;0.406;ölçüldü;True;dogru;2;12
+25;way/879213697;Sasalı Merkez;LG05 20260219;<150;supheli;düz / teras;20.9;0.39;0.0;ölçülemedi;True;belirsiz;3;1
+26;way/927699197;Ataşehir;LG03 20260114;<150;normal;düz / teras;104.9;0.967;0.0;ölçülemedi;True;kaymis;3;2
+27;way/901973735;Yeni Mahalle;LG03 20260114;<150;supheli;muhtemelen eğimli (kiremit dışı);72.4;0.289;0.0;ölçüldü;True;dogru;3;3
+28;way/929195632;Maltepe;LG03 20260114;<150;normal;eğimli (kiremit);55.3;0.655;0.746;ölçülemedi;True;dogru;3;4
+29;way/381829851;Esentepe;LG03 20260114;>=300;normal;eğimli (kiremit);338.7;0.712;0.684;ölçüldü;True;dogru;3;5
+30;way/865453344;Ahmet Efendi;LG03 20260114;150-300;normal;düz / teras;151.4;0.831;0.0;ölçülemedi;True;dogru;3;6
+31;way/879213696;Sasalı Merkez;LG05 20260219;<150;normal;eğimli (kiremit);76.2;0.908;0.856;ölçülemedi;True;dogru;3;7
+32;way/880592936;Uğur Mumcu;LG03 20260114;150-300;normal;düz / teras;218.1;0.997;0.0;ölçüldü;True;dogru;3;8
+33;way/894217899;Çağdaş;LG03 20260114;>=300;normal;eğimli (kiremit);434.4;0.785;0.62;ölçüldü;True;dogru;3;9
+34;way/873311161;Kaklıç;LG05 20260219;<150;normal;düz / teras;119.4;0.879;0.024;ölçüldü;True;belirsiz;3;10
+35;way/880041505;Evka-2;LG03 20260114;<150;normal;eğimli (kiremit);147.8;0.726;0.467;ölçülemedi;True;dogru;3;11
+36;way/894220613;Küçük Çiğli;LG03 20260114;150-300;supheli;düz / teras;233.9;0.294;0.0;ölçüldü;True;tasmis;3;12
+37;way/929754047;Şirintepe;LG03 20260114;<150;normal;eğimli (kiremit);85.1;0.792;0.686;ölçüldü;True;dogru;4;1
+38;way/929141975;Güzeltepe;LG03 20260114;<150;normal;eğimli (kiremit);71.6;0.986;0.972;ölçüldü;True;eksik;4;2
+39;way/887300621;Ataşehir;LG03 20260114;150-300;normal;eğimli (kiremit);232.6;0.873;0.653;ölçülemedi;True;dogru;4;3
+40;way/927242622;Atatürk Organize Sanayi Bölgesi;LG03 20260114;150-300;supheli;eğimli (kiremit);208.9;0.372;0.335;ölçüldü;True;dogru;4;4
+41;way/928860637;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);62.0;0.657;0.748;engelli;True;dogru;4;5
+42;way/880592940;Uğur Mumcu;LG03 20260114;150-300;normal;eğimli (kiremit);266.4;0.93;0.707;engelli;True;dogru;4;6
+43;way/879301096;Kaklıç;LG05 20260219;150-300;normal;eğimli (kiremit);245.6;0.991;0.962;ölçülemedi;True;dogru;4;7
+44;way/928211458;Şirintepe;LG03 20260114;<150;normal;düz / teras;100.3;0.746;0.0;ölçüldü;True;dogru;4;8
+45;way/894220612;Küçük Çiğli;LG03 20260114;<150;normal;düz / teras;132.6;0.933;0.048;ölçüldü;True;dogru;4;9
+46;way/867726676;Cumhuriyet;LG03 20260114;>=300;normal;eğimli (kiremit);400.9;0.882;0.565;ölçüldü;True;dogru;4;10
+47;way/551481628;Balatçık;LG03 20260114;>=300;normal;eğimli (kiremit);300.4;0.699;0.274;ölçüldü;True;dogru;4;11
+48;way/879213704;Sasalı Merkez;LG05 20260219;<150;normal;karma (kiremit + teras);91.6;0.642;0.096;ölçüldü;True;belirsiz;4;12
+49;way/928869429;Yakakent;LG03 20260114;<150;supheli;düz / teras;21.8;0.116;0.0;engelli;True;yanlis;5;1
+50;way/894217900;Çağdaş;LG03 20260114;<150;normal;eğimli (kiremit);48.8;0.952;0.292;ölçülemedi;True;dogru;5;2
+51;way/906808673;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);101.3;0.727;0.693;ölçülemedi;True;dogru;5;3
+52;way/880627120;İnönü;LG03 20260114;<150;normal;düz / teras;115.6;0.997;0.0;ölçülemedi;True;dogru;5;4
+53;way/1419939911;Ahmet Taner Kışlalı;LG03 20260114;<150;normal;düz / teras;72.9;0.962;0.0;ölçülemedi;True;dogru;5;5
+54;way/928801319;Egekent;LG03 20260114;>=300;normal;eğimli (kiremit);407.0;0.716;0.343;ölçüldü;True;dogru;5;6
+55;way/865453342;Ahmet Efendi;LG03 20260114;150-300;normal;karma (kiremit + teras);191.4;0.983;0.221;ölçüldü;True;dogru;5;7
+56;way/915154276;Maltepe;LG03 20260114;150-300;normal;düz / teras;153.3;0.778;0.02;ölçülemedi;True;dogru;5;8
+57;way/883265483;Esentepe;LG03 20260114;>=300;supheli;karma (kiremit + teras);331.1;0.19;0.24;ölçüldü;True;tasmis;5;9
+58;way/880041501;Evka-2;LG03 20260114;150-300;normal;eğimli (kiremit);183.9;0.701;0.299;ölçüldü;True;dogru;5;10
+59;way/899667516;Harmandalı Gazi Mustafa Kemal Atatürk;LG03 20260114;<150;normal;düz / teras;99.8;0.69;0.0;ölçülemedi;True;dogru;5;11
+60;way/930306955;Harmandalı Gazi Mustafa Kemal Atatürk;LG03 20260114;<150;normal;eğimli (kiremit);76.8;0.803;0.555;ölçüldü;True;dogru;5;12
+61;way/930306957;Harmandalı Gazi Mustafa Kemal Atatürk;LG03 20260114;<150;normal;eğimli (kiremit);24.7;0.766;0.459;ölçüldü;True;dogru;6;1
+62;way/879301082;Kaklıç;LG05 20260219;<150;supheli;düz / teras;53.9;0.346;0.076;engelli;True;dogru;6;2
+63;way/880627111;İnönü;LG03 20260114;<150;normal;karma (kiremit + teras);118.1;0.984;0.239;engelli;True;dogru;6;3
+64;way/927747695;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);87.1;0.95;0.561;ölçüldü;True;dogru;6;4
+65;way/930306966;Harmandalı Gazi Mustafa Kemal Atatürk;LG03 20260114;<150;normal;eğimli (kiremit);38.9;0.956;0.93;ölçülemedi;True;dogru;6;5
+66;way/880568914;Uğur Mumcu;LG03 20260114;150-300;normal;düz / teras;179.6;0.976;0.0;ölçülemedi;True;dogru;6;6
+67;way/880627102;İnönü;LG03 20260114;<150;normal;karma (kiremit + teras);94.0;0.58;0.098;ölçülemedi;True;dogru;6;7
+68;way/381829848;Esentepe;LG03 20260114;>=300;normal;eğimli (kiremit);550.5;0.644;0.39;engelli;True;dogru;6;8
+69;way/865759067;Egekent;LG03 20260114;>=300;normal;eğimli (kiremit);432.3;0.815;0.467;ölçüldü;True;dogru;6;9
+70;way/377547733;Evka-5;LG03 20260114;>=300;normal;muhtemelen eğimli (kiremit dışı);663.4;0.932;0.0;ölçüldü;True;dogru;6;10
+71;way/525137195;Atatürk Organize Sanayi Bölgesi;LG03 20260114;>=300;supheli;düz / teras;415.3;0.393;0.0;ölçüldü;True;kaymis;6;11
+72;way/1419939916;Ahmet Taner Kışlalı;LG03 20260114;<150;normal;düz / teras;49.4;0.95;0.038;ölçüldü;True;dogru;6;12
+73;way/901973712;Yeni Mahalle;LG03 20260114;<150;normal;düz / teras;104.8;0.861;0.004;ölçülemedi;True;dogru;7;1
+74;way/891951409;Köyiçi;LG03 20260114;<150;supheli;düz / teras;91.0;0.001;0.012;ölçüldü;True;belirsiz;7;2
+75;way/873311124;Kaklıç;LG05 20260219;<150;supheli;eğimli (kiremit);53.6;0.232;0.335;ölçüldü;True;tasmis;7;3
+76;way/879453169;Sasalı Merkez;LG05 20260219;<150;normal;eğimli (kiremit);86.1;0.962;0.897;ölçüldü;True;dogru;7;4
+77;way/865455422;Ahmet Efendi;LG03 20260114;150-300;normal;karma (kiremit + teras);218.3;0.847;0.202;ölçüldü;True;dogru;7;5
+78;way/449873675;İzkent;LG03 20260114;>=300;normal;eğimli (kiremit);408.0;0.954;0.475;engelli;True;dogru;7;6
+79;way/377547732;Evka-5;LG03 20260114;150-300;supheli;düz / teras;274.0;0.338;0.0;ölçüldü;True;kaymis;7;7
+80;way/872348797;Cumhuriyet;LG03 20260114;>=300;normal;eğimli (kiremit);402.3;0.946;0.464;ölçüldü;True;dogru;7;8
+81;way/865446707;Aydınlıkevler;LG03 20260114;<150;normal;eğimli (kiremit);69.9;0.85;0.361;engelli;True;dogru;7;9
+82;way/449873671;İzkent;LG03 20260114;>=300;normal;eğimli (kiremit);400.2;0.892;0.51;ölçüldü;True;dogru;7;10
+83;way/929145320;Güzeltepe;LG03 20260114;<150;normal;eğimli (kiremit);86.3;0.987;0.639;ölçüldü;True;dogru;7;11
+84;way/879301069;Kaklıç;LG05 20260219;<150;normal;düz / teras;51.2;1.0;0.0;ölçülemedi;True;belirsiz;7;12
+85;way/883241488;Esentepe;LG03 20260114;>=300;normal;karma (kiremit + teras);316.7;0.864;0.247;ölçüldü;True;dogru;8;1
+86;way/884518538;Çağdaş;LG03 20260114;150-300;normal;eğimli (kiremit);208.3;0.956;0.514;engelli;True;dogru;8;2
+87;way/929141978;Güzeltepe;LG03 20260114;<150;normal;düz / teras;81.0;0.96;0.0;ölçülemedi;True;belirsiz;8;3
+88;way/880592957;Uğur Mumcu;LG03 20260114;150-300;normal;düz / teras;207.6;1.0;0.0;ölçüldü;True;dogru;8;4
+89;way/880038340;Evka-6;LG03 20260114;>=300;normal;düz / teras;671.2;0.735;0.005;ölçüldü;True;dogru;8;5
+90;way/927156081;Yeni Mahalle;LG03 20260114;<150;normal;eğimli (kiremit);49.1;0.973;0.358;ölçülemedi;True;dogru;8;6
+91;way/484836776;Atatürk Organize Sanayi Bölgesi;LG03 20260114;150-300;supheli;düz / teras;267.0;0.288;0.0;ölçülemedi;True;yanlis;8;7
+92;way/880041499;Evka-2;LG03 20260114;150-300;normal;eğimli (kiremit);163.3;0.642;0.608;ölçüldü;True;dogru;8;8
+93;way/891951408;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);88.4;0.802;0.775;ölçüldü;True;dogru;8;9
+94;way/906808675;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);96.7;0.753;0.378;ölçülemedi;True;dogru;8;10
+95;way/929198613;Maltepe;LG03 20260114;<150;normal;düz / teras;117.6;0.948;0.0;ölçülemedi;True;dogru;8;11
+96;way/929754048;Şirintepe;LG03 20260114;<150;normal;eğimli (kiremit);108.7;0.685;0.769;ölçüldü;True;dogru;8;12
+97;way/928258896;Ataşehir;LG03 20260114;<150;supheli;düz / teras;85.5;0.386;0.0;ölçülemedi;True;belirsiz;9;1
+98;way/880038943;Evka-6;LG03 20260114;150-300;normal;düz / teras;194.5;0.924;0.0;ölçülemedi;True;kaymis;9;2
+99;way/377050067;Evka-5;LG03 20260114;>=300;normal;karma (kiremit + teras);312.9;0.875;0.114;ölçüldü;True;dogru;9;3
+100;way/868462201;Cumhuriyet;LG03 20260114;<150;normal;karma (kiremit + teras);58.3;0.556;0.236;ölçüldü;True;belirsiz;9;4
+101;way/899667521;Harmandalı Gazi Mustafa Kemal Atatürk;LG03 20260114;<150;normal;eğimli (kiremit);53.9;0.934;0.86;ölçülemedi;True;dogru;9;5
+102;way/377542095;Atatürk;LG03 20260114;>=300;normal;eğimli (kiremit);442.8;0.83;0.372;ölçülemedi;True;dogru;9;6
+103;way/884518536;Çağdaş;LG03 20260114;150-300;normal;eğimli (kiremit);218.6;0.924;0.597;ölçülemedi;True;dogru;9;7
+104;way/928434049;Güzeltepe;LG03 20260114;<150;normal;eğimli (kiremit);89.1;0.763;0.748;ölçülemedi;True;dogru;9;8
+105;way/865453340;Ahmet Efendi;LG03 20260114;>=300;normal;düz / teras;382.9;0.887;0.0;ölçüldü;True;dogru;9;9
+106;way/928860639;Köyiçi;LG03 20260114;<150;normal;eğimli (kiremit);112.5;0.963;0.618;engelli;True;dogru;9;10
+107;way/865455425;Ahmet Efendi;LG03 20260114;150-300;normal;düz / teras;195.5;0.915;0.0;ölçülemedi;True;dogru;9;11
+108;way/879213667;Sasalı Merkez;LG05 20260219;150-300;normal;düz / teras;151.5;0.649;0.057;engelli;True;dogru;9;12
+109;way/929195633;Maltepe;LG03 20260114;<150;normal;eğimli (kiremit);63.0;0.673;0.675;ölçülemedi;True;dogru;10;1

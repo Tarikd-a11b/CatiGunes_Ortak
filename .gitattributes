@@ -1,2 +1,9 @@
 DURUM.md merge=union
 * text=auto
+# Veri dosyaları bayt bayt aynı kalsın
+model_verisi/** -text
+proje/veri/** -text
+proje/data/** -text
+proje/notebooks/** -text
+proje/CatiGunes_Veri/** -text
+raporlar/** -text

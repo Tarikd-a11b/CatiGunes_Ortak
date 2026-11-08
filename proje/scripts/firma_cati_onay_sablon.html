@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firma Çatı Eşleme</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  :root { --bg:#f6f6f4; --kart:#fff; --yazi:#1d1d1f; --soluk:#6e6e73; --cizgi:#d9d9d6; --vurgu:#0a6cff; --ok:#1f9d55; --uyari:#c77700; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--yazi);
+         display:grid; grid-template-rows:auto 1fr; height:100vh; }
+  header { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:8px 14px; background:var(--kart); border-bottom:1px solid var(--cizgi); }
+  header b { font-size:15px; }
+  header select, header input { font:inherit; padding:4px 6px; border:1px solid var(--cizgi); border-radius:6px; background:#fff; }
+  .ilerleme { color:var(--soluk); margin-left:auto; }
+  button { font:inherit; padding:6px 11px; border-radius:7px; border:1px solid var(--cizgi); background:#fff; cursor:pointer; }
+  button:hover { border-color:#999; }
+  button.ana { background:var(--vurgu); border-color:var(--vurgu); color:#fff; }
+  button.ok { background:var(--ok); border-color:var(--ok); color:#fff; }
+  main { display:grid; grid-template-columns:360px 1fr; min-height:0; }
+  #liste { overflow:auto; border-right:1px solid var(--cizgi); background:var(--kart); }
+  .satir { padding:7px 12px; border-bottom:1px solid #eee; cursor:pointer; display:flex; gap:8px; align-items:baseline; }
+  .satir:hover { background:#f2f6ff; }
+  .satir.secili { background:#e4eeff; }
+  .satir .d { width:10px; height:10px; border-radius:50%; background:#ccc; flex:none; transform:translateY(1px); }
+  .satir.cati .d { background:var(--ok); } .satir.listede_yok .d { background:var(--uyari); } .satir.bulamadim .d { background:#b00020; }
+  .rozet { font-size:11px; padding:1px 6px; border-radius:9px; margin-left:6px; white-space:nowrap; }
+  .rozet.icinde { background:#e3f6ea; color:#14733f; } .rozet.yakin { background:#fff1db; color:#8a5200; } .rozet.yok { background:#f1f1f1; color:#6e6e73; }
+  .satir small { color:var(--soluk); display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:290px; }
+  #sag { display:grid; grid-template-rows:auto 1fr; min-height:0; }
+  #panel { padding:10px 14px; background:var(--kart); border-bottom:1px solid var(--cizgi); }
+  #panel h2 { margin:0 0 2px; font-size:17px; }
+  #panel ul { margin:4px 0 8px; padding-left:18px; color:var(--soluk); max-height:72px; overflow:auto; }
+  .dugmeler { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  #secim { color:var(--soluk); }
+  #harita { min-height:300px; }
+  .ipucu { color:var(--soluk); font-size:12px; }
+  .etiket { background:rgba(0,0,0,.55); color:#fff; border:none; box-shadow:none; font-size:11px; padding:0 3px; }
+  @media (max-width: 760px) { main { grid-template-columns:1fr; grid-template-rows:200px 1fr; } #liste { border-right:none; border-bottom:1px solid var(--cizgi); } }
+</style>
+</head>
+<body>
+<header>
+  <b>Firma → çatı eşleme</b>
+  <label>Adın <input id="ad" size="10" placeholder="ör. Yiğit"></label>
+  <label>Pay <select id="pay"><option value="0">Hepsi</option><option value="1">1/4</option><option value="2">2/4</option><option value="3">3/4</option><option value="4">4/4</option></select></label>
+  <label>Göster <select id="filtre"><option value="bekleyen">Bekleyenler</option><option value="kontrol">Bekleyen: TomTom yakın + önerisiz</option><option value="icinde">Bekleyen: TomTom çatı içinde</option><option value="hepsi">Hepsi</option></select></label>
+  <button id="indir" class="ana">CSV indir</button>
+  <span class="ilerleme" id="ilerleme"></span>
+</header>
+<main>
+  <div id="liste"></div>
+  <div id="sag">
+    <div id="panel">
+      <h2><span id="baslik">—</span><span id="rozet" class="rozet"></span></h2>
+      <ul id="firmalar"></ul>
+      <div class="dugmeler">
+        <button id="gmaps" class="ana">Google Maps'te aç (G)</button>
+        <button id="kaydet" class="ok">Seçili çatıyı kaydet (Enter)</button>
+        <button id="yok">Çatı listede yok (Y)</button>
+        <button id="bulamadim">Bulamadım (B)</button>
+        <button id="sonraki">Atla →</button>
+        <span id="secim"></span>
+      </div>
+      <div class="ipucu">Maps'te binayı bul → haritada o çatıya tıkla (birden çok seçilebilir) → kaydet. Mavi: TomTom önerisi (önceden seçili; doğruysa Enter). Turuncu: adresin sokağına cephe veren adaylar. Yeşil: başka adrese verilmiş çatılar.</div>
+    </div>
+    <div id="harita"></div>
+  </div>
+</main>
+<script>
+const KARTLAR = /*KARTLAR*/[];
+const CATILAR = /*CATILAR*/{};
+const ANAHTAR = 'firmaCatiOnay_v1';
+const ROZET = { icinde: 'TomTom: çatı içinde', yakin: 'TomTom: 25 m yakın', yok: 'öneri yok' };
+let kararlar = {};
+try { kararlar = JSON.parse(localStorage.getItem(ANAHTAR) || '{}'); } catch (e) { kararlar = {}; }
+let adKayit = '';
+try { adKayit = localStorage.getItem(ANAHTAR + '_ad') || ''; } catch (e) {}
+const $ = id => document.getElementById(id);
+$('ad').value = adKayit;
+$('ad').onchange = () => { try { localStorage.setItem(ANAHTAR + '_ad', $('ad').value.trim()); } catch (e) {} };
+function sakla() { try { localStorage.setItem(ANAHTAR, JSON.stringify(kararlar)); } catch (e) {} }
+
+const harita = L.map('harita', { maxZoom: 21 });
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+  { maxZoom: 21, maxNativeZoom: 19, attribution: 'Esri World Imagery' }).addTo(harita);
+const katman = {};
+let aktif = null, secili = new Set();
+const verilen = () => { const m = {}; for (const [k, v] of Object.entries(kararlar)) (v.cati || []).forEach(c => m[c] = k); return m; };
+function stil(id) {
+  const k = KARTLAR[aktif] || { aday: [] };
+  if (secili.has(id)) return { color: '#00e5ff', weight: 3, fillColor: '#00e5ff', fillOpacity: .35 };
+  if (k.aday.includes(id)) return { color: '#ff9500', weight: 2, fillColor: '#ff9500', fillOpacity: .18 };
+  if (VER[id] && VER[id] !== k.k) return { color: '#34c759', weight: 1.5, fillOpacity: .12, fillColor: '#34c759' };
+  return { color: '#ffffff', weight: 1, fillOpacity: .03, fillColor: '#fff' };
+}
+let VER = verilen();
+const gj = L.geoJSON(CATILAR, {
+  style: f => stil(f.properties.cati_id),
+  onEachFeature: (f, l) => {
+    const id = f.properties.cati_id; katman[id] = l;
+    l.bindTooltip(`c${id} · ${Math.round(f.properties.alan_m2)} m²` + (VER[id] ? `<br>verildi: ${VER[id].replace('|', ' No:')}` : ''), { sticky: true });
+    l.on('click', () => { secili.has(id) ? secili.delete(id) : secili.add(id); boya(); secimYaz(); });
+  }
+}).addTo(harita);
+harita.fitBounds(gj.getBounds());
+function boya() { for (const id in katman) katman[id].setStyle(stil(+id)); }
+function secimYaz() { $('secim').textContent = secili.size ? 'Seçili: ' + [...secili].map(c => 'c' + c).join(', ') : 'Çatı seçilmedi'; }
+
+function gorunen() {
+  const pay = +$('pay').value, f = $('filtre').value;
+  return KARTLAR.map((k, i) => i).filter(i => (!pay || Math.floor(i * 4 / KARTLAR.length) + 1 === pay) && (f === 'hepsi' || (!kararlar[KARTLAR[i].k]
+    && (f === 'bekleyen' || (f === 'kontrol' && KARTLAR[i].tip !== 'icinde') || (f === 'icinde' && KARTLAR[i].tip === 'icinde')))));
+}
+function liste() {
+  const g = gorunen();
+  $('liste').innerHTML = g.map(i => { const k = KARTLAR[i], d = kararlar[k.k];
+    return `<div class="satir ${d ? d.karar : ''} ${i === aktif ? 'secili' : ''}" data-i="${i}"><span class="d"></span><div>${k.ad}<span class="rozet ${k.tip}">${ROZET[k.tip]}</span><small>${k.firmalar.join(' · ')}</small></div></div>`; }).join('');
+  const toplam = KARTLAR.length, biten = Object.keys(kararlar).length;
+  $('ilerleme').textContent = `${biten}/${toplam} adres işaretlendi · bu görünümde ${g.length}`;
+  document.querySelectorAll('.satir').forEach(s => s.onclick = () => ac(+s.dataset.i));
+}
+function ac(i) {
+  aktif = i; const k = KARTLAR[i], d = kararlar[k.k];
+  secili = new Set(d ? (d.cati || []) : k.oneri);
+  $('baslik').textContent = k.ad; $('rozet').className = 'rozet ' + k.tip; $('rozet').textContent = ROZET[k.tip];
+  $('firmalar').innerHTML = k.firmalar.map(f => `<li>${f}</li>`).join('');
+  boya(); secimYaz(); liste();
+  const ids = (secili.size ? [...secili, ...k.aday.slice(0, 6)] : k.aday).filter(id => katman[id]);
+  if (ids.length) harita.fitBounds(L.featureGroup(ids.map(id => katman[id])).getBounds(), { padding: [40, 40], maxZoom: 19 });
+  const s = document.querySelector('.satir.secili'); if (s) s.scrollIntoView({ block: 'nearest' });
+}
+function karar(tur) {
+  if (aktif === null) return;
+  const k = KARTLAR[aktif];
+  if (tur === 'cati' && !secili.size) { $('secim').textContent = 'Önce haritada bir çatıya tıkla'; return; }
+  kararlar[k.k] = { karar: tur, cati: tur === 'cati' ? [...secili] : [], ad: $('ad').value.trim(), zaman: new Date().toISOString() };
+  sakla(); VER = verilen(); sonraki();
+}
+function sonraki() {
+  const g = gorunen(); const sira = g.filter(i => i > (aktif ?? -1));
+  if (sira.length) ac(sira[0]); else if (g.length) ac(g[0]); else { liste(); $('baslik').textContent = 'Bu payda bekleyen adres kalmadı 🎉'; }
+}
+$('gmaps').onclick = () => { if (aktif !== null) window.open('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(KARTLAR[aktif].q), 'gmaps'); };
+$('kaydet').onclick = () => karar('cati');
+$('yok').onclick = () => karar('listede_yok');
+$('bulamadim').onclick = () => karar('bulamadim');
+$('sonraki').onclick = sonraki;
+$('pay').onchange = $('filtre').onchange = () => { aktif = null; sonraki(); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'Enter') karar('cati');
+  else if (e.key === 'g' || e.key === 'G') $('gmaps').click();
+  else if (e.key === 'y' || e.key === 'Y') karar('listede_yok');
+  else if (e.key === 'b' || e.key === 'B') karar('bulamadim');
+  else if (e.key === 'ArrowRight') sonraki();
+});
+$('indir').onclick = () => {
+  const s = ['sokak,kapi_no,karar,cati_id,isaretleyen,zaman'];
+  for (const [k, v] of Object.entries(kararlar)) { const [sk, no] = k.split('|');
+    s.push([sk, no, v.karar, (v.cati || []).join(';'), (v.ad || $('ad').value.trim()).replace(/,/g, ' '), v.zaman].join(',')); }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob(['﻿' + s.join('\n')], { type: 'text/csv' }));
+  a.download = `firma_cati_${($('ad').value.trim() || 'ekip').replace(/\s+/g, '_')}_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+};
+sonraki();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Çatı Görsel Onayı</title>
+<style>
+:root{--bg:#f6f7f9;--kart:#fff;--yazi:#1d2330;--soluk:#667085;--cizgi:#e3e6ea;--vurgu:#2f6fde;--ok:#1f9d55;--hata:#d14343;--uyari:#c27c0e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171c;--kart:#1d2128;--yazi:#e7eaf0;--soluk:#98a2b3;--cizgi:#2c323b;--vurgu:#6b9cff;--ok:#3fbf7f;--hata:#f07070;--uyari:#e5a83b}}
+:root[data-theme="dark"]{--bg:#14171c;--kart:#1d2128;--yazi:#e7eaf0;--soluk:#98a2b3;--cizgi:#2c323b;--vurgu:#6b9cff;--ok:#3fbf7f;--hata:#f07070;--uyari:#e5a83b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--kart);border-bottom:1px solid var(--cizgi);padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+h1{font-size:16px;margin:0 12px 0 0}
+input,select,button{font:inherit;color:inherit}
+input[type=text],select{background:var(--bg);border:1px solid var(--cizgi);border-radius:6px;padding:6px 8px}
+button{border:1px solid var(--cizgi);background:var(--bg);border-radius:6px;padding:6px 10px;cursor:pointer}
+button.ana{background:var(--vurgu);color:#fff;border-color:var(--vurgu)}
+.ilerleme{color:var(--soluk);margin-left:auto}
+.bar{height:4px;background:var(--cizgi);width:100%;flex-basis:100%;border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0}
+.aciklama{max-width:1200px;margin:12px auto 0;padding:0 16px;color:var(--soluk)}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;padding:16px;max-width:1400px;margin:0 auto}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.kart.onay{border-color:var(--ok)}.kart.degis{border-color:var(--uyari)}
+.kart img{width:100%;height:240px;object-fit:contain;background:#222;display:block}
+.ic{padding:10px;display:flex;flex-direction:column;gap:6px}
+.ust{display:flex;justify-content:space-between;gap:6px;color:var(--soluk);font-size:12px}
+.rozet{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;background:var(--bg);border:1px solid var(--cizgi)}
+.r-mevcut_ges_tam,.r-mevcut_ges_kismi{color:var(--vurgu)}.r-bina_yok,.r-cati_degil{color:var(--hata)}.r-sorun_yok{color:var(--ok)}
+.not{font-size:12px;color:var(--soluk)}
+.dug{display:flex;gap:6px;flex-wrap:wrap}
+.dug button{flex:1}
+.durum{font-size:12px}
+@media (max-width:520px){main{grid-template-columns:1fr;padding:16px}header{padding:10px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Çatı Görsel Onayı</h1>
+  <input type="text" id="ad" placeholder="Kontrol eden (ad soyad)">
+  <select id="filtre">
+    <option value="hepsi">Hepsi</option><option value="bekleyen">Bekleyenler</option>
+  </select>
+  <button class="ana" id="indir">CSV indir</button>
+  <span class="ilerleme" id="ilerleme"></span>
+  <div class="bar"><i id="bar"></i></div>
+</header>
+<p class="aciklama">Pembe çizgi = çatı poligonu. Claude'un kararı doğruysa <b>Doğru</b>, değilse listeden doğru kararı seç. "elendi" yazan kartlar şu an analizden çıkarılmış çatılar. Bitince <b>CSV indir</b> → dosyayı Claude'a ver (<code>python scripts/gorsel_onay.py isle &lt;csv&gt;</code>). İlerleme bu tarayıcıda otomatik saklanır.</p>
+<main id="liste"></main>
+<script>
+const VERI = /*VERI*/[];
+const KARARLAR = /*KARARLAR*/[];
+const ETIKET = {sorun_yok:'sorun yok',mevcut_ges_tam:'mevcut GES (tam)',mevcut_ges_kismi:'mevcut GES (kısmi)',bina_yok:'bina yok',cati_degil:'çatı değil',goruntu_kotu:'görüntü kötü',agac_alti:'ağaç altında',sekil_uyumsuz:'şekil uyumsuz'};
+const ANAHTAR = 'cati_gorsel_onay_v1';
+let durum = {};
+try { durum = JSON.parse(localStorage.getItem(ANAHTAR) || '{}'); } catch (e) { durum = {}; }
+const kaydet = () => { try { localStorage.setItem(ANAHTAR, JSON.stringify(durum)); } catch (e) {} };
+const ad = document.getElementById('ad');
+try { ad.value = localStorage.getItem(ANAHTAR + '_ad') || ''; } catch (e) {}
+ad.addEventListener('input', () => { try { localStorage.setItem(ANAHTAR + '_ad', ad.value); } catch (e) {} });
+const filtre = document.getElementById('filtre');
+[...new Set(VERI.map(v => v.claude))].forEach(k => { const o = document.createElement('option'); o.value = 'k:' + k; o.textContent = 'Claude: ' + ETIKET[k]; filtre.appendChild(o); });
+
+function ilerleme() {
+  const n = VERI.filter(v => durum[v.osm]).length;
+  document.getElementById('ilerleme').textContent = n + ' / ' + VERI.length + ' karar verildi';
+  document.getElementById('bar').style.width = (100 * n / VERI.length) + '%';
+}
+function kart(v) {
+  const d = document.createElement('div'); d.className = 'kart'; d.dataset.osm = v.osm;
+  d.innerHTML = `<img loading="lazy" src="${v.img}" alt="${v.osm}">
+  <div class="ic">
+    <div class="ust"><span>${v.osm}</span><span>${v.alan.toLocaleString('tr-TR')} m² · ${v.bolge === 'osb' ? 'OSB' : 'Kamu'}${v.durum === 'elendi' ? ' · <b>elendi</b>' : ''}</span></div>
+    ${v.ek ? `<div class="not">${v.ek}</div>` : ''}
+    <div>Claude: <span class="rozet r-${v.claude}">${ETIKET[v.claude]}</span></div>
+    ${v.not ? `<div class="not">${v.not}</div>` : ''}
+    <div class="dug"><button data-a="dogru">✓ Doğru</button>
+      <select data-a="sec"><option value="">Değiştir…</option>${KARARLAR.map(k => `<option value="${k}">${ETIKET[k]}</option>`).join('')}</select></div>
+    <input type="text" data-a="not" placeholder="Not (isteğe bağlı)">
+    <div class="durum"></div>
+  </div>`;
+  const ciz = () => {
+    const s = durum[v.osm]; d.classList.toggle('onay', !!s && s.insan === v.claude); d.classList.toggle('degis', !!s && s.insan !== v.claude);
+    d.querySelector('.durum').textContent = s ? (s.insan === v.claude ? 'Onaylandı' : 'Değiştirildi → ' + ETIKET[s.insan]) : '';
+    d.querySelector('[data-a=not]').value = (s && s.not) || '';
+  };
+  d.querySelector('[data-a=dogru]').onclick = () => { durum[v.osm] = {insan: v.claude, not: (durum[v.osm] || {}).not || ''}; kaydet(); ciz(); ilerleme(); uygula(); };
+  d.querySelector('[data-a=sec]').onchange = e => { if (!e.target.value) return; durum[v.osm] = {insan: e.target.value, not: (durum[v.osm] || {}).not || ''}; e.target.value = ''; kaydet(); ciz(); ilerleme(); uygula(); };
+  d.querySelector('[data-a=not]').onchange = e => { if (!durum[v.osm]) return; durum[v.osm].not = e.target.value; kaydet(); };
+  ciz(); return d;
+}
+const liste = document.getElementById('liste');
+VERI.forEach(v => liste.appendChild(kart(v)));
+function uygula() {
+  const f = filtre.value;
+  liste.querySelectorAll('.kart').forEach(d => {
+    const v = VERI.find(x => x.osm === d.dataset.osm);
+    d.style.display = f === 'hepsi' || (f === 'bekleyen' && !durum[v.osm]) || (f === 'k:' + v.claude) ? '' : 'none';
+  });
+}
+filtre.onchange = uygula; ilerleme();
+document.getElementById('indir').onclick = () => {
+  if (!ad.value.trim()) { ad.focus(); ad.placeholder = 'Önce adını yaz'; return; }
+  const t = new Date().toISOString().slice(0, 10);
+  const q = s => '"' + String(s).replace(/"/g, '""') + '"';
+  const sat = [['osm', 'claude', 'insan', 'insan_not', 'kontrol_eden', 'tarih'].join(',')];
+  VERI.filter(v => durum[v.osm]).forEach(v => sat.push([v.osm, v.claude, durum[v.osm].insan, durum[v.osm].not || '', ad.value.trim(), t].map(q).join(',')));
+  const b = new Blob(['﻿' + sat.join('\n')], {type: 'text/csv'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'gorsel_onay_' + t + '.csv'; a.click();
+};
+</script>
+</body>
+</html>

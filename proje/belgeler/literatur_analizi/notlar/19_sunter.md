@@ -1,0 +1,19 @@
+## Sunter, Castellanos & Kammen (2019) — ABD'de çatı PV kurulumunda ırksal/etnik eşitsizlik
+KUNYE: Sunter D.A., Castellanos S., Kammen D.M. (2019). Disparities in rooftop photovoltaics deployment in the United States by race and ethnicity. Nature Sustainability 2, 71–76. doi:10.1038/s41893-018-0204-z. (Okuma listesindeki künye HATALIYDI: başlık ve DOI sonu "-5" yanlış — düzeltildi.) Tufts + UC Berkeley (RAEL).
+TEMA: Enerji adaletinin ÖLÇÜM BİÇİMİ — kurulumun teknik potansiyele oranı; eşitsizlik argümanının Nature düzeyindeki dayanağı
+AMAC: Çatı PV kurulumundaki ırksal/etnik farkın yalnız gelir ve ev sahipliği farklarından kaynaklanıp kaynaklanmadığını sınamak (hipotez: yalnız ekonomik kaynak ve mülkiyet açıklamaz).
+YONTEM:
+- Veri: Google Project Sunroof (60+ milyon bina, tüm 50 eyalet; mevcut PV'li bina sayısı + PV'ye uygun bina sayısı) × ACS 2009–2013 5 yıllık anket (medyan hane geliri, ırk/etnisite, kiracı oranı). Nüfus sayım bölgesi bazında birleştirme. Eleme: Sunroof binaların ≥%95'ini kapsamıyorsa, geçersiz veri, medyan gelir yoksulluk sınırı altı (4 kişi 23.834 $) → 34.156 bölge (ulusal teknik potansiyelin %58'i; 829 TWh/yıl).
+- Ölçüt: kurulum / mevcut teknik potansiyel (PV'li bina / uygun bina), EYALET İÇİNDE normalize (eyaletler arası ışınım, teşvik, fiyat, nüfus yapısı farkları giderilir), sonra "belirgin çoğunluğu olmayan" bölgelere göre göreli.
+- Çoğunluk eşikleri: %50 (çoğunluk), %75 (güçlü çoğunluk).
+- LOWESS (yerel ağırlıklı düzleştirme) eğrileri; %90 güven aralığı 1.000 bootstrap yinelemesi; gelir yerine "yaşam maliyeti düşülmüş artık gelir" ile sağlamlık testi.
+- Sosyal yayılım (seeding) analizi: hiç PV'si olmayan bölgelerin oranı; bunlar çıkarılınca analiz tekrarı.
+BULGULAR: Aynı medyan gelirde siyah çoğunluklu bölgeler %69, Hispanik %30, Asyalı %2 DAHA AZ; beyaz çoğunluklu %21 DAHA FAZLA kurulum. Ev sahipliği düzeltmesiyle: siyah −%61, Hispanik −%45, beyaz +%37. Siyah çoğunluklu bölgelerin %47'sinde HİÇ PV yok (beyaz %21, Asyalı %17, Hispanik %24) — ilk "tohum" eksikliği; tohumlanmış düşük gelirli siyah çoğunluklu bölgelerde kurulum diğer gruplardan bile yüksek. Güneş sektöründe üst yönetimin %80'i beyaz — işgücü çeşitliliği eksikliği yayılımı engelleyebilir; usuli adalet boyutu da olabilir. Öneri: azınlık topluluklarının "tohumlanması" (ilk kurulumların hedefli desteklenmesi) eşitsizliği azaltabilir.
+EKSIKLER: Irk etkisinin nedenleri açıklanamıyor (korelasyon); bölge bazlı veri (hane düzeyi yok — ekolojik çıkarım riski); Project Sunroof ~4 yıllık görüntü; yoksulluk sınırı altı bölgeler dışlanmış (en yoksullar analiz dışı!); zaman serisi yok.
+BIZIM PROJEYE:
+- ÖLÇÜM BİÇİMİ: eşitsizliği ham kurulum sayısıyla değil "kurulu / teknik potansiyel" ile ve bölge içinde normalize ederek ölç → bizim için: mahalle bazında (mevcut GES kurulu gücü) / (bizim hesapladığımız teknik potansiyel), ilçe içinde normalize. Bizim teknik potansiyel haritamız tam olarak bu paydayı üretiyor → projenin toplumsal katmanı için bu ölçüt "ikinci aşama" olarak eklenebilir.
+- Irk ekseni Türkiye'ye AKTARILMAZ; aktarılan şey YAPI: grup bazında (SES/ihtiyaç kademesi) normalize karşılaştırma.
+- "Tohum" (seeding) bulgusu → kamu binası ekseninin ek gerekçesi: ihtiyaçlı mahallede görünür bir kamu çatısı GES'i (okul, muhtarlık, sağlık ocağı) komşuluk yayılımını başlatabilir. LLM raporunun öneri bölümüne.
+- "Hiç kurulum olmayan bölge yüzdesi" (sıfır-şişkinlik) → Çiğli mahallelerinde "GES'i hiç olmayan mahalle" analizi.
+- Bootstrap GA ile belirsizlik (1.000 yineleme, %90) → bizim Spearman/Kendall katsayılarımıza eklenmeli (26 mahallede noktasal katsayı zayıf). LOWESS 26 mahallede anlamsız, kullanılmamalı.
+- Yoksulluk sınırı altı bölgelerin dışlanması → bizim tasarımda en yoksul mahalleleri DIŞLAMAMA ilkesi (ihtiyaç ekseni tam onları öne çıkarmak için var) — metodolojik fark olarak yaz.

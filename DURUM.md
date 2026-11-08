@@ -21,7 +21,6 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 - [ ] LLM açıklama katmanı (Dorukhan)
 - [ ] Kurulum maliyeti için gerçek firma teklifleri; bakım gideri ve iskonto oranı için kaynak (Bilal)
 - [ ] Tez metni (Yiğit koordinasyonunda, herkes)
-- [ ] Veri klasörünün Drive bağlantısını `API.md`'ye eklemek (Bilal)
 
 ## Bilal
 - 2026-11-08: Üretim, NPV ve Monte Carlo tamamlandı, ara rapor teslime hazırlandı. Çıktılar `ekonomi/` ve `uretim/` klasörlerinde.

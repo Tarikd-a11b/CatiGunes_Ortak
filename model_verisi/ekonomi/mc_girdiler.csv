@@ -1,0 +1,20 @@
+﻿parametre,taban,mc_alt,mc_ust,dagilim,birim,kaynak
+kur_TL_USD,50.07,46.0,56.0,"ucgen, ortak",TL/USD,"TCMB gosterge doviz satis 06.11.2026; aralik: yil sonu PKA beklentisi 51,5 ve +/- oynaklik"
+capex_kucuk_USD,550.0,450.0,850.0,"ucgen, ortak",USD/kWp (<100 kWp),TR kurulumcu 2026 fiyatlari: 100 kW anahtar teslim 50-55 bin USD; 100 kW+ sanayi 600-850 USD/kW
+capex_orta_USD,500.0,400.0,750.0,"ucgen, ortak",USD/kWp (100-1000 kWp),TR kurulumcu 2026 fiyatlari (400-850 USD/kWp; sandvic cati ~400)
+capex_buyuk_USD,450.0,380.0,650.0,"ucgen, ortak",USD/kWp (>=1000 kWp),TR kurulumcu 2026 C&I cati 400-450 USD/kWp (MW sinifi); IRENA 2024 dunya ort. 691 USD/kW
+om_orani,0.015,0.01,0.02,"ucgen, ortak",yatirimin %/yil,literatur tipik %1-2 (varsayim)
+evirici_orani,0.08,0.05,0.12,"ucgen, ortak",yatirimin %,evirici yenileme tek seferlik (varsayim)
+evirici_yili,13.0,10.0,15.0,"ucgen, ortak",yil,evirici omru 10-15 yil (varsayim)
+bozunma,0.005,0.004,0.008,"ucgen, ortak",1/yil,"kristal Si modul garantisi ~%0,4-0,55/yil (varsayim)"
+omur,25.0,20.0,30.0,"ucgen, ortak",yil,modul guc garantisi 25-30 yil
+iskonto_reel,0.08,0.05,0.12,"ucgen, ortak",1/yil reel,TR ulke riski yuksek; reel sermaye maliyeti varsayimi
+fiyat_artisi_reel,0.0,-0.02,0.02,"ucgen, ortak",1/yil reel,tarife enflasyonla ayni hizda artar (taban); aralik varsayim
+tarife_sanayi_kr,334.7015,285.0,405.0,"ucgen, ortak",kr/kWh,"OSB sanayi: EPDK 04.04.2026 OG Sanayi tek zamanli enerji 290,9687 + Ataturk OSB TT-OG dagitim 43,7328 (EPDK 14049-111), vergi haric"
+tarife_osb_diger_kr,369.9352,315.0,445.0,"ucgen, ortak",kr/kWh,"OSB sanayi disi: EPDK 04.04.2026 OG Kamu/Ozel Hizmetler enerji 326,2024 + Ataturk OSB TT-OG 43,7328 (EPDK 14049-111), vergi haric"
+tarife_kamu_kr,493.0369,420.0,600.0,"ucgen, ortak",kr/kWh,"Cigli kamu (OSB disi): EPDK 04.04.2026 OG cift terim Kamu ve Ozel Hizmetler, tek zamanli enerji+dagitim, vergi haric"
+engel_payi,0.75,0.7,0.85,"ucgen, cati basina",oran,"Ni vd. 2024 engel %14,9 -> 0,85 ust; defter 0,70-0,80"
+yon_montaj,1.0,0.92,1.0,"ucgen, cati basina",carpan,"PVGIS dogu-bati/guney 0,92; cati montaj 0,96"
+oz_tuketim,1.0,0.714,1.0,"ucgen, cati basina (TAM)",oran,"Saatlik PVGIS: hafta sonu %28,6 (kotu sinir)"
+alan_hatasi,1.0,,,"ampirik, cati basina",carpan,Test seti insan/SAM ve insan/ayak izi orani
+ozgul_uretim,1.0,,,"normal SD_y/sqrt(T), ortak",carpan,PVGIS SD_y ~30 kWh/kWp

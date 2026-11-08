@@ -1,0 +1,11 @@
+﻿dosya;aciklama;satir;ureten_betik
+01_model_sonuclari_cigli_karsiyaka.csv;Uc modelin mahalle bazli ciktisi: cati alani, PVGIS uretim bandi, AHP oncelik skorlari, guvenilirlik kademesi (53 mahalle x 34 sutun);53;bolge_modelleri.py
+02_kamu_binalari_cigli.csv;"OSM kamu hizmeti binalari; tesis alani ve CATI alani ayri sutunda (okul poligonu bahceyi de kapsiyor, doluluk sutununa bakin)";166;kamu_binalari.py
+03_capraz_kontrol_ms_osm.csv;Microsoft ayak izi ile OSM karsilastirmasi: bina sayisi, cati alani, ortusme orani, resmi yapi sayisi (Cigli + Karsiyaka + Menemen GMK);54;osm_capraz_kontrol.py
+04_pvgis_dogrulama_izmirbb_ges.csv;"Izmir BB nin kendi 26 gunes tesisi; ozgul verim (kWh/kWp) ile PVGIS tahmininin karsilastirmasi. tur sutunu: proje_bazli = kullanilabilir, planlama_kabulu = sabit 1600 carpani, olcum degil";26;dogrulama_ges.py
+05_ihtiyac_analizi_cigli.csv;Pilot bolge secimi icin mahalle bazli ihtiyac tablosu (2026-09-09);27;ihtiyac_analizi.py
+09_tuik_ses2023_tum_ilceler.csv;"TUIK Sosyoekonomik Seviye 2023, Turkiye genelinde 973 ilce. SES skoru hane geliri + egitim suresi + meslek bilesenlerinden; 26 milyon hanenin tamami icin idari kayitlardan hesaplanmis. Kaynak: TUIK bulten 57942";973;tuik_ses.py
+06_osm_bina_ayak_izleri.csv;"OSM bina ayak izleri, Cigli + Karsiyaka; geometri yerine merkez koordinati ve UTM alani. Model 1 in birincil girdisi.";40787;osm_capraz_kontrol.py
+07_sam_kalibrasyon_referans_kumesi.csv;"MS ve OSM nin ayni binada ayni alani soyledigi kayitlar (+-%15). SAM kalibrasyonunun referansi; yer gercegi DEGIL.";1709;referans_kume.py
+08_kamu_binalari_cigli_konumlu.csv;02 ile ayni veri, ustune konum (lon/lat) eklenmis - haritaya dogrudan yuklenebilir.;166;kamu_binalari.py
+10_tuik_ses2023_izmir_ilceleri.csv;Ayni verinin Izmir alt kumesi, SES skoruna gore sirali (30 ilce). Karsiyaka 160,59 (TR 14.) ile Cigli 148,13 (TR 45.) arasindaki fark ust seviye hane payindan geliyor, en alt paydan degil.;30;tuik_ses.py

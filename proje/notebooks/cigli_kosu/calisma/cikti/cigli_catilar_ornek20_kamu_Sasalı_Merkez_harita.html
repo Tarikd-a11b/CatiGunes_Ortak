@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e11f45f04f8d738eed1f5f445f839b81 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e11f45f04f8d738eed1f5f445f839b81" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e11f45f04f8d738eed1f5f445f839b81 = L.map(
+                "map_e11f45f04f8d738eed1f5f445f839b81",
+                {
+                    center: [38.4960755, 26.95217355],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0f608f8bebafffea34f15e503c04c583 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0f608f8bebafffea34f15e503c04c583.addTo(map_e11f45f04f8d738eed1f5f445f839b81);
+        
+    
+            var tile_layer_74426ab5736f055779d18d8a1e8d41bf = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri World Imagery",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_74426ab5736f055779d18d8a1e8d41bf.addTo(map_e11f45f04f8d738eed1f5f445f839b81);
+        
+    
+            var feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_ddfb729f09eed10346693bfdfbbd07fd_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#E91E8C", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_ddfb729f09eed10346693bfdfbbd07fd_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ddfb729f09eed10346693bfdfbbd07fd = L.geoJson(null, {
+                onEachFeature: geo_json_ddfb729f09eed10346693bfdfbbd07fd_onEachFeature,
+            
+                style: geo_json_ddfb729f09eed10346693bfdfbbd07fd_styler,
+            ...{
+}
+        });
+
+        function geo_json_ddfb729f09eed10346693bfdfbbd07fd_add (data) {
+            geo_json_ddfb729f09eed10346693bfdfbbd07fd
+                .addData(data);
+        }
+            geo_json_ddfb729f09eed10346693bfdfbbd07fd_add({"features": [{"geometry": {"coordinates": [[[26.9520448, 38.4958213], [26.9521368, 38.4957852], [26.9520794, 38.4956958], [26.9519875, 38.4957319], [26.9520346, 38.4958054], [26.9520448, 38.4958213]]], "type": "Polygon"}, "properties": {"alan_m2": 85.3, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 17.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 2573, "kWh_ust": 13657, "kWp_alt": 1.68, "kWp_ust": 9.96, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.186, "osm": "way/867449819", "oturtma_orani": 0.724, "pay_guney": 0.16896551724137931, "pay_guney_dogu_bati": 1.0, "pv_yuz_azimut": 212.47119279445687, "sam": true, "tip": "karma (kiremit + teras)", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 16.621892583938514, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 13.931217401670313, "yukseklik_model": 15.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ddfb729f09eed10346693bfdfbbd07fd.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: karma (kiremit + teras)<br>alan: 85 m² | oturtma: 0.72<br>üretim: 2.6–13.7 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ddfb729f09eed10346693bfdfbbd07fd.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_ed163396f37a0a205d03d03ef962a09d_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_ed163396f37a0a205d03d03ef962a09d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ed163396f37a0a205d03d03ef962a09d = L.geoJson(null, {
+                onEachFeature: geo_json_ed163396f37a0a205d03d03ef962a09d_onEachFeature,
+            
+                style: geo_json_ed163396f37a0a205d03d03ef962a09d_styler,
+            ...{
+}
+        });
+
+        function geo_json_ed163396f37a0a205d03d03ef962a09d_add (data) {
+            geo_json_ed163396f37a0a205d03d03ef962a09d
+                .addData(data);
+        }
+            geo_json_ed163396f37a0a205d03d03ef962a09d_add({"features": [{"geometry": {"coordinates": [[[26.9522409, 38.4957518], [26.9523659, 38.4957084], [26.9523197, 38.4956268], [26.9521947, 38.4956702], [26.9522409, 38.4957518]]], "type": "Polygon"}, "properties": {"alan_m2": 137.5, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 52.0, "egim_foto_lo": 47.0, "golge_boyu_m": 15.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 6780, "kWh_ust": 15877, "kWp_alt": 4.43, "kWp_ust": 11.15, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.915, "osm": "way/867449820", "oturtma_orani": 0.999, "pay_guney": 0.2764756944444444, "pay_guney_dogu_bati": 0.6948784722222222, "pv_yuz_azimut": 204.4439557708971, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0003, "yukseklik_hi": 14.768291777762302, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 12.377668930799764, "yukseklik_model": 13.6}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ed163396f37a0a205d03d03ef962a09d.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 138 m² | oturtma: 1.00<br>üretim: 6.8–15.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ed163396f37a0a205d03d03ef962a09d.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_e060084fe0c2de42bb950884cabd4b64_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_e060084fe0c2de42bb950884cabd4b64_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e060084fe0c2de42bb950884cabd4b64 = L.geoJson(null, {
+                onEachFeature: geo_json_e060084fe0c2de42bb950884cabd4b64_onEachFeature,
+            
+                style: geo_json_e060084fe0c2de42bb950884cabd4b64_styler,
+            ...{
+}
+        });
+
+        function geo_json_e060084fe0c2de42bb950884cabd4b64_add (data) {
+            geo_json_e060084fe0c2de42bb950884cabd4b64
+                .addData(data);
+        }
+            geo_json_e060084fe0c2de42bb950884cabd4b64_add({"features": [{"geometry": {"coordinates": [[[26.951899, 38.4961994], [26.952011, 38.4961946], [26.9520105, 38.496188], [26.9520051, 38.4961101], [26.9518932, 38.4961148], [26.951899, 38.4961994]]], "type": "Polygon"}, "properties": {"alan_m2": 105.0, "anlik_golge_payi": 0.006, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 54.0, "egim_foto_lo": 49.0, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 3050, "kWh_ust": 11711, "kWp_alt": 2.01, "kWp_ust": 8.57, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.867, "osm": "way/867449824", "oturtma_orani": 0.992, "pay_guney": 0.16366906474820145, "pay_guney_dogu_bati": 0.6996402877697842, "pv_yuz_azimut": 182.72630588939174, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0334, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e060084fe0c2de42bb950884cabd4b64.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 105 m² | oturtma: 0.99<br>üretim: 3.0–11.7 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e060084fe0c2de42bb950884cabd4b64.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_72f399877f445ebcc33cd5388607b938_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#00AEEF", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_72f399877f445ebcc33cd5388607b938_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_72f399877f445ebcc33cd5388607b938 = L.geoJson(null, {
+                onEachFeature: geo_json_72f399877f445ebcc33cd5388607b938_onEachFeature,
+            
+                style: geo_json_72f399877f445ebcc33cd5388607b938_styler,
+            ...{
+}
+        });
+
+        function geo_json_72f399877f445ebcc33cd5388607b938_add (data) {
+            geo_json_72f399877f445ebcc33cd5388607b938
+                .addData(data);
+        }
+            geo_json_72f399877f445ebcc33cd5388607b938_add({"features": [{"geometry": {"coordinates": [[[26.9518379, 38.4957412], [26.9519169, 38.4958643], [26.9520507, 38.4958117], [26.9520036, 38.4957382], [26.9519718, 38.4956886], [26.9518379, 38.4957412]]], "type": "Polygon"}, "properties": {"alan_m2": 151.5, "anlik_golge_payi": 0.001, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 15.0, "golge_durumu": "engelli", "kWh_alt": 18695, "kWh_ust": 21499, "kWp_alt": 13.89, "kWp_ust": 13.89, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.057, "osm": "way/879213667", "oturtma_orani": 0.649, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.0546, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 12.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_72f399877f445ebcc33cd5388607b938.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 152 m² | oturtma: 0.65<br>üretim: 18.7–21.5 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_72f399877f445ebcc33cd5388607b938.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_f4926dddb5b86bcec4b46de61a60d26c_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_f4926dddb5b86bcec4b46de61a60d26c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f4926dddb5b86bcec4b46de61a60d26c = L.geoJson(null, {
+                onEachFeature: geo_json_f4926dddb5b86bcec4b46de61a60d26c_onEachFeature,
+            
+                style: geo_json_f4926dddb5b86bcec4b46de61a60d26c_styler,
+            ...{
+}
+        });
+
+        function geo_json_f4926dddb5b86bcec4b46de61a60d26c_add (data) {
+            geo_json_f4926dddb5b86bcec4b46de61a60d26c
+                .addData(data);
+        }
+            geo_json_f4926dddb5b86bcec4b46de61a60d26c_add({"features": [{"geometry": {"coordinates": [[[26.9519801, 38.4959942], [26.9519791, 38.4959422], [26.9518635, 38.4959435], [26.9518655, 38.4960482], [26.9519811, 38.4960469], [26.9519801, 38.4959942]]], "type": "Polygon"}, "properties": {"alan_m2": 122.2, "anlik_golge_payi": 0.003, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 32.5, "egim_foto_lo": 20.0, "golge_boyu_m": 12.0, "golge_durumu": "engelli", "kWh_alt": 4357, "kWh_ust": 15584, "kWp_alt": 2.81, "kWp_ust": 11.15, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.993, "osm": "way/879213695", "oturtma_orani": 0.953, "pay_guney": 0.19711971197119713, "pay_guney_dogu_bati": 0.7821782178217822, "pv_yuz_azimut": 184.0856143629725, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0047, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f4926dddb5b86bcec4b46de61a60d26c.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 122 m² | oturtma: 0.95<br>üretim: 4.4–15.6 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f4926dddb5b86bcec4b46de61a60d26c.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_59655c12bf84a65a02d7b99f2dcb929c_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_59655c12bf84a65a02d7b99f2dcb929c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_59655c12bf84a65a02d7b99f2dcb929c = L.geoJson(null, {
+                onEachFeature: geo_json_59655c12bf84a65a02d7b99f2dcb929c_onEachFeature,
+            
+                style: geo_json_59655c12bf84a65a02d7b99f2dcb929c_styler,
+            ...{
+}
+        });
+
+        function geo_json_59655c12bf84a65a02d7b99f2dcb929c_add (data) {
+            geo_json_59655c12bf84a65a02d7b99f2dcb929c
+                .addData(data);
+        }
+            geo_json_59655c12bf84a65a02d7b99f2dcb929c_add({"features": [{"geometry": {"coordinates": [[[26.9519962, 38.4960026], [26.9520849, 38.4960016], [26.9520834, 38.4959218], [26.9519947, 38.4959228], [26.9519962, 38.4960026]]], "type": "Polygon"}, "properties": {"alan_m2": 76.2, "anlik_golge_payi": 0.016, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 34.0, "egim_foto_lo": 29.5, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 3537, "kWh_ust": 10813, "kWp_alt": 2.28, "kWp_ust": 7.68, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.856, "osm": "way/879213696", "oturtma_orani": 0.908, "pay_guney": 0.2569037656903766, "pay_guney_dogu_bati": 0.8635983263598327, "pv_yuz_azimut": 180.0, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0068, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_59655c12bf84a65a02d7b99f2dcb929c.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 76 m² | oturtma: 0.91<br>üretim: 3.5–10.8 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_59655c12bf84a65a02d7b99f2dcb929c.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_70ccd6512b0dd9e5c23f3969d468397f_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#00AEEF", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_70ccd6512b0dd9e5c23f3969d468397f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_70ccd6512b0dd9e5c23f3969d468397f = L.geoJson(null, {
+                onEachFeature: geo_json_70ccd6512b0dd9e5c23f3969d468397f_onEachFeature,
+            
+                style: geo_json_70ccd6512b0dd9e5c23f3969d468397f_styler,
+            ...{
+}
+        });
+
+        function geo_json_70ccd6512b0dd9e5c23f3969d468397f_add (data) {
+            geo_json_70ccd6512b0dd9e5c23f3969d468397f
+                .addData(data);
+        }
+            geo_json_70ccd6512b0dd9e5c23f3969d468397f_add({"features": [{"geometry": {"coordinates": [[[26.9521384, 38.4959296], [26.9521833, 38.4959291], [26.9521822, 38.4958708], [26.9521373, 38.4958713], [26.9521384, 38.4959296]]], "type": "Polygon"}, "properties": {"alan_m2": 20.9, "anlik_golge_payi": 0.332, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 2453, "kWh_ust": 2820, "kWp_alt": 1.91, "kWp_ust": 1.91, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213697", "oturtma_orani": 0.39, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.1243, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_70ccd6512b0dd9e5c23f3969d468397f.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 21 m² | oturtma: 0.39<br>üretim: 2.5–2.8 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_70ccd6512b0dd9e5c23f3969d468397f.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_3eb705b3e314cf1e210389ad185ab4c6_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#00AEEF", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_3eb705b3e314cf1e210389ad185ab4c6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3eb705b3e314cf1e210389ad185ab4c6 = L.geoJson(null, {
+                onEachFeature: geo_json_3eb705b3e314cf1e210389ad185ab4c6_onEachFeature,
+            
+                style: geo_json_3eb705b3e314cf1e210389ad185ab4c6_styler,
+            ...{
+}
+        });
+
+        function geo_json_3eb705b3e314cf1e210389ad185ab4c6_add (data) {
+            geo_json_3eb705b3e314cf1e210389ad185ab4c6
+                .addData(data);
+        }
+            geo_json_3eb705b3e314cf1e210389ad185ab4c6_add({"features": [{"geometry": {"coordinates": [[[26.9523455, 38.4959065], [26.9524642, 38.495884], [26.9524411, 38.4958093], [26.9523224, 38.4958319], [26.9523455, 38.4959065]]], "type": "Polygon"}, "properties": {"alan_m2": 107.2, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 12.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 13700, "kWh_ust": 15755, "kWp_alt": 9.83, "kWp_ust": 9.83, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213698", "oturtma_orani": 0.906, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.002, "yukseklik_hi": 11.987890568497983, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 10.047346224493943, "yukseklik_model": 11.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3eb705b3e314cf1e210389ad185ab4c6.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 107 m² | oturtma: 0.91<br>üretim: 13.7–15.8 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_3eb705b3e314cf1e210389ad185ab4c6.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_126b08a2ded585f8f3fe8a0fdd05e30e_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_126b08a2ded585f8f3fe8a0fdd05e30e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_126b08a2ded585f8f3fe8a0fdd05e30e = L.geoJson(null, {
+                onEachFeature: geo_json_126b08a2ded585f8f3fe8a0fdd05e30e_onEachFeature,
+            
+                style: geo_json_126b08a2ded585f8f3fe8a0fdd05e30e_styler,
+            ...{
+}
+        });
+
+        function geo_json_126b08a2ded585f8f3fe8a0fdd05e30e_add (data) {
+            geo_json_126b08a2ded585f8f3fe8a0fdd05e30e
+                .addData(data);
+        }
+            geo_json_126b08a2ded585f8f3fe8a0fdd05e30e_add({"features": [{"geometry": {"coordinates": [[[26.952308, 38.4960095], [26.9523101, 38.495959], [26.9522906, 38.4959559], [26.9522841, 38.4958838], [26.9521572, 38.495895], [26.9521737, 38.4960033], [26.9522502, 38.4960071], [26.952308, 38.4960095]]], "type": "Polygon"}, "properties": {"alan_m2": 166.1, "anlik_golge_payi": 0.003, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 60.0, "egim_foto_lo": 60.0, "golge_boyu_m": 19.0, "golge_durumu": "engelli", "kWh_alt": 7422, "kWh_ust": 20907, "kWp_alt": 4.78, "kWp_ust": 14.74, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213699", "oturtma_orani": 0.94, "pay_guney": 0.24695823742190068, "pay_guney_dogu_bati": 0.7609339033212759, "pv_yuz_azimut": 187.12502020028597, "sam": true, "tip": "muhtemelen e\u011fimli (kiremit d\u0131\u015f\u0131)", "yillik_golge_kaybi": 0.0037, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 12.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_126b08a2ded585f8f3fe8a0fdd05e30e.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: muhtemelen eğimli (kiremit dışı)<br>alan: 166 m² | oturtma: 0.94<br>üretim: 7.4–20.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_126b08a2ded585f8f3fe8a0fdd05e30e.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_eab90982d41bde4b32e29f7124f30146_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#00AEEF", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_eab90982d41bde4b32e29f7124f30146_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_eab90982d41bde4b32e29f7124f30146 = L.geoJson(null, {
+                onEachFeature: geo_json_eab90982d41bde4b32e29f7124f30146_onEachFeature,
+            
+                style: geo_json_eab90982d41bde4b32e29f7124f30146_styler,
+            ...{
+}
+        });
+
+        function geo_json_eab90982d41bde4b32e29f7124f30146_add (data) {
+            geo_json_eab90982d41bde4b32e29f7124f30146
+                .addData(data);
+        }
+            geo_json_eab90982d41bde4b32e29f7124f30146_add({"features": [{"geometry": {"coordinates": [[[26.9524039, 38.4961175], [26.9525092, 38.4961159], [26.9525065, 38.4960056], [26.9524012, 38.4960072], [26.9524039, 38.4961175]]], "type": "Polygon"}, "properties": {"alan_m2": 119.6, "anlik_golge_payi": 0.023, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 17.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 15304, "kWh_ust": 17599, "kWp_alt": 10.97, "kWp_ust": 10.97, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213700", "oturtma_orani": 0.964, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 16.621892583938514, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 13.931217401670313, "yukseklik_model": 15.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_eab90982d41bde4b32e29f7124f30146.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 120 m² | oturtma: 0.96<br>üretim: 15.3–17.6 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_eab90982d41bde4b32e29f7124f30146.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_1ce0e0bd9a6a0bdffeed464c1627d778_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_1ce0e0bd9a6a0bdffeed464c1627d778_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1ce0e0bd9a6a0bdffeed464c1627d778 = L.geoJson(null, {
+                onEachFeature: geo_json_1ce0e0bd9a6a0bdffeed464c1627d778_onEachFeature,
+            
+                style: geo_json_1ce0e0bd9a6a0bdffeed464c1627d778_styler,
+            ...{
+}
+        });
+
+        function geo_json_1ce0e0bd9a6a0bdffeed464c1627d778_add (data) {
+            geo_json_1ce0e0bd9a6a0bdffeed464c1627d778
+                .addData(data);
+        }
+            geo_json_1ce0e0bd9a6a0bdffeed464c1627d778_add({"features": [{"geometry": {"coordinates": [[[26.9523084, 38.4961141], [26.9524029, 38.4961167], [26.9524064, 38.4960391], [26.9523697, 38.4960389], [26.9523119, 38.4960365], [26.9523084, 38.4961141]]], "type": "Polygon"}, "properties": {"alan_m2": 65.9, "anlik_golge_payi": 0.036, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 48.0, "egim_foto_lo": 43.0, "golge_boyu_m": 9.0, "golge_durumu": "engelli", "kWh_alt": 2857, "kWh_ust": 6944, "kWp_alt": 2.03, "kWp_ust": 5.33, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.858, "osm": "way/879213701", "oturtma_orani": 0.817, "pay_guney": 0.2635135135135135, "pay_guney_dogu_bati": 0.693050193050193, "pv_yuz_azimut": 177.3974408178851, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.1433, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1ce0e0bd9a6a0bdffeed464c1627d778.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 66 m² | oturtma: 0.82<br>üretim: 2.9–6.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_1ce0e0bd9a6a0bdffeed464c1627d778.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_c81f509385856ecc42a396d41c394a5d_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_c81f509385856ecc42a396d41c394a5d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c81f509385856ecc42a396d41c394a5d = L.geoJson(null, {
+                onEachFeature: geo_json_c81f509385856ecc42a396d41c394a5d_onEachFeature,
+            
+                style: geo_json_c81f509385856ecc42a396d41c394a5d_styler,
+            ...{
+}
+        });
+
+        function geo_json_c81f509385856ecc42a396d41c394a5d_add (data) {
+            geo_json_c81f509385856ecc42a396d41c394a5d
+                .addData(data);
+        }
+            geo_json_c81f509385856ecc42a396d41c394a5d_add({"features": [{"geometry": {"coordinates": [[[26.9522463, 38.4962492], [26.9524153, 38.4962403], [26.9524072, 38.496146], [26.9522382, 38.496155], [26.9522463, 38.4962492]]], "type": "Polygon"}, "properties": {"alan_m2": 173.4, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 29.0, "egim_foto_lo": 20.5, "golge_boyu_m": 2.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 8183, "kWh_ust": 16185, "kWp_alt": 6.51, "kWp_ust": 13.69, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.985, "osm": "way/879213702", "oturtma_orani": 0.998, "pay_guney": 0.3219309462915601, "pay_guney_dogu_bati": 0.6767902813299232, "pv_yuz_azimut": 183.57633273009753, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.2957, "yukseklik_hi": 2.7198865376169192, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 2.2796038701412056, "yukseklik_model": 2.5}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c81f509385856ecc42a396d41c394a5d.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 173 m² | oturtma: 1.00<br>üretim: 8.2–16.2 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c81f509385856ecc42a396d41c394a5d.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_4c8d18b29b54935cc437c2246a2aac60_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_4c8d18b29b54935cc437c2246a2aac60_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4c8d18b29b54935cc437c2246a2aac60 = L.geoJson(null, {
+                onEachFeature: geo_json_4c8d18b29b54935cc437c2246a2aac60_onEachFeature,
+            
+                style: geo_json_4c8d18b29b54935cc437c2246a2aac60_styler,
+            ...{
+}
+        });
+
+        function geo_json_4c8d18b29b54935cc437c2246a2aac60_add (data) {
+            geo_json_4c8d18b29b54935cc437c2246a2aac60
+                .addData(data);
+        }
+            geo_json_4c8d18b29b54935cc437c2246a2aac60_add({"features": [{"geometry": {"coordinates": [[[26.9520966, 38.4961853], [26.9522096, 38.4961831], [26.9522068, 38.4960976], [26.9521866, 38.496098], [26.9521861, 38.4960807], [26.952117, 38.4960821], [26.9521175, 38.4960993], [26.9520938, 38.4960998], [26.9520966, 38.4961853]]], "type": "Polygon"}, "properties": {"alan_m2": 119.1, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 27.5, "egim_foto_lo": 24.0, "golge_boyu_m": 18.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 4337, "kWh_ust": 14912, "kWp_alt": 2.79, "kWp_ust": 10.62, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.978, "osm": "way/879213703", "oturtma_orani": 0.998, "pay_guney": 0.20065635255508674, "pay_guney_dogu_bati": 0.7637130801687764, "pv_yuz_azimut": 182.4895524992408, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 17.548692987026623, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 14.707991637105586, "yukseklik_model": 16.1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4c8d18b29b54935cc437c2246a2aac60.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 119 m² | oturtma: 1.00<br>üretim: 4.3–14.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_4c8d18b29b54935cc437c2246a2aac60.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_658f444d405a26aee5fc7429a553abab_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#E91E8C", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_658f444d405a26aee5fc7429a553abab_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_658f444d405a26aee5fc7429a553abab = L.geoJson(null, {
+                onEachFeature: geo_json_658f444d405a26aee5fc7429a553abab_onEachFeature,
+            
+                style: geo_json_658f444d405a26aee5fc7429a553abab_styler,
+            ...{
+}
+        });
+
+        function geo_json_658f444d405a26aee5fc7429a553abab_add (data) {
+            geo_json_658f444d405a26aee5fc7429a553abab
+                .addData(data);
+        }
+            geo_json_658f444d405a26aee5fc7429a553abab_add({"features": [{"geometry": {"coordinates": [[[26.9520988, 38.4962613], [26.9522309, 38.4962587], [26.9522287, 38.496189], [26.9522096, 38.4961894], [26.9520966, 38.4961916], [26.9520988, 38.4962613]]], "type": "Polygon"}, "properties": {"alan_m2": 91.6, "anlik_golge_payi": 0.002, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 6.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 12976, "kWh_ust": 13412, "kWp_alt": 10.69, "kWp_ust": 10.69, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.096, "osm": "way/879213704", "oturtma_orani": 0.642, "pay_guney": 1.0, "pay_guney_dogu_bati": 1.0, "pv_yuz_azimut": 182.29060933701777, "sam": true, "tip": "karma (kiremit + teras)", "yillik_golge_kaybi": 0.3376, "yukseklik_hi": 6.427088149969345, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 5.3867008118823, "yukseklik_model": 5.9}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_658f444d405a26aee5fc7429a553abab.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: karma (kiremit + teras)<br>alan: 92 m² | oturtma: 0.64<br>üretim: 13.0–13.4 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_658f444d405a26aee5fc7429a553abab.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_5f0ecc3f76f5bc094f6119b026182c4b_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#E91E8C", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_5f0ecc3f76f5bc094f6119b026182c4b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5f0ecc3f76f5bc094f6119b026182c4b = L.geoJson(null, {
+                onEachFeature: geo_json_5f0ecc3f76f5bc094f6119b026182c4b_onEachFeature,
+            
+                style: geo_json_5f0ecc3f76f5bc094f6119b026182c4b_styler,
+            ...{
+}
+        });
+
+        function geo_json_5f0ecc3f76f5bc094f6119b026182c4b_add (data) {
+            geo_json_5f0ecc3f76f5bc094f6119b026182c4b
+                .addData(data);
+        }
+            geo_json_5f0ecc3f76f5bc094f6119b026182c4b_add({"features": [{"geometry": {"coordinates": [[[26.9520186, 38.4961101], [26.952024, 38.496188], [26.9520882, 38.4961852], [26.952082, 38.4960974], [26.9520179, 38.4961001], [26.9520186, 38.4961101]]], "type": "Polygon"}, "properties": {"alan_m2": 58.9, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 5000, "kWh_ust": 8286, "kWp_alt": 4.32, "kWp_ust": 6.87, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.122, "osm": "way/879213705", "oturtma_orani": 0.946, "pay_guney": 0.6287878787878788, "pay_guney_dogu_bati": 1.0, "pv_yuz_azimut": 97.12501396020197, "sam": true, "tip": "karma (kiremit + teras)", "yillik_golge_kaybi": 0.1677, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5f0ecc3f76f5bc094f6119b026182c4b.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: karma (kiremit + teras)<br>alan: 59 m² | oturtma: 0.95<br>üretim: 5.0–8.3 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5f0ecc3f76f5bc094f6119b026182c4b.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_7092fa834638a6bc58024add9f7dc48f_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_7092fa834638a6bc58024add9f7dc48f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7092fa834638a6bc58024add9f7dc48f = L.geoJson(null, {
+                onEachFeature: geo_json_7092fa834638a6bc58024add9f7dc48f_onEachFeature,
+            
+                style: geo_json_7092fa834638a6bc58024add9f7dc48f_styler,
+            ...{
+}
+        });
+
+        function geo_json_7092fa834638a6bc58024add9f7dc48f_add (data) {
+            geo_json_7092fa834638a6bc58024add9f7dc48f
+                .addData(data);
+        }
+            geo_json_7092fa834638a6bc58024add9f7dc48f_add({"features": [{"geometry": {"coordinates": [[[26.9519172, 38.4963322], [26.9519914, 38.4963266], [26.951978, 38.4962164], [26.9519037, 38.4962219], [26.9519172, 38.4963322]]], "type": "Polygon"}, "properties": {"alan_m2": 96.1, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 31.5, "egim_foto_lo": 6.5, "golge_boyu_m": 18.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 6795, "kWh_ust": 11958, "kWp_alt": 5.24, "kWp_ust": 8.86, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.255, "osm": "way/879453160", "oturtma_orani": 0.996, "pay_guney": 0.46770601336302897, "pay_guney_dogu_bati": 0.7906458797327395, "pv_yuz_azimut": 95.35583262109512, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0032, "yukseklik_hi": 17.548692987026623, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 14.707991637105586, "yukseklik_model": 16.1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7092fa834638a6bc58024add9f7dc48f.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 96 m² | oturtma: 1.00<br>üretim: 6.8–12.0 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_7092fa834638a6bc58024add9f7dc48f.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_d46fa360a9423233990502884ada72a0_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_d46fa360a9423233990502884ada72a0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d46fa360a9423233990502884ada72a0 = L.geoJson(null, {
+                onEachFeature: geo_json_d46fa360a9423233990502884ada72a0_onEachFeature,
+            
+                style: geo_json_d46fa360a9423233990502884ada72a0_styler,
+            ...{
+}
+        });
+
+        function geo_json_d46fa360a9423233990502884ada72a0_add (data) {
+            geo_json_d46fa360a9423233990502884ada72a0
+                .addData(data);
+        }
+            geo_json_d46fa360a9423233990502884ada72a0_add({"features": [{"geometry": {"coordinates": [[[26.9522846, 38.4963857], [26.952408, 38.4963815], [26.9524043, 38.4963165], [26.952281, 38.4963207], [26.9522846, 38.4963857]]], "type": "Polygon"}, "properties": {"alan_m2": 86.1, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 55.0, "egim_foto_lo": 50.0, "golge_boyu_m": 26.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 4770, "kWh_ust": 9196, "kWp_alt": 3.07, "kWp_ust": 6.27, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.897, "osm": "way/879453169", "oturtma_orani": 0.962, "pay_guney": 0.3053003533568905, "pay_guney_dogu_bati": 0.6240282685512367, "pv_yuz_azimut": 182.29061093256536, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 24.96309621173147, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 20.922185520587778, "yukseklik_model": 22.9}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d46fa360a9423233990502884ada72a0.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 86 m² | oturtma: 0.96<br>üretim: 4.8–9.2 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d46fa360a9423233990502884ada72a0.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_45f2a55ced91cb929804df01d16c41c7_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_45f2a55ced91cb929804df01d16c41c7_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_45f2a55ced91cb929804df01d16c41c7 = L.geoJson(null, {
+                onEachFeature: geo_json_45f2a55ced91cb929804df01d16c41c7_onEachFeature,
+            
+                style: geo_json_45f2a55ced91cb929804df01d16c41c7_styler,
+            ...{
+}
+        });
+
+        function geo_json_45f2a55ced91cb929804df01d16c41c7_add (data) {
+            geo_json_45f2a55ced91cb929804df01d16c41c7
+                .addData(data);
+        }
+            geo_json_45f2a55ced91cb929804df01d16c41c7_add({"features": [{"geometry": {"coordinates": [[[26.9522953, 38.4964466], [26.9523865, 38.4964466], [26.9523865, 38.4963878], [26.9522953, 38.4963878], [26.9522953, 38.4964466]]], "type": "Polygon"}, "properties": {"alan_m2": 60.7, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 30.0, "egim_foto_lo": 26.0, "golge_boyu_m": 17.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 2474, "kWh_ust": 5945, "kWp_alt": 1.95, "kWp_ust": 5.06, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 1.0, "osm": "way/879453170", "oturtma_orani": 1.0, "pay_guney": 0.27542754275427545, "pay_guney_dogu_bati": 0.7155715571557155, "pv_yuz_azimut": 180.0, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.2829, "yukseklik_hi": 16.621892583938514, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 13.931217401670313, "yukseklik_model": 15.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_45f2a55ced91cb929804df01d16c41c7.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 61 m² | oturtma: 1.00<br>üretim: 2.5–5.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_45f2a55ced91cb929804df01d16c41c7.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_111d7913bac9e2091e97c258302c9ee5_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_111d7913bac9e2091e97c258302c9ee5_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_111d7913bac9e2091e97c258302c9ee5 = L.geoJson(null, {
+                onEachFeature: geo_json_111d7913bac9e2091e97c258302c9ee5_onEachFeature,
+            
+                style: geo_json_111d7913bac9e2091e97c258302c9ee5_styler,
+            ...{
+}
+        });
+
+        function geo_json_111d7913bac9e2091e97c258302c9ee5_add (data) {
+            geo_json_111d7913bac9e2091e97c258302c9ee5
+                .addData(data);
+        }
+            geo_json_111d7913bac9e2091e97c258302c9ee5_add({"features": [{"geometry": {"coordinates": [[[26.952306, 38.496499], [26.952408, 38.496499], [26.952408, 38.4964634], [26.952306, 38.4964634], [26.952306, 38.496499]]], "type": "Polygon"}, "properties": {"alan_m2": 42.7, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 8.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 1874, "kWh_ust": 3208, "kWp_alt": 1.71, "kWp_ust": 3.06, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.909, "osm": "way/879453171", "oturtma_orani": 0.979, "pay_guney": 0.3431786216596343, "pay_guney_dogu_bati": 0.6146272855133614, "pv_yuz_azimut": 180.0, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.4538, "yukseklik_hi": 8.280688956145557, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 6.940249282752848, "yukseklik_model": 7.6}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_111d7913bac9e2091e97c258302c9ee5.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 43 m² | oturtma: 0.98<br>üretim: 1.9–3.2 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_111d7913bac9e2091e97c258302c9ee5.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+        function geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#FF7800", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6 = L.geoJson(null, {
+                onEachFeature: geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6_onEachFeature,
+            
+                style: geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6_styler,
+            ...{
+}
+        });
+
+        function geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6_add (data) {
+            geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6
+                .addData(data);
+        }
+            geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6_add({"features": [{"geometry": {"coordinates": [[[26.9520835, 38.4965179], [26.9521895, 38.4965242], [26.9522003, 38.496413], [26.9520942, 38.4964067], [26.9520835, 38.4965179]]], "type": "Polygon"}, "properties": {"alan_m2": 128.3, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 45.0, "egim_foto_lo": 40.0, "golge_boyu_m": 19.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 3892, "kWh_ust": 16728, "kWp_alt": 2.53, "kWp_ust": 12.15, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.954, "osm": "way/879453172", "oturtma_orani": 0.978, "pay_guney": 0.16875, "pay_guney_dogu_bati": 0.8116071428571429, "pv_yuz_azimut": 175.76360669925168, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0135, "yukseklik_hi": 18.47549339011473, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 15.48476587254086, "yukseklik_model": 17.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 128 m² | oturtma: 0.98<br>üretim: 3.9–16.7 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_9a38c3bec9df644f1fba02dc9b5cd4f6.addTo(feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78);
+        
+    
+            feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78.addTo(map_e11f45f04f8d738eed1f5f445f839b81);
+        
+    
+            var feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_57950bfb8b62c43207d29b0319b37c6e_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_57950bfb8b62c43207d29b0319b37c6e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_57950bfb8b62c43207d29b0319b37c6e = L.geoJson(null, {
+                onEachFeature: geo_json_57950bfb8b62c43207d29b0319b37c6e_onEachFeature,
+            
+                style: geo_json_57950bfb8b62c43207d29b0319b37c6e_styler,
+            ...{
+}
+        });
+
+        function geo_json_57950bfb8b62c43207d29b0319b37c6e_add (data) {
+            geo_json_57950bfb8b62c43207d29b0319b37c6e
+                .addData(data);
+        }
+            geo_json_57950bfb8b62c43207d29b0319b37c6e_add({"features": [{"geometry": {"coordinates": [[[26.9520448, 38.4958213], [26.9521368, 38.4957852], [26.9520794, 38.4956958], [26.9519875, 38.4957319], [26.9520346, 38.4958054], [26.9520448, 38.4958213]]], "type": "Polygon"}, "properties": {"alan_m2": 85.3, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 17.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 2573, "kWh_ust": 13657, "kWp_alt": 1.68, "kWp_ust": 9.96, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.186, "osm": "way/867449819", "oturtma_orani": 0.724, "pay_guney": 0.16896551724137931, "pay_guney_dogu_bati": 1.0, "pv_yuz_azimut": 212.47119279445687, "sam": true, "tip": "karma (kiremit + teras)", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 16.621892583938514, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 13.931217401670313, "yukseklik_model": 15.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_57950bfb8b62c43207d29b0319b37c6e.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: karma (kiremit + teras)<br>alan: 85 m² | oturtma: 0.72<br>üretim: 2.6–13.7 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_57950bfb8b62c43207d29b0319b37c6e.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_b6be66850fc271c009921e91266b1525_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_b6be66850fc271c009921e91266b1525_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b6be66850fc271c009921e91266b1525 = L.geoJson(null, {
+                onEachFeature: geo_json_b6be66850fc271c009921e91266b1525_onEachFeature,
+            
+                style: geo_json_b6be66850fc271c009921e91266b1525_styler,
+            ...{
+}
+        });
+
+        function geo_json_b6be66850fc271c009921e91266b1525_add (data) {
+            geo_json_b6be66850fc271c009921e91266b1525
+                .addData(data);
+        }
+            geo_json_b6be66850fc271c009921e91266b1525_add({"features": [{"geometry": {"coordinates": [[[26.9522409, 38.4957518], [26.9523659, 38.4957084], [26.9523197, 38.4956268], [26.9521947, 38.4956702], [26.9522409, 38.4957518]]], "type": "Polygon"}, "properties": {"alan_m2": 137.5, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 52.0, "egim_foto_lo": 47.0, "golge_boyu_m": 15.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 6780, "kWh_ust": 15877, "kWp_alt": 4.43, "kWp_ust": 11.15, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.915, "osm": "way/867449820", "oturtma_orani": 0.999, "pay_guney": 0.2764756944444444, "pay_guney_dogu_bati": 0.6948784722222222, "pv_yuz_azimut": 204.4439557708971, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0003, "yukseklik_hi": 14.768291777762302, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 12.377668930799764, "yukseklik_model": 13.6}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_b6be66850fc271c009921e91266b1525.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 138 m² | oturtma: 1.00<br>üretim: 6.8–15.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_b6be66850fc271c009921e91266b1525.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_0f124dfb0551b3407a1061cb6ff415c9_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_0f124dfb0551b3407a1061cb6ff415c9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0f124dfb0551b3407a1061cb6ff415c9 = L.geoJson(null, {
+                onEachFeature: geo_json_0f124dfb0551b3407a1061cb6ff415c9_onEachFeature,
+            
+                style: geo_json_0f124dfb0551b3407a1061cb6ff415c9_styler,
+            ...{
+}
+        });
+
+        function geo_json_0f124dfb0551b3407a1061cb6ff415c9_add (data) {
+            geo_json_0f124dfb0551b3407a1061cb6ff415c9
+                .addData(data);
+        }
+            geo_json_0f124dfb0551b3407a1061cb6ff415c9_add({"features": [{"geometry": {"coordinates": [[[26.951899, 38.4961994], [26.952011, 38.4961946], [26.9520105, 38.496188], [26.9520051, 38.4961101], [26.9518932, 38.4961148], [26.951899, 38.4961994]]], "type": "Polygon"}, "properties": {"alan_m2": 105.0, "anlik_golge_payi": 0.006, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 54.0, "egim_foto_lo": 49.0, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 3050, "kWh_ust": 11711, "kWp_alt": 2.01, "kWp_ust": 8.57, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.867, "osm": "way/867449824", "oturtma_orani": 0.992, "pay_guney": 0.16366906474820145, "pay_guney_dogu_bati": 0.6996402877697842, "pv_yuz_azimut": 182.72630588939174, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0334, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0f124dfb0551b3407a1061cb6ff415c9.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 105 m² | oturtma: 0.99<br>üretim: 3.0–11.7 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0f124dfb0551b3407a1061cb6ff415c9.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_12117d728971478711a01b7a560a0587_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_12117d728971478711a01b7a560a0587_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_12117d728971478711a01b7a560a0587 = L.geoJson(null, {
+                onEachFeature: geo_json_12117d728971478711a01b7a560a0587_onEachFeature,
+            
+                style: geo_json_12117d728971478711a01b7a560a0587_styler,
+            ...{
+}
+        });
+
+        function geo_json_12117d728971478711a01b7a560a0587_add (data) {
+            geo_json_12117d728971478711a01b7a560a0587
+                .addData(data);
+        }
+            geo_json_12117d728971478711a01b7a560a0587_add({"features": [{"geometry": {"coordinates": [[[26.9518379, 38.4957412], [26.9519169, 38.4958643], [26.9520507, 38.4958117], [26.9520036, 38.4957382], [26.9519718, 38.4956886], [26.9518379, 38.4957412]]], "type": "Polygon"}, "properties": {"alan_m2": 151.5, "anlik_golge_payi": 0.001, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 15.0, "golge_durumu": "engelli", "kWh_alt": 18695, "kWh_ust": 21499, "kWp_alt": 13.89, "kWp_ust": 13.89, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.057, "osm": "way/879213667", "oturtma_orani": 0.649, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.0546, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 12.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_12117d728971478711a01b7a560a0587.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 152 m² | oturtma: 0.65<br>üretim: 18.7–21.5 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_12117d728971478711a01b7a560a0587.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_522203d2a0bcdc32dea475932541b3a6_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_522203d2a0bcdc32dea475932541b3a6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_522203d2a0bcdc32dea475932541b3a6 = L.geoJson(null, {
+                onEachFeature: geo_json_522203d2a0bcdc32dea475932541b3a6_onEachFeature,
+            
+                style: geo_json_522203d2a0bcdc32dea475932541b3a6_styler,
+            ...{
+}
+        });
+
+        function geo_json_522203d2a0bcdc32dea475932541b3a6_add (data) {
+            geo_json_522203d2a0bcdc32dea475932541b3a6
+                .addData(data);
+        }
+            geo_json_522203d2a0bcdc32dea475932541b3a6_add({"features": [{"geometry": {"coordinates": [[[26.9519801, 38.4959942], [26.9519791, 38.4959422], [26.9518635, 38.4959435], [26.9518655, 38.4960482], [26.9519811, 38.4960469], [26.9519801, 38.4959942]]], "type": "Polygon"}, "properties": {"alan_m2": 122.2, "anlik_golge_payi": 0.003, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 32.5, "egim_foto_lo": 20.0, "golge_boyu_m": 12.0, "golge_durumu": "engelli", "kWh_alt": 4357, "kWh_ust": 15584, "kWp_alt": 2.81, "kWp_ust": 11.15, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.993, "osm": "way/879213695", "oturtma_orani": 0.953, "pay_guney": 0.19711971197119713, "pay_guney_dogu_bati": 0.7821782178217822, "pv_yuz_azimut": 184.0856143629725, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0047, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_522203d2a0bcdc32dea475932541b3a6.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 122 m² | oturtma: 0.95<br>üretim: 4.4–15.6 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_522203d2a0bcdc32dea475932541b3a6.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_6242a115842f6534de51f10d2cd88820_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_6242a115842f6534de51f10d2cd88820_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_6242a115842f6534de51f10d2cd88820 = L.geoJson(null, {
+                onEachFeature: geo_json_6242a115842f6534de51f10d2cd88820_onEachFeature,
+            
+                style: geo_json_6242a115842f6534de51f10d2cd88820_styler,
+            ...{
+}
+        });
+
+        function geo_json_6242a115842f6534de51f10d2cd88820_add (data) {
+            geo_json_6242a115842f6534de51f10d2cd88820
+                .addData(data);
+        }
+            geo_json_6242a115842f6534de51f10d2cd88820_add({"features": [{"geometry": {"coordinates": [[[26.9519962, 38.4960026], [26.9520849, 38.4960016], [26.9520834, 38.4959218], [26.9519947, 38.4959228], [26.9519962, 38.4960026]]], "type": "Polygon"}, "properties": {"alan_m2": 76.2, "anlik_golge_payi": 0.016, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 34.0, "egim_foto_lo": 29.5, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 3537, "kWh_ust": 10813, "kWp_alt": 2.28, "kWp_ust": 7.68, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.856, "osm": "way/879213696", "oturtma_orani": 0.908, "pay_guney": 0.2569037656903766, "pay_guney_dogu_bati": 0.8635983263598327, "pv_yuz_azimut": 180.0, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0068, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6242a115842f6534de51f10d2cd88820.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 76 m² | oturtma: 0.91<br>üretim: 3.5–10.8 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_6242a115842f6534de51f10d2cd88820.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_9637167f609576f72d439b8fcfde5f83_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#E53935", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_9637167f609576f72d439b8fcfde5f83_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_9637167f609576f72d439b8fcfde5f83 = L.geoJson(null, {
+                onEachFeature: geo_json_9637167f609576f72d439b8fcfde5f83_onEachFeature,
+            
+                style: geo_json_9637167f609576f72d439b8fcfde5f83_styler,
+            ...{
+}
+        });
+
+        function geo_json_9637167f609576f72d439b8fcfde5f83_add (data) {
+            geo_json_9637167f609576f72d439b8fcfde5f83
+                .addData(data);
+        }
+            geo_json_9637167f609576f72d439b8fcfde5f83_add({"features": [{"geometry": {"coordinates": [[[26.9521384, 38.4959296], [26.9521833, 38.4959291], [26.9521822, 38.4958708], [26.9521373, 38.4958713], [26.9521384, 38.4959296]]], "type": "Polygon"}, "properties": {"alan_m2": 20.9, "anlik_golge_payi": 0.332, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 2453, "kWh_ust": 2820, "kWp_alt": 1.91, "kWp_ust": 1.91, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213697", "oturtma_orani": 0.39, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.1243, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9637167f609576f72d439b8fcfde5f83.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 21 m² | oturtma: 0.39<br>üretim: 2.5–2.8 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_9637167f609576f72d439b8fcfde5f83.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_3fc3b391b9a85ba640e1c4995ff61954_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_3fc3b391b9a85ba640e1c4995ff61954_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3fc3b391b9a85ba640e1c4995ff61954 = L.geoJson(null, {
+                onEachFeature: geo_json_3fc3b391b9a85ba640e1c4995ff61954_onEachFeature,
+            
+                style: geo_json_3fc3b391b9a85ba640e1c4995ff61954_styler,
+            ...{
+}
+        });
+
+        function geo_json_3fc3b391b9a85ba640e1c4995ff61954_add (data) {
+            geo_json_3fc3b391b9a85ba640e1c4995ff61954
+                .addData(data);
+        }
+            geo_json_3fc3b391b9a85ba640e1c4995ff61954_add({"features": [{"geometry": {"coordinates": [[[26.9523455, 38.4959065], [26.9524642, 38.495884], [26.9524411, 38.4958093], [26.9523224, 38.4958319], [26.9523455, 38.4959065]]], "type": "Polygon"}, "properties": {"alan_m2": 107.2, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 12.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 13700, "kWh_ust": 15755, "kWp_alt": 9.83, "kWp_ust": 9.83, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213698", "oturtma_orani": 0.906, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.002, "yukseklik_hi": 11.987890568497983, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 10.047346224493943, "yukseklik_model": 11.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3fc3b391b9a85ba640e1c4995ff61954.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 107 m² | oturtma: 0.91<br>üretim: 13.7–15.8 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_3fc3b391b9a85ba640e1c4995ff61954.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_93152cacf1dfff7b724ab6d3828ed051_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_93152cacf1dfff7b724ab6d3828ed051_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_93152cacf1dfff7b724ab6d3828ed051 = L.geoJson(null, {
+                onEachFeature: geo_json_93152cacf1dfff7b724ab6d3828ed051_onEachFeature,
+            
+                style: geo_json_93152cacf1dfff7b724ab6d3828ed051_styler,
+            ...{
+}
+        });
+
+        function geo_json_93152cacf1dfff7b724ab6d3828ed051_add (data) {
+            geo_json_93152cacf1dfff7b724ab6d3828ed051
+                .addData(data);
+        }
+            geo_json_93152cacf1dfff7b724ab6d3828ed051_add({"features": [{"geometry": {"coordinates": [[[26.952308, 38.4960095], [26.9523101, 38.495959], [26.9522906, 38.4959559], [26.9522841, 38.4958838], [26.9521572, 38.495895], [26.9521737, 38.4960033], [26.9522502, 38.4960071], [26.952308, 38.4960095]]], "type": "Polygon"}, "properties": {"alan_m2": 166.1, "anlik_golge_payi": 0.003, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 60.0, "egim_foto_lo": 60.0, "golge_boyu_m": 19.0, "golge_durumu": "engelli", "kWh_alt": 7422, "kWh_ust": 20907, "kWp_alt": 4.78, "kWp_ust": 14.74, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213699", "oturtma_orani": 0.94, "pay_guney": 0.24695823742190068, "pay_guney_dogu_bati": 0.7609339033212759, "pv_yuz_azimut": 187.12502020028597, "sam": true, "tip": "muhtemelen e\u011fimli (kiremit d\u0131\u015f\u0131)", "yillik_golge_kaybi": 0.0037, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 12.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_93152cacf1dfff7b724ab6d3828ed051.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: muhtemelen eğimli (kiremit dışı)<br>alan: 166 m² | oturtma: 0.94<br>üretim: 7.4–20.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_93152cacf1dfff7b724ab6d3828ed051.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_30f5da25a666a3527b0f4f7535b54cce_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_30f5da25a666a3527b0f4f7535b54cce_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_30f5da25a666a3527b0f4f7535b54cce = L.geoJson(null, {
+                onEachFeature: geo_json_30f5da25a666a3527b0f4f7535b54cce_onEachFeature,
+            
+                style: geo_json_30f5da25a666a3527b0f4f7535b54cce_styler,
+            ...{
+}
+        });
+
+        function geo_json_30f5da25a666a3527b0f4f7535b54cce_add (data) {
+            geo_json_30f5da25a666a3527b0f4f7535b54cce
+                .addData(data);
+        }
+            geo_json_30f5da25a666a3527b0f4f7535b54cce_add({"features": [{"geometry": {"coordinates": [[[26.9524039, 38.4961175], [26.9525092, 38.4961159], [26.9525065, 38.4960056], [26.9524012, 38.4960072], [26.9524039, 38.4961175]]], "type": "Polygon"}, "properties": {"alan_m2": 119.6, "anlik_golge_payi": 0.023, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 17.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 15304, "kWh_ust": 17599, "kWp_alt": 10.97, "kWp_ust": 10.97, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.0, "osm": "way/879213700", "oturtma_orani": 0.964, "pay_guney": null, "pay_guney_dogu_bati": null, "pv_yuz_azimut": null, "sam": true, "tip": "d\u00fcz / teras", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 16.621892583938514, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 13.931217401670313, "yukseklik_model": 15.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_30f5da25a666a3527b0f4f7535b54cce.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: düz / teras<br>alan: 120 m² | oturtma: 0.96<br>üretim: 15.3–17.6 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_30f5da25a666a3527b0f4f7535b54cce.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_44c4a15ba882248d36922f1c73ce9374_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_44c4a15ba882248d36922f1c73ce9374_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_44c4a15ba882248d36922f1c73ce9374 = L.geoJson(null, {
+                onEachFeature: geo_json_44c4a15ba882248d36922f1c73ce9374_onEachFeature,
+            
+                style: geo_json_44c4a15ba882248d36922f1c73ce9374_styler,
+            ...{
+}
+        });
+
+        function geo_json_44c4a15ba882248d36922f1c73ce9374_add (data) {
+            geo_json_44c4a15ba882248d36922f1c73ce9374
+                .addData(data);
+        }
+            geo_json_44c4a15ba882248d36922f1c73ce9374_add({"features": [{"geometry": {"coordinates": [[[26.9523084, 38.4961141], [26.9524029, 38.4961167], [26.9524064, 38.4960391], [26.9523697, 38.4960389], [26.9523119, 38.4960365], [26.9523084, 38.4961141]]], "type": "Polygon"}, "properties": {"alan_m2": 65.9, "anlik_golge_payi": 0.036, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 48.0, "egim_foto_lo": 43.0, "golge_boyu_m": 9.0, "golge_durumu": "engelli", "kWh_alt": 2857, "kWh_ust": 6944, "kWp_alt": 2.03, "kWp_ust": 5.33, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.858, "osm": "way/879213701", "oturtma_orani": 0.817, "pay_guney": 0.2635135135135135, "pay_guney_dogu_bati": 0.693050193050193, "pv_yuz_azimut": 177.3974408178851, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.1433, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_44c4a15ba882248d36922f1c73ce9374.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 66 m² | oturtma: 0.82<br>üretim: 2.9–6.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_44c4a15ba882248d36922f1c73ce9374.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_7592f2973cf52548d59105f33604194a_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_7592f2973cf52548d59105f33604194a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7592f2973cf52548d59105f33604194a = L.geoJson(null, {
+                onEachFeature: geo_json_7592f2973cf52548d59105f33604194a_onEachFeature,
+            
+                style: geo_json_7592f2973cf52548d59105f33604194a_styler,
+            ...{
+}
+        });
+
+        function geo_json_7592f2973cf52548d59105f33604194a_add (data) {
+            geo_json_7592f2973cf52548d59105f33604194a
+                .addData(data);
+        }
+            geo_json_7592f2973cf52548d59105f33604194a_add({"features": [{"geometry": {"coordinates": [[[26.9522463, 38.4962492], [26.9524153, 38.4962403], [26.9524072, 38.496146], [26.9522382, 38.496155], [26.9522463, 38.4962492]]], "type": "Polygon"}, "properties": {"alan_m2": 173.4, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 29.0, "egim_foto_lo": 20.5, "golge_boyu_m": 2.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 8183, "kWh_ust": 16185, "kWp_alt": 6.51, "kWp_ust": 13.69, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.985, "osm": "way/879213702", "oturtma_orani": 0.998, "pay_guney": 0.3219309462915601, "pay_guney_dogu_bati": 0.6767902813299232, "pv_yuz_azimut": 183.57633273009753, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.2957, "yukseklik_hi": 2.7198865376169192, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 2.2796038701412056, "yukseklik_model": 2.5}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7592f2973cf52548d59105f33604194a.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 173 m² | oturtma: 1.00<br>üretim: 8.2–16.2 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_7592f2973cf52548d59105f33604194a.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_34aa230bc7e7495d374d6df1394ab5ba_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_34aa230bc7e7495d374d6df1394ab5ba_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_34aa230bc7e7495d374d6df1394ab5ba = L.geoJson(null, {
+                onEachFeature: geo_json_34aa230bc7e7495d374d6df1394ab5ba_onEachFeature,
+            
+                style: geo_json_34aa230bc7e7495d374d6df1394ab5ba_styler,
+            ...{
+}
+        });
+
+        function geo_json_34aa230bc7e7495d374d6df1394ab5ba_add (data) {
+            geo_json_34aa230bc7e7495d374d6df1394ab5ba
+                .addData(data);
+        }
+            geo_json_34aa230bc7e7495d374d6df1394ab5ba_add({"features": [{"geometry": {"coordinates": [[[26.9520966, 38.4961853], [26.9522096, 38.4961831], [26.9522068, 38.4960976], [26.9521866, 38.496098], [26.9521861, 38.4960807], [26.952117, 38.4960821], [26.9521175, 38.4960993], [26.9520938, 38.4960998], [26.9520966, 38.4961853]]], "type": "Polygon"}, "properties": {"alan_m2": 119.1, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 27.5, "egim_foto_lo": 24.0, "golge_boyu_m": 18.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 4337, "kWh_ust": 14912, "kWp_alt": 2.79, "kWp_ust": 10.62, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.978, "osm": "way/879213703", "oturtma_orani": 0.998, "pay_guney": 0.20065635255508674, "pay_guney_dogu_bati": 0.7637130801687764, "pv_yuz_azimut": 182.4895524992408, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 17.548692987026623, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 14.707991637105586, "yukseklik_model": 16.1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_34aa230bc7e7495d374d6df1394ab5ba.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 119 m² | oturtma: 1.00<br>üretim: 4.3–14.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_34aa230bc7e7495d374d6df1394ab5ba.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c = L.geoJson(null, {
+                onEachFeature: geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c_onEachFeature,
+            
+                style: geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c_styler,
+            ...{
+}
+        });
+
+        function geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c_add (data) {
+            geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c
+                .addData(data);
+        }
+            geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c_add({"features": [{"geometry": {"coordinates": [[[26.9520988, 38.4962613], [26.9522309, 38.4962587], [26.9522287, 38.496189], [26.9522096, 38.4961894], [26.9520966, 38.4961916], [26.9520988, 38.4962613]]], "type": "Polygon"}, "properties": {"alan_m2": 91.6, "anlik_golge_payi": 0.002, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 6.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 12976, "kWh_ust": 13412, "kWp_alt": 10.69, "kWp_ust": 10.69, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.096, "osm": "way/879213704", "oturtma_orani": 0.642, "pay_guney": 1.0, "pay_guney_dogu_bati": 1.0, "pv_yuz_azimut": 182.29060933701777, "sam": true, "tip": "karma (kiremit + teras)", "yillik_golge_kaybi": 0.3376, "yukseklik_hi": 6.427088149969345, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 5.3867008118823, "yukseklik_model": 5.9}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: karma (kiremit + teras)<br>alan: 92 m² | oturtma: 0.64<br>üretim: 13.0–13.4 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_32f3b89ba70f3cc89f6d53c26a94dd0c.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_2473cff0631a3b044cc01d6b93196dd6_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_2473cff0631a3b044cc01d6b93196dd6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2473cff0631a3b044cc01d6b93196dd6 = L.geoJson(null, {
+                onEachFeature: geo_json_2473cff0631a3b044cc01d6b93196dd6_onEachFeature,
+            
+                style: geo_json_2473cff0631a3b044cc01d6b93196dd6_styler,
+            ...{
+}
+        });
+
+        function geo_json_2473cff0631a3b044cc01d6b93196dd6_add (data) {
+            geo_json_2473cff0631a3b044cc01d6b93196dd6
+                .addData(data);
+        }
+            geo_json_2473cff0631a3b044cc01d6b93196dd6_add({"features": [{"geometry": {"coordinates": [[[26.9520186, 38.4961101], [26.952024, 38.496188], [26.9520882, 38.4961852], [26.952082, 38.4960974], [26.9520179, 38.4961001], [26.9520186, 38.4961101]]], "type": "Polygon"}, "properties": {"alan_m2": 58.9, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 0.0, "golge_durumu": "\u00f6l\u00e7\u00fclemedi", "kWh_alt": 5000, "kWh_ust": 8286, "kWp_alt": 4.32, "kWp_ust": 6.87, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.122, "osm": "way/879213705", "oturtma_orani": 0.946, "pay_guney": 0.6287878787878788, "pay_guney_dogu_bati": 1.0, "pv_yuz_azimut": 97.12501396020197, "sam": true, "tip": "karma (kiremit + teras)", "yillik_golge_kaybi": 0.1677, "yukseklik_hi": null, "yukseklik_kaynak": "s\u0131n\u0131f medyan\u0131", "yukseklik_lo": null, "yukseklik_model": 10.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_2473cff0631a3b044cc01d6b93196dd6.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: karma (kiremit + teras)<br>alan: 59 m² | oturtma: 0.95<br>üretim: 5.0–8.3 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_2473cff0631a3b044cc01d6b93196dd6.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_e3ec4ebe8fd27f9458778f8006038ecb_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_e3ec4ebe8fd27f9458778f8006038ecb_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e3ec4ebe8fd27f9458778f8006038ecb = L.geoJson(null, {
+                onEachFeature: geo_json_e3ec4ebe8fd27f9458778f8006038ecb_onEachFeature,
+            
+                style: geo_json_e3ec4ebe8fd27f9458778f8006038ecb_styler,
+            ...{
+}
+        });
+
+        function geo_json_e3ec4ebe8fd27f9458778f8006038ecb_add (data) {
+            geo_json_e3ec4ebe8fd27f9458778f8006038ecb
+                .addData(data);
+        }
+            geo_json_e3ec4ebe8fd27f9458778f8006038ecb_add({"features": [{"geometry": {"coordinates": [[[26.9519172, 38.4963322], [26.9519914, 38.4963266], [26.951978, 38.4962164], [26.9519037, 38.4962219], [26.9519172, 38.4963322]]], "type": "Polygon"}, "properties": {"alan_m2": 96.1, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 31.5, "egim_foto_lo": 6.5, "golge_boyu_m": 18.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 6795, "kWh_ust": 11958, "kWp_alt": 5.24, "kWp_ust": 8.86, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.255, "osm": "way/879453160", "oturtma_orani": 0.996, "pay_guney": 0.46770601336302897, "pay_guney_dogu_bati": 0.7906458797327395, "pv_yuz_azimut": 95.35583262109512, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0032, "yukseklik_hi": 17.548692987026623, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 14.707991637105586, "yukseklik_model": 16.1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e3ec4ebe8fd27f9458778f8006038ecb.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 96 m² | oturtma: 1.00<br>üretim: 6.8–12.0 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e3ec4ebe8fd27f9458778f8006038ecb.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_369e1a23106a1ce82c5e1ecc723790b6_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_369e1a23106a1ce82c5e1ecc723790b6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_369e1a23106a1ce82c5e1ecc723790b6 = L.geoJson(null, {
+                onEachFeature: geo_json_369e1a23106a1ce82c5e1ecc723790b6_onEachFeature,
+            
+                style: geo_json_369e1a23106a1ce82c5e1ecc723790b6_styler,
+            ...{
+}
+        });
+
+        function geo_json_369e1a23106a1ce82c5e1ecc723790b6_add (data) {
+            geo_json_369e1a23106a1ce82c5e1ecc723790b6
+                .addData(data);
+        }
+            geo_json_369e1a23106a1ce82c5e1ecc723790b6_add({"features": [{"geometry": {"coordinates": [[[26.9522846, 38.4963857], [26.952408, 38.4963815], [26.9524043, 38.4963165], [26.952281, 38.4963207], [26.9522846, 38.4963857]]], "type": "Polygon"}, "properties": {"alan_m2": 86.1, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 55.0, "egim_foto_lo": 50.0, "golge_boyu_m": 26.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 4770, "kWh_ust": 9196, "kWp_alt": 3.07, "kWp_ust": 6.27, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.897, "osm": "way/879453169", "oturtma_orani": 0.962, "pay_guney": 0.3053003533568905, "pay_guney_dogu_bati": 0.6240282685512367, "pv_yuz_azimut": 182.29061093256536, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0, "yukseklik_hi": 24.96309621173147, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 20.922185520587778, "yukseklik_model": 22.9}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_369e1a23106a1ce82c5e1ecc723790b6.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 86 m² | oturtma: 0.96<br>üretim: 4.8–9.2 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_369e1a23106a1ce82c5e1ecc723790b6.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_891f411e8b654f23f081fc2eb647025d_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_891f411e8b654f23f081fc2eb647025d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_891f411e8b654f23f081fc2eb647025d = L.geoJson(null, {
+                onEachFeature: geo_json_891f411e8b654f23f081fc2eb647025d_onEachFeature,
+            
+                style: geo_json_891f411e8b654f23f081fc2eb647025d_styler,
+            ...{
+}
+        });
+
+        function geo_json_891f411e8b654f23f081fc2eb647025d_add (data) {
+            geo_json_891f411e8b654f23f081fc2eb647025d
+                .addData(data);
+        }
+            geo_json_891f411e8b654f23f081fc2eb647025d_add({"features": [{"geometry": {"coordinates": [[[26.9522953, 38.4964466], [26.9523865, 38.4964466], [26.9523865, 38.4963878], [26.9522953, 38.4963878], [26.9522953, 38.4964466]]], "type": "Polygon"}, "properties": {"alan_m2": 60.7, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 30.0, "egim_foto_lo": 26.0, "golge_boyu_m": 17.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 2474, "kWh_ust": 5945, "kWp_alt": 1.95, "kWp_ust": 5.06, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 1.0, "osm": "way/879453170", "oturtma_orani": 1.0, "pay_guney": 0.27542754275427545, "pay_guney_dogu_bati": 0.7155715571557155, "pv_yuz_azimut": 180.0, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.2829, "yukseklik_hi": 16.621892583938514, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 13.931217401670313, "yukseklik_model": 15.3}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_891f411e8b654f23f081fc2eb647025d.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 61 m² | oturtma: 1.00<br>üretim: 2.5–5.9 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_891f411e8b654f23f081fc2eb647025d.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_dde5e7a79ed92680dad9eb5ef213fdf1_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_dde5e7a79ed92680dad9eb5ef213fdf1_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_dde5e7a79ed92680dad9eb5ef213fdf1 = L.geoJson(null, {
+                onEachFeature: geo_json_dde5e7a79ed92680dad9eb5ef213fdf1_onEachFeature,
+            
+                style: geo_json_dde5e7a79ed92680dad9eb5ef213fdf1_styler,
+            ...{
+}
+        });
+
+        function geo_json_dde5e7a79ed92680dad9eb5ef213fdf1_add (data) {
+            geo_json_dde5e7a79ed92680dad9eb5ef213fdf1
+                .addData(data);
+        }
+            geo_json_dde5e7a79ed92680dad9eb5ef213fdf1_add({"features": [{"geometry": {"coordinates": [[[26.952306, 38.496499], [26.952408, 38.496499], [26.952408, 38.4964634], [26.952306, 38.4964634], [26.952306, 38.496499]]], "type": "Polygon"}, "properties": {"alan_m2": 42.7, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": null, "egim_foto_lo": null, "golge_boyu_m": 8.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 1874, "kWh_ust": 3208, "kWp_alt": 1.71, "kWp_ust": 3.06, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.909, "osm": "way/879453171", "oturtma_orani": 0.979, "pay_guney": 0.3431786216596343, "pay_guney_dogu_bati": 0.6146272855133614, "pv_yuz_azimut": 180.0, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.4538, "yukseklik_hi": 8.280688956145557, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 6.940249282752848, "yukseklik_model": 7.6}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dde5e7a79ed92680dad9eb5ef213fdf1.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 43 m² | oturtma: 0.98<br>üretim: 1.9–3.2 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_dde5e7a79ed92680dad9eb5ef213fdf1.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+        function geo_json_6fe250ba3739760a0795835ddd910846_styler(feature) {
+            switch(feature.properties.osm) {
+                default:
+                    return {"color": "#20303A", "fillColor": "#2E9E2E", "fillOpacity": 0.75, "weight": 0.6};
+            }
+        }
+
+        function geo_json_6fe250ba3739760a0795835ddd910846_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_6fe250ba3739760a0795835ddd910846 = L.geoJson(null, {
+                onEachFeature: geo_json_6fe250ba3739760a0795835ddd910846_onEachFeature,
+            
+                style: geo_json_6fe250ba3739760a0795835ddd910846_styler,
+            ...{
+}
+        });
+
+        function geo_json_6fe250ba3739760a0795835ddd910846_add (data) {
+            geo_json_6fe250ba3739760a0795835ddd910846
+                .addData(data);
+        }
+            geo_json_6fe250ba3739760a0795835ddd910846_add({"features": [{"geometry": {"coordinates": [[[26.9520835, 38.4965179], [26.9521895, 38.4965242], [26.9522003, 38.496413], [26.9520942, 38.4964067], [26.9520835, 38.4965179]]], "type": "Polygon"}, "properties": {"alan_m2": 128.3, "anlik_golge_payi": 0.0, "birim": "Sasal\u0131 Merkez", "cekim": "LG05 20260219", "egim_foto_hi": 45.0, "egim_foto_lo": 40.0, "golge_boyu_m": 19.0, "golge_durumu": "\u00f6l\u00e7\u00fcld\u00fc", "kWh_alt": 3892, "kWh_ust": 16728, "kWp_alt": 2.53, "kWp_ust": 12.15, "kamu": false, "kamu_ad": null, "kamu_eslesme": null, "kamu_grup": null, "kamu_mulkiyet": null, "kamu_osm": null, "kamu_tur": null, "kiremit_payi": 0.954, "osm": "way/879453172", "oturtma_orani": 0.978, "pay_guney": 0.16875, "pay_guney_dogu_bati": 0.8116071428571429, "pv_yuz_azimut": 175.76360669925168, "sam": true, "tip": "e\u011fimli (kiremit)", "yillik_golge_kaybi": 0.0135, "yukseklik_hi": 18.47549339011473, "yukseklik_kaynak": "g\u00f6lge", "yukseklik_lo": 15.48476587254086, "yukseklik_model": 17.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6fe250ba3739760a0795835ddd910846.bindTooltip(
+                `<div>
+                     <b>Sasalı Merkez</b> (LG05 20260219)<br>tip: eğimli (kiremit)<br>alan: 128 m² | oturtma: 0.98<br>üretim: 3.9–16.7 MWh/yıl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_6fe250ba3739760a0795835ddd910846.addTo(feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2);
+        
+    
+            var layer_control_c4e25abc8a4e77b97a32dd064e19b570_layers = {
+                base_layers : {
+                    "OpenStreetMap" : tile_layer_0f608f8bebafffea34f15e503c04c583,
+                    "Uydu g\u00f6r\u00fcnt\u00fcs\u00fc" : tile_layer_74426ab5736f055779d18d8a1e8d41bf,
+                },
+                overlays :  {
+                    "\u00c7at\u0131 tipi" : feature_group_fa07fc4fa7b59dd1e96efa097e1a4a78,
+                    "Oturtma g\u00fcvenilirli\u011fi" : feature_group_3f369afbcae90a6ddd3a96c50bf0bdc2,
+                },
+            };
+            let layer_control_c4e25abc8a4e77b97a32dd064e19b570 = L.control.layers(
+                layer_control_c4e25abc8a4e77b97a32dd064e19b570_layers.base_layers,
+                layer_control_c4e25abc8a4e77b97a32dd064e19b570_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_e11f45f04f8d738eed1f5f445f839b81);
+
+        
+    
+            map_e11f45f04f8d738eed1f5f445f839b81.fitBounds(
+                [[38.4956268, 26.9518379], [38.4965242, 26.9525092]],
+                {}
+            );
+        
+</script>
+</html>

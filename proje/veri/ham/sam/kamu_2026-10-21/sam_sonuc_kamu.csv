@@ -1,0 +1,81 @@
+cati_id,maske_dosyasi,sam_alan_m2,ayak_izi_m2,kaplama,tasma,iou_ayak,guven,secilen_maske,tur,kurum_ad,uydu,alan_sinifi,mevcut_ges,hizalama,bolum,dikkat,supheli
+1397,sam_maskeler_kamu/c1397.png,893.1,1021.3,0.874,0.061,0.827,0.954,2,okul,Çiğli Fen Lisesi,LG03,1000-5000,,cati_bazli,test_referans,,False
+1398,sam_maskeler_kamu/c1398.png,794.7,1231.5,0.645,0.267,0.523,0.915,2,okul,Çiğli Fen Lisesi,LG03,1000-5000,,cati_bazli,test_referans,,True
+1399,sam_maskeler_kamu/c1399.png,538.0,682.3,0.789,0.03,0.77,0.932,1,okul,Çiğli Fen Lisesi,LG03,200-1000,,cati_bazli,train,,False
+1400,sam_maskeler_kamu/c1400.png,321.1,325.6,0.986,0.239,0.753,0.951,2,okul,Çiğli Fen Lisesi,LG03,200-1000,,cati_bazli,train,,False
+1401,sam_maskeler_kamu/c1401.png,566.9,598.2,0.948,0.127,0.833,0.966,0,okul,Çelebi Anaokulu ve Gündüz Bakımevi,LG03,200-1000,,cati_bazli,train,,False
+1402,sam_maskeler_kamu/c1402.png,5353.6,5959.1,0.898,0.328,0.625,0.954,2,hastane,Diş Hekimliği Fakültesi Hastanesi,LG03,>5000,,cati_bazli,test_referans,,True
+1403,sam_maskeler_kamu/c1403.png,524.9,553.9,0.948,0.173,0.791,0.986,0,hastane,Diş Hekimliği Fakültesi Hastanesi,LG03,200-1000,,cati_bazli,train,,False
+1404,sam_maskeler_kamu/c1404.png,1675.8,1808.0,0.927,0.118,0.825,0.991,2,okul,Çiğli Borsa İstanbul Mesleki ve Teknik Anadolu Lisesi,LG03,1000-5000,,yalniz_blok,train,,False
+1406,sam_maskeler_kamu/c1406.png,409.5,452.2,0.906,0.164,0.769,0.884,0,okul,Münevver Öğretmen İlkokulu ve Ortaokulu,LG03,200-1000,,cati_bazli,supheli,gorsel_sorun,True
+1407,sam_maskeler_kamu/c1407.png,753.3,817.9,0.921,0.016,0.907,0.987,2,okul,Çiğli Aydoğan Yağcı Bilim ve Sanat Merkezi,LG03,200-1000,,cati_bazli,train,,False
+1408,sam_maskeler_kamu/c1408.png,690.4,741.2,0.931,0.018,0.916,0.981,2,okul,Çiğli Mehpare Yağcı Anadolu İmam Hatip Lisesi,LG03,200-1000,,yalniz_blok,train,,False
+1409,sam_maskeler_kamu/c1409.png,621.1,719.7,0.863,0.009,0.856,0.988,2,okul,Çiğli Rotary Ticaret Mesleki ve Teknik Anadolu Lisesi,LG03,200-1000,,cati_bazli,train,,False
+1411,sam_maskeler_kamu/c1411.png,441.6,650.6,0.679,0.027,0.666,0.886,2,okul,Çiğli Yıldız Tınas İzmiroğlu Anadolu Lisesi,LG03,200-1000,,cati_bazli,train,,True
+1412,sam_maskeler_kamu/c1412.png,151.4,247.7,0.611,0.068,0.585,0.977,2,okul,ortak kampus: Cahide Ahmet Dalyanoğlu Ortaokulu + Turan Çakın İlkokulu,LG03,200-1000,,cati_bazli,train,,True
+1413,sam_maskeler_kamu/c1413.png,765.8,877.0,0.873,0.136,0.768,0.97,2,okul,Cahide Ahmet Dalyanoğlu Ortaokulu,LG03,200-1000,,yalniz_blok,train,,False
+1414,sam_maskeler_kamu/c1414.png,156.4,360.1,0.434,0.172,0.398,0.854,2,okul,Turan Çakın İlkokulu,LG03,200-1000,,cati_bazli,train,,True
+1415,sam_maskeler_kamu/c1415.png,16164.1,18677.4,0.865,0.235,0.684,0.917,2,hastane,Çiğli Eğitim ve Araştırma Hastanesi,LG03,>5000,,cati_bazli,test_referans,,False
+1416,sam_maskeler_kamu/c1416.png,434.1,592.4,0.733,0.143,0.653,0.944,2,okul,Selim Diniz İlkokulu-Ortaokulu,LG03,200-1000,,cati_bazli,train,,False
+1417,sam_maskeler_kamu/c1417.png,217.9,235.4,0.926,0.184,0.766,0.911,2,okul,Balatçık İlkokulu,LG03,200-1000,,cati_bazli,supheli,gorsel_sorun,True
+1419,sam_maskeler_kamu/c1419.png,215.3,302.2,0.712,0.19,0.61,0.853,2,okul,Balatçık İlkokulu,LG03,200-1000,,cati_bazli,supheli,gorsel_sorun,True
+1420,sam_maskeler_kamu/c1420.png,1418.3,1547.5,0.917,0.341,0.622,0.969,2,okul,Selim Diniz İlkokulu-Ortaokulu,LG03,1000-5000,,cati_bazli,train,,True
+1422,sam_maskeler_kamu/c1422.png,269.1,271.6,0.991,0.056,0.936,0.981,2,okul,İsmail Rahmi Karadavut İlkokulu,LG03,200-1000,,cati_bazli,train,,False
+1423,sam_maskeler_kamu/c1423.png,891.4,974.0,0.915,0.167,0.773,0.979,2,okul,İsmail Rahmi Karadavut İlkokulu,LG03,200-1000,,cati_bazli,test_referans,,False
+1424,sam_maskeler_kamu/c1424.png,120.3,266.4,0.452,0.237,0.396,0.857,0,okul,Şehit Ali Karaoğlan Anadolu Lisesi ve Mesleki ve Teknik Anadolu Lisesi,LG03,200-1000,,cati_bazli,train,,True
+1426,sam_maskeler_kamu/c1426.png,444.4,550.5,0.807,0.124,0.725,0.979,2,okul,Şehit Ali Karaoğlan Anadolu Lisesi ve Mesleki ve Teknik Anadolu Lisesi,LG03,200-1000,,cati_bazli,train,,False
+1427,sam_maskeler_kamu/c1427.png,170.3,221.2,0.77,0.209,0.64,0.896,2,okul,Büyükçiğli İlkokulu,LG03,200-1000,,cati_bazli,test_referans,,False
+1428,sam_maskeler_kamu/c1428.png,165.1,325.3,0.508,0.086,0.484,0.957,0,okul,Büyükçiğli İlkokulu,LG03,200-1000,,yalniz_blok,val,,True
+1430,sam_maskeler_kamu/c1430.png,476.4,940.6,0.507,0.127,0.472,0.896,2,okul,Nazime-Sacide Akarcalı İlkokulu,LG03,200-1000,,cati_bazli,train,,True
+1431,sam_maskeler_kamu/c1431.png,762.6,825.5,0.924,0.031,0.897,0.944,2,okul,80.Yıl Küçükçiğli İlkokulu,LG03,200-1000,,cati_bazli,val,,False
+1432,sam_maskeler_kamu/c1432.png,1660.0,1765.3,0.94,0.115,0.838,0.988,2,okul,Tüpraş Mahmut Esat Bozkurt İlkokulu ve Ortaokulu,LG03,1000-5000,,yalniz_blok,train,,False
+1433,sam_maskeler_kamu/c1433.png,1690.4,1805.1,0.936,0.13,0.822,0.978,1,okul,TOKİ İlkokulu,LG03,1000-5000,,cati_bazli,train,,False
+1434,sam_maskeler_kamu/c1434.png,545.5,696.8,0.783,0.152,0.686,0.967,2,okul,Gülen Kora Ortaokulu,LG03,200-1000,,yalniz_blok,train,,False
+1435,sam_maskeler_kamu/c1435.png,641.6,672.5,0.954,0.015,0.94,0.975,2,okul,Gülen Kora Ortaokulu,LG03,200-1000,,cati_bazli,train,,False
+1436,sam_maskeler_kamu/c1436.png,3173.0,3295.6,0.963,0.129,0.843,0.861,2,okul,Çiğli 75. Yıl Mesleki ve Teknik Anadolu Lisesi,LG03,1000-5000,,cati_bazli,train,,False
+1438,sam_maskeler_kamu/c1438.png,1806.6,1883.4,0.959,0.129,0.84,0.963,1,okul,Mehmet-Hikmet Kaşerci Ortaokulu,LG03,1000-5000,,cati_bazli,test_referans,,False
+1439,sam_maskeler_kamu/c1439.png,308.0,372.1,0.828,0.075,0.776,0.972,2,okul,Maltepe İlkokulu,LG03,200-1000,,cati_bazli,train,,False
+1440,sam_maskeler_kamu/c1440.png,215.4,315.5,0.683,0.177,0.595,0.949,1,okul,Maltepe İlkokulu,LG03,200-1000,,cati_bazli,train,,True
+1441,sam_maskeler_kamu/c1441.png,356.3,881.3,0.404,0.331,0.337,0.777,2,okul,Büyükçiğli Anadolu Lisesi,LG03,200-1000,,cati_bazli,supheli,gorsel_sorun,True
+1442,sam_maskeler_kamu/c1442.png,824.5,840.8,0.981,0.081,0.903,0.935,2,okul,İzzet Gökçimen Ortaokulu,LG03,200-1000,,cati_bazli,train,,False
+1443,sam_maskeler_kamu/c1443.png,1710.5,2056.3,0.832,0.112,0.753,0.968,1,okul,Sezai Karakoç Anadolu Lisesi,LG03,1000-5000,,cati_bazli,train,,False
+1444,sam_maskeler_kamu/c1444.png,694.3,969.3,0.716,0.088,0.67,0.922,1,okul,Necip Fazıl Kısakürek Anadolu Lisesi,LG03,200-1000,,cati_bazli,val,,False
+1445,sam_maskeler_kamu/c1445.png,343.5,457.7,0.75,0.105,0.69,0.967,2,okul,Çiğli Teğmen Ali Rıza Akıncı Anadolu Lisesi,LG03,200-1000,,yalniz_blok,test_referans,,False
+1446,sam_maskeler_kamu/c1446.png,619.4,825.1,0.751,0.157,0.658,0.964,2,okul,Tuğba Özbek Anadolu Lisesi,LG03,200-1000,kismi,cati_bazli,test_referans,,False
+1447,sam_maskeler_kamu/c1447.png,595.4,982.2,0.606,0.304,0.479,0.91,1,okul,Tuğba Özbek Anadolu Lisesi,LG03,200-1000,,cati_bazli,train,,True
+1448,sam_maskeler_kamu/c1448.png,134.3,216.6,0.62,0.18,0.546,0.954,2,okul,Tuğba Özbek Anadolu Lisesi,LG03,200-1000,,cati_bazli,test_referans,,True
+1449,sam_maskeler_kamu/c1449.png,87.1,221.7,0.393,0.023,0.389,0.922,2,okul,Yunus Emre İlkokulu,LG03,200-1000,,cati_bazli,train,,True
+1450,sam_maskeler_kamu/c1450.png,251.2,331.0,0.759,0.168,0.658,0.834,1,okul,Ali Şir Nevai Ortaokulu,LG03,200-1000,,cati_bazli,train,,True
+1453,sam_maskeler_kamu/c1453.png,435.1,478.6,0.909,0.031,0.883,0.981,2,okul,Çiğli Naime TÖMEK Ticaret Mesleki ve Teknik Anadolu Lisesi,LG03,200-1000,,yalniz_blok,val,,False
+1454,sam_maskeler_kamu/c1454.png,633.2,649.3,0.975,0.256,0.73,0.956,2,okul,Çiğli Naime TÖMEK Ticaret Mesleki ve Teknik Anadolu Lisesi,LG03,200-1000,,cati_bazli,train,,False
+1455,sam_maskeler_kamu/c1455.png,369.0,554.6,0.665,0.252,0.543,0.859,2,okul,Yuvamız İzmir,LG03,200-1000,,cati_bazli,test_referans,,True
+1456,sam_maskeler_kamu/c1456.png,381.5,739.9,0.516,0.296,0.424,0.943,2,okul,Şehit Uğur Görkem Harmankaya İlkokulu,LG03,200-1000,,cati_bazli,train,,True
+1457,sam_maskeler_kamu/c1457.png,699.5,842.5,0.83,0.107,0.756,0.957,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1458,sam_maskeler_kamu/c1458.png,5058.2,5159.9,0.98,0.029,0.952,1.004,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1459,sam_maskeler_kamu/c1459.png,5022.6,5127.8,0.979,0.036,0.945,1.001,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1460,sam_maskeler_kamu/c1460.png,5054.0,5147.4,0.982,0.026,0.957,1.001,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1461,sam_maskeler_kamu/c1461.png,4954.2,5118.8,0.968,0.005,0.964,0.965,1,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1462,sam_maskeler_kamu/c1462.png,5423.9,5594.1,0.97,0.059,0.914,0.945,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1463,sam_maskeler_kamu/c1463.png,1116.5,1148.2,0.972,0.004,0.969,0.965,0,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1464,sam_maskeler_kamu/c1464.png,444.3,457.3,0.972,0.04,0.934,0.988,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1465,sam_maskeler_kamu/c1465.png,222.4,325.6,0.683,0.03,0.669,0.959,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,True
+1466,sam_maskeler_kamu/c1466.png,3446.6,3482.5,0.99,0.047,0.944,0.978,1,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1467,sam_maskeler_kamu/c1467.png,579.0,743.8,0.778,0.034,0.758,0.952,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1468,sam_maskeler_kamu/c1468.png,4143.7,4200.4,0.987,0.004,0.982,0.997,0,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1469,sam_maskeler_kamu/c1469.png,520.2,545.5,0.953,0.106,0.857,0.96,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1470,sam_maskeler_kamu/c1470.png,577.1,615.4,0.938,0.045,0.898,0.959,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1472,sam_maskeler_kamu/c1472.png,1211.2,1248.3,0.97,0.049,0.924,0.997,0,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1474,sam_maskeler_kamu/c1474.png,505.0,553.3,0.913,0.014,0.901,0.984,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1475,sam_maskeler_kamu/c1475.png,288.7,326.3,0.885,0.063,0.835,0.987,1,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1476,sam_maskeler_kamu/c1476.png,400.5,542.6,0.738,0.075,0.697,0.979,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1477,sam_maskeler_kamu/c1477.png,3141.5,3273.9,0.96,0.048,0.915,0.974,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1482,sam_maskeler_kamu/c1482.png,1034.5,1087.5,0.951,0.006,0.946,0.996,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1484,sam_maskeler_kamu/c1484.png,437.6,440.4,0.994,0.121,0.874,0.974,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1485,sam_maskeler_kamu/c1485.png,194.0,214.9,0.903,0.116,0.807,1.008,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1486,sam_maskeler_kamu/c1486.png,1764.9,2136.4,0.826,0.089,0.764,0.938,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,1000-5000,,yalniz_blok,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1487,sam_maskeler_kamu/c1487.png,7222.4,7880.8,0.916,0.09,0.84,0.971,1,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1488,sam_maskeler_kamu/c1488.png,387.3,733.6,0.528,0.097,0.5,0.936,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,yalniz_blok,ikcu_yeni,gorsel_kontrol_yapilmadi,True
+1492,sam_maskeler_kamu/c1492.png,198.3,211.8,0.936,0.231,0.731,0.897,1,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1493,sam_maskeler_kamu/c1493.png,34198.4,42921.7,0.797,0.06,0.758,0.92,0,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1494,sam_maskeler_kamu/c1494.png,7139.7,8603.4,0.83,0.06,0.788,0.977,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,>5000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,False
+1495,sam_maskeler_kamu/c1495.png,584.1,862.8,0.677,0.005,0.675,0.898,2,universite,İzmir Kâtip Çelebi Üniversitesi,LG03,200-1000,,cati_bazli,ikcu_yeni,gorsel_kontrol_yapilmadi,True

@@ -8,19 +8,19 @@
 # Claude kişisel ayarları
 .claude/settings.local.json
 
-# Büyük veri (Drive'da durur)
-*.gpkg
-*.tif
-*.tiff
-*.zip
+# GitHub sınırını aşan veya yeniden indirilebilen dosyalar
 *.pth
-*.pt
 *.ckpt
+proje/cache/
+proje/veri/arsiv_kapsam_disi/
 
 # Araç çıktıları
 __pycache__/
+.ipynb_checkpoints/
 .venv/
 node_modules/
 dist/
 .DS_Store
+Thumbs.db
+desktop.ini
 ~$*
