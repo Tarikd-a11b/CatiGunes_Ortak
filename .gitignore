@@ -1,0 +1,26 @@
+# Anahtarlar
+.env
+.env.*
+*_key
+.tomtom_key
+*.pem
+
+# Claude kişisel ayarları
+.claude/settings.local.json
+
+# Büyük veri (Drive'da durur)
+*.gpkg
+*.tif
+*.tiff
+*.zip
+*.pth
+*.pt
+*.ckpt
+
+# Araç çıktıları
+__pycache__/
+.venv/
+node_modules/
+dist/
+.DS_Store
+~$*
