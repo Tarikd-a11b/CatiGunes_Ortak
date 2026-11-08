@@ -22,7 +22,9 @@ OSB ve kamu binalarında çatı GES uygunluğu ve önceliklendirme karar destek 
 ## Klasörler
 - `proje/`: kodlar, notebook'lar, ham ve işlenmiş veri, belgeler (`proje/scripts/kur.py` hesap zincirini kurar).
 - `model_verisi/`: son veri seti ve çıktılar (çatı geometrileri, üretim, NPV, Monte Carlo). `model_verisi/` içindeki çıktıları elle değiştirme; betiklerle üret.
-- `raporlar/`: ara rapor, karşılaştırma ve teklif belgeleri. Güncel teslim dosyası `raporlar/Bitirme_Ara_Rapor_Teslim.docx`.
+- `raporlar/`: güncel ara rapor (`Bitirme_Ara_Rapor_Teslim.docx`) ve TÜBİTAK 2209-A önerisi.
+- `YONTEM.md`: üretim, NPV ve Monte Carlo hesabının ayrıntısı. Bu konularda çalışmadan önce oku.
+- `proje/scripts/` içindeki betiklerin bir kısmı Bilal'in bilgisayarındaki yolları ve repoda olmayan `proje/cache/` klasörünü varsayar. Yolları düzeltmeden `kur.py` zincirini çalıştırma. API ve web harita için `model_verisi/` yeterlidir.
 - `kaynaklar/`: makaleler. Atıf yazmadan önce buradaki PDF'ten doğrula. Repo özel kalmalı, makaleler dışarı dağıtılmamalı.
 - Word dosyaları birleştirilemez: aynı `.docx` üzerinde iki kişi aynı anda çalışmasın, başlamadan önce `DURUM.md`'ye yaz.
 

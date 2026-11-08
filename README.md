@@ -27,7 +27,8 @@ Ekipteki herkesin Claude'unun projede neler olduğunu bilmesi için ortak notlar
 
 | `proje/` | Kodlar, notebook'lar, ham ve işlenmiş veri, belgeler |
 | `model_verisi/` | Son veri seti, üretim, NPV ve Monte Carlo çıktıları |
-| `raporlar/` | Ara rapor ve teklif belgeleri |
+| `YONTEM.md` | Üretim, NPV ve Monte Carlo yöntemi |
+| `raporlar/` | Ara rapor teslim dosyası ve TÜBİTAK önerisi |
 | `kaynaklar/` | Makaleler; tezde kullanılan 11 kaynak `Tez_Kullanilan_11_Kaynak/` altında (`Isaretli/` notlu kopyalar) |
 
 Repo yaklaşık 950 MB; ilk `git clone` uzun sürebilir. Makaleler yalnız ekip içi kullanım içindir, repo herkese açılmamalı.
