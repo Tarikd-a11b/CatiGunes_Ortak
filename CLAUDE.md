@@ -23,6 +23,7 @@ OSB ve kamu binalarında çatı GES uygunluğu ve önceliklendirme karar destek 
 - `proje/`: kodlar, notebook'lar, ham ve işlenmiş veri, belgeler (`proje/scripts/kur.py` hesap zincirini kurar).
 - `model_verisi/`: son veri seti ve çıktılar (çatı geometrileri, üretim, NPV, Monte Carlo). `model_verisi/` içindeki çıktıları elle değiştirme; betiklerle üret.
 - `raporlar/`: ara rapor, karşılaştırma ve teklif belgeleri. Güncel teslim dosyası `raporlar/Bitirme_Ara_Rapor_Teslim.docx`.
+- `kaynaklar/`: makaleler. Atıf yazmadan önce buradaki PDF'ten doğrula. Repo özel kalmalı, makaleler dışarı dağıtılmamalı.
 - Word dosyaları birleştirilemez: aynı `.docx` üzerinde iki kişi aynı anda çalışmasın, başlamadan önce `DURUM.md`'ye yaz.
 
 ## Çalışma biçimi

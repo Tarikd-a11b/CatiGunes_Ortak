@@ -28,8 +28,9 @@ Ekipteki herkesin Claude'unun projede neler olduğunu bilmesi için ortak notlar
 | `proje/` | Kodlar, notebook'lar, ham ve işlenmiş veri, belgeler |
 | `model_verisi/` | Son veri seti, üretim, NPV ve Monte Carlo çıktıları |
 | `raporlar/` | Ara rapor ve teklif belgeleri |
+| `kaynaklar/` | Makaleler; tezde kullanılan 11 kaynak `Tez_Kullanilan_11_Kaynak/` altında (`Isaretli/` notlu kopyalar) |
 
-Repo yaklaşık 535 MB; ilk `git clone` biraz sürer.
+Repo yaklaşık 950 MB; ilk `git clone` uzun sürebilir. Makaleler yalnız ekip içi kullanım içindir, repo herkese açılmamalı.
 
 ## Repoda olmayanlar
 - **SAM ağırlığı** (`sam_vit_b_01ec64.pth`, 358 MB, GitHub sınırını aşıyor). SAM'i yeniden koşacak olan [resmî adresten](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) indirip betiğin beklediği `modeller/` klasörüne koyar.
