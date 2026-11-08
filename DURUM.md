@@ -11,7 +11,9 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 ## Takvim
 | Tarih | İş |
 |---|---|
+| 11 Kasım 17:30 | TÜBİTAK 2209-A son başvuru ve danışman onayı |
 | 13 Kasım | Ara rapor teslimi |
+| 16–23 Kasım | TÜBİTAK 2209-A kuruluş e-imzası |
 | 11 Aralık | REST API, web harita, LLM açıklama katmanı |
 | 21 Aralık | Tez metni ve final teslimi |
 
@@ -23,6 +25,7 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 - [ ] Tez metni (Yiğit koordinasyonunda, herkes)
 
 ## Bilal
+- 2026-11-08: Eksikler yüklendi: güncel TÜBİTAK önerisi (`raporlar/`), `CALISMA_NOTLARI.md`, `kamu_binalari/`, `proje/cizim_paketi/`, çalışma rehberi ve 2209-A belgeleri.
 - 2026-11-08: Colab defterleri çıktılarıyla `proje/notebooks/colab/` altına eklendi. Dünkü sonuç defteri `sonuc_uretim_npv_harita_2026-11-07.ipynb`; açma adımları `README.md`'de.
 - 2026-11-08: Üretim, NPV ve Monte Carlo tamamlandı, ara rapor teslime hazırlandı. Çıktılar `ekonomi/` ve `uretim/` klasörlerinde.
 

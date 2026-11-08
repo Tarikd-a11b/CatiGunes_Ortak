@@ -1,0 +1,147 @@
+ÇATI GES BİTİRME PROJESİ — YAPILACAKLAR
+Cuma (23.10.2026) toplantısı için | hazırlanma: 21.10.2026 | son güncelleme: 22.10.2026 akşam
+=====================================================================
+
+1) SAM SONUÇLARI (bilgi ver) — GÜNCEL: 22.10, birleşik koşu + multimask
+---------------------------------------------------------------------
+- 1.085 çatı (≥200 m²: OSB 1.005 + Çiğli kamu 80), düzeltilmiş ayak izleriyle.
+- 973 temiz / 112 şüpheli (%10,3: OSB 95, kamu 17).
+  (Seyir: 21.10 → 124 şüpheli; multimask kuralı ile 124 → 112, bkz. madde 4.)
+- Şüphelilerin toplam alandaki payı yalnız %4,3.
+- Medyan: kaplama 0,92 | ayak iziyle örtüşme (IoU) 0,87 | SAM güveni 0,97.
+- IoU ≥ 0,70: tüm çatılarda %89, temiz çatılarda %97.
+- SAM alanı ayak izinin %91'i (temiz: 2,14 / 2,33 km², %92).
+- Sorun küçük çatılarda: 200–1000 m² %15 şüpheli, 1000–5000 %6, >5000 %2.
+- Kamu: okul 15/48 şüpheli (kırma çatı), üniversite 1/29, hastane 1/3.
+- Uydu: LG03 %12, WV02 %7 şüpheli. Mevcut GES'li çatılarda sorun yok.
+- Göz kontrolü: şüphelilerin çoğu beşik/çok yüzlü çatı (SAM tek yüz seçiyor),
+  ~8 gölge/parlaklık bölünmesi, ~7 mevcut panel boşluğu, ~12 ayak izi sorunu.
+
+2) ÖNEMLİ UYARI: "OTURTMA" PUANI NE ÖLÇÜYOR? (ekibe anlat)
+---------------------------------------------------------------------
+- Puanlar SAM'i gerçek çatıyla DEĞİL, ayak izi poligonuyla (OSM/Microsoft)
+  karşılaştırıyor. Şüpheli kararı bir model değil, 3 eşik kuralı:
+    kaplama < 0,7  VEYA  taşma > 0,3  VEYA  güven < 0,85
+- İyi oturtma ama düşük puan: ayak izi kayık/eski ya da çok yüzlü çatıda
+  SAM tek yüzü doğru çiziyor.
+- Kötü oturtma ama yüksek puan:
+    * 3 aday maskeden ayak izine en çok benzeyen seçiliyor,
+    * kaydedilen maske ayak iziyle kırpılıyor (taşma haritada görünmüyor),
+    * güven SAM'in kendi tahmini, doğruluk değil.
+- Sonuç: gerçek doğruluk için insan etiketi şart (madde 3).
+
+3) ELLE ÇİZİM (İNSAN ETİKETİ) — KARAR + İŞ BÖLÜMÜ
+---------------------------------------------------------------------
+Karar verilecek:
+  [ ] Ne çizilecek? (öneri: önce ÇATI SINIRI, tüm yüzlerle;
+      "panele uygun alan" daha sonra / daha yavaş)
+  [ ] Araç: LabelMe (ücretsiz, açık kaynak GPL-3.0, pip install labelme)
+      — yedek: CVAT ücretsiz bulut (Python kurmak istemeyen olursa)
+  [ ] Kim hangi çatıları çizecek?
+Plan:
+  - 111 çatı (test_referans, modelde kullanılmadı) → kişi başı ~28,
+    çatı başı 1–2 dk → kişi başı 1 saatten az.
+  - + kalan 112 şüpheli (düzeltme amaçlı; multimask bunları çözemedi).
+  - 20 çatıyı İKİ kişi bağımsız çizecek (insanlar arası uyum → tezde rapor).
+  - SAM maskesi başlangıç olarak verilmeyecek (çizen SAM'e yaslanmasın).
+  - Etiket adı tek tip: labels.txt ile sabit (ör. "cati").
+  - JSON'lar Drive'da toplanacak → karşılaştırma betiği:
+    SAM vs insan, ayak izi vs insan → eşikler (0,7/0,3/0,85) test edilecek.
+  - Claude'un çizdiği etiket doğrulama sayılmaz.
+Benim hazırlayacağım: 4 kişiye bölünmüş görüntü paketi + labels.txt +
+çizim kılavuzu + başlatma komutu.
+
+4) SAM KURAL ÖNERİLERİ (ekip onayı bekliyor)
+---------------------------------------------------------------------
+  [x] Multimask denendi (22.10, 124 şüpheli + 150 temiz kontrol):
+      Kural: kaplama < 0,7 ise ve "seçici birleşim" (taşması ≤ 0,3 olan
+      maskelerin birleşimi) daha iyiyse onu kullan → 65 çatıda uygulandı.
+      Şüpheli 124 → 112 (%10,3). Temiz 150 çatının HİÇBİRİ bozulmadı.
+      UYGULANDI (sam_sonuc_birlestir.py, MULTIMASK=False ile geri alınır).
+      Ekip onayı: kural kalsın mı?
+  [!] Multimask şüphelilerin çoğunu ÇÖZMEDİ: 93 düşük kaplamalı çatının
+      92'sinde 3 maskenin hiçbiri tek başına 0,7'ye ulaşmıyor. Sorun yüz
+      seçimi değil: çok bölmeli / farklı renkli çatılar (SAM renk sınırında
+      duruyor) + ayak izinin bina dışını da kapsaması. → LabelMe ile insan
+      çizimi şart (bkz. madde 3).
+  [x] Kırpılmamış (ham) maske kaydedildi (multimask koşusu, 274 çatı).
+  [ ] Şüpheli nedenini sütun olarak yaz (kaplama/taşma/güven/ayak izi).
+  [ ] 200–1000 m² çatılara ayrı güven notu / üretimde bant.
+  [ ] Kamu: kırma çatıda alan = ayak izi; kaplama<0,7 tek başına şüpheli
+      sayılmasın (kamu SAM: 57 temiz / 23 şüpheli).
+  [x] Ayak izi düzeltme (22.10, Bilal): 34 çizim → 25 uygulandı, 9 komşu
+      çatıya taştığı için uygulanmadı (eski haliyle kaldı; kural: örtüşme
+      > %15). Model_Verisi 1.085 çatı (798 küçülüp 141 m² → 200 m² altı,
+      çıktı), doğrulama 0 hata, diğer çatılar birebir aynı.
+      Kontrol: 669 poligonu açık avlu olabilir.
+  [x] Düzeltilen 24 çatıda SAM yeniden koşuldu (22.10): şüpheli 10 → 1
+      (kalan 1441 kırma çatı; multimask'ta da 0,45'te kaldı → elle çizim),
+      medyan kaplama 0,74 → 0,96.
+      Drive: CatiGunes_Model_Verisi_2026-10-22.zip (1.085 çatı; 21.10 zip çöpte).
+  [x] BİRLEŞİK SAM (22.10): tek paket Desktop\CatiGunes_SAM_Birlesik.zip +
+      tek defter Colab Notebooks/sam_birlesik_colab.ipynb (OSB + kamu). Koşuldu:
+      1.085 çatının hepsinin SAM sonucu var (5 yeni sanayi = görüntü kötü →
+      şüpheli). Sonuç: veri/ham/sam/birlesik_2026-10-22/ (tablo, maskeler,
+      harita, poligonlar) + sam_sonuc_birlesik.csv.
+      Eski ayrı paketler + defterler SİLİNDİ (22.10; Geri Dönüşüm Kutusu /
+      Drive çöpü). Bölüm kaydı: veri/elle/sam_bolum.csv.
+      Güncel tek tablo: veri/ham/sam/sam_sonuc_birlesik.csv (1.085 çatı).
+
+5) VERİ TARAFI AÇIK İŞLER (benim alanım)
+---------------------------------------------------------------------
+  [x] Firma↔çatı ön eşleme (TomTom, 21.10): 764 firmanın 668'i otomatik
+      bir çatıya bağlandı (299 nokta çatı içinde, 369 çatıya ≤25 m yakın),
+      11 kesin (OSM bina adı). Doğrulama: güvenilir 9 kesinin 8'i aynı çatı.
+      Kaynak: veri/ham/iaosb/firma_cati_eslesme.csv → Model_Verisi/firmalar/
+  [ ] Firma↔çatı ELLE KONTROL — ERTELENDİ (21.10), CUMA KARAR VERİLECEK:
+      Kontrol edilmeyen adreste TomTom önerisi geçerli kalır; çekirdek
+      model (çatı uygunluk/SAM/PVGIS/NPV) firmaya bağlı değil.
+      Seçenek A (önerim): 30 kartlık rastgele örneklem → doğruluk %
+      ölç, teze "örneklemde doğruluk %X" yaz (~15-20 dk, tek kişi).
+      Seçenek B: tam kontrol, aşağıdaki gibi 4 kişiye paylaştır.
+      Not: birkaç kayıt bende zaten girildi (tarayıcıda duruyor).
+      Sayfa: veri/elle/firma_cati_onay.html
+      - "Göster: TomTom yakın + önerisiz" → 323 adres kontrol edilecek
+        (264 yakın: komşu çatı mı?, 60 öneri yok: Maps'ten bul).
+      - 4 kişiye "Pay 1/4–4/4" ile bölünür → kişi başı ~80 adres, ~30 dk.
+      - Kim hangi payı alacak? → herkes adını yazsın, bitince "CSV indir".
+  [ ] Dönen CSV'leri işle (ben):
+      python scripts/firma_cati_onay.py isle <csv1> <csv2> ...
+      python scripts/firma_cati_eslesme.py
+  [ ] OSM'de adı olan ama kayıtlı adrese ~2 km uzak firmalar (Baylan,
+      Demsaç): ikinci tesis mi? → elle kontrolde bakılsın.
+  [ ] Kalıcı yap: firma_cati_eslesme.py kur.py zincirinde değil (TomTom'a
+      gider) — koordinat önbelleği 30 gün sonra silinir, yeniden koşu gerekir.
+  [ ] .tomtom_key proje klasöründe → paylaşılan zip'e GİRMESİN.
+  [x] Görsel karar onayı (21.10, Bilal): 196 kart, 178 onay / 18 değişiklik
+      (%91 uyum). 5 "bina yok" → "görüntü kötü" (analize geri döndü),
+      4 "sorun yok" → "çatı değil", 5 → "şekil uyumsuz". kur.py koşuldu:
+      Model_Verisi 1.081 → 1.086 çatı; mevcut GES 62 tam + 27 kısmi.
+      Şekil uyumsuz notları → ayak izi düzeltme işine girdi.
+  [x] Drive güncellendi (21.10): CatiGunes_Model_Verisi_2026-10-21.zip
+      (57 MB, 1.086 çatı); eski v2/v3 Drive çöp kutusunda (30 gün).
+  [x] Kamu SAM yeniden koşuldu + geojson indirildi (21.10): 80 çatı,
+      57 temiz / 23 şüpheli (18.10 ile aynı). Dosyalar:
+      veri/ham/sam/ (geojson + sonuç zip + harita html).
+  [ ] SAM çıktı şeması sabitlensin:
+      cati_id, maske_dosyasi, kullanilabilir_m2, panel_disi_m2, guven
+
+6) KARAR BEKLEYEN DİĞER KONULAR
+---------------------------------------------------------------------
+  [ ] İKÇÜ: 3 tribün + inşaat halindeki bina çıkarılsın mı? 4 "depo"
+      (~20.400 m²) mülkiyeti + 42.733 m² birleşik blok teyidi;
+      üniversite kapsamı hocayla netleşsin.
+  [ ] GES aşaması filtreleri: mevcut GES (tam 62 → düş, kısmi 27 → panel
+      alanını düş), dar < 8 m, cami, SAM sonrası < 10 kWp.
+  [ ] Hocanın teklif yorumları (4 madde, YZ dili, zaman kipleri) —
+      kim düzeltiyor?
+
+7) DIŞARIDAN VERİ TALEBİ — TAMAMEN KALKTI (21.10)
+---------------------------------------------------------------------
+  Hiçbir kurumdan veri istenmeyecek; talep yazısı yazılmayacak.
+  İptal: İAOSB tüketim + sözleşme gücü, MEB / İl Sağlık resmî listeleri,
+  GES maliyeti talebi, İKÇÜ teyitleri (kurumdan sorma).
+  Cuma konuşulacak: NPV öz tüketimsiz nasıl kurulacak, EPDK 2× sözleşme
+  gücü tavanı nasıl uygulanacak, GES maliyeti hangi kaynaktan alınacak.
+  UNUTMA: EPDK tarifesi (Nisan 2026, elde var) NPV hesabına girecek.
+  [ ] NPV seçenek notu (Claude hazırlayacak) — HENÜZ YAZILMADI.

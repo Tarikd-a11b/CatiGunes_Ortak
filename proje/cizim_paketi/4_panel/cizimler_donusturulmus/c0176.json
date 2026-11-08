@@ -1,0 +1,36 @@
+{
+  "version": "7.9.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "panelsiz",
+      "points": [
+        [
+          127.57425742574267,
+          369.3069306930693
+        ],
+        [
+          125.31117397454037,
+          406.0820367751061
+        ],
+        [
+          302.3974540311174,
+          409.47666195190953
+        ],
+        [
+          303.5289957567186,
+          366.47807637906647
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "../goruntuler/c0176.jpg",
+  "imageData": null,
+  "imageHeight": 474,
+  "imageWidth": 370
+}

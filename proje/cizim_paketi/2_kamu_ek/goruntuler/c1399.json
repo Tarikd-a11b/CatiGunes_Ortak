@@ -1,0 +1,36 @@
+{
+  "version": "7.9.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "1",
+      "points": [
+        [
+          62.20621683093254,
+          74.22289613343443
+        ],
+        [
+          215.18407999659252,
+          119.3790123690805
+        ],
+        [
+          195.03411675511757,
+          187.64215314632298
+        ],
+        [
+          42.05625358945758,
+          142.4860369106769
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "oriented_rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "c1399.jpg",
+  "imageData": null,
+  "imageHeight": 254,
+  "imageWidth": 300
+}

@@ -30,6 +30,11 @@ Ekipteki herkesin Claude'unun projede neler olduğunu bilmesi için ortak notlar
 | `YONTEM.md` | Üretim, NPV ve Monte Carlo yöntemi |
 | `raporlar/` | Ara rapor teslim dosyası ve TÜBİTAK önerisi |
 | `kaynaklar/` | Makaleler; tezde kullanılan 11 kaynak `Tez_Kullanilan_11_Kaynak/` altında (`Isaretli/` notlu kopyalar) |
+| `CALISMA_NOTLARI.md` | Veri kuralları, danışman notları, denenip bırakılanlar, tuzaklar |
+| `kamu_binalari/` | Çiğli kamu binalarının ayrı paketi |
+| `proje/cizim_paketi/` | LabelMe çizim paketi ve insan çizimleri |
+| `proje/belgeler/CatiGunes_Calisma_Rehberi.pdf` | Ekip çalışma rehberi (5 sayfa) |
+| `proje/belgeler/tubitak_2209a/` | 2209-A çağrı metni, bilgi notu, form ve araçlar |
 
 Repo yaklaşık 950 MB; ilk `git clone` uzun sürebilir. Makaleler yalnız ekip içi kullanım içindir, repo herkese açılmamalı.
 
@@ -53,6 +58,7 @@ Kaydedilmiş çıktılar açılınca görünür. Yeniden koşmak için defteri *
 ## Repoda olmayanlar
 - **SAM ağırlığı** (`sam_vit_b_01ec64.pth`, 358 MB, GitHub sınırını aşıyor). SAM'i yeniden koşacak olan [resmî adresten](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) indirip betiğin beklediği `modeller/` klasörüne koyar.
 - **`proje/cache/`** ve **`proje/veri/arsiv_kapsam_disi/`** (yeniden indirilebilen ara dosyalar, kapsam dışı arşiv).
+- **Ara rapor çalışma sürümleri** (Karşılaştırma, v2): güncel dosya `raporlar/Bitirme_Ara_Rapor_Teslim.docx`.
 - **Anahtarlar:** TomTom gibi servis anahtarlarını herkes kendi bilgisayarında tutar, repoya koymaz.
 
 Anahtar, şifre ve öğrenci numarası repoya konmaz.

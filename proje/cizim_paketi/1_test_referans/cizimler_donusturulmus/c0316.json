@@ -1,0 +1,36 @@
+{
+ "version": "7.9.0",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "cati",
+   "points": [
+    [
+     115.98220282068505,
+     79.38213566151781
+    ],
+    [
+     106.8485560779047,
+     372.73337810611156
+    ],
+    [
+     290.59603760913365,
+     381.3297515110814
+    ],
+    [
+     295.96877098723985,
+     86.90396239086635
+    ]
+   ],
+   "group_id": null,
+   "description": "",
+   "shape_type": "polygon",
+   "flags": {},
+   "mask": null
+  }
+ ],
+ "imagePath": "../goruntuler/c0316.jpg",
+ "imageData": null,
+ "imageHeight": 450,
+ "imageWidth": 355
+}

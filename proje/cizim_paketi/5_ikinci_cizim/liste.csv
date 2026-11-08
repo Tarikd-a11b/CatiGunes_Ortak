@@ -1,0 +1,21 @@
+﻿cati_id,dosya,bolge,tur,kurum_ad,alan_m2,alan_sinifi,bolum,supheli,mevcut_ges,cift_cizim
+9,c0009.jpg,ataturk_osb,sanayi,,5684.3,>5000,test_referans,False,,True
+32,c0032.jpg,ataturk_osb,sanayi,,4510.0,1000-5000,test_referans,False,,True
+101,c0101.jpg,ataturk_osb,sanayi,,620.2,200-1000,test_referans,False,,True
+191,c0191.jpg,ataturk_osb,sanayi,,2124.3,1000-5000,test_referans,False,,True
+240,c0240.jpg,ataturk_osb,sanayi,,3427.0,1000-5000,test_referans,False,,True
+360,c0360.jpg,ataturk_osb,sanayi,,3714.2,1000-5000,test_referans,False,,True
+408,c0408.jpg,ataturk_osb,sanayi,,15293.0,>5000,test_referans,False,,True
+483,c0483.jpg,ataturk_osb,sanayi,,469.3,200-1000,test_referans,False,,True
+505,c0505.jpg,ataturk_osb,sanayi,,704.2,200-1000,test_referans,False,,True
+595,c0595.jpg,ataturk_osb,sanayi,,224.4,200-1000,test_referans,False,,True
+598,c0598.jpg,ataturk_osb,sanayi,,313.7,200-1000,test_referans,True,,True
+727,c0727.jpg,ataturk_osb,sanayi,,2695.1,1000-5000,test_referans,False,,True
+997,c0997.jpg,ataturk_osb,sanayi,,209.8,200-1000,test_referans,True,,True
+1141,c1141.jpg,ataturk_osb,sanayi,,295.5,200-1000,test_referans,False,,True
+1158,c1158.jpg,ataturk_osb,sanayi,,1884.8,1000-5000,test_referans,False,,True
+1226,c1226.jpg,ataturk_osb,sanayi,,9858.7,>5000,test_referans,False,tam,True
+1307,c1307.jpg,ataturk_osb,sanayi,,1889.3,1000-5000,test_referans,False,kismi,True
+1329,c1329.jpg,ataturk_osb,sanayi,,398.8,200-1000,test_referans,False,,True
+1334,c1334.jpg,ataturk_osb,sanayi,,273.9,200-1000,test_referans,False,,True
+1446,c1446.jpg,cigli_kamu,okul,Tuğba Özbek Anadolu Lisesi,883.6,200-1000,test_referans,False,,True

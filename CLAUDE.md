@@ -3,7 +3,7 @@
 OSB ve kamu binalarında çatı GES uygunluğu ve önceliklendirme karar destek sistemi (MIS412, İzmir Bakırçay Üniversitesi YBS). Bu repo ekipteki herkesin Claude'unun aynı bilgiyle çalışması için var.
 
 ## Oturum başında
-1. `DURUM.md` ve `KARARLAR.md` dosyalarını oku.
+1. `DURUM.md`, `KARARLAR.md` ve `CALISMA_NOTLARI.md` dosyalarını oku. `CALISMA_NOTLARI.md`'de denenip bırakılan yöntemleri yeniden önerme.
 2. API veya web harita işi yapılacaksa `API.md` dosyasını da oku.
 3. `KARARLAR.md`'deki kapanmış konuları, kullanıcı açıkça istemedikçe yeniden açma veya önerme.
 

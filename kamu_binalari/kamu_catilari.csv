@@ -1,0 +1,81 @@
+﻿cati_id,osm,bolge,tur,kurum_ad,alan_m2,kapsam,ayak_izi_kaynagi,ms_iou,mevcut_ges,gorsel_kontrol,ayak_izi_duzeltme,dogrulama,not,kesit,lon,lat,geometri_kaynagi,cati_alan_m2,geometri_notu,panel_durumu,uygun_alan_m2
+1397,way/878964926,cigli_kamu,okul,Çiğli Fen Lisesi,1010.5,ana,OSM,0.38,,,,,,kamu/way_878964926.jpg,26.946562,38.495111,insan,906.7,,panel_yok,906.7
+1398,way/878964928,cigli_kamu,okul,Çiğli Fen Lisesi,1214.2,ana,OSM,0.42,,,,,,kamu/way_878964928.jpg,26.946529,38.494716,insan,1108.6,,panel_yok,1108.6
+1399,way/878964965,cigli_kamu,okul,Çiğli Fen Lisesi,673.6,ana,OSM,0.85,,,,,bina islevi: dormitory,kamu/way_878964965.jpg,26.945386,38.494804,insan,618.5,,panel_yok,618.5
+1400,way/878964966,cigli_kamu,okul,Çiğli Fen Lisesi,319.8,ana,OSM,0.82,,,,,,kamu/way_878964966.jpg,26.945863,38.495849,insan,329.2,,panel_yok,329.2
+1401,way/868505947,cigli_kamu,okul,Çelebi Anaokulu ve Gündüz Bakımevi,593.0,ana,OSM,0.54,,,,,,kamu/way_868505947.jpg,27.030357,38.508763,sam,568.9,,panel_yok,568.9
+1402,way/879136910,cigli_kamu,hastane,Diş Hekimliği Fakültesi Hastanesi,5905.6,ana,OSM,0.71,,,,,,kamu/way_879136910.jpg,27.030627,38.519327,insan,6480.8,,panel_yok,6480.8
+1403,way/1479366720,cigli_kamu,hastane,Diş Hekimliği Fakültesi Hastanesi,537.0,ana,OSM,0.0,,,,,bina islevi: cafe,kamu/way_1479366720.jpg,27.031451,38.519179,sam,524.9,,panel_yok,524.9
+1404,way/380650504,cigli_kamu,okul,Çiğli Borsa İstanbul Mesleki ve Teknik Anadolu Lisesi,1790.7,ana,OSM,0.75,,,,,,kamu/way_380650504.jpg,27.056437,38.515628,insan,1786.9,,panel_yok,1786.9
+1406,way/384583021,cigli_kamu,okul,Münevver Öğretmen İlkokulu ve Ortaokulu,445.4,ana,OSM,0.68,,goruntu_kotu,,,,kamu/way_384583021.jpg,27.050983,38.511664,ayak_izi,445.4,SAM supheli,panel_yok,445.4
+1407,way/472473577,cigli_kamu,okul,Çiğli Aydoğan Yağcı Bilim ve Sanat Merkezi,809.0,ana,OSM,0.57,,,,,,kamu/way_472473577.jpg,27.052168,38.491812,sam,752.2,,panel_yok,752.2
+1408,way/472473578,cigli_kamu,okul,Çiğli Mehpare Yağcı Anadolu İmam Hatip Lisesi,731.9,ana,OSM,0.57,,,,,,kamu/way_472473578.jpg,27.052801,38.491494,sam,690.7,,panel_yok,690.7
+1409,way/472473744,cigli_kamu,okul,Çiğli Rotary Ticaret Mesleki ve Teknik Anadolu Lisesi,710.7,ana,OSM,0.56,,,,,,kamu/way_472473744.jpg,27.051826,38.492231,sam,619.5,,panel_yok,619.5
+1411,way/501391714,cigli_kamu,okul,Çiğli Yıldız Tınas İzmiroğlu Anadolu Lisesi,642.8,ana,OSM,0.62,,,,,,kamu/way_501391714.jpg,27.048985,38.515942,ayak_izi,642.8,SAM supheli,panel_yok,642.8
+1412,way/503333927,cigli_kamu,okul,ortak kampus: Cahide Ahmet Dalyanoğlu Ortaokulu + Turan Çakın İlkokulu,243.2,ana,OSM,0.37,,,,,,kamu/way_503333927.jpg,27.058928,38.504163,ayak_izi,243.2,SAM supheli,panel_yok,243.2
+1413,way/503333928,cigli_kamu,okul,Cahide Ahmet Dalyanoğlu Ortaokulu,857.9,ana,OSM,0.53,,,,,,kamu/way_503333928.jpg,27.059392,38.504786,sam,764.1,,panel_yok,764.1
+1414,way/503333929,cigli_kamu,okul,Turan Çakın İlkokulu,350.5,ana,OSM,0.43,,,,,,kamu/way_503333929.jpg,27.058593,38.504529,insan,356.4,,panel_yok,356.4
+1415,way/503350239,cigli_kamu,hastane,Çiğli Eğitim ve Araştırma Hastanesi,18529.9,ana,OSM,0.39,,,,,,kamu/way_503350239.jpg,27.049386,38.499693,insan,16866.8,,panel_yok,16866.8
+1416,way/503433186,cigli_kamu,okul,Selim Diniz İlkokulu-Ortaokulu,582.3,ana,OSM,0.53,,,,,,kamu/way_503433186.jpg,27.05477,38.496839,sam,433.5,,panel_yok,433.5
+1417,way/881459099,cigli_kamu,okul,Balatçık İlkokulu,230.5,ana,OSM,0.49,,agac_alti,,,,kamu/way_881459099.jpg,27.03925,38.514607,insan,157.8,,panel_yok,157.8
+1419,way/881459101,cigli_kamu,okul,Balatçık İlkokulu,295.1,ana,OSM,0.32,,agac_alti,,,,kamu/way_881459101.jpg,27.039358,38.514384,ayak_izi,295.1,SAM supheli,panel_yok,295.1
+1420,way/883367911,cigli_kamu,okul,Selim Diniz İlkokulu-Ortaokulu,1522.1,ana,OSM,0.25,,,,,,kamu/way_883367911.jpg,27.05418,38.497544,ayak_izi,1522.1,SAM supheli,panel_yok,1522.1
+1422,way/887294295,cigli_kamu,okul,İsmail Rahmi Karadavut İlkokulu,266.8,ana,OSM,0.46,,,,,,kamu/way_887294295.jpg,27.063172,38.48923,sam,270.3,,panel_yok,270.3
+1423,way/887300638,cigli_kamu,okul,İsmail Rahmi Karadavut İlkokulu,960.3,ana,OSM,0.36,,,,,,kamu/way_887300638.jpg,27.063668,38.489502,insan,947.5,,panel_yok,947.5
+1424,way/926752786,cigli_kamu,okul,Şehit Ali Karaoğlan Anadolu Lisesi ve Mesleki ve Teknik Anadolu Lisesi,259.7,ana,OSM,0.16,,,,,,kamu/way_926752786.jpg,27.052734,38.490756,ayak_izi,259.7,SAM supheli,panel_yok,259.7
+1426,way/926752788,cigli_kamu,okul,Şehit Ali Karaoğlan Anadolu Lisesi ve Mesleki ve Teknik Anadolu Lisesi,546.0,ana,OSM,0.41,,,,,,kamu/way_926752788.jpg,27.052479,38.491017,sam,443.6,,panel_yok,443.6
+1427,way/927737893,cigli_kamu,okul,Büyükçiğli İlkokulu,217.4,ana,OSM,0.65,,,,,,kamu/way_927737893.jpg,27.063071,38.49403,insan,224.3,,panel_yok,224.3
+1428,way/927737894,cigli_kamu,okul,Büyükçiğli İlkokulu,317.4,ana,OSM,0.65,,,,,,kamu/way_927737894.jpg,27.062809,38.494051,ayak_izi,317.4,SAM supheli,panel_yok,317.4
+1430,way/1429025585,cigli_kamu,okul,Nazime-Sacide Akarcalı İlkokulu,927.4,ana,OSM,0.78,,,,,,kamu/way_1429025585.jpg,27.041993,38.509555,ayak_izi,927.4,SAM supheli,panel_yok,927.4
+1431,way/1433531004,cigli_kamu,okul,80.Yıl Küçükçiğli İlkokulu,814.8,ana,OSM,0.59,,,,,,kamu/way_1433531004.jpg,27.052741,38.50354,sam,761.7,,panel_yok,761.7
+1432,way/880658390,cigli_kamu,okul,Tüpraş Mahmut Esat Bozkurt İlkokulu ve Ortaokulu,1745.2,ana,OSM,0.75,,,,,,kamu/way_880658390.jpg,27.046496,38.520933,sam,1658.8,,panel_yok,1658.8
+1433,way/375908072,cigli_kamu,okul,TOKİ İlkokulu,1774.3,ana,OSM,0.65,,,,,,kamu/way_375908072.jpg,27.063407,38.521735,sam,1687.2,,panel_yok,1687.2
+1434,way/378222676,cigli_kamu,okul,Gülen Kora Ortaokulu,687.6,ana,OSM,0.7,,,,,,kamu/way_378222676.jpg,27.057004,38.519237,sam,544.7,,panel_yok,544.7
+1435,way/501391716,cigli_kamu,okul,Gülen Kora Ortaokulu,665.8,ana,OSM,0.64,,,,,,kamu/way_501391716.jpg,27.057085,38.518923,sam,640.3,,panel_yok,640.3
+1436,way/377338835,cigli_kamu,okul,Çiğli 75. Yıl Mesleki ve Teknik Anadolu Lisesi,3256.2,ana,OSM,0.65,,,,,,kamu/way_377338835.jpg,27.072382,38.485441,sam,3166.5,,panel_yok,3166.5
+1438,way/377345326,cigli_kamu,okul,Mehmet-Hikmet Kaşerci Ortaokulu,1854.8,ana,OSM,0.55,,,,,,kamu/way_377345326.jpg,27.073386,38.485949,insan,1852.3,,panel_yok,1852.3
+1439,way/503433894,cigli_kamu,okul,Maltepe İlkokulu,364.6,ana,OSM,0.44,,,,,,kamu/way_503433894.jpg,27.070415,38.491065,sam,307.8,,panel_yok,307.8
+1440,way/503433895,cigli_kamu,okul,Maltepe İlkokulu,309.3,ana,OSM,0.05,,,,,,kamu/way_503433895.jpg,27.07023,38.491264,insan,347.2,,panel_yok,347.2
+1441,way/386075181,cigli_kamu,okul,Büyükçiğli Anadolu Lisesi,714.4,ana,OSM,0.11,,,elle 2026-10-22,,,kamu/way_386075181.jpg,27.065449,38.498654,ayak_izi,714.4,SAM supheli,panel_yok,714.4
+1442,way/386075184,cigli_kamu,okul,İzzet Gökçimen Ortaokulu,823.1,ana,OSM,0.58,,,,,,kamu/way_386075184.jpg,27.065997,38.498756,sam,823.2,,panel_yok,823.2
+1443,way/1446405939,cigli_kamu,okul,Sezai Karakoç Anadolu Lisesi,2029.7,ana,OSM,0.73,,,,,,kamu/way_1446405939.jpg,27.077367,38.493507,insan,1863.2,,panel_yok,1863.2
+1444,way/1446405941,cigli_kamu,okul,Necip Fazıl Kısakürek Anadolu Lisesi,958.5,ana,OSM,0.48,,,,,,kamu/way_1446405941.jpg,27.077366,38.492818,insan,1054.8,,panel_yok,1054.8
+1445,way/1446405942,cigli_kamu,okul,Çiğli Teğmen Ali Rıza Akıncı Anadolu Lisesi,449.2,ana,OSM,0.23,,,,,,kamu/way_1446405942.jpg,27.07778,38.492774,insan,513.5,,panel_yok,513.5
+1446,way/661706991,cigli_kamu,okul,Tuğba Özbek Anadolu Lisesi,883.6,ana,OSM,0.29,,,elle 2026-10-22,,,kamu/way_661706991.jpg,27.084614,38.499334,insan,916.3,,panel_yok,916.3
+1447,way/661706992,cigli_kamu,okul,Tuğba Özbek Anadolu Lisesi,974.3,ana,OSM,0.26,,,,,,kamu/way_661706992.jpg,27.084101,38.499262,ayak_izi,974.3,SAM supheli,panel_yok,974.3
+1448,way/661706993,cigli_kamu,okul,Tuğba Özbek Anadolu Lisesi,211.2,ana,OSM,0.07,,,,,,kamu/way_661706993.jpg,27.084269,38.499509,insan,128.3,,panel_yok,128.3
+1449,way/928902469,cigli_kamu,okul,Yunus Emre İlkokulu,615.0,ana,OSM,0.24,,,elle 2026-10-24,,,kamu/way_928902469.jpg,27.080397,38.497461,insan,615.2,ayakizi_hatali,panel_yok,615.2
+1450,way/865446863,cigli_kamu,okul,Ali Şir Nevai Ortaokulu,324.4,ana,OSM,0.37,,,,,,kamu/way_865446863.jpg,27.089634,38.496174,insan,360.2,,panel_yok,360.2
+1453,way/865448085,cigli_kamu,okul,Çiğli Naime TÖMEK Ticaret Mesleki ve Teknik Anadolu Lisesi,468.6,ana,OSM,0.44,,,,,,kamu/way_865448085.jpg,27.086646,38.496169,sam,434.3,,panel_yok,434.3
+1454,way/865448086,cigli_kamu,okul,Çiğli Naime TÖMEK Ticaret Mesleki ve Teknik Anadolu Lisesi,635.3,ana,OSM,0.55,,,,,,kamu/way_865448086.jpg,27.086896,38.496284,sam,631.4,,panel_yok,631.4
+1455,way/884834813,cigli_kamu,okul,Yuvamız İzmir,545.0,ana,OSM,0.82,,,,,,kamu/way_884834813.jpg,27.088001,38.499425,insan,592.0,,panel_yok,592.0
+1456,ms/13923,cigli_kamu,okul,Şehit Uğur Görkem Harmankaya İlkokulu,602.2,ana,Microsoft,1.0,,,elle 2026-10-22,,bina islevi: None,kamu/ms_13923.jpg,27.09028,38.504344,sam,573.3,,panel_yok,573.3
+1457,way/420190311,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,834.6,ana,OSM,0.71,,,,,bina islevi: university,kamu/way_420190311.jpg,27.031246,38.515225,insan,778.2,,panel_yok,778.2
+1458,way/503183904,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,5117.1,ana,OSM,0.86,,,,,bina islevi: warehouse,kamu/way_503183904.jpg,27.030609,38.509594,insan,4997.6,,panel_yok,4997.6
+1459,way/503183905,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,5082.3,ana,OSM,0.86,,,,,bina islevi: warehouse,kamu/way_503183905.jpg,27.030326,38.510586,insan,4996.2,,panel_yok,4996.2
+1460,way/503183906,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,5118.0,ana,OSM,0.86,,,,,bina islevi: warehouse,kamu/way_503183906.jpg,27.029669,38.509401,insan,5242.1,,panel_yok,5242.1
+1461,way/503183907,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,5082.0,ana,OSM,0.87,,,,,bina islevi: warehouse,kamu/way_503183907.jpg,27.029387,38.510392,sam,4945.9,,panel_yok,4945.9
+1462,way/660991428,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,5557.2,ana,OSM,0.78,,,,,bina islevi: sports_centre,kamu/way_660991428.jpg,27.02938,38.512652,sam,5411.1,,panel_yok,5411.1
+1463,way/868505896,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,1134.8,ana,OSM,0.64,,,,,bina islevi: university,kamu/way_868505896.jpg,27.031455,38.510492,insan,807.9,,panel_yok,807.9
+1464,way/868505897,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,451.0,ana,OSM,0.52,,,,,,kamu/way_868505897.jpg,27.031991,38.510754,sam,443.3,,panel_yok,443.3
+1465,way/868505900,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,320.5,ana,OSM,0.15,,,,,bina islevi: industrial,kamu/way_868505900.jpg,27.032343,38.509736,ayak_izi,320.5,SAM supheli,panel_yok,320.5
+1466,way/868505901,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,3454.0,ana,OSM,0.82,,,,,bina islevi: industrial,kamu/way_868505901.jpg,27.032357,38.508912,sam,3439.9,,panel_yok,3439.9
+1467,way/868505931,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,737.5,ana,OSM,0.69,,,,,bina islevi: university,kamu/way_868505931.jpg,27.034015,38.509716,sam,579.8,,panel_yok,579.8
+1468,way/868505934,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,4165.8,ana,OSM,0.78,,,,,bina islevi: industrial,kamu/way_868505934.jpg,27.033781,38.510205,insan,4158.3,,panel_yok,4158.3
+1469,way/868505948,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,528.0,ana,OSM,0.26,,,,,bina islevi: grandstand,kamu/way_868505948.jpg,27.029367,38.513213,sam,520.0,,panel_yok,520.0
+1470,way/880646190,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,606.6,ana,OSM,0.72,,,,,bina islevi: commercial,kamu/way_880646190.jpg,27.029165,38.515486,insan,630.5,,panel_yok,630.5
+1472,way/884318782,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,1228.3,ana,OSM,0.62,,,,,bina islevi: grandstand,kamu/way_884318782.jpg,27.02861,38.513889,sam,1210.3,,panel_yok,1210.3
+1474,way/1005862242,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,540.0,ana,OSM,0.43,,,,,bina islevi: cafe,kamu/way_1005862242.jpg,27.033103,38.512274,sam,503.5,,panel_yok,503.5
+1475,way/1304888741,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,320.1,ana,OSM,0.57,,,,,,kamu/way_1304888741.jpg,27.030101,38.512767,sam,288.5,,panel_yok,288.5
+1476,way/1369974837,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,528.3,ana,OSM,0.0,,,,,bina islevi: grandstand,kamu/way_1369974837.jpg,27.028958,38.514746,insan,426.5,,panel_yok,426.5
+1477,way/1369974840,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,3248.3,ana,OSM,0.58,,,,,bina islevi: university,kamu/way_1369974840.jpg,27.030761,38.513751,sam,3136.4,,panel_yok,3136.4
+1482,way/1456548800,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,1071.9,ana,OSM,0.45,,,,,bina islevi: industrial,kamu/way_1456548800.jpg,27.032032,38.509671,sam,1034.1,,panel_yok,1034.1
+1484,way/880395631,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,439.4,ana,OSM,0.47,,,,,,kamu/way_880395631.jpg,27.028692,38.519007,sam,440.6,,panel_yok,440.6
+1485,way/880395632,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,212.1,ana,OSM,0.29,,,,,,kamu/way_880395632.jpg,27.028719,38.518883,sam,192.2,,panel_yok,192.2
+1486,way/991446219,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,2111.1,ana,OSM,0.65,,,,,bina islevi: dormitory,kamu/way_991446219.jpg,27.035027,38.509552,sam,1762.5,,panel_yok,1762.5
+1487,ms/724,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,7817.7,ana,Microsoft,1.0,,,,,bina islevi: None,kamu/ms_724.jpg,27.029625,38.511741,sam,7211.6,,panel_yok,7211.6
+1488,ms/4084,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,724.4,ana,Microsoft,1.0,,,,,bina islevi: None,kamu/ms_4084.jpg,27.031017,38.517179,insan,108.8,,panel_yok,108.8
+1492,ms/8774,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,205.8,ana,Microsoft,1.0,,,,,bina islevi: None,kamu/ms_8774.jpg,27.031085,38.518382,sam,199.4,,panel_yok,199.4
+1493,ms/10139,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,42732.5,ana,Microsoft,1.0,,,,,bina islevi: None,kamu/ms_10139.jpg,27.032524,38.512697,sam,34129.2,,panel_yok,34129.2
+1494,ms/14029,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,8552.1,ana,Microsoft,1.0,,,,,bina islevi: None,kamu/ms_14029.jpg,27.031152,38.512702,sam,7124.4,,panel_yok,7124.4
+1495,ms/15979,cigli_kamu,universite,İzmir Kâtip Çelebi Üniversitesi,942.1,ana,Microsoft,1.0,,,elle 2026-10-24,,bina islevi: None,kamu/ms_15979.jpg,27.028918,38.518095,insan,942.1,ayakizi_eksik,panel_yok,942.1

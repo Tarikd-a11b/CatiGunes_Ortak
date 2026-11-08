@@ -1,0 +1,36 @@
+{
+  "version": "7.9.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "cati",
+      "points": [
+        [
+          68.76271186440675,
+          132.71186440677968
+        ],
+        [
+          154.18644067796617,
+          519.1525423728814
+        ],
+        [
+          381.98305084745766,
+          464.2372881355934
+        ],
+        [
+          293.8474576271187,
+          81.18644067796612
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "../goruntuler/c1459.jpg",
+  "imageData": null,
+  "imageHeight": 568,
+  "imageWidth": 446
+}
