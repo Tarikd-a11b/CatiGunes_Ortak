@@ -35,16 +35,25 @@ v = d.dropna(subset=['lat'])
 renk = cm.LinearColormap(['#d73027', '#fee08b', '#1a9850'], vmin=v.npv_TL_kWp.quantile(.05), vmax=v.npv_TL_kWp.quantile(.95),
                          caption='NPV / kWp (TL, reel)')
 h = folium.Map(location=[v.lat.mean(), v.lon.mean()], zoom_start=14, tiles='Esri.WorldImagery')
-for r in v.itertuples():
+# Kucuk noktalar tiklanabilsin: once gorunmez genis tiklama alanlari (en altta), sonra gercek noktalar
+# buyukten kucuge (kucukler ustte). Noktaya basinca o cati acilir; genis alan yalniz bosluga basinca devreye girer.
+TIKLAMA_PX = 12
+v = v.assign(yaricap=(v.kwp_merkez ** .5 / 3).clip(5, 14).fillna(5)).sort_values('yaricap', ascending=False)
+
+def bilgi(r):
     yok = pd.isna(r.npv_TL)
-    folium.CircleMarker(
-        [r.lat, r.lon], radius=3 if yok else max(3, min(14, (r.kwp_merkez ** .5) / 3)),
-        color='#999' if yok else renk(r.npv_TL_kWp), fill=True, fill_opacity=.85, weight=1,
-        popup=folium.Popup(('<b>c%04d</b> %s %s<br>' % (r.cati_id, r.tur, '' if pd.isna(r.kurum_ad) else r.kurum_ad)) +
-                           ('mevcut GES / uygun alan yok' if yok else
-                            'uygun alan %s m²<br>%.1f kWp · %s kWh/yıl<br>yatırım %s TL<br>NPV %s TL (%s TL/kWp)<br>IRR %%%.1f · geri ödeme %d yıl<br>sıra: NPV %d · üretim %d'
-                            % (f'{r.uygun_alan_m2:,.0f}', r.kwp_merkez, f'{r.kwh_merkez:,.0f}', f'{r.yatirim_TL:,.0f}',
-                               f'{r.npv_TL:,.0f}', f'{r.npv_TL_kWp:,.0f}', r.irr_reel * 100, r.geri_odeme_yil, r.sira_npv, r.sira_uretim)),
-                           max_width=300)).add_to(h)
+    return folium.Popup(('<b>c%04d</b> %s %s<br>' % (r.cati_id, r.tur, '' if pd.isna(r.kurum_ad) else r.kurum_ad)) +
+                        ('mevcut GES / uygun alan yok' if yok else
+                         'uygun alan %s m²<br>%.1f kWp · %s kWh/yıl<br>yatırım %s TL<br>NPV %s TL (%s TL/kWp)<br>IRR %%%.1f · geri ödeme %d yıl<br>sıra: NPV %d · üretim %d'
+                         % (f'{r.uygun_alan_m2:,.0f}', r.kwp_merkez, f'{r.kwh_merkez:,.0f}', f'{r.yatirim_TL:,.0f}',
+                            f'{r.npv_TL:,.0f}', f'{r.npv_TL_kWp:,.0f}', r.irr_reel * 100, r.geri_odeme_yil, r.sira_npv, r.sira_uretim)),
+                        max_width=300)
+
+for r in v.itertuples():
+    folium.CircleMarker([r.lat, r.lon], radius=max(r.yaricap, TIKLAMA_PX), stroke=False, fill=True,
+                        fill_color='#000', fill_opacity=0, popup=bilgi(r)).add_to(h)
+for r in v.itertuples():
+    folium.CircleMarker([r.lat, r.lon], radius=r.yaricap, color='#999' if pd.isna(r.npv_TL) else renk(r.npv_TL_kWp),
+                        fill=True, fill_opacity=.85, weight=1, popup=bilgi(r)).add_to(h)
 renk.add_to(h)
 display(h)

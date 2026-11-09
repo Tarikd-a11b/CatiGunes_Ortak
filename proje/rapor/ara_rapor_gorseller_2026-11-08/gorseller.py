@@ -23,7 +23,7 @@ def gantt():
     D = lambda g, a: dt.date(2026, a, g)
     Y = [('Bina envanteri', D(21, 9), D(18, 10), 1), ('SAM çatı çıkarımı', D(16, 10), D(30, 10), 1), ('Elle çizim ve doğrulama', D(22, 10), D(28, 10), 1),
          ('Veri aşaması kapandı', D(30, 10), None, 1), ('Kurulu güç ve üretim', D(2, 11), D(7, 11), 1), ('NPV ve Monte Carlo', D(7, 11), D(8, 11), 1),
-         ('Ara rapor teslimi', D(13, 11), None, 2), ('REST API ve web harita', D(16, 11), D(11, 12), 0), ('Tez yazımı', D(23, 11), D(21, 12), 0),
+         ('Ara rapor teslimi', D(13, 11), None, 2), ('REST API ve web harita', D(16, 11), D(11, 12), 0), ('Uygunluk analizi', D(16, 11), D(11, 12), 0), ('Tez yazımı', D(23, 11), D(21, 12), 0),
          ('LLM açıklaması', D(30, 11), D(11, 12), 0), ('Final teslimi', D(21, 12), None, 0)]
     b = D(21, 9); g = lambda d: (d - b).days
     fig, ax = plt.subplots(figsize=(6.6, 3.7), dpi=200)
