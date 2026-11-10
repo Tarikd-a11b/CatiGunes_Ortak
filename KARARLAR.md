@@ -28,3 +28,9 @@ Buradaki konular kapanmıştır. Yeniden açmak için ekip kararı gerekir. Yeni
 ## Teknik
 - Colab yalnız SAM çatı çıkarımı için kullanıldı. Üretim ve NPV yerelde Python betikleriyle üretilir.
 - Rapor biçimi: A4, Times New Roman, tablolar sayfa arasında bölünmez.
+
+## 10 Kasım 2026
+- Firma adı arayüze alınmayacak: firma verisi eksik, elle onay tamamlanmadı. OSB çatıları arayüzde ve haritada tür bazında ("sanayi") gösterilir. Final raporda 4.5 bölümü buna göre yazılacak: "Veri eksik olduğu için firma adı arayüze alınmadı, çatılar tür bazında (sanayi) gösterildi." Ara rapora dokunulmaz.
+- Şüpheli işaretli 128 çatı üretimde kalır. Bu çatılarda SAM maskesi kullanılmaz: 97'sinde kayıtlı ayak izi, 31'inde insan çizimi kullanılır. Payları üretimin %5,1'i, NPV'nin %5,3'ü.
+- Hocaya yalnız sonuç defteri (`proje/notebooks/colab/sonuc_uretim_npv_harita_2026-11-07.ipynb`) çıktılarıyla gönderilir. Çalıştırınca NPV 4,17 milyar TL çıkmalıdır. `tahmin_modeli.ipynb` gönderilmez: kenar boşluğunu düşmediği için üretimi yaklaşık %20 fazla bulur. `ayak_izi_tespit_colab.ipynb` denenip bırakılan yöntemdir.
+- Colab defterlerinin tek akışta birleştirilmesi ara rapordan sonraki iştir (final için tekrar üretilebilirlik).

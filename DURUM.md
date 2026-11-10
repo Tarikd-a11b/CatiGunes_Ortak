@@ -22,9 +22,13 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 - [ ] Web harita (Yavuz)
 - [ ] LLM açıklama katmanı (Dorukhan)
 - [ ] Kurulum maliyeti için gerçek firma teklifleri; bakım gideri ve iskonto oranı için kaynak (Bilal)
-- [ ] Tez metni (Yiğit koordinasyonunda, herkes)
+- [ ] Tez metni (Yiğit koordinasyonunda, herkes). 4.5 firma eşleştirmesi KARARLAR.md'deki 10 Kasım maddesine göre yazılacak
+- [ ] Colab defterlerini tek akışta birleştirmek (final için)
 
 ## Bilal
+- 2026-11-10: Repo herkese açık çıktı, özele çevrildi. Dört üyenin erişimi değişmedi.
+- 2026-11-10: Ara rapor kaynakçası denetlendi: 36 kaynağın linki ve DOI'si çalışıyor, DOI başlıkları Crossref ile eşleşiyor. Rapor teslime hazır, yalnız kapaktaki öğrenci numaraları kaldı.
+- 2026-11-10: Sonuç defteri denetlendi, hata yok. Defter hesap yapmaz, `cati_npv.csv` dosyasını gösterir; hesap `proje/scripts/uretim_hesabi.py` ve `npv_hesabi.py` dosyalarındadır. Finale not: 1.021 çatının hepsinde NPV pozitif (%100 öz tüketim varsayımı), 16 çatı 5 kWp'nin altında (uygunluk analizinde alt eşik düşünülebilir), harita rengi NPV/kWp büyük ölçüde tarife grubunu gösterir.
 - 2026-11-08: Eksikler yüklendi: güncel TÜBİTAK önerisi (`raporlar/`), `CALISMA_NOTLARI.md`, `kamu_binalari/`, `proje/cizim_paketi/`, çalışma rehberi ve 2209-A belgeleri.
 - 2026-11-08: Colab defterleri çıktılarıyla `proje/notebooks/colab/` altına eklendi. Dünkü sonuç defteri `sonuc_uretim_npv_harita_2026-11-07.ipynb`; açma adımları `README.md`'de.
 - 2026-11-08: Üretim, NPV ve Monte Carlo tamamlandı, ara rapor teslime hazırlandı. Çıktılar `ekonomi/` ve `uretim/` klasörlerinde.
