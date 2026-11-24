@@ -35,7 +35,7 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 - 2026-11-08: Üretim, NPV ve Monte Carlo tamamlandı, ara rapor teslime hazırlandı. Çıktılar `ekonomi/` ve `uretim/` klasörlerinde.
 
 ## Yiğit
-- 2026-11-24: Uygunluk modeli (aşama 1, "panel kurulabilir mi?") `proje/uygunluk_modeli/` altına eklendi: kod, girdi verisi, 200 elle etiketli eğitim çatısı, 111 test etiketi ve sonuçlar. Ana sonuç (110 test çatısı, 15 tohum ortalaması): RF macro F1 0.854, "uygun değil" F1 0.756; kural (tam dolu GES veya net alan < 100 m²) 0.867 / 0.778; fark anlamlı değil. 100 m² eşiği ekip kararı değil, yalnız karşılaştırma için. Kurulum `requirements.txt` ile (scikit-learn sürümü RF sonucunu değiştiriyor). Bilal'e veri notu: çatı olmayan kayıtlar 1076 ve 1391.
+- 2026-11-24: Uygunluk modeli (aşama 1, "panel kurulabilir mi?") `proje/uygunluk_modeli/` altına eklendi: kod, girdi verisi, 200 elle etiketli eğitim çatısı, 111 test etiketi ve sonuçlar. Ana sonuç (110 test çatısı, 15 tohum ortalaması): RF macro F1 0.854, "uygun değil" F1 0.756; kural (tam dolu GES veya net alan < 100 m²) 0.867 / 0.778; fark anlamlı değil. 100 m² eşiği ekip kararı değil, yalnız karşılaştırma için. Kurulum `requirements.txt` ile (scikit-learn sürümü RF sonucunu değiştiriyor). Bilal'e veri notu: çatı olmayan kayıtlar 1076 ve 1391. ExtraTrees (öneride yok, ek karşılaştırma) macro F1 0.895, "uygun değil" F1 0.829 ile kuralın üstünde ve sonucu tohumdan bağımsız; ana model olarak kullanılması hocanın incelemesine bağlı.
 
 ## Dorukhan
 
