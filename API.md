@@ -11,6 +11,7 @@ Veri klasörü: bu repoda `model_verisi/`.
 | `catilar.gpkg`, katman `uygun_alan` | 1.021 | Panel konabilecek alan, EPSG:4326 |
 | `ekonomi/cati_npv.csv` | 1.085 | Çatı başına ekonomi sonuçları ve sıralar |
 | `ekonomi/mc_cati.csv` | 1.021 | Çatı başına belirsizlik sonuçları |
+| `uygunluk/cati_uygunluk.csv` | 1.085 | Çatı başına uygunluk sonucu ("panel kurulabilir mi?") |
 | `uretim/cati_uretim.csv` | 1.085 | Alan ve üretim |
 | `firmalar/firma_cati_eslesme.csv` | | Firma–çatı eşleşmesi |
 
@@ -43,6 +44,23 @@ Tüm dosyalar `cati_id` (tam sayı) ile birleşir.
 - `tam_dolu` olan 64 çatıda `kwp_merkez` 0'dır; ekonomi alanları ve sıralar boştur (NaN). API bunları `null` döndürmeli.
 - Harita bu çatıları "mevcut GES, potansiyel yok" olarak göstermeli. Sıfır NPV gibi göstermemeli.
 - Bu 64 çatı `uygun_alan` katmanında ve `mc_cati.csv`'de yoktur.
+
+## Uygunluk alanları (`uygunluk/cati_uygunluk.csv`)
+Betikle üretilir: `proje/uygunluk_modeli/predict_all_roofs.py`. Elle değiştirilmez.
+
+| Alan | Değer | Anlamı |
+|---|---|---|
+| `p_uygun_rf`, `p_uygun_xgb`, `p_uygun_et` | 0–1 | Random Forest / XGBoost / Extra Trees'e göre "uygun" olasılığı |
+| `uygun_rf`, `uygun_xgb`, `uygun_et` | 1 / 0 | Karar (olasılık ≥ 0,5 ise 1) |
+| `uygun_kural` | 1 / 0 | Kural sonucu (tam dolu GES veya net alan < 100 m²), yalnız karşılaştırma |
+| `karar_kaynagi` | `model`, `kural_tam_dolu_GES` | Tam dolu GES'li 64 çatıda karar kuraldan gelir, olasılık boştur |
+| `etiket_kumesi` | `egitim`, `test`, `yok`, `cati_degil` | Çatı elle etiketlendi mi |
+| `el_etiketi` | 1 / 0 / boş | Elle verilen etiket |
+| `cati_degil` | true / false | Etiketlemede çatı olmadığı görülen kayıtlar (1076, 1391) |
+
+- Ana modelin hangisi olacağı (RF mi Extra Trees mi) hocanın incelemesinde. Karar çıkana kadar arayüz ikisinden birini sabit kullanmasın, alan adını tek yerden değiştirilebilir tutsun.
+- `cati_degil` true olan kayıtlar haritada uygunluk rengiyle gösterilmemeli.
+- Eğitim çatılarındaki model tahmini, modelin bu çatıları görmüş olması nedeniyle başarı göstergesi değildir.
 
 ## Önerilen uç noktalar
 | Uç nokta | Döndürdüğü |

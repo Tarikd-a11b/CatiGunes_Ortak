@@ -12,6 +12,7 @@ Usage
 Output: cati_uygunluk.csv (one row per roof, joins to every other file on cati_id)
     cati_id
     p_uygun_rf, uygun_rf        Random Forest probability of "suitable" and decision (1/0)
+    p_uygun_xgb, uygun_xgb      XGBoost probability and decision
     p_uygun_et, uygun_et        Extra Trees probability and decision
     uygun_kural                 rule baseline (full PV or net area < 100 m2), comparison only
     karar_kaynagi               "kural_tam_dolu_GES" if the roof is fully covered by PV
@@ -26,7 +27,7 @@ Notes
     - Predictions for training roofs are in-sample: the model has seen these roofs, so they
       say nothing about accuracy. Accuracy comes only from the test roofs (results.json).
     - Which model is the main one (Random Forest or Extra Trees) is not decided yet, so both
-      are written. The decision threshold is 0.5 as in the evaluation.
+      are written, together with XGBoost (the second model named in the proposal). The decision threshold is 0.5 as in the evaluation.
 """
 import os
 import sys
@@ -62,7 +63,7 @@ def main():
 
     models = sm.build_models(y_train)
     out = pd.DataFrame({"cati_id": roofs["roof_id"].to_numpy()})
-    for short, name in [("rf", "random_forest"), ("et", "extra_trees_additional")]:
+    for short, name in [("rf", "random_forest"), ("xgb", "xgboost"), ("et", "extra_trees_additional")]:
         fitted = clone(models[name]).set_params(random_state=sm.SEED).fit(X_train, y_train)
         decision, probability = sm.predict_with_rule_override(fitted, X_all, fully_covered_by_pv)
         out[f"p_uygun_{short}"] = np.where(fully_covered_by_pv, np.nan, probability.round(3))
@@ -90,7 +91,7 @@ def main():
     # Short summary for the console
     real = ~out["cati_degil"]
     print(f"Saved {path}: {len(out)} roofs")
-    for col in ["uygun_rf", "uygun_et", "uygun_kural"]:
+    for col in ["uygun_rf", "uygun_xgb", "uygun_et", "uygun_kural"]:
         print(f"  {col:12s} suitable {int(out.loc[real, col].sum())} / not suitable {int((out.loc[real, col] == 0).sum())}")
     print("  decided by full-PV rule:", int(fully_covered_by_pv.sum()))
     print("  hand-labelled roofs:", out["etiket_kumesi"].value_counts().to_dict())

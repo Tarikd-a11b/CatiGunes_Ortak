@@ -20,6 +20,7 @@ Outputs are written to `results/`. Input files are never modified.
 | `uygunluk_veri_tablosu.csv`, `cati_uretim.csv`, `sekil_ozellikleri.csv` | Features of all 1,085 roofs (from the shared data pipeline; Turkish column names are renamed inside the script) |
 | `egitim_etiket_v2.csv` | 200 hand-labelled training roofs (roof 1391 is not a roof and is not used) |
 | `test_etiketli_birlesik.csv` | 111 hand-labelled test roofs (original labels) |
+| `predict_all_roofs.py` | Applies the same models to all 1,085 roofs and writes `model_verisi/uygunluk/cati_uygunluk.csv` for the API, web map and LLM layer (does not change any score) |
 | `make_figures.py` | Draws the confusion matrices, SHAP explanations and permutation importance (uses the same data, features and model settings) |
 | `results/results.json` | All scores, including confusion matrices |
 | `results/test_predictions.csv` | Per-roof labels (three versions) and predictions |
