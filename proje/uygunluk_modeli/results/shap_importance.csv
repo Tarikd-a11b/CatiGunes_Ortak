@@ -1,0 +1,17 @@
+feature,Random Forest,XGBoost
+net_area_m2,0.0711,0.9029
+gross_area_m2,0.0375,0.2576
+existing_pv_share,0.0019,0.0
+is_pitched,0.005,0.0
+deviation_from_south_deg,0.0084,0.1506
+specific_yield_kwh_kwp,0.0054,0.0
+width_m,0.0471,0.4421
+length_m,0.0204,0.0548
+aspect_ratio,0.0267,0.383
+compactness,0.0385,0.2809
+solidity,0.0257,0.2903
+rectangularity,0.0715,0.7289
+n_parts,0.0131,0.0195
+n_holes,0.0029,0.0658
+inscribed_circle_radius_m,0.0434,0.0526
+net_to_gross_ratio,0.0492,0.1667
