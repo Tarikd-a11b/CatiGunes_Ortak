@@ -1,0 +1,4 @@
+# Veritabani dokumu bayt bayt ayni kalsin (satir sonu donusumu COPY verisini bozar)
+veritabani/yedek/*.sql -text
+*.bat text eol=crlf
+*.ps1 text eol=crlf

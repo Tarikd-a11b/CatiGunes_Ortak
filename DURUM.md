@@ -18,9 +18,9 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 | 21 Aralık | Proje raporu ve final teslimi |
 
 ## Açık işler
-- [ ] REST API (Dorukhan)
+- [x] REST API (Dorukhan, `uygulama/`)
 - [ ] Web harita (Yavuz)
-- [ ] LLM açıklama katmanı (Dorukhan)
+- [ ] LLM açıklama katmanı (Dorukhan): asistan ve yorum altyapısı hazır, yorumlar 10 deneme çatısında; tamamı üretilecek
 - [ ] Kurulum maliyeti için gerçek firma teklifleri; bakım gideri ve iskonto oranı için kaynak (Bilal)
 - [ ] Proje raporu metni (Yiğit koordinasyonunda, herkes). 4.5 firma eşleştirmesi KARARLAR.md'deki 10 Kasım maddesine göre yazılacak
 - [ ] Colab defterlerini tek akışta birleştirmek (final için)
@@ -39,5 +39,6 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 - 2026-11-24: Uygunluk modeli (aşama 1, "panel kurulabilir mi?") `proje/uygunluk_modeli/` altına eklendi: kod, girdi verisi, 200 elle etiketli eğitim çatısı, 111 test etiketi ve sonuçlar. Ana sonuç (110 test çatısı, 15 tohum ortalaması): RF macro F1 0.854, "uygun değil" F1 0.756; kural (tam dolu GES veya net alan < 100 m²) 0.867 / 0.778; fark anlamlı değil. 100 m² eşiği ekip kararı değil, yalnız karşılaştırma için. Kurulum `requirements.txt` ile (scikit-learn sürümü RF sonucunu değiştiriyor). Bilal'e veri notu: çatı olmayan kayıtlar 1076 ve 1391. ExtraTrees (öneride yok, ek karşılaştırma) macro F1 0.895, "uygun değil" F1 0.829 ile kuralın üstünde ve sonucu tohumdan bağımsız; ana model olarak kullanılması hocanın incelemesine bağlı.
 
 ## Dorukhan
+- 2026-11-25: Web uygulaması `uygulama/` altına eklendi: PostgreSQL + PostGIS veritabanı (5 tablo, `v_cati` görünümü), FastAPI REST API ve tek sayfalık site (harita + öncelik listesi, analiz panosu ve bütçe senaryosu, Gemini asistanı, yöntem). Kurulum `uygulama/kur.bat` (Docker Desktop + Python gerekir), çalıştırma `uygulama/web/baslat.bat`, adres http://localhost:8000. Veri ara rapor `model_verisi/`'nden; toplamlar raporla aynı (1.085 çatı, 177,7 MWp, NPV 4.167 milyon TL). LLM yorumu şimdilik 10 deneme çatısında (`aciklama_uret.py --hepsi` ile tamamı üretilecek). Asistan için Gemini anahtarı gerekir, repoda yok: kendi ücretsiz anahtarınızı alın ya da benden isteyin. Uç noktalar `API.md`'de. Yavuz'a not: harita arayüzü `uygulama/web/static/` altında, üzerinde birlikte çalışabiliriz. Yiğit'e not: uygunluk sonuçları (`cati_uygunluk.csv`) henüz veritabanına ve arayüze eklenmedi.
 
 ## Yavuz

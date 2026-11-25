@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ÇatıGüneş · Çatı GES Karar Destek Sistemi</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%231e293b'/%3E%3Ccircle cx='20' cy='22' r='8' fill='%23f59e0b'/%3E%3Cpath d='M5 40V32.5L20 22.5l15 10V40z' fill='%231e293b'/%3E%3Cpath d='M7 32.5L20 23.8l13 8.7' fill='none' stroke='%23fff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css?v=20261125n">
+</head>
+<body>
+  <!-- logo tanimi: sayfada birkac yerde kullanilir -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gunes-renk" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fcd34d"/><stop offset="1" stop-color="#f97316"/>
+      </linearGradient>
+      <symbol id="logo" viewBox="0 0 40 40">
+        <rect width="40" height="40" rx="11" fill="#1e293b"/>
+        <g stroke="url(#gunes-renk)" stroke-width="2.2" stroke-linecap="round">
+          <path d="M20 6.5v3M9.5 10.5l2.1 2.1M30.5 10.5l-2.1 2.1M5.5 20.5h3M31.5 20.5h3"/>
+        </g>
+        <circle cx="20" cy="22" r="7.5" fill="url(#gunes-renk)"/>
+        <path d="M5 40V32.5L20 22.5l15 10V40z" fill="#1e293b"/>
+        <path d="M7 32.5L20 23.8l13 8.7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- acilis ekrani -->
+  <div class="acilis" id="acilis" aria-hidden="true">
+    <svg class="acilis-logo"><use href="#logo"/></svg>
+    <div class="acilis-ad">Çatı<span>Güneş</span></div>
+    <div class="acilis-alt">Çatı GES uygunluk ve önceliklendirme karar destek sistemi</div>
+    <div class="acilis-cubuk"><i></i></div>
+  </div>
+
+  <!-- ust menu -->
+  <header class="menu">
+    <div class="kap menu-ic">
+      <a class="marka" href="#proje">
+        <svg class="logo"><use href="#logo"/></svg>
+        <span>
+          <span class="marka-ad">Çatı<span>Güneş</span></span>
+          <span class="marka-alt">Karar Destek Sistemi</span>
+        </span>
+      </a>
+      <nav class="menu-baglanti" id="menu-baglanti">
+        <a href="#proje">Proje</a>
+        <a href="#harita-bolum">Harita</a>
+        <a href="#analiz">Analiz</a>
+        <a href="#asistan">Asistan</a>
+        <a href="#yontem">Yöntem</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. giris -->
+    <section class="giris" id="proje">
+      <div class="kap giris-ic">
+        <div class="giris-metin">
+          <h1>Hangi çatıdan başlamalı?</h1>
+          <p>
+            ÇatıGüneş, İzmir Atatürk Organize Sanayi Bölgesi ile Çiğli'deki okul, hastane ve üniversite binalarının
+            çatılarını tek tek inceleyen bir karar destek sistemi. Her çatı için kurulabilir güç, yıllık üretim ve
+            yatırımın net bugünkü değeri hesaplandı, çatılar bu değere göre sıralandı. Sonuçlar 10.000 senaryoluk
+            bir Monte Carlo testiyle sınandı.
+          </p>
+          <div class="giris-dugmeler">
+            <a class="dugme birincil" href="#harita-bolum">Haritayı incele</a>
+            <a class="dugme ikincil" href="#analiz">Analize git</a>
+          </div>
+          <div class="giris-not" id="veri-etiket">Veriler yükleniyor…</div>
+        </div>
+        <div class="giris-gostergeler">
+          <div class="g-kart"><span class="g-etiket">İncelenen çatı</span><span class="g-deger" id="h-cati">–</span></div>
+          <div class="g-kart"><span class="g-etiket">Kurulabilir güç</span><span class="g-deger" id="h-mwp">–</span></div>
+          <div class="g-kart"><span class="g-etiket">Yıllık üretim</span><span class="g-deger" id="h-gwh">–</span></div>
+          <div class="g-kart vurgulu"><span class="g-etiket">Net bugünkü değer</span><span class="g-deger" id="h-npv">–</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. harita -->
+    <section class="bolum" id="harita-bolum">
+      <div class="kap">
+        <div class="bolum-bas">
+          <div>
+            <div class="bolum-no">01 · Harita</div>
+            <h2>Çatılar ve yatırım önceliği</h2>
+            <p>Bir çatıya ya da listedeki bir satıra tıklayın. Renk, çatının net bugünkü değerini gösterir.</p>
+          </div>
+        </div>
+
+        <div class="arac-cubugu">
+          <div class="segment" id="grup-secim" role="group" aria-label="Bina grubu">
+            <button data-grup="" class="secili">Tümü</button>
+            <button data-grup="sanayi">Sanayi</button>
+            <button data-grup="kamu">Kamu</button>
+          </div>
+          <label class="anahtar">
+            <input type="checkbox" id="ges-goster" checked><span class="anahtar-kutu"></span>Mevcut GES'li çatılar
+          </label>
+          <div class="arac-ozet" id="arac-ozet"></div>
+          <div class="segment altlik" id="altlik" role="group" aria-label="Harita altlığı">
+            <button data-altlik="uydu" class="secili">Uydu</button>
+            <button data-altlik="acik">Açık</button>
+            <button data-altlik="koyu">Koyu</button>
+          </div>
+        </div>
+
+        <div class="harita-izgara">
+          <aside class="liste-kart">
+            <div class="liste-bas">
+              <div class="liste-baslik" id="liste-baslik">Öncelik sıralaması</div>
+              <div class="liste-aciklama">
+                <span><i class="ak-cubuk"></i>olası NPV aralığı</span>
+                <span><i class="ak-cizgi"></i>hesaplanan değer</span>
+                <span><b class="ak-rozet">%</b><span id="liste-rozet-aciklama">senaryolarda ilk 100'de kalma</span></span>
+              </div>
+            </div>
+            <ol id="liste"></ol>
+          </aside>
+
+          <div class="harita-kap" id="harita-kap">
+            <div id="harita"></div>
+
+            <div class="vurgu-cip" id="vurgu-cip" hidden>
+              <i></i><span id="vurgu-yazi"></span>
+              <button id="vurgu-kaldir" aria-label="Vurguyu kaldır">
+                <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+
+            <div class="tekerlek-ipucu" id="tekerlek-ipucu" hidden>Yakınlaştırmak için haritaya tıklayın</div>
+
+            <div class="lejant" aria-label="Renk açıklaması">
+              <span class="lejant-baslik">NPV</span>
+              <div class="lejant-olcek">
+                <div class="lejant-serit" id="lejant-serit"></div>
+                <div class="lejant-etiket" id="lejant-etiket"></div>
+              </div>
+              <span class="lejant-birim">milyon TL</span>
+              <span class="lejant-ayrac"></span>
+              <span class="lejant-ges"><i></i>Mevcut GES</span>
+            </div>
+
+            <aside class="detay" id="detay" hidden>
+              <button class="kapat" id="detay-kapat" aria-label="Kapat">
+                <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </button>
+              <div id="detay-icerik"></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. analiz -->
+    <section class="bolum acik-zemin" id="analiz">
+      <div class="kap">
+        <div class="bolum-bas">
+          <div>
+            <div class="bolum-no">02 · Analiz</div>
+            <h2>Potansiyel nerede, hangi çatılar öncelikli?</h2>
+            <p>Potansiyeli olan çatıların NPV'si ve 10.000 senaryoluk Monte Carlo sonuçları.</p>
+          </div>
+          <div class="segment" id="analiz-grup" role="group" aria-label="Analiz kapsamı">
+            <button data-grup="" class="secili">Tümü</button>
+            <button data-grup="sanayi">Sanayi</button>
+            <button data-grup="kamu">Kamu</button>
+          </div>
+        </div>
+
+        <div class="a-bulgular" id="a-bulgular"></div>
+
+        <div class="a-izgara">
+          <section class="a-kart">
+            <div class="a-kart-bas">
+              <h3>Bütçe senaryosu</h3>
+              <p>Seçilen bütçeyle hangi çatılar yapılabilir? Çatılar sıraya göre eklenir, bütçeye sığmayan atlanır.</p>
+            </div>
+            <div class="butce-ust">
+              <div class="butce-deger"><span id="butce-yazi">500</span><small>milyon TL</small></div>
+              <div class="segment kucuk" id="butce-olcut" role="group" aria-label="Sıralama ölçütü">
+                <button data-olcut="npv" class="secili" title="En yüksek toplam net bugünkü değer">Toplam getiri</button>
+                <button data-olcut="verim" title="Yatırılan her lira başına en yüksek NPV">Lira başına getiri</button>
+              </div>
+            </div>
+            <input type="range" id="butce" min="25" max="4500" step="25" value="500" aria-label="Bütçe (milyon TL)">
+            <div class="butce-olcek"><span>25 milyon</span><span id="butce-max">4,5 milyar TL</span></div>
+            <dl class="butce-sonuc" id="butce-sonuc"></dl>
+            <div class="butce-grup" id="butce-grup"></div>
+            <button class="dugme birincil tam" id="butce-goster">Bu çatıları haritada göster</button>
+          </section>
+
+          <section class="a-kart">
+            <div class="a-kart-bas">
+              <h3>Potansiyel nerede yoğunlaşıyor?</h3>
+              <p>Çatılar NPV'ye göre sıralandığında toplam NPV'nin birikimli payı.</p>
+            </div>
+            <div class="grafik" id="pareto"></div>
+          </section>
+
+          <section class="a-kart">
+            <div class="a-kart-bas">
+              <h3>Sanayi ve kamu karşılaştırması</h3>
+              <p>Potansiyeli olan çatıların ortalaması.</p>
+            </div>
+            <div class="a-lejant"><span><i style="background:var(--sanayi)"></i>Sanayi</span><span><i style="background:var(--kamu)"></i>Kamu</span></div>
+            <div id="karsilastirma"></div>
+          </section>
+
+          <section class="a-kart">
+            <div class="a-kart-bas">
+              <h3>Hangi çatılar her koşulda öncelikli?</h3>
+              <p id="saglam-aciklama">İlk 15 çatının olası NPV aralığı ve 10.000 senaryoda üst sıralarda kalma oranı.</p>
+            </div>
+            <div class="grafik" id="saglamlik"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. asistan -->
+    <section class="bolum" id="asistan">
+      <div class="kap">
+        <div class="bolum-bas">
+          <div>
+            <div class="bolum-no">03 · Asistan</div>
+            <h2>Veriye sorun</h2>
+            <p>Sorunuzu yazın ya da hazır sorulardan birini seçin. Asistan cevabı projenin veritabanından bulur; cevaptaki çatılar yandaki haritada gösterilir.</p>
+          </div>
+        </div>
+        <div class="asistan-kart">
+          <div class="sohbet">
+            <div class="sohbet-ust">
+              <div class="sohbet-kimlik">
+                <span class="sohbet-baslik">ÇatıGüneş asistanı</span>
+                <span class="sohbet-alt"><i></i>Veritabanından cevaplar · genelde birkaç saniye</span>
+              </div>
+              <button type="button" class="sohbet-temizle" id="sohbet-temizle">Yeni sohbet</button>
+            </div>
+            <div class="sohbet-mesajlar" id="sohbet-mesajlar"></div>
+            <div class="hazir-sorular" id="hazir-sorular"></div>
+            <form class="sohbet-form" id="sohbet-form">
+              <textarea id="sohbet-girdi" rows="1" placeholder="Örneğin: Geri ödemesi 5 yıldan kısa olan sanayi çatıları hangileri?" aria-label="Soru"></textarea>
+              <button type="submit" class="dugme birincil" id="sohbet-gonder" aria-label="Gönder">
+                <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5L13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+            <div class="sohbet-not">Cevaplar yapay zekâ (Gemini) ile üretilir; sayılar veritabanından alınır.</div>
+          </div>
+          <div class="sorgu-harita-kap">
+            <div id="sorgu-harita"></div>
+            <div class="sorgu-harita-bos" id="sorgu-harita-bos">Cevapta adı geçen çatılar burada vurgulanır.</div>
+            <aside class="detay" id="a-detay" hidden>
+              <button class="kapat" id="a-detay-kapat" aria-label="Kapat">
+                <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </button>
+              <div id="a-detay-icerik"></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. yontem ve ekip -->
+    <section class="bolum acik-zemin" id="yontem">
+      <div class="kap">
+        <div class="bolum-bas">
+          <div>
+            <div class="bolum-no">04 · Yöntem</div>
+            <h2>Nasıl hesaplandı?</h2>
+            <p>Yalnızca ücretsiz erişilebilen veri ve yeniden eğitilmemiş hazır bir model kullanıldı.</p>
+          </div>
+        </div>
+        <ol class="adimlar">
+          <li><b>Bina envanteri</b><span>OpenStreetMap bina ayak izleri, eksikler Microsoft verisiyle tamamlandı</span></li>
+          <li><b>Çatı çıkarımı</b><span>Segment Anything (SAM) modeli uydu görüntüsü üzerinde çalıştırıldı</span></li>
+          <li><b>Doğrulama</b><span>İnsan çizimiyle karşılaştırıldı, ortanca IoU 0,878</span></li>
+          <li><b>Mevcut GES</b><span>Panelli çatılar elle işaretlendi, potansiyelden düşüldü</span></li>
+          <li><b>Üretim</b><span>PVGIS v5.3, güneye 10° eğim, kenar boşluğu ve engel payı düşülerek</span></li>
+          <li><b>Ekonomi</b><span>NPV, geri ödeme ve 10.000 senaryoluk Monte Carlo testi</span></li>
+        </ol>
+        <div class="yontem-alt">
+          <div>
+            <h3>Veri kaynakları</h3>
+            <div class="cipler">
+              <span>OpenStreetMap</span><span>Microsoft Building Footprints</span><span>Esri World Imagery</span>
+              <span>PVGIS v5.3</span><span>EPDK tarifeleri</span><span>TCMB kurları</span>
+            </div>
+          </div>
+          <div>
+            <h3>Proje ekibi</h3>
+            <p class="kisiler">Bilal Tarık Demir · Yiğit Eren Yıldırım · Yavuz Acer · Dorukhan Turhan</p>
+            <h3>Danışman</h3>
+            <p class="kisiler">Doç. Dr. Emine Uçar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="alt">
+    <div class="kap alt-ic">
+      <span class="alt-marka"><svg class="logo kucuk"><use href="#logo"/></svg><span class="marka-ad">Çatı<span>Güneş</span></span></span>
+      <span>İzmir Bakırçay Üniversitesi · Yönetim Bilişim Sistemleri · MIS412 Bitirme Projesi · 2026</span>
+    </div>
+  </footer>
+
+  <div class="a-ipucu" id="a-ipucu" hidden></div>
+
+  <script>
+    // acilis ekraninda takilip kalmasin: hata olursa ya da 20 sn icinde acilmazsa sebebi yazilir
+    (function () {
+      function goster(m) {
+        var a = document.getElementById("acilis");
+        if (!a || a.classList.contains("bitti")) return;
+        a.querySelector(".acilis-alt").textContent = m;
+        var c = a.querySelector(".acilis-cubuk"); if (c) c.remove();
+      }
+      window.addEventListener("error", function (e) { goster("Sayfa yüklenemedi: " + (e.message || "bir dosya alınamadı") + " · Ctrl+F5 ile yenileyin."); });
+      setTimeout(function () { goster("Sayfa açılamadı. İnternet bağlantısını kontrol edip Ctrl+F5 ile yenileyin."); }, 20000);
+    })();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    // birinci kaynak yanit vermezse harita kutuphanesi ikinci kaynaktan yuklenir
+    if (!window.L) {
+      document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">');
+      document.write('<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"><\/script>');
+    }
+  </script>
+  <script src="app.js?v=20261125n"></script>
+</body>
+</html>

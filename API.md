@@ -62,13 +62,17 @@ Betikle üretilir: `proje/uygunluk_modeli/predict_all_roofs.py`. Elle değiştir
 - `cati_degil` true olan kayıtlar haritada uygunluk rengiyle gösterilmemeli.
 - Eğitim çatılarındaki model tahmini, modelin bu çatıları görmüş olması nedeniyle başarı göstergesi değildir.
 
-## Önerilen uç noktalar
+## Uç noktalar (uygulandı, `uygulama/web/api/main.py`)
+Kurulum ve çalıştırma `uygulama/README.md`'de. API veritabanındaki `v_cati` görünümünü okur; alan adları buradaki CSV adlarından biraz farklıdır (`kwp`, `kwh_yil`, `yatirim_tl`, `npv_tl`, `sira_grup` vb.).
+
 | Uç nokta | Döndürdüğü |
 |---|---|
-| `GET /catilar?bolge=&tur=&limit=` | GeoJSON, harita için özet alanlar |
-| `GET /catilar/{cati_id}` | Tek çatının tüm alanları |
-| `GET /siralama?olcut=npv\|npv_kwp\|uretim&tur=&limit=` | Sıralı liste |
-| `GET /ozet` | Bölge ve tür toplamları |
-| `GET /catilar/{cati_id}/aciklama` | LLM açıklama metni |
+| `GET /api/catilar?grup=sanayi\|kamu\|diger` | GeoJSON, harita için özet alanlar |
+| `GET /api/catilar/{cati_id}` | Tek çatının tüm alanları; `aciklama` alanında LLM yorumu (yoksa `null`) |
+| `GET /api/siralama?olcut=npv\|npv_kwp\|uretim&grup=sanayi\|kamu&limit=` | Sıralı liste (grup verilirse grup içi sıra) |
+| `GET /api/ozet` | Bölge ve tür toplamları |
+| `GET /api/analiz` | Analiz panosu için potansiyeli olan 1.021 çatının özet satırları |
+| `GET /api/bolgeler` | Bölge sınırları (GeoJSON) |
+| `POST /api/sohbet` | Asistan: soru Gemini'ye gider, Gemini gerekirse salt okunur kullanıcıyla SQL çalıştırır |
 
-LLM katmanı yeni hesap yapmaz. Yalnız bu alanları okuyup metne çevirir ve metindeki sayılar kayıtla eşleşmelidir.
+LLM katmanı yeni hesap yapmaz. Yalnız bu alanları okuyup metne çevirir ve metindeki sayılar kayıtla eşleşmelidir (`uygulama/veritabani/aciklama_uret.py` bunu denetler; uyuşmayan yorum gösterilmez). Uygunluk alanları henüz veritabanına ve arayüze eklenmedi.
