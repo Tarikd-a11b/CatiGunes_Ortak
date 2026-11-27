@@ -37,3 +37,4 @@ Buradaki konular kapanmıştır. Yeniden açmak için ekip kararı gerekir. Yeni
 
 ## 27 Kasım 2026
 - Uygunluk modeli (hoca kararı): Raporda tüm modellerin sonuçları (Extra Trees, Random Forest, XGBoost ve kural yöntemi) birlikte verilip uygulamada en başarılı olan Extra Trees kullanılacaktır (`model_verisi/uygunluk/cati_uygunluk.csv` içinde `uygun_et`). Sıralama, harita ve LLM açıklamaları bu sütuna göre yapılır.
+- Site dili (hoca kararı): Site İngilizce ve Türkçe olacak; varsayılan dil İngilizce. Arayüz metinleri ve LLM çatı açıklamaları dahil her şey iki dilde hazırlanır.
