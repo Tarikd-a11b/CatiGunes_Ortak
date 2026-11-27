@@ -34,3 +34,6 @@ Buradaki konular kapanmıştır. Yeniden açmak için ekip kararı gerekir. Yeni
 - Şüpheli işaretli 128 çatı üretimde kalır. Bu çatılarda SAM maskesi kullanılmaz: 97'sinde kayıtlı ayak izi, 31'inde insan çizimi kullanılır. Payları üretimin %5,1'i, NPV'nin %5,3'ü.
 - Hocaya yalnız sonuç defteri (`proje/notebooks/colab/sonuc_uretim_npv_harita_2026-11-07.ipynb`) çıktılarıyla gönderilir. Çalıştırınca NPV 4,17 milyar TL çıkmalıdır. `tahmin_modeli.ipynb` gönderilmez: kenar boşluğunu düşmediği için üretimi yaklaşık %20 fazla bulur. `ayak_izi_tespit_colab.ipynb` denenip bırakılan yöntemdir.
 - Colab defterlerinin tek akışta birleştirilmesi ara rapordan sonraki iştir (final için tekrar üretilebilirlik).
+
+## 27 Kasım 2026
+- Uygunluk modeli (hoca kararı): Raporda tüm modellerin sonuçları (Extra Trees, Random Forest, XGBoost ve kural yöntemi) birlikte verilip uygulamada en başarılı olan Extra Trees kullanılacaktır (`model_verisi/uygunluk/cati_uygunluk.csv` içinde `uygun_et`). Sıralama, harita ve LLM açıklamaları bu sütuna göre yapılır.

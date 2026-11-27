@@ -9,9 +9,10 @@ Usage
 
 Outputs (written to the given folder)
     confusion_matrices.png   2 x 2 confusion matrix of each method (test-label version B)
-    shap_importance.png      mean |SHAP| per feature for Random Forest and XGBoost
+    shap_importance.png      mean |SHAP| per feature for Random Forest, XGBoost and Extra Trees
     shap_beeswarm_random_forest.png
     shap_beeswarm_xgboost.png
+    shap_beeswarm_extra_trees.png
     shap_importance.csv      the numbers behind shap_importance.png
     permutation_importance.png   drop in macro F1 when one feature is shuffled
     permutation_importance.csv   the numbers behind permutation_importance.png
@@ -57,7 +58,7 @@ BAR_COLOR = "#2f6fb0"    # single hue: the bars show magnitude, not categories
 DISPLAY_NAMES = {
     "random_forest": "Random Forest",
     "xgboost": "XGBoost",
-    "extra_trees_additional": "Extra Trees (additional)",
+    "extra_trees": "Extra Trees (main model)",
 }
 
 
@@ -87,7 +88,7 @@ def prepare():
 def plot_confusion_matrices(y_true, keep, predictions, out_dir):
     """One 2 x 2 matrix per method. Rows = true class, columns = predicted class."""
     titles = dict(DISPLAY_NAMES, rule=f"Rule baseline (full PV or net area < {int(sm.MIN_NET_AREA_M2)} m²)")
-    order = ["random_forest", "xgboost", "extra_trees_additional", "rule"]
+    order = ["random_forest", "xgboost", "extra_trees", "rule"]
     fig, axes = plt.subplots(1, 4, figsize=(15, 4.2))
     for ax, name in zip(axes, order):
         matrix = confusion_matrix(y_true[keep], predictions[name][keep], labels=[0, 1])
@@ -126,8 +127,8 @@ def shap_values_for_suitable(model, X):
 
 
 def plot_shap(X_model, fitted, out_dir):
-    """Mean |SHAP| bar chart for both proposal models, plus one beeswarm plot per model."""
-    names = ["random_forest", "xgboost"]
+    """Mean |SHAP| bar chart for the three models, plus one beeswarm plot per model."""
+    names = ["random_forest", "xgboost", "extra_trees"]
     shap_values = {name: shap_values_for_suitable(fitted[name], X_model) for name in names}
 
     # 1) importance = mean absolute SHAP value per feature
@@ -135,7 +136,7 @@ def plot_shap(X_model, fitted, out_dir):
                               index=sm.FEATURES)
     importance.round(4).to_csv(os.path.join(out_dir, "shap_importance.csv"), index_label="feature")
 
-    fig, axes = plt.subplots(1, 2, figsize=(13, 6))
+    fig, axes = plt.subplots(1, 3, figsize=(19, 6))
     for ax, name in zip(axes, names):
         column = importance[DISPLAY_NAMES[name]].sort_values()
         ax.barh(column.index, column.values, color=BAR_COLOR, height=0.65)
@@ -143,7 +144,7 @@ def plot_shap(X_model, fitted, out_dir):
             ax.text(value, y_position, f"  {value:.3f}", va="center", fontsize=9, color=INK)
         ax.set_title(DISPLAY_NAMES[name], fontsize=12, color=INK)
         # the two models use different output scales, so each panel has its own x-axis
-        unit = "probability of suitable" if name == "random_forest" else "log-odds of suitable"
+        unit = "log-odds of suitable" if name == "xgboost" else "probability of suitable"
         ax.set_xlabel(f"Mean |SHAP value| ({unit})", fontsize=10, color=MUTED)
         ax.set_xlim(0, column.max() * 1.18)
         ax.tick_params(axis="y", length=0, labelsize=10, labelcolor=INK)
@@ -171,9 +172,9 @@ def plot_shap(X_model, fitted, out_dir):
 
 def plot_permutation_importance(X_model, y_model, fitted, out_dir):
     """Drop in macro F1 after shuffling one feature (mean and standard deviation over repeats)."""
-    names = ["random_forest", "xgboost"]
+    names = ["random_forest", "xgboost", "extra_trees"]
     table = {}
-    fig, axes = plt.subplots(1, 2, figsize=(13, 6), sharex=True)
+    fig, axes = plt.subplots(1, 3, figsize=(19, 6), sharex=True)
     for ax, name in zip(axes, names):
         result = permutation_importance(fitted[name], X_model.to_numpy(), y_model, scoring="f1_macro",
                                         n_repeats=N_PERMUTATION_REPEATS, random_state=sm.SEED, n_jobs=2)
@@ -216,10 +217,10 @@ def main():
     importance = plot_shap(X_model, fitted, out_dir)
     permutation = plot_permutation_importance(X_model, y_true[reaches_classifier], fitted, out_dir)
 
-    print("Mean |SHAP| per feature (largest first, Random Forest order):")
-    print(importance.sort_values("Random Forest", ascending=False).round(3).to_string())
-    print("\nPermutation importance (drop in macro F1, largest first, Random Forest order):")
-    print(permutation.sort_values("Random Forest mean", ascending=False).round(3).to_string())
+    print("Mean |SHAP| per feature (largest first, Extra Trees order):")
+    print(importance.sort_values("Extra Trees (main model)", ascending=False).round(3).to_string())
+    print("\nPermutation importance (drop in macro F1, largest first, Extra Trees order):")
+    print(permutation.sort_values("Extra Trees (main model) mean", ascending=False).round(3).to_string())
     print(f"\nSaved figures to: {out_dir}/")
 
 

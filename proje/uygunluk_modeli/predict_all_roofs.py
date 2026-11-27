@@ -26,8 +26,8 @@ Output: cati_uygunluk.csv (one row per roof, joins to every other file on cati_i
 Notes
     - Predictions for training roofs are in-sample: the model has seen these roofs, so they
       say nothing about accuracy. Accuracy comes only from the test roofs (results.json).
-    - Which model is the main one (Random Forest or Extra Trees) is not decided yet, so both
-      are written, together with XGBoost (the second model named in the proposal). The decision threshold is 0.5 as in the evaluation.
+    - Extra Trees is the main model used in the application (uygun_et / p_uygun_et).
+      Random Forest and XGBoost are written as well so the three can be compared. The decision threshold is 0.5 as in the evaluation.
 """
 import os
 import sys
@@ -63,7 +63,7 @@ def main():
 
     models = sm.build_models(y_train)
     out = pd.DataFrame({"cati_id": roofs["roof_id"].to_numpy()})
-    for short, name in [("rf", "random_forest"), ("xgb", "xgboost"), ("et", "extra_trees_additional")]:
+    for short, name in [("rf", "random_forest"), ("xgb", "xgboost"), ("et", "extra_trees")]:
         fitted = clone(models[name]).set_params(random_state=sm.SEED).fit(X_train, y_train)
         decision, probability = sm.predict_with_rule_override(fitted, X_all, fully_covered_by_pv)
         out[f"p_uygun_{short}"] = np.where(fully_covered_by_pv, np.nan, probability.round(3))

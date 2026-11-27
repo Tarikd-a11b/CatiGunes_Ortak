@@ -7,9 +7,9 @@ Pipeline
     2. For every other roof, a classifier trained on 200 hand-labelled training roofs
        predicts suitable / not suitable from 16 numeric features
        (6 basic features + 10 footprint-shape features).
-    3. The classifiers (Random Forest, XGBoost, plus Extra Trees as an additional
-       comparison) are evaluated on the 111 independently hand-labelled test roofs and
-       compared with a rule-only baseline.
+    3. The classifiers (Random Forest, XGBoost and Extra Trees) are evaluated on the 111
+       independently hand-labelled test roofs and compared with a rule-only baseline.
+       Extra Trees scored best and is the model used in the application; all three are reported.
 
 Evaluation protocol
     - Hyper-parameters are fixed and deliberately simple. The test set was never used
@@ -186,8 +186,9 @@ def build_models(y_train):
         "xgboost": XGBClassifier(
             n_estimators=150, max_depth=3, learning_rate=0.05, subsample=0.9, colsample_bytree=0.9,
             scale_pos_weight=negative_to_positive, eval_metric="logloss", n_jobs=2),
-        # Not named in the project proposal; kept as an additional comparison only.
-        "extra_trees_additional": ExtraTreesClassifier(
+        # Main model used in the application (advisor decision: report all models, use the best in the app).
+        # Random Forest and XGBoost are the two models named in the project proposal and are reported alongside.
+        "extra_trees": ExtraTreesClassifier(
             n_estimators=300, min_samples_leaf=3, class_weight="balanced", n_jobs=2),
     }
 

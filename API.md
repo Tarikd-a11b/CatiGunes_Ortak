@@ -58,7 +58,7 @@ Betikle üretilir: `proje/uygunluk_modeli/predict_all_roofs.py`. Elle değiştir
 | `el_etiketi` | 1 / 0 / boş | Elle verilen etiket |
 | `cati_degil` | true / false | Etiketlemede çatı olmadığı görülen kayıtlar (1076, 1391) |
 
-- Ana modelin hangisi olacağı (RF mi Extra Trees mi) hocanın incelemesinde. Karar çıkana kadar arayüz ikisinden birini sabit kullanmasın, alan adını tek yerden değiştirilebilir tutsun.
+- Uygulamada ana model Extra Trees'tir: karar için `uygun_et`, olasılık için `p_uygun_et` kullanılır (KARARLAR.md, 27 Kasım 2026). RF ve XGBoost sütunları karşılaştırma içindir.
 - `cati_degil` true olan kayıtlar haritada uygunluk rengiyle gösterilmemeli.
 - Eğitim çatılarındaki model tahmini, modelin bu çatıları görmüş olması nedeniyle başarı göstergesi değildir.
 

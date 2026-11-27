@@ -1,4 +1,4 @@
-roof_id,pv_status,net_area_m2,width_m,label_A_original,label_B_preflagged_corrections,label_C_B_plus_1004,pred_random_forest,pred_xgboost,pred_extra_trees_additional,pred_rule_baseline_full_pv_or_net_area_below_100
+roof_id,pv_status,net_area_m2,width_m,label_A_original,label_B_preflagged_corrections,label_C_B_plus_1004,pred_random_forest,pred_xgboost,pred_extra_trees,pred_rule_baseline_full_pv_or_net_area_below_100
 4,tam_dolu,0.0,52.493592845670825,0.0,0.0,0.0,0,0,0,0
 6,panel_yok,3460.9,50.836342271393164,1.0,1.0,1.0,1,1,1,1
 7,panel_yok,2524.0,48.03102582627973,1.0,1.0,1.0,1,1,1,1

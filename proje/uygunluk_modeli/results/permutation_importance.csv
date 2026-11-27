@@ -1,17 +1,17 @@
-feature,Random Forest mean,Random Forest std,XGBoost mean,XGBoost std
-net_area_m2,0.097,0.041,0.0855,0.042
-gross_area_m2,-0.0022,0.0108,-0.0391,0.0353
-existing_pv_share,0.0,0.0,0.0,0.0
-is_pitched,0.0,0.0,0.0,0.0
-deviation_from_south_deg,-0.0011,0.0077,-0.0177,0.0241
-specific_yield_kwh_kwp,0.0,0.0,0.0,0.0
-width_m,0.0887,0.0436,-0.0282,0.0153
-length_m,0.0063,0.0189,-0.0017,0.0045
-aspect_ratio,0.0826,0.0509,-0.0094,0.0158
-compactness,0.0547,0.029,-0.0026,0.008
-solidity,0.0491,0.0306,-0.0557,0.0278
-rectangularity,0.1059,0.0786,-0.0159,0.0547
-n_parts,0.0,0.0,0.0,0.0
-n_holes,0.0025,0.0124,0.0,0.0
-inscribed_circle_radius_m,0.0635,0.0485,0.0028,0.0053
-net_to_gross_ratio,0.0987,0.0433,0.0066,0.0076
+feature,Random Forest mean,Random Forest std,XGBoost mean,XGBoost std,Extra Trees (main model) mean,Extra Trees (main model) std
+net_area_m2,0.097,0.041,0.0855,0.042,0.0423,0.0364
+gross_area_m2,-0.0022,0.0108,-0.0391,0.0353,0.0067,0.0204
+existing_pv_share,0.0,0.0,0.0,0.0,0.0,0.0
+is_pitched,0.0,0.0,0.0,0.0,-0.0054,0.0123
+deviation_from_south_deg,-0.0011,0.0077,-0.0177,0.0241,0.0,0.0
+specific_yield_kwh_kwp,0.0,0.0,0.0,0.0,0.0297,0.0204
+width_m,0.0887,0.0436,-0.0282,0.0153,0.0737,0.041
+length_m,0.0063,0.0189,-0.0017,0.0045,0.0,0.0
+aspect_ratio,0.0826,0.0509,-0.0094,0.0158,0.0151,0.0307
+compactness,0.0547,0.029,-0.0026,0.008,0.0337,0.0372
+solidity,0.0491,0.0306,-0.0557,0.0278,0.0018,0.0165
+rectangularity,0.1059,0.0786,-0.0159,0.0547,-0.0,0.0184
+n_parts,0.0,0.0,0.0,0.0,0.0,0.0
+n_holes,0.0025,0.0124,0.0,0.0,0.0,0.0
+inscribed_circle_radius_m,0.0635,0.0485,0.0028,0.0053,0.0775,0.0394
+net_to_gross_ratio,0.0987,0.0433,0.0066,0.0076,0.1034,0.0537
