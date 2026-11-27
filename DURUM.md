@@ -20,7 +20,7 @@ Her üye kendi bölümünün en üstüne tarihli madde ekler. Başkasının böl
 ## Açık işler
 - [x] REST API (Dorukhan, `uygulama/`)
 - [ ] Web harita (Yavuz)
-- [ ] LLM açıklama katmanı (Dorukhan): asistan ve yorum altyapısı hazır, yorumlar 10 deneme çatısında; tamamı üretilecek
+- [ ] LLM açıklama katmanı (Yiğit, Dorukhan ile): Dorukhan'ın yorum altyapısı hazır (10 deneme çatısı). Kalan: uygunluk (ET) ve SHAP nedenleri, iki dil (EN varsayılan), sayı kontrolü ve şablon yedeği eklenip tüm çatılar için üretilecek. LLM servisi henüz seçilmedi.
 - [ ] Kurulum maliyeti için gerçek firma teklifleri; bakım gideri ve iskonto oranı için kaynak (Bilal)
 - [ ] Proje raporu metni (Yiğit koordinasyonunda, herkes). 4.5 firma eşleştirmesi KARARLAR.md'deki 10 Kasım maddesine göre yazılacak
 - [ ] Colab defterlerini tek akışta birleştirmek (final için)
